@@ -23,7 +23,6 @@
             sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
           },
           colors: {
-            // Industrial steel / slate scale
             steel: {
               50:  '#f8fafc',
               100: '#f1f5f9',
@@ -37,7 +36,6 @@
               900: '#0f172a',
               950: '#020617',
             },
-            // Primary brand blue
             brand: {
               400: '#60a5fa',
               500: '#3b82f6',
@@ -58,13 +56,6 @@
   </script>
   <style>
     html { scroll-behavior: smooth; }
-    .hero-bg {
-      background-image:
-        linear-gradient(105deg, rgba(15, 23, 42, 0.88) 0%, rgba(15, 23, 42, 0.55) 55%, rgba(15, 23, 42, 0.35) 100%),
-        url('images/Small%20Farm.jpg');
-      background-size: cover;
-      background-position: center;
-    }
     #mobile-menu {
       max-height: 0;
       overflow: hidden;
@@ -73,6 +64,46 @@
     #mobile-menu.open { max-height: 420px; }
     .project-card:hover img { transform: scale(1.04); }
     .project-card img { transition: transform 0.4s ease; }
+
+    /* Hero video background */
+    .hero-video-wrap {
+      position: relative;
+      overflow: hidden;
+      min-height: 82vh;
+      display: flex;
+      align-items: center;
+      color: white;
+    }
+    .hero-video-wrap video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+      z-index: 0;
+    }
+    .hero-video-wrap .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(105deg, rgba(15, 23, 42, 0.88) 0%, rgba(15, 23, 42, 0.55) 55%, rgba(15, 23, 42, 0.35) 100%);
+      z-index: 1;
+    }
+    .hero-video-wrap .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+    /* Fallback when video is missing or fails */
+    .hero-video-wrap.no-video {
+      background-image:
+        linear-gradient(105deg, rgba(15, 23, 42, 0.88) 0%, rgba(15, 23, 42, 0.55) 55%, rgba(15, 23, 42, 0.35) 100%),
+        url('images/Small%20Farm.jpg');
+      background-size: cover;
+      background-position: center;
+    }
   </style>
 </head>
 <body class="bg-steel-50 text-steel-900 font-sans antialiased">
@@ -112,9 +143,15 @@
     </div>
   </nav>
 
-  <!-- Hero -->
-  <section id="home" class="hero-bg min-h-[82vh] flex items-center text-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-20 sm:py-24 w-full">
+  <!-- Hero with Video Background -->
+  <section id="home" class="hero-video-wrap">
+    <!-- Background video (upload images/hero.mp4 for it to play) -->
+    <video autoplay muted loop playsinline poster="images/Small%20Farm.jpg" id="hero-video">
+      <source src="images/hero.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content max-w-7xl mx-auto px-4 sm:px-6 py-20 sm:py-24 w-full">
       <div class="max-w-2xl">
         <p class="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold tracking-wide uppercase text-brand-400 bg-white/10 border border-white/15 rounded-full px-3 py-1 mb-5">
           <span class="w-1.5 h-1.5 rounded-full bg-brand-400"></span>
@@ -497,6 +534,16 @@
         btn.setAttribute('aria-expanded', 'false');
       })
     );
+
+    // Graceful fallback if hero video fails to load
+    const heroVideo = document.getElementById('hero-video');
+    const heroWrap = document.querySelector('.hero-video-wrap');
+    if (heroVideo) {
+      heroVideo.addEventListener('error', () => {
+        heroWrap.classList.add('no-video');
+        heroVideo.style.display = 'none';
+      });
+    }
   </script>
 </body>
 </html>
