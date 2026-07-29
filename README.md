@@ -44,29 +44,30 @@ Modern, visual, locally focused website for **Stamps Steel Buildings** — a pri
 
 ---
 
-## Accessories product image names
+## Accessories product assets (`images/`)
 
-Drop photos into `images/` using these filenames:
+Product photos and sheets (no supplier names in public filenames):
 
 ```
-ridge-vent-1.jpg / ridge-vent-2.jpg
-low-profile-vent.jpg
-cupola.jpg
-wall-louver.jpg
-wall-fan.jpg
-walk-door-canopy.jpg
-corner-canopy.jpg
-preassembled-door.jpg
-knockdown-door.jpg
-rollup-door.jpg
-electric-operator.jpg
-thermal-window.jpg
-roof-curb.jpg
-door-hardware.jpg
+ridge-vent-1.png / ridge-vent-2.png
+low-profile-vent.png
+cupola.png / cupola-specs.png
+wall-louver.png / wall-louver-specs.png
+wall-fan.png / wall-fan-specs.png
+walk-door-canopy.png / walk-door-canopy-specs.png / walk-door-canopy-sizes.png
+corner-canopy.png / corner-canopy-specs.png
+rollup-door.png
+electric-operator.png
+roof-curb.png / roof-curb-specs.png
+door-hardware.png
+preassembled-door-specs.pdf
+knockdown-door-specs.pdf
+thermal-window-specs.pdf
 ```
 
-Until photos are uploaded, cards show a steel “Photo coming soon” placeholder.  
-**3D View** buttons are non-interactive placeholders (“Coming Soon”).
+Walk doors and thermal windows currently use **PDF product sheets** (photos TBD).  
+**3D View** buttons are non-interactive placeholders (“Coming Soon”).  
+Click product photos to open a multi-image lightbox when extra views/specs exist.
 
 ---
 
