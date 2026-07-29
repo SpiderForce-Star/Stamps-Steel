@@ -83,7 +83,7 @@
       width: 100%;
     }
     #mobile-menu { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
-    #mobile-menu.open { max-height: 560px; }
+    #mobile-menu.open { max-height: 620px; }
     .copper-gradient {
       background: linear-gradient(135deg, #e0a05a 0%, #c97b3a 50%, #b87333 100%);
       -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
@@ -134,8 +134,9 @@
           <a href="#solutions" class="px-2.5 py-2 hover:text-copper-400 transition">Solutions</a>
           <a href="#projects" class="px-2.5 py-2 hover:text-copper-400 transition">Projects</a>
           <a href="#process" class="px-2.5 py-2 hover:text-copper-400 transition">Process</a>
-          <a href="accessories.html" class="px-2.5 py-2 hover:text-copper-400 transition">Accessories</a>
-          <a href="panels.html" class="px-2.5 py-2 hover:text-copper-400 transition">Panels &amp; Colors</a>
+          <a href="accessories.html" class="px-2 py-2 hover:text-copper-400 transition">Accessories</a>
+          <a href="panels.html" class="px-2 py-2 hover:text-copper-400 transition">Panels</a>
+          <a href="erection.html" class="px-2 py-2 hover:text-copper-400 transition">Erection</a>
           <a href="#contact" class="ml-2 bg-copper-600 hover:bg-copper-500 text-white px-4 py-2.5 rounded-lg font-semibold transition shadow-lg shadow-copper-900/30">Get Free Quote</a>
         </div>
         <div class="flex items-center gap-2 lg:hidden">
@@ -154,6 +155,7 @@
         <a href="#process" class="block py-3 px-3 rounded-lg hover:bg-steel-800">Process</a>
         <a href="accessories.html" class="block py-3 px-3 rounded-lg hover:bg-steel-800">Accessories</a>
         <a href="panels.html" class="block py-3 px-3 rounded-lg hover:bg-steel-800">Panels &amp; Colors</a>
+        <a href="erection.html" class="block py-3 px-3 rounded-lg hover:bg-steel-800">Erection</a>
         <a href="#contact" class="block py-3 px-3 bg-copper-600 rounded-lg text-center font-semibold mt-2">Get Free Quote</a>
       </div>
     </div>
@@ -480,17 +482,23 @@
     </div>
   </section>
 
-  <!-- PANELS TEASER -->
+  <!-- PANELS + ERECTION TEASERS -->
   <section id="panels-preview" class="py-14 md:py-16 bg-white border-y border-slate-200">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-        <div class="max-w-xl">
-          <p class="text-sm font-semibold text-copper-600 uppercase tracking-wide mb-2">Roof &amp; Wall Systems</p>
-          <h2 class="text-2xl md:text-3xl font-black mb-2">Panel Types &amp; Colors</h2>
-          <p class="text-slate-600 text-sm sm:text-base leading-relaxed">PBR, multi-rib, standing seam, and specialty wall profiles with commercial color options — materials sourced through industry channels including Ascent Buildings, Central States, and MBCI.</p>
-        </div>
-        <a href="panels.html" class="inline-flex justify-center items-center bg-copper-600 hover:bg-copper-500 text-white px-6 py-3 rounded-xl font-semibold transition shrink-0">
+    <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-6">
+      <div class="rounded-2xl border border-slate-200 p-6 sm:p-8 flex flex-col">
+        <p class="text-sm font-semibold text-copper-600 uppercase tracking-wide mb-2">Roof &amp; Wall Systems</p>
+        <h2 class="text-2xl font-black mb-2">Panel Types &amp; Colors</h2>
+        <p class="text-slate-600 text-sm leading-relaxed flex-1 mb-5">PBR, multi-rib, standing seam, and specialty profiles — materials channels including Ascent, Central States, and MBCI.</p>
+        <a href="panels.html" class="inline-flex justify-center items-center bg-copper-600 hover:bg-copper-500 text-white px-6 py-3 rounded-xl font-semibold transition self-start">
           Explore Panels &amp; Colors
+        </a>
+      </div>
+      <div class="rounded-2xl border border-slate-200 p-6 sm:p-8 flex flex-col bg-slate-50">
+        <p class="text-sm font-semibold text-copper-600 uppercase tracking-wide mb-2">Professional Erection</p>
+        <h2 class="text-2xl font-black mb-2">On Your Slab or Piers</h2>
+        <p class="text-slate-600 text-sm leading-relaxed flex-1 mb-5">From flatbed unload to primary frame, secondary, insulation, sheeting, trim, and accessories — MBMA-informed process with a 50×100×16 visual walkthrough.</p>
+        <a href="erection.html" class="inline-flex justify-center items-center bg-steel-900 hover:bg-steel-800 text-white px-6 py-3 rounded-xl font-semibold transition self-start">
+          View Erection Process
         </a>
       </div>
     </div>
@@ -632,6 +640,7 @@
           <a href="#projects" class="hover:text-copper-400 transition">Projects</a>
           <a href="accessories.html" class="hover:text-copper-400 transition">Accessories</a>
           <a href="panels.html" class="hover:text-copper-400 transition">Panels &amp; Colors</a>
+          <a href="erection.html" class="hover:text-copper-400 transition">Erection</a>
           <a href="#contact" class="hover:text-copper-400 transition">Get Free Quote</a>
         </div>
         <div class="flex justify-center gap-6 mb-6">
