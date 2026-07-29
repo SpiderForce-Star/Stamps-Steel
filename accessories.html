@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Building Accessories | Stamps Steel Buildings – Bethpage, Middle Tennessee</title>
+  <meta name="description" content="Ventilation, doors, canopies, windows, roof curbs, and hardware for pre-engineered metal buildings. High-performance accessories engineered for Middle Tennessee. Free accessory quotes.">
+  <meta name="keywords" content="metal building accessories, ridge vent, cupola, walk door, roll-up door, metal building canopy, roof curb, Middle Tennessee">
+  <meta property="og:title" content="Building Accessories | Stamps Steel Buildings">
+  <meta property="og:description" content="Complete your PEB with ventilation, doors, canopies, windows, and hardware — engineered for Middle Tennessee conditions.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://SpiderForce-Star.github.io/Stamps-Steel/accessories.html">
+  <meta name="theme-color" content="#0f172a">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+          colors: {
+            steel: {
+              50: '#f8fafc', 100: '#f1f5f9', 200: '#e2e8f0', 300: '#cbd5e1',
+              400: '#94a3b8', 500: '#64748b', 600: '#475569', 700: '#334155',
+              800: '#1e293b', 900: '#0f172a', 950: '#020617'
+            },
+            copper: {
+              50: '#fdf6ee', 100: '#f9ebdb', 200: '#f0d4b0', 300: '#e8b878',
+              400: '#e0a05a', 500: '#c97b3a', 600: '#b87333', 700: '#9a5f28', 800: '#7a4a1f'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    #mobile-menu { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+    #mobile-menu.open { max-height: 480px; }
+    .filter-btn.active {
+      background-color: #b87333;
+      color: #fff;
+      border-color: #b87333;
+    }
+    .product-card {
+      transition: box-shadow 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+    }
+    .product-card:hover {
+      border-color: #e0a05a;
+      box-shadow: 0 12px 28px -8px rgba(15, 23, 42, 0.14);
+    }
+    .product-card.hidden { display: none; }
+    .img-placeholder {
+      background: linear-gradient(145deg, #1e293b 0%, #334155 50%, #0f172a 100%);
+    }
+    .product-card img {
+      position: relative;
+      z-index: 1;
+    }
+    .product-img-fallback {
+      z-index: 0;
+    }
+    /* Sticky filter sits under nav (h-16 = 4rem) */
+    .filter-sticky { top: 4rem; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans antialiased">
+
+  <!-- NAV (matches home) -->
+  <nav class="bg-steel-950 text-white sticky top-0 z-50 shadow-xl border-b border-steel-800">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between items-center h-16 md:h-18">
+        <a href="index.html" class="flex items-center gap-3 group">
+          <img src="images/logo.jpg" alt="Stamps Steel" class="h-10 md:h-12 object-contain">
+        </a>
+        <div class="hidden md:flex items-center space-x-1 text-sm font-medium">
+          <a href="index.html#why" class="px-3 py-2 hover:text-copper-400 transition">Why Us</a>
+          <a href="index.html#solutions" class="px-3 py-2 hover:text-copper-400 transition">Solutions</a>
+          <a href="index.html#projects" class="px-3 py-2 hover:text-copper-400 transition">Projects</a>
+          <a href="index.html#process" class="px-3 py-2 hover:text-copper-400 transition">Process</a>
+          <a href="accessories.html" class="px-3 py-2 text-copper-400 font-semibold border-b-2 border-copper-500" aria-current="page">Accessories</a>
+          <a href="#quote" class="ml-2 bg-copper-600 hover:bg-copper-500 text-white px-5 py-2.5 rounded-lg font-semibold transition shadow-lg shadow-copper-900/30">Get Free Quote</a>
+        </div>
+        <div class="flex items-center gap-2 md:hidden">
+          <a href="#quote" class="bg-copper-600 text-white px-3 py-1.5 rounded-lg text-sm font-semibold">Quote</a>
+          <button id="menu-btn" class="p-2 text-slate-200" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="mobile-menu" class="md:hidden bg-steel-900 border-t border-steel-800">
+      <div class="px-4 py-3 space-y-1">
+        <a href="index.html#why" class="block py-3 px-3 rounded-lg hover:bg-steel-800">Why Us</a>
+        <a href="index.html#solutions" class="block py-3 px-3 rounded-lg hover:bg-steel-800">Solutions</a>
+        <a href="index.html#projects" class="block py-3 px-3 rounded-lg hover:bg-steel-800">Projects</a>
+        <a href="index.html#process" class="block py-3 px-3 rounded-lg hover:bg-steel-800">Process</a>
+        <a href="accessories.html" class="block py-3 px-3 rounded-lg bg-steel-800 text-copper-400 font-semibold" aria-current="page">Accessories</a>
+        <a href="#quote" class="block py-3 px-3 bg-copper-600 rounded-lg text-center font-semibold mt-2">Get Free Quote</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="relative bg-steel-950 text-white overflow-hidden">
+    <div class="absolute inset-0 opacity-40" aria-hidden="true"
+         style="background-image: linear-gradient(105deg, rgba(2,6,23,0.95) 0%, rgba(15,23,42,0.85) 55%, rgba(15,23,42,0.7) 100%), url('images/8.jpg'); background-size: cover; background-position: center;"></div>
+    <div class="relative max-w-7xl mx-auto px-4 py-16 sm:py-20 md:py-24">
+      <p class="text-copper-400 font-semibold tracking-widest uppercase text-sm mb-4">Complete Your Building</p>
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-black mb-5 leading-tight tracking-tight">Building Accessories</h1>
+      <p class="text-lg sm:text-xl text-slate-300 max-w-2xl mb-8 leading-relaxed">
+        High-performance ventilation, doors, canopies, windows, and hardware engineered for Middle Tennessee conditions.
+      </p>
+      <a href="#quote" class="inline-flex items-center justify-center bg-copper-600 hover:bg-copper-500 text-white px-8 py-4 rounded-xl font-bold text-lg transition shadow-xl shadow-copper-900/40">
+        Request Accessory Quote
+      </a>
+    </div>
+  </section>
+
+  <!-- CATEGORY FILTER (sticky under nav on desktop) -->
+  <div id="filter-bar" class="bg-white border-b border-slate-200 sticky filter-sticky z-40 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 py-3">
+      <div class="flex gap-2 overflow-x-auto pb-1 scrollbar-thin" role="tablist" aria-label="Product categories">
+        <button type="button" class="filter-btn active shrink-0 px-4 py-2 rounded-full text-sm font-semibold border border-copper-600 transition" data-filter="all">All</button>
+        <button type="button" class="filter-btn shrink-0 px-4 py-2 rounded-full text-sm font-semibold border border-slate-200 text-slate-700 hover:border-copper-400 hover:text-copper-700 transition" data-filter="ventilation">Ventilation</button>
+        <button type="button" class="filter-btn shrink-0 px-4 py-2 rounded-full text-sm font-semibold border border-slate-200 text-slate-700 hover:border-copper-400 hover:text-copper-700 transition" data-filter="canopies">Canopies</button>
+        <button type="button" class="filter-btn shrink-0 px-4 py-2 rounded-full text-sm font-semibold border border-slate-200 text-slate-700 hover:border-copper-400 hover:text-copper-700 transition" data-filter="doors">Doors</button>
+        <button type="button" class="filter-btn shrink-0 px-4 py-2 rounded-full text-sm font-semibold border border-slate-200 text-slate-700 hover:border-copper-400 hover:text-copper-700 transition" data-filter="windows">Windows</button>
+        <button type="button" class="filter-btn shrink-0 px-4 py-2 rounded-full text-sm font-semibold border border-slate-200 text-slate-700 hover:border-copper-400 hover:text-copper-700 transition" data-filter="roof-curbs">Roof Curbs</button>
+        <button type="button" class="filter-btn shrink-0 px-4 py-2 rounded-full text-sm font-semibold border border-slate-200 text-slate-700 hover:border-copper-400 hover:text-copper-700 transition" data-filter="hardware">Hardware</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRODUCT GRID -->
+  <main class="py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-4">
+      <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Continuous Ridge Vent -->
+        <article class="product-card bg-white rounded-2xl overflow-hidden border border-slate-200 flex flex-col" data-category="ventilation">
+          <div class="relative aspect-[4/3] img-placeholder overflow-hidden">
+            <span class="absolute inset-0 flex items-center justify-center text-slate-400 text-sm font-medium pointer-events-none product-img-fallback" aria-hidden="true">Photo coming soon</span>
+            <img src="images/ridge-vent-1.jpg" alt="Continuous ridge vent for metal buildings" class="w-full h-full object-cover" loading="lazy" width="600" height="450" onerror="this.classList.add('hidden')">
+            <span class="absolute top-3 right-3 z-10 bg-steel-900/80 text-white text-xs font-semibold px-2.5 py-1 rounded-full backdrop-blur">+1 more</span>
+          </div>
+          <div class="p-5 flex flex-col flex-1">
+            <h2 class="font-bold text-lg text-steel-900">Continuous Ridge Vent</h2>
+            <p class="text-sm text-slate-600 mt-2 leading-relaxed">Full-length ridge ventilation that exhausts heat and moisture along the entire roof peak for healthier, cooler buildings.</p>
+            <ul class="mt-3 space-y-1.5 text-sm text-slate-700 flex-1">
+              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Continuous peak exhaust for even airflow</li>
+              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Reduces condensation &amp; interior heat buildup</li>
+              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Weather-resistant design for TN storms</li>
+              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Matches most metal roof profiles</li>
+            </ul>
+            <div class="mt-5 flex flex-col sm:flex-row gap-2">
+              <button type="button" class="btn-3d flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl text-sm font-semibold border border-slate-300 text-slate-600 bg-white cursor-not-allowed opacity-90" title="Coming Soon" aria-disabled="true">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5"/></svg>
+                3D View – Coming Soon
+              </button>
+              <a href="#quote" class="quote-btn flex-1 inline-flex items-center justify-center px-3 py-2.5 rounded-xl text-sm font-semibold bg-copper-600 hover:bg-copper-500 text-white transition" data-product="Continuous Ridge Vent">Request Quote</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Low-Profile Roof Vent -->
+        <article class="product-card bg-white rounded-2xl overflow-hidden border border-slate-200 flex flex-col" data-category="ventilation">
+          <div class="relative aspect-[4/3] img-placeholder overflow-hidden">
+            <img src="images/low-profile-vent.jpg" alt="Low-profile roof vent" class="w-full h-full object-cover" loading="lazy" width="600" height="450" onerror="this.classList.add('hidden')">
+            <span class="absolute inset-0 flex items-center justify-center text-slate-400 text-sm font-medium pointer-events-none product-img-fallback" aria-hidden="true">Photo coming soon</span>
+          </div>
+          <div class="p-5 flex flex-col flex-1">
+            <h2 class="font-bold text-lg text-steel-900">Low-Profile Roof Vent</h2>
+            <p class="text-sm text-slate-600 mt-2 leading-relaxed">Compact roof-mounted vents that relieve attic and building heat without dominating the roofline.</p>
+            <ul class="mt-3 space-y-1.5 text-sm text-slate-700 flex-1">
+              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Low-profile silhouette, clean appearance</li>
+              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Point ventilation where you need it</li>
+              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Durable metal construction</li>
+              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Easy to pair with ridge or wall intake</li>
+            </ul>
+            <div class="mt-5 flex flex-col sm:flex-row gap-2">
+              <button type="button" class="btn-3d flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl text-sm font-semibold border border-slate-300 text-slate-600 bg-white cursor-not-allowed opacity-90" title="Coming Soon" aria-disabled="true">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5"/></svg>
+                3D View – Coming Soon
+              </button>
+              <a href="#quote" class="quote-btn flex-1 inline-flex items-center justify-center px-3 py-2.5 rounded-xl text-sm font-semibold bg-copper-600 hover:bg-copper-500 text-white transition" data-product="Low-Profile Roof Vent">Request Quote</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Metal Building Cupola -->
+        <article class="product-card bg-white rounded-2xl overflow-hidden border border-slate-200 flex flex-col" data-category="ventilation">
+          <div class="relative aspect-[4/3] img-placeholder overflow-hidden">
+            <img src="images/cupola.jpg" alt="Metal building cupola" class="w-full h-full object-cover" loading="lazy" width="600" height="450" onerror="this.classList.add('hidden')">
+            <span class="absolute inset-0 flex items-center justify-center text-slate-400 text-sm font-medium pointer-events-none product-img-fallback" aria-hidden="true">Photo coming soon</span>
+          </div>
+          <div class="p-5 flex flex-col flex-1">
+            <h2 class="font-bold text-lg text-steel-900">Metal Building Cupola</h2>
+            <p class="text-sm text-slate-600 mt-2 leading-relaxed">Classic peak-mounted cupolas that combine natural ventilation with a finished architectural look.</p>
+            <ul class="mt-3 space-y-1.5 text-sm text-slate-700 flex-1">
+              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Available in 2', 3', and 4' sizes</li>
+              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Natural stack-effect ventilation</li>
+              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Weather-sealed for metal roofs</li>
+              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Ideal for barns, shops &amp; arenas</li>
+            </ul>
+            <div class="mt-5 flex flex-col sm:flex-row gap-2">
+              <button type="button" class="btn-3d flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl text-sm font-semibold border border-slate-300 text-slate-600 bg-white cursor-not-allowed opacity-90" title="Coming Soon" aria-disabled="true">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5"/></svg>
+                3D View – Coming Soon
+              </button>
+              <a href="#quote" class="quote-btn flex-1 inline-flex items-center justify-center px-3 py-2.5 rounded-xl text-sm font-semibold bg-copper-600 hover:bg-copper-500 text-white transition" data-product="Metal Building Cupola">Request Quote</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Wall Louver -->
+        <article class="product-card bg-white rounded-2xl overflow-hidden border border-slate-200 flex flex-col" data-category="ventilation">
+          <div class="relative aspect-[4/3] img-placeholder overflow-hidden">
+            <img src="images/wall-louver.jpg" alt="Wall louver for metal buildings" class="w-full h-full object-cover" loading="lazy" width="600" height="450" onerror="this.classList.add('hidden')">
+            <span class="absolute inset-0 flex items-center justify-center text-slate-400 text-sm font-medium pointer-events-none product-img-fallback" aria-hidden="true">Photo coming soon</span>
+          </div>
+          <div class="p-5 flex flex-col flex-1">
+            <h2 class="font-bold text-lg text-steel-900">Wall Louver</h2>
+            <p class="text-sm text-slate-600 mt-2 leading-relaxed">Fixed or operable wall louvers that provide reliable intake air and weather protection for metal wall panels.</p>
+            <ul class="mt-3 space-y-1.5 text-sm text-slate-700 flex-1">
+              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Intake air for balanced ventilation</li>
+              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Weather-resistant blade design</li>
+              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Sizes to fit common panel openings</li>
+              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Complements ridge vents &amp; fans</li>
+            </ul>
+            <div class="mt-5 flex flex-col sm:flex-row gap-2">
+              <button type="button" class="btn-3d flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl text-sm font-semibold border border-slate-300 text-slate-600 bg-white cursor-not-allowed opacity-90" title="Coming Soon" aria-disabled="true">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5"/></svg>
+                3D View – Coming Soon
+              </button>
+              <a href="#quote" class="quote-btn flex-1 inline-flex items-center justify-center px-3 py-2.5 rounded-xl text-sm font-semibold bg-copper-600 hover:bg-copper-500 text-white transition" data-product="Wall Louver">Request Quote</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Wall Exhaust Fan -->
+        <article class="product-card bg-white rounded-2xl overflow-hidden border border-slate-200 flex flex-col" data-category="ventilation">
+          <div class="relative aspect-[4/3] img-placeholder overflow-hidden">
+            <img src="images/wall-fan.jpg" alt="Wall exhaust fan" class="w-full h-full object-cover" loading="lazy" width="600" height="450" onerror="this.classList.add('hidden')">
+            <span class="absolute inset-0 flex items-center justify-center text-slate-400 text-sm font-medium pointer-events-none product-img-fallback" aria-hidden="true">Photo coming soon</span>
+          </div>
+          <div class="p-5 flex flex-col flex-1">
+            <h2 class="font-bold text-lg text-steel-900">Wall Exhaust Fan</h2>
+            <p class="text-sm text-slate-600 mt-2 leading-relaxed">Powered wall fans that move large volumes of air for shops, livestock, and high-heat workspaces.</p>
+            <ul class="mt-3 space-y-1.5 text-sm text-slate-700 flex-1">
+              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> High-CFM exhaust for large bays</li>
+              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Designed for metal wall installs</li>
+              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Helps control humidity &amp; fumes</li>
+              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Pairs with intake louvers</li>
+            </ul>
+            <div class="mt-5 flex flex-col sm:flex-row gap-2">
+              <button type="button" class="btn-3d flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl text-sm font-semibold border border-slate-300 text-slate-600 bg-white cursor-not-allowed opacity-90" title="Coming Soon" aria-disabled="true">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5"/></svg>
+                3D View – Coming Soon
+              </button>
+              <a href="#quote" class="quote-btn flex-1 inline-flex items-center justify-center px-3 py-2.5 rounded-xl text-sm font-semibold bg-copper-600 hover:bg-copper-500 text-white transition" data-product="Wall Exhaust Fan">Request Quote</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Walk-Door Canopy -->
+        <article class="product-card bg-white rounded-2xl overflow-hidden border border-slate-200 flex flex-col" data-category="canopies">
+          <div class="relative aspect-[4/3] img-placeholder overflow-hidden">
+            <img src="images/walk-door-canopy.jpg" alt="Walk-door canopy" class="w-full h-full object-cover" loading="lazy" width="600" height="450" onerror="this.classList.add('hidden')">
+            <span class="absolute inset-0 flex items-center justify-center text-slate-400 text-sm font-medium pointer-events-none product-img-fallback" aria-hidden="true">Photo coming soon</span>
+          </div>
+          <div class="p-5 flex flex-col flex-1">
+            <h2 class="font-bold text-lg text-steel-900">Walk-Door Canopy</h2>
+            <p class="text-sm text-slate-600 mt-2 leading-relaxed">Compact overhead cover for personnel doors — keeps rain and sun off the entrance without a full lean-to.</p>
+            <ul class="mt-3 space-y-1.5 text-sm text-slate-700 flex-1">
+              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Sized for standard walk doors</li>
+              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Weather protection at the entry</li>
+              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Metal finish options to match building</li>
+              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Simple, durable mounting</li>
+            </ul>
+            <div class="mt-5 flex flex-col sm:flex-row gap-2">
+              <button type="button" class="btn-3d flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl text-sm font-semibold border border-slate-300 text-slate-600 bg-white cursor-not-allowed opacity-90" title="Coming Soon" aria-disabled="true">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5"/></svg>
+                3D View – Coming Soon
+              </button>
+              <a href="#quote" class="quote-btn flex-1 inline-flex items-center justify-center px-3 py-2.5 rounded-xl text-sm font-semibold bg-copper-600 hover:bg-copper-500 text-white transition" data-product="Walk-Door Canopy">Request Quote</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Corner Canopy -->
+        <article class="product-card bg-white rounded-2xl overflow-hidden border border-slate-200 flex flex-col" data-category="canopies">
+          <div class="relative aspect-[4/3] img-placeholder overflow-hidden">
+            <img src="images/corner-canopy.jpg" alt="Corner canopy for metal buildings" class="w-full h-full object-cover" loading="lazy" width="600" height="450" onerror="this.classList.add('hidden')">
+            <span class="absolute inset-0 flex items-center justify-center text-slate-400 text-sm font-medium pointer-events-none product-img-fallback" aria-hidden="true">Photo coming soon</span>
+          </div>
+          <div class="p-5 flex flex-col flex-1">
+            <h2 class="font-bold text-lg text-steel-900">Corner Canopy</h2>
+            <p class="text-sm text-slate-600 mt-2 leading-relaxed">Wraps a building corner for covered outdoor work space, equipment staging, or dual-entry protection.</p>
+            <ul class="mt-3 space-y-1.5 text-sm text-slate-700 flex-1">
+              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Two-side corner coverage</li>
+              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Great for staging &amp; outdoor work</li>
+              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Engineered for metal building attachment</li>
+              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Custom sizes available</li>
+            </ul>
+            <div class="mt-5 flex flex-col sm:flex-row gap-2">
+              <button type="button" class="btn-3d flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl text-sm font-semibold border border-slate-300 text-slate-600 bg-white cursor-not-allowed opacity-90" title="Coming Soon" aria-disabled="true">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5"/></svg>
+                3D View – Coming Soon
+              </button>
+              <a href="#quote" class="quote-btn flex-1 inline-flex items-center justify-center px-3 py-2.5 rounded-xl text-sm font-semibold bg-copper-600 hover:bg-copper-500 text-white transition" data-product="Corner Canopy">Request Quote</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Preassembled Walk Door -->
+        <article class="product-card bg-white rounded-2xl overflow-hidden border border-slate-200 flex flex-col" data-category="doors">
+          <div class="relative aspect-[4/3] img-placeholder overflow-hidden">
+            <img src="images/preassembled-door.jpg" alt="Preassembled walk door" class="w-full h-full object-cover" loading="lazy" width="600" height="450" onerror="this.classList.add('hidden')">
+            <span class="absolute inset-0 flex items-center justify-center text-slate-400 text-sm font-medium pointer-events-none product-img-fallback" aria-hidden="true">Photo coming soon</span>
+          </div>
+          <div class="p-5 flex flex-col flex-1">
+            <h2 class="font-bold text-lg text-steel-900">Preassembled Walk Door</h2>
+            <p class="text-sm text-slate-600 mt-2 leading-relaxed">Factory-assembled personnel doors ready for faster field install in metal building openings.</p>
+            <ul class="mt-3 space-y-1.5 text-sm text-slate-700 flex-1">
+              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Pre-hung, pre-assembled for speed</li>
+              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Built for metal building jambs</li>
+              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Common commercial sizes</li>
+              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Hardware packages available</li>
+            </ul>
+            <div class="mt-5 flex flex-col sm:flex-row gap-2">
+              <button type="button" class="btn-3d flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl text-sm font-semibold border border-slate-300 text-slate-600 bg-white cursor-not-allowed opacity-90" title="Coming Soon" aria-disabled="true">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5"/></svg>
+                3D View – Coming Soon
+              </button>
+              <a href="#quote" class="quote-btn flex-1 inline-flex items-center justify-center px-3 py-2.5 rounded-xl text-sm font-semibold bg-copper-600 hover:bg-copper-500 text-white transition" data-product="Preassembled Walk Door">Request Quote</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Knock-Down Walk Door -->
+        <article class="product-card bg-white rounded-2xl overflow-hidden border border-slate-200 flex flex-col" data-category="doors">
+          <div class="relative aspect-[4/3] img-placeholder overflow-hidden">
+            <img src="images/knockdown-door.jpg" alt="Knock-down walk door" class="w-full h-full object-cover" loading="lazy" width="600" height="450" onerror="this.classList.add('hidden')">
+            <span class="absolute inset-0 flex items-center justify-center text-slate-400 text-sm font-medium pointer-events-none product-img-fallback" aria-hidden="true">Photo coming soon</span>
+          </div>
+          <div class="p-5 flex flex-col flex-1">
+            <h2 class="font-bold text-lg text-steel-900">Knock-Down Walk Door</h2>
+            <p class="text-sm text-slate-600 mt-2 leading-relaxed">Ship-efficient knock-down personnel doors assembled on site — flexible and economical for many projects.</p>
+            <ul class="mt-3 space-y-1.5 text-sm text-slate-700 flex-1">
+              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Knock-down crate for easier shipping</li>
+              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Field assembly with standard tools</li>
+              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Cost-effective walk-door option</li>
+              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Compatible with metal building openings</li>
+            </ul>
+            <div class="mt-5 flex flex-col sm:flex-row gap-2">
+              <button type="button" class="btn-3d flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl text-sm font-semibold border border-slate-300 text-slate-600 bg-white cursor-not-allowed opacity-90" title="Coming Soon" aria-disabled="true">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5"/></svg>
+                3D View – Coming Soon
+              </button>
+              <a href="#quote" class="quote-btn flex-1 inline-flex items-center justify-center px-3 py-2.5 rounded-xl text-sm font-semibold bg-copper-600 hover:bg-copper-500 text-white transition" data-product="Knock-Down Walk Door">Request Quote</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Commercial Roll-Up Door -->
+        <article class="product-card bg-white rounded-2xl overflow-hidden border border-slate-200 flex flex-col" data-category="doors">
+          <div class="relative aspect-[4/3] img-placeholder overflow-hidden">
+            <img src="images/rollup-door.jpg" alt="Commercial roll-up door" class="w-full h-full object-cover" loading="lazy" width="600" height="450" onerror="this.classList.add('hidden')">
+            <span class="absolute inset-0 flex items-center justify-center text-slate-400 text-sm font-medium pointer-events-none product-img-fallback" aria-hidden="true">Photo coming soon</span>
+          </div>
+          <div class="p-5 flex flex-col flex-1">
+            <h2 class="font-bold text-lg text-steel-900">Commercial Roll-Up Door</h2>
+            <p class="text-sm text-slate-600 mt-2 leading-relaxed">Heavy-duty roll-up doors for vehicle, equipment, and service bays — built for daily commercial use.</p>
+            <ul class="mt-3 space-y-1.5 text-sm text-slate-700 flex-1">
+              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Wide range of widths &amp; heights</li>
+              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Manual or electric operation ready</li>
+              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Durable curtain &amp; guide systems</li>
+              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Ideal for shops, warehouses &amp; auto</li>
+            </ul>
+            <div class="mt-5 flex flex-col sm:flex-row gap-2">
+              <button type="button" class="btn-3d flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl text-sm font-semibold border border-slate-300 text-slate-600 bg-white cursor-not-allowed opacity-90" title="Coming Soon" aria-disabled="true">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5"/></svg>
+                3D View – Coming Soon
+              </button>
+              <a href="#quote" class="quote-btn flex-1 inline-flex items-center justify-center px-3 py-2.5 rounded-xl text-sm font-semibold bg-copper-600 hover:bg-copper-500 text-white transition" data-product="Commercial Roll-Up Door">Request Quote</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Electric Operator -->
+        <article class="product-card bg-white rounded-2xl overflow-hidden border border-slate-200 flex flex-col" data-category="doors">
+          <div class="relative aspect-[4/3] img-placeholder overflow-hidden">
+            <img src="images/electric-operator.jpg" alt="Electric operator for roll-up doors" class="w-full h-full object-cover" loading="lazy" width="600" height="450" onerror="this.classList.add('hidden')">
+            <span class="absolute inset-0 flex items-center justify-center text-slate-400 text-sm font-medium pointer-events-none product-img-fallback" aria-hidden="true">Photo coming soon</span>
+          </div>
+          <div class="p-5 flex flex-col flex-1">
+            <h2 class="font-bold text-lg text-steel-900">Electric Operator for Roll-Up Doors</h2>
+            <p class="text-sm text-slate-600 mt-2 leading-relaxed">Motorized operators that make heavy roll-up doors push-button simple for high-traffic bays.</p>
+            <ul class="mt-3 space-y-1.5 text-sm text-slate-700 flex-1">
+              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Electric open/close for roll-ups</li>
+              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Safer, faster bay access</li>
+              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Remote &amp; wall-control options</li>
+              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Sized to door weight &amp; cycles</li>
+            </ul>
+            <div class="mt-5 flex flex-col sm:flex-row gap-2">
+              <button type="button" class="btn-3d flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl text-sm font-semibold border border-slate-300 text-slate-600 bg-white cursor-not-allowed opacity-90" title="Coming Soon" aria-disabled="true">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5"/></svg>
+                3D View – Coming Soon
+              </button>
+              <a href="#quote" class="quote-btn flex-1 inline-flex items-center justify-center px-3 py-2.5 rounded-xl text-sm font-semibold bg-copper-600 hover:bg-copper-500 text-white transition" data-product="Electric Operator for Roll-Up Doors">Request Quote</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Thermal-Break Window -->
+        <article class="product-card bg-white rounded-2xl overflow-hidden border border-slate-200 flex flex-col" data-category="windows">
+          <div class="relative aspect-[4/3] img-placeholder overflow-hidden">
+            <img src="images/thermal-window.jpg" alt="Thermal-break window for metal buildings" class="w-full h-full object-cover" loading="lazy" width="600" height="450" onerror="this.classList.add('hidden')">
+            <span class="absolute inset-0 flex items-center justify-center text-slate-400 text-sm font-medium pointer-events-none product-img-fallback" aria-hidden="true">Photo coming soon</span>
+          </div>
+          <div class="p-5 flex flex-col flex-1">
+            <h2 class="font-bold text-lg text-steel-900">Thermal-Break Window for Metal Buildings</h2>
+            <p class="text-sm text-slate-600 mt-2 leading-relaxed">Energy-conscious windows with thermal-break frames designed for metal wall systems and Tennessee seasons.</p>
+            <ul class="mt-3 space-y-1.5 text-sm text-slate-700 flex-1">
+              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Thermal-break frame reduces heat transfer</li>
+              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Built for metal building wall panels</li>
+              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Natural light without excess heat gain</li>
+              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Multiple sizes &amp; glass options</li>
+            </ul>
+            <div class="mt-5 flex flex-col sm:flex-row gap-2">
+              <button type="button" class="btn-3d flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl text-sm font-semibold border border-slate-300 text-slate-600 bg-white cursor-not-allowed opacity-90" title="Coming Soon" aria-disabled="true">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5"/></svg>
+                3D View – Coming Soon
+              </button>
+              <a href="#quote" class="quote-btn flex-1 inline-flex items-center justify-center px-3 py-2.5 rounded-xl text-sm font-semibold bg-copper-600 hover:bg-copper-500 text-white transition" data-product="Thermal-Break Window for Metal Buildings">Request Quote</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Roof Curb -->
+        <article class="product-card bg-white rounded-2xl overflow-hidden border border-slate-200 flex flex-col" data-category="roof-curbs">
+          <div class="relative aspect-[4/3] img-placeholder overflow-hidden">
+            <img src="images/roof-curb.jpg" alt="Roof curb for metal buildings" class="w-full h-full object-cover" loading="lazy" width="600" height="450" onerror="this.classList.add('hidden')">
+            <span class="absolute inset-0 flex items-center justify-center text-slate-400 text-sm font-medium pointer-events-none product-img-fallback" aria-hidden="true">Photo coming soon</span>
+          </div>
+          <div class="p-5 flex flex-col flex-1">
+            <h2 class="font-bold text-lg text-steel-900">Roof Curb</h2>
+            <p class="text-sm text-slate-600 mt-2 leading-relaxed">Structural roof curbs for HVAC, vents, and equipment penetrations — sealed and framed for metal roof systems.</p>
+            <ul class="mt-3 space-y-1.5 text-sm text-slate-700 flex-1">
+              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Clean, watertight roof penetrations</li>
+              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Supports HVAC &amp; equipment mounts</li>
+              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Matched to metal roof profiles</li>
+              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Custom sizes for your project</li>
+            </ul>
+            <div class="mt-5 flex flex-col sm:flex-row gap-2">
+              <button type="button" class="btn-3d flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl text-sm font-semibold border border-slate-300 text-slate-600 bg-white cursor-not-allowed opacity-90" title="Coming Soon" aria-disabled="true">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5"/></svg>
+                3D View – Coming Soon
+              </button>
+              <a href="#quote" class="quote-btn flex-1 inline-flex items-center justify-center px-3 py-2.5 rounded-xl text-sm font-semibold bg-copper-600 hover:bg-copper-500 text-white transition" data-product="Roof Curb">Request Quote</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Commercial Grade 1 Door Hardware -->
+        <article class="product-card bg-white rounded-2xl overflow-hidden border border-slate-200 flex flex-col" data-category="hardware">
+          <div class="relative aspect-[4/3] img-placeholder overflow-hidden">
+            <img src="images/door-hardware.jpg" alt="Commercial Grade 1 door hardware" class="w-full h-full object-cover" loading="lazy" width="600" height="450" onerror="this.classList.add('hidden')">
+            <span class="absolute inset-0 flex items-center justify-center text-slate-400 text-sm font-medium pointer-events-none product-img-fallback" aria-hidden="true">Photo coming soon</span>
+          </div>
+          <div class="p-5 flex flex-col flex-1">
+            <h2 class="font-bold text-lg text-steel-900">Commercial Grade 1 Door Hardware</h2>
+            <p class="text-sm text-slate-600 mt-2 leading-relaxed">Heavy-duty Grade 1 locksets and hardware built for high-cycle commercial and industrial walk doors.</p>
+            <ul class="mt-3 space-y-1.5 text-sm text-slate-700 flex-1">
+              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Grade 1 commercial durability</li>
+              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> High-cycle use for busy entries</li>
+              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Lever &amp; lockset configurations</li>
+              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Fits standard commercial doors</li>
+            </ul>
+            <div class="mt-5 flex flex-col sm:flex-row gap-2">
+              <button type="button" class="btn-3d flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl text-sm font-semibold border border-slate-300 text-slate-600 bg-white cursor-not-allowed opacity-90" title="Coming Soon" aria-disabled="true">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5"/></svg>
+                3D View – Coming Soon
+              </button>
+              <a href="#quote" class="quote-btn flex-1 inline-flex items-center justify-center px-3 py-2.5 rounded-xl text-sm font-semibold bg-copper-600 hover:bg-copper-500 text-white transition" data-product="Commercial Grade 1 Door Hardware">Request Quote</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <p id="empty-state" class="hidden text-center text-slate-500 py-16">No products in this category.</p>
+    </div>
+  </main>
+
+  <!-- BOTTOM CTA -->
+  <section class="bg-steel-950 text-white py-14 md:py-16">
+    <div class="max-w-3xl mx-auto px-4 text-center">
+      <h2 class="text-2xl sm:text-3xl font-black mb-4">Need help selecting the right accessories?</h2>
+      <p class="text-slate-300 mb-8">Our team can match ventilation, doors, canopies, and hardware to your building and Middle Tennessee conditions.</p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 mb-8 text-sm sm:text-base">
+        <a href="tel:+16156298217" class="text-copper-400 hover:text-copper-300 font-semibold transition">(615) 629-8217</a>
+        <span class="hidden sm:inline text-slate-600">|</span>
+        <a href="mailto:info@stampssteel.com" class="text-copper-400 hover:text-copper-300 font-semibold transition">info@stampssteel.com</a>
+      </div>
+      <a href="#quote" class="inline-flex items-center justify-center bg-copper-600 hover:bg-copper-500 text-white px-8 py-3.5 rounded-xl font-bold transition shadow-lg shadow-copper-900/30">
+        Get Free Quote
+      </a>
+    </div>
+  </section>
+
+  <!-- QUOTE FORM -->
+  <section id="quote" class="py-16 md:py-20 bg-slate-50">
+    <div class="max-w-2xl mx-auto px-4">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl md:text-4xl font-black mb-3">Request Accessory Quote</h2>
+        <p class="text-slate-600">Tell us what you need. We’ll respond promptly — no pressure.</p>
+      </div>
+      <div class="bg-white rounded-2xl shadow-xl p-6 md:p-8 border border-slate-100">
+        <form action="mailto:info@stampssteel.com" method="POST" enctype="text/plain" class="space-y-5">
+          <div class="grid sm:grid-cols-2 gap-5">
+            <div>
+              <label class="block text-sm font-semibold mb-1.5">Name *</label>
+              <input type="text" name="name" required class="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-copper-500 focus:border-copper-500 outline-none transition" placeholder="Your name">
+            </div>
+            <div>
+              <label class="block text-sm font-semibold mb-1.5">Phone</label>
+              <input type="tel" name="phone" class="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-copper-500 focus:border-copper-500 outline-none transition" placeholder="(615) 555-0123">
+            </div>
+          </div>
+          <div>
+            <label class="block text-sm font-semibold mb-1.5">Email *</label>
+            <input type="email" name="email" required class="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-copper-500 focus:border-copper-500 outline-none transition" placeholder="you@email.com">
+          </div>
+          <div>
+            <label class="block text-sm font-semibold mb-1.5">Accessory / Product</label>
+            <input type="text" name="product" id="quote-product" class="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-copper-500 focus:border-copper-500 outline-none transition" placeholder="e.g. Continuous Ridge Vent, Roll-Up Door">
+          </div>
+          <div>
+            <label class="block text-sm font-semibold mb-1.5">Details / Quantities / Location</label>
+            <textarea name="details" rows="4" class="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-copper-500 focus:border-copper-500 outline-none transition" placeholder="Quantities, sizes, building type, site location, or any special requirements..."></textarea>
+          </div>
+          <button type="submit" class="w-full bg-copper-600 hover:bg-copper-500 text-white font-bold py-4 rounded-xl text-lg transition shadow-lg shadow-copper-900/20">Send Quote Request</button>
+        </form>
+        <p class="text-center text-sm text-slate-500 mt-6">
+          <a href="mailto:info@stampssteel.com" class="hover:text-copper-600">info@stampssteel.com</a>
+          &nbsp;•&nbsp;
+          <a href="tel:+16156298217" class="hover:text-copper-600">(615) 629-8217</a>
+          &nbsp;•&nbsp; Bethpage, TN 37022
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-steel-950 text-slate-400 py-12 border-t border-steel-800">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex flex-col items-center text-center">
+        <img src="images/logo.jpg" alt="Stamps Steel Buildings" class="h-14 object-contain mb-5">
+        <p class="text-sm text-slate-300 mb-1">Custom Pre-Engineered Metal Buildings</p>
+        <p class="text-sm mb-4">Bethpage, Middle Tennessee</p>
+        <p class="text-sm mb-1">
+          <a href="tel:+16156298217" class="hover:text-copper-400 transition font-medium">(615) 629-8217</a>
+        </p>
+        <p class="text-sm mb-6">
+          <a href="mailto:info@stampssteel.com" class="hover:text-copper-400 transition font-medium">info@stampssteel.com</a>
+        </p>
+        <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 mb-6 text-sm">
+          <a href="index.html#why" class="hover:text-copper-400 transition">Why Us</a>
+          <a href="index.html#solutions" class="hover:text-copper-400 transition">Solutions</a>
+          <a href="index.html#projects" class="hover:text-copper-400 transition">Projects</a>
+          <a href="accessories.html" class="hover:text-copper-400 transition">Accessories</a>
+          <a href="#quote" class="hover:text-copper-400 transition">Get Free Quote</a>
+        </div>
+        <div class="flex justify-center gap-6 mb-6">
+          <a href="https://www.facebook.com/profile.php?id=61592282766064" target="_blank" rel="noopener noreferrer" class="hover:text-copper-400 transition font-medium">Facebook</a>
+          <a href="https://www.instagram.com/stampssteel/" target="_blank" rel="noopener noreferrer" class="hover:text-copper-400 transition font-medium">Instagram</a>
+        </div>
+        <p class="text-xs text-slate-500">© 2026 Stamps Steel Buildings. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    if (btn && menu) {
+      btn.addEventListener('click', () => {
+        menu.classList.toggle('open');
+        btn.setAttribute('aria-expanded', menu.classList.contains('open'));
+      });
+      menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+        menu.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+      }));
+    }
+
+    // Category filters
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.product-card');
+    const empty = document.getElementById('empty-state');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filter = btn.dataset.filter;
+        filterBtns.forEach(b => {
+          b.classList.remove('active');
+          b.classList.add('border-slate-200', 'text-slate-700');
+        });
+        btn.classList.add('active');
+        btn.classList.remove('border-slate-200', 'text-slate-700');
+
+        let visible = 0;
+        cards.forEach(card => {
+          const match = filter === 'all' || card.dataset.category === filter;
+          card.classList.toggle('hidden', !match);
+          if (match) visible++;
+        });
+        if (empty) empty.classList.toggle('hidden', visible > 0);
+      });
+    });
+
+    // Pre-fill quote product from card CTA
+    const productInput = document.getElementById('quote-product');
+    document.querySelectorAll('.quote-btn').forEach(link => {
+      link.addEventListener('click', () => {
+        if (productInput && link.dataset.product) {
+          productInput.value = link.dataset.product;
+        }
+      });
+    });
+
+    // Hide "Photo coming soon" when real image loads
+    document.querySelectorAll('.product-card img').forEach(img => {
+      const fallback = img.parentElement.querySelector('.product-img-fallback');
+      const hideFallback = () => {
+        if (fallback && img.complete && img.naturalWidth > 0) {
+          fallback.classList.add('hidden');
+          img.classList.remove('hidden');
+        }
+      };
+      img.addEventListener('load', hideFallback);
+      hideFallback();
+      img.addEventListener('error', () => {
+        img.classList.add('hidden');
+        if (fallback) fallback.classList.remove('hidden');
+      });
+    });
+  </script>
+</body>
+</html>
