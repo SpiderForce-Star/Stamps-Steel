@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Panel Types &amp; Colors | Stamps Steel Buildings – Bethpage, Middle Tennessee</title>
-  <meta name="description" content="Metal roof and wall panel profiles and finish colors for Stamps Steel PEBs. PBR, R-Panel, multi-rib, standing seam, and more — materials aligned with industry systems from Ascent Buildings, Central States, and MBCI.">
-  <meta name="keywords" content="metal building panels, PBR panel, R-panel, standing seam, metal roof colors, Middle Tennessee, Stamps Steel">
+  <meta name="description" content="Real metal roof and wall panel profiles from Ascent Buildings, Central States, and MBCI — PBR/R-Loc, multi-rib, 7.2, standing seam, and commercial colors for Middle Tennessee PEBs.">
+  <meta name="keywords" content="metal building panels, PBR panel, R-Loc, standing seam, MBCI, Central States, Ascent Buildings, metal roof colors, Middle Tennessee">
   <meta property="og:title" content="Panel Types &amp; Colors | Stamps Steel Buildings">
-  <meta property="og:description" content="Choose roof and wall panel profiles and colors for your custom pre-engineered metal building.">
+  <meta property="og:description" content="Manufacturer panel profile views and colors for custom pre-engineered metal buildings.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://SpiderForce-Star.github.io/Stamps-Steel/panels.html">
   <meta name="theme-color" content="#0f172a">
@@ -39,13 +39,9 @@
     html { scroll-behavior: smooth; }
     #mobile-menu { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
     #mobile-menu.open { max-height: 560px; }
-    .filter-btn.active {
-      background-color: #b87333;
-      color: #fff;
-      border-color: #b87333;
-    }
+    .filter-btn.active { background-color: #b87333; color: #fff; border-color: #b87333; }
     .panel-card, .color-swatch {
-      transition: box-shadow 0.25s ease, border-color 0.25s ease, transform 0.2s ease;
+      transition: box-shadow 0.25s ease, border-color 0.25s ease;
     }
     .panel-card:hover, .color-swatch:hover {
       border-color: #e0a05a;
@@ -53,7 +49,9 @@
     }
     .panel-card.hidden { display: none; }
     .filter-sticky { top: 4rem; }
-    .profile-svg { width: 100%; height: auto; display: block; }
+    #lightbox { display: none; }
+    #lightbox.open { display: flex; }
+    .panel-img-area { background: linear-gradient(180deg, #f8fafc 0%, #e2e8f0 100%); }
   </style>
 </head>
 <body class="bg-slate-50 text-slate-900 font-sans antialiased">
@@ -97,20 +95,13 @@
 
   <!-- HERO -->
   <section class="relative bg-steel-950 text-white overflow-hidden">
-    <div class="absolute inset-0 opacity-35" aria-hidden="true"
-         style="background-image: linear-gradient(105deg, rgba(2,6,23,0.95) 0%, rgba(15,23,42,0.85) 55%, rgba(15,23,42,0.7) 100%), url('images/1.jpg'); background-size: cover; background-position: center;"></div>
+    <div class="absolute inset-0 opacity-30" aria-hidden="true"
+         style="background-image: linear-gradient(105deg, rgba(2,6,23,0.95) 0%, rgba(15,23,42,0.85) 55%, rgba(15,23,42,0.7) 100%), url('images/panels/csm-panellocplus-header.jpg'); background-size: cover; background-position: center;"></div>
     <div class="relative max-w-7xl mx-auto px-4 py-16 sm:py-20 md:py-24">
       <p class="text-copper-400 font-semibold tracking-widest uppercase text-sm mb-4">Roof &amp; Wall Systems</p>
       <h1 class="text-4xl sm:text-5xl md:text-6xl font-black mb-5 leading-tight tracking-tight">Panel Types &amp; Colors</h1>
       <p class="text-lg sm:text-xl text-slate-300 max-w-2xl mb-6 leading-relaxed">
-        Choose commercial-grade exposed-fastener and standing-seam profiles, then finish with durable painted or Galvalume® options engineered for Middle Tennessee weather.
-      </p>
-      <p class="text-sm text-slate-400 max-w-2xl mb-8 leading-relaxed">
-        Stamps Steel sources PEB materials and metal panels through established industry channels, including systems and component families associated with
-        <strong class="text-slate-300">Ascent Buildings</strong>,
-        <strong class="text-slate-300">Central States Manufacturing</strong>, and
-        <strong class="text-slate-300">MBCI</strong>.
-        Exact gauges, color names, and warranties are confirmed on your quote.
+        Real manufacturer profile views — not sketches. Commercial PEB panels sourced through Ascent Buildings, Central States Manufacturing, and MBCI.
       </p>
       <div class="flex flex-col sm:flex-row gap-3">
         <a href="#profiles" class="inline-flex justify-center items-center bg-copper-600 hover:bg-copper-500 text-white px-7 py-3.5 rounded-xl font-bold transition shadow-xl shadow-copper-900/40">Browse Profiles</a>
@@ -119,28 +110,29 @@
     </div>
   </section>
 
-  <!-- SOURCING NOTE -->
+  <!-- SOURCES -->
   <section class="py-8 bg-white border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-4">
-      <div class="grid md:grid-cols-3 gap-6 text-center md:text-left">
-        <div class="rounded-xl border border-slate-100 p-5">
-          <p class="text-xs font-semibold uppercase tracking-wide text-copper-600 mb-1">PEB Systems</p>
+      <div class="grid md:grid-cols-3 gap-6">
+        <a href="https://ascentbuildings.com/commercial-wall-panels/" target="_blank" rel="noopener noreferrer" class="rounded-xl border border-slate-100 p-5 hover:border-copper-300 transition block">
+          <p class="text-xs font-semibold uppercase tracking-wide text-copper-600 mb-1">PEB manufacturer · Portland, TN</p>
           <h2 class="font-bold text-steel-900 mb-1">Ascent Buildings</h2>
-          <p class="text-sm text-slate-600 leading-relaxed">Commercial pre-engineered building systems and secondary — the structural backbone your panels attach to.</p>
-        </div>
-        <div class="rounded-xl border border-slate-100 p-5">
-          <p class="text-xs font-semibold uppercase tracking-wide text-copper-600 mb-1">Roof &amp; Wall Panels</p>
+          <p class="text-sm text-slate-600 leading-relaxed">R-Loc (PBR), M-Loc, and 7.2 data sheets &amp; product photography used on this page.</p>
+        </a>
+        <a href="https://centralstatesco.com/products/metal-roofing/" target="_blank" rel="noopener noreferrer" class="rounded-xl border border-slate-100 p-5 hover:border-copper-300 transition block">
+          <p class="text-xs font-semibold uppercase tracking-wide text-copper-600 mb-1">Metal panels nationwide</p>
           <h2 class="font-bold text-steel-900 mb-1">Central States</h2>
-          <p class="text-sm text-slate-600 leading-relaxed">Exposed-fastener lines (e.g. R-Loc / PBR-style, multi-rib) and standing-seam families widely used on shops, barns, and commercial work.</p>
-        </div>
-        <div class="rounded-xl border border-slate-100 p-5">
-          <p class="text-xs font-semibold uppercase tracking-wide text-copper-600 mb-1">Profiles &amp; Finishes</p>
+          <p class="text-sm text-slate-600 leading-relaxed">R-Loc, Panel-Loc Plus, M-Loc, Central Snap standing seam — published specs and application photos.</p>
+        </a>
+        <a href="https://www.mbci.com/products/" target="_blank" rel="noopener noreferrer" class="rounded-xl border border-slate-100 p-5 hover:border-copper-300 transition block">
+          <p class="text-xs font-semibold uppercase tracking-wide text-copper-600 mb-1">90+ roof &amp; wall profiles</p>
           <h2 class="font-bold text-steel-900 mb-1">MBCI</h2>
-          <p class="text-sm text-slate-600 leading-relaxed">Extensive structural and architectural panel catalog — PBR, R-Panel, standing seam, and specialty wall systems with broad color options.</p>
-        </div>
+          <p class="text-sm text-slate-600 leading-relaxed">PBR, PBU, 7.2, MasterRib, LokSeam, Double-Lok, Ultra-Dek — 3D panel views and product renders.</p>
+        </a>
       </div>
       <p class="text-xs text-slate-500 mt-6 text-center max-w-3xl mx-auto">
-        Brand names identify common industry material sources. Stamps Steel is an independent private-label / broker company. Product availability, trademarks, and warranties belong to their respective manufacturers. We help you select the right profile and finish for your project and quote accordingly.
+        Profile images and specifications are drawn from publicly published manufacturer materials for selection guidance.
+        Stamps Steel is an independent private-label / broker. Trade names and warranties belong to their respective owners. Confirm current gauges, colors, and warranties on your quote.
       </p>
     </div>
   </section>
@@ -152,7 +144,7 @@
         <button type="button" class="filter-btn active shrink-0 px-4 py-2 rounded-full text-sm font-semibold border border-copper-600 transition" data-filter="all">All Profiles</button>
         <button type="button" class="filter-btn shrink-0 px-4 py-2 rounded-full text-sm font-semibold border border-slate-200 text-slate-700 hover:border-copper-400 transition" data-filter="exposed">Exposed Fastener</button>
         <button type="button" class="filter-btn shrink-0 px-4 py-2 rounded-full text-sm font-semibold border border-slate-200 text-slate-700 hover:border-copper-400 transition" data-filter="standing">Standing Seam</button>
-        <button type="button" class="filter-btn shrink-0 px-4 py-2 rounded-full text-sm font-semibold border border-slate-200 text-slate-700 hover:border-copper-400 transition" data-filter="wall">Wall Specialty</button>
+        <button type="button" class="filter-btn shrink-0 px-4 py-2 rounded-full text-sm font-semibold border border-slate-200 text-slate-700 hover:border-copper-400 transition" data-filter="wall">Wall / Specialty</button>
       </div>
     </div>
   </div>
@@ -161,197 +153,11 @@
   <section id="profiles" class="py-12 md:py-16">
     <div class="max-w-7xl mx-auto px-4">
       <div class="mb-10">
-        <p class="text-sm font-semibold text-copper-600 uppercase tracking-wide mb-2">Profiles</p>
+        <p class="text-sm font-semibold text-copper-600 uppercase tracking-wide mb-2">Manufacturer profiles</p>
         <h2 class="text-3xl md:text-4xl font-black mb-3">Panel Types</h2>
-        <p class="text-slate-600 max-w-2xl">Typical commercial PEB roof and wall profiles. Specs below are industry-standard ranges used for selection — final gauge, coverage, and slope limits depend on the manufacturer package on your order.</p>
+        <p class="text-slate-600 max-w-2xl">Click any photo for a larger view. Specs below match published manufacturer data (Ascent, Central States, MBCI). Interactive 3D links open MBCI’s panel viewers when available.</p>
       </div>
-
-      <div id="panel-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-
-        <!-- PBR -->
-        <article class="panel-card bg-white rounded-2xl overflow-hidden border border-slate-200 flex flex-col" data-category="exposed">
-          <div class="bg-slate-100 border-b border-slate-200 p-4">
-            <svg class="profile-svg" viewBox="0 0 360 80" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path d="M0 60 L0 40 L20 40 L30 15 L50 15 L60 40 L100 40 L110 15 L130 15 L140 40 L180 40 L190 15 L210 15 L220 40 L260 40 L270 15 L290 15 L300 40 L340 40 L350 15 L360 15 L360 60 Z" fill="#94a3b8" stroke="#475569" stroke-width="1.5"/>
-              <text x="180" y="75" text-anchor="middle" font-size="10" fill="#64748b" font-family="system-ui">~36&quot; coverage · 1¼&quot; ribs</text>
-            </svg>
-          </div>
-          <div class="p-5 flex flex-col flex-1">
-            <div class="flex items-start justify-between gap-2 mb-1">
-              <h3 class="font-bold text-lg">PBR / R-Loc Style</h3>
-              <span class="text-[10px] font-semibold uppercase tracking-wide bg-copper-100 text-copper-700 px-2 py-0.5 rounded-full shrink-0">Most popular</span>
-            </div>
-            <p class="text-sm text-slate-600 leading-relaxed mb-3">Purlin-bearing rib (PBR) exposed-fastener panel — the workhorse for commercial and agricultural PEBs. Used for roofs and walls; installable vertically or horizontally.</p>
-            <ul class="text-sm text-slate-700 space-y-1.5 flex-1">
-              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> ~36&quot; coverage; tall ribs with purlin-bearing leg</li>
-              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Common gauges: 26 painted; 26/24 Galvalume®</li>
-              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Roof &amp; wall; typical min. roof slope ~½:12</li>
-              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Strong panel-to-panel overlap for commercial loads</li>
-            </ul>
-            <p class="text-xs text-slate-500 mt-3">Industry references: Central States R-Loc®, MBCI PBR</p>
-          </div>
-        </article>
-
-        <!-- R-Panel -->
-        <article class="panel-card bg-white rounded-2xl overflow-hidden border border-slate-200 flex flex-col" data-category="exposed">
-          <div class="bg-slate-100 border-b border-slate-200 p-4">
-            <svg class="profile-svg" viewBox="0 0 360 80" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path d="M0 60 L0 40 L25 40 L35 18 L55 18 L65 40 L105 40 L115 18 L135 18 L145 40 L185 40 L195 18 L215 18 L225 40 L265 40 L275 18 L295 18 L305 40 L345 40 L360 40 L360 60 Z" fill="#94a3b8" stroke="#475569" stroke-width="1.5"/>
-              <text x="180" y="75" text-anchor="middle" font-size="10" fill="#64748b" font-family="system-ui">R-Panel look · exposed fasteners</text>
-            </svg>
-          </div>
-          <div class="p-5 flex flex-col flex-1">
-            <h3 class="font-bold text-lg mb-1">R-Panel</h3>
-            <p class="text-sm text-slate-600 leading-relaxed mb-3">Classic exposed-fastener profile with a clean ribbed look for agricultural, industrial, and commercial roofs and walls. Economical and widely available.</p>
-            <ul class="text-sm text-slate-700 space-y-1.5 flex-1">
-              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Similar appearance family to PBR (overlap detail varies)</li>
-              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Excellent value for shops, barns, and warehouses</li>
-              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Painted and Galvalume® finishes</li>
-              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Roof and wall applications</li>
-            </ul>
-            <p class="text-xs text-slate-500 mt-3">Industry references: MBCI R-Panel / related exposed-fastener lines</p>
-          </div>
-        </article>
-
-        <!-- Multi-rib / Panel-Loc style -->
-        <article class="panel-card bg-white rounded-2xl overflow-hidden border border-slate-200 flex flex-col" data-category="exposed">
-          <div class="bg-slate-100 border-b border-slate-200 p-4">
-            <svg class="profile-svg" viewBox="0 0 360 80" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path d="M0 60 L0 42
-                L15 42 L22 28 L32 28 L39 42
-                L54 42 L61 28 L71 28 L78 42
-                L93 42 L100 28 L110 28 L117 42
-                L132 42 L139 28 L149 28 L156 42
-                L171 42 L178 28 L188 28 L195 42
-                L210 42 L217 28 L227 28 L234 42
-                L249 42 L256 28 L266 28 L273 42
-                L288 42 L295 28 L305 28 L312 42
-                L327 42 L334 28 L344 28 L351 42
-                L360 42 L360 60 Z" fill="#94a3b8" stroke="#475569" stroke-width="1.2"/>
-              <text x="180" y="75" text-anchor="middle" font-size="10" fill="#64748b" font-family="system-ui">Multi-rib / low-rib post-frame style</text>
-            </svg>
-          </div>
-          <div class="p-5 flex flex-col flex-1">
-            <h3 class="font-bold text-lg mb-1">Multi-Rib / Panel-Loc Style</h3>
-            <p class="text-sm text-slate-600 leading-relaxed mb-3">Popular low- to mid-rib exposed-fastener panels for versatile roof and wall applications — strong aesthetics at a competitive price point.</p>
-            <ul class="text-sm text-slate-700 space-y-1.5 flex-1">
-              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Versatile coverage for residential-scale and light commercial</li>
-              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Often specified with SMP paint systems</li>
-              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Optional striations for flat-area stiffness</li>
-              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Roof, wall, and accent applications</li>
-            </ul>
-            <p class="text-xs text-slate-500 mt-3">Industry references: Central States Panel-Loc® / Panel-Loc Plus®, M-Loc®</p>
-          </div>
-        </article>
-
-        <!-- Standing Seam Snap -->
-        <article class="panel-card bg-white rounded-2xl overflow-hidden border border-slate-200 flex flex-col" data-category="standing">
-          <div class="bg-slate-100 border-b border-slate-200 p-4">
-            <svg class="profile-svg" viewBox="0 0 360 80" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path d="M0 60 L0 45 L40 45 L40 18 L48 12 L56 18 L56 45 L120 45 L120 18 L128 12 L136 18 L136 45 L200 45 L200 18 L208 12 L216 18 L216 45 L280 45 L280 18 L288 12 L296 18 L296 45 L360 45 L360 60 Z" fill="#94a3b8" stroke="#475569" stroke-width="1.5"/>
-              <text x="180" y="75" text-anchor="middle" font-size="10" fill="#64748b" font-family="system-ui">Concealed fastener · vertical legs</text>
-            </svg>
-          </div>
-          <div class="p-5 flex flex-col flex-1">
-            <h3 class="font-bold text-lg mb-1">Standing Seam — Snap-Lock</h3>
-            <p class="text-sm text-slate-600 leading-relaxed mb-3">Architectural roof system with concealed fasteners and raised vertical seams. Clean lines for commercial and higher-end shop exteriors.</p>
-            <ul class="text-sm text-slate-700 space-y-1.5 flex-1">
-              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Concealed clips / snap engagement (system-specific)</li>
-              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Improved weather performance vs. exposed fastener</li>
-              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Common 24-ga painted architectural finishes</li>
-              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Slope requirements vary by system</li>
-            </ul>
-            <p class="text-xs text-slate-500 mt-3">Industry references: Central States Central Snap® / similar; MBCI snap systems</p>
-          </div>
-        </article>
-
-        <!-- Standing Seam Mechanical -->
-        <article class="panel-card bg-white rounded-2xl overflow-hidden border border-slate-200 flex flex-col" data-category="standing">
-          <div class="bg-slate-100 border-b border-slate-200 p-4">
-            <svg class="profile-svg" viewBox="0 0 360 80" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path d="M0 60 L0 45 L50 45 L50 20 L55 10 L65 10 L70 20 L70 45 L140 45 L140 20 L145 10 L155 10 L160 20 L160 45 L230 45 L230 20 L235 10 L245 10 L250 20 L250 45 L320 45 L320 20 L325 10 L335 10 L340 20 L340 45 L360 45 L360 60 Z" fill="#94a3b8" stroke="#475569" stroke-width="1.5"/>
-              <text x="180" y="75" text-anchor="middle" font-size="10" fill="#64748b" font-family="system-ui">Mechanically seamed · low slope capable</text>
-            </svg>
-          </div>
-          <div class="p-5 flex flex-col flex-1">
-            <h3 class="font-bold text-lg mb-1">Standing Seam — Mechanically Seamed</h3>
-            <p class="text-sm text-slate-600 leading-relaxed mb-3">Field-seamed systems for superior weather-tight performance on lower slopes and high-performance commercial roofs.</p>
-            <ul class="text-sm text-slate-700 space-y-1.5 flex-1">
-              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Single- or double-lock seaming (system-specific)</li>
-              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Preferred for low-slope commercial applications</li>
-              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Structural clip attachment for thermal movement</li>
-              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Long service life with proper detailing</li>
-            </ul>
-            <p class="text-xs text-slate-500 mt-3">Industry references: Central Seam Plus® / Central-Loc® families; MBCI Double-Lok® &amp; related</p>
-          </div>
-        </article>
-
-        <!-- 7.2 / wall specialty -->
-        <article class="panel-card bg-white rounded-2xl overflow-hidden border border-slate-200 flex flex-col" data-category="wall">
-          <div class="bg-slate-100 border-b border-slate-200 p-4">
-            <svg class="profile-svg" viewBox="0 0 360 80" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path d="M0 60 L0 50
-                L0 50 L25 20 L50 50 L75 20 L100 50 L125 20 L150 50 L175 20 L200 50 L225 20 L250 50 L275 20 L300 50 L325 20 L350 50 L360 50 L360 60 Z" fill="#94a3b8" stroke="#475569" stroke-width="1.5"/>
-              <text x="180" y="75" text-anchor="middle" font-size="10" fill="#64748b" font-family="system-ui">Deep rib · wall / liner applications</text>
-            </svg>
-          </div>
-          <div class="p-5 flex flex-col flex-1">
-            <h3 class="font-bold text-lg mb-1">7.2 &amp; Deep-Rib Wall Panels</h3>
-            <p class="text-sm text-slate-600 leading-relaxed mb-3">Deep-corrugation wall and liner panels for industrial aesthetics, strength, and economical coverage on large wall planes.</p>
-            <ul class="text-sm text-slate-700 space-y-1.5 flex-1">
-              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Distinctive industrial profile</li>
-              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Strong spanning characteristics</li>
-              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Wall, partition, and select roof uses by product</li>
-              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Painted and metallic finishes</li>
-            </ul>
-            <p class="text-xs text-slate-500 mt-3">Industry references: Central States 7.2 Panel; comparable MBCI deep-rib walls</p>
-          </div>
-        </article>
-
-        <!-- Board & Batten -->
-        <article class="panel-card bg-white rounded-2xl overflow-hidden border border-slate-200 flex flex-col" data-category="wall">
-          <div class="bg-slate-100 border-b border-slate-200 p-4">
-            <svg class="profile-svg" viewBox="0 0 360 80" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <rect x="0" y="35" width="360" height="25" fill="#94a3b8" stroke="#475569" stroke-width="1"/>
-              <rect x="50" y="18" width="14" height="42" fill="#64748b" stroke="#334155" stroke-width="1"/>
-              <rect x="140" y="18" width="14" height="42" fill="#64748b" stroke="#334155" stroke-width="1"/>
-              <rect x="230" y="18" width="14" height="42" fill="#64748b" stroke="#334155" stroke-width="1"/>
-              <rect x="320" y="18" width="14" height="42" fill="#64748b" stroke="#334155" stroke-width="1"/>
-              <text x="180" y="75" text-anchor="middle" font-size="10" fill="#64748b" font-family="system-ui">Board &amp; batten vertical accent</text>
-            </svg>
-          </div>
-          <div class="p-5 flex flex-col flex-1">
-            <h3 class="font-bold text-lg mb-1">Board &amp; Batten</h3>
-            <p class="text-sm text-slate-600 leading-relaxed mb-3">Vertical accent siding for modern shops, offices, and storefronts — pairs well with PBR field panels and standing-seam roofs.</p>
-            <ul class="text-sm text-slate-700 space-y-1.5 flex-1">
-              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Architectural wall aesthetic</li>
-              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Great for office ends and entry façades</li>
-              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Coordinate colors with roof and trim</li>
-              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Metal durability with residential-style look</li>
-            </ul>
-            <p class="text-xs text-slate-500 mt-3">Industry references: Central States Board &amp; Batten; similar MBCI wall systems</p>
-          </div>
-        </article>
-
-        <!-- Galvalume note card -->
-        <article class="panel-card bg-white rounded-2xl overflow-hidden border border-slate-200 flex flex-col" data-category="exposed">
-          <div class="bg-gradient-to-br from-slate-200 via-slate-100 to-zinc-300 border-b border-slate-200 p-6 min-h-[120px] flex items-center justify-center">
-            <p class="text-sm font-semibold text-steel-700 tracking-wide">Acrylic Galvalume® / Bare Metallic</p>
-          </div>
-          <div class="p-5 flex flex-col flex-1">
-            <h3 class="font-bold text-lg mb-1">Unpainted Metallic Finish</h3>
-            <p class="text-sm text-slate-600 leading-relaxed mb-3">Galvalume® substrate without color coat — bright metallic look, excellent corrosion resistance, and a classic commercial PEB appearance.</p>
-            <ul class="text-sm text-slate-700 space-y-1.5 flex-1">
-              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Often 24- or 26-gauge acrylic-coated Galvalume®</li>
-              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Popular on agricultural and industrial roofs</li>
-              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> No chalk/fade color warranty (substrate warranties apply)</li>
-              <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> Pairs with painted walls or full metallic envelope</li>
-            </ul>
-            <p class="text-xs text-slate-500 mt-3">Available on many Central States and MBCI structural panels</p>
-          </div>
-        </article>
-
-      </div>
+      <div id="panel-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
       <p id="empty-panels" class="hidden text-center text-slate-500 py-12">No profiles in this category.</p>
     </div>
   </section>
@@ -362,51 +168,46 @@
       <div class="mb-10 text-center max-w-2xl mx-auto">
         <p class="text-sm font-semibold text-copper-600 uppercase tracking-wide mb-2">Finishes</p>
         <h2 class="text-3xl md:text-4xl font-black mb-3">Standard Color Palette</h2>
-        <p class="text-slate-600">Common commercial metal building finish colors used across major panel manufacturers. Swatches are approximate for screen viewing — always approve a physical sample or manufacturer color chart before final selection. Availability varies by gauge, paint system (e.g. SMP / PVDF), and mill.</p>
+        <p class="text-slate-600">Common commercial colors across manufacturer charts (names vary slightly by brand). Screen swatches are approximate — approve a physical sample before final selection.</p>
       </div>
-
-      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4" id="color-grid">
-        <!-- filled by JS for consistency -->
-      </div>
-
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4" id="color-grid"></div>
       <div class="mt-10 grid md:grid-cols-2 gap-6">
         <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6">
           <h3 class="font-bold text-lg mb-2">Paint systems</h3>
           <ul class="text-sm text-slate-600 space-y-2 leading-relaxed">
-            <li><strong class="text-steel-800">SMP</strong> — Siliconized polyester; strong everyday commercial performance and color selection.</li>
-            <li><strong class="text-steel-800">PVDF (Kynar-type)</strong> — Premium architectural chalk/fade resistance for high-visibility projects.</li>
-            <li><strong class="text-steel-800">Galvalume®</strong> — Unpainted metallic substrate with excellent corrosion resistance.</li>
+            <li><strong class="text-steel-800">SMP</strong> — Siliconized polyester; common commercial everyday performance (e.g. Central States / MBCI Signature 200-class).</li>
+            <li><strong class="text-steel-800">PVDF / Fluropon</strong> — Premium chalk/fade resistance for high-visibility roofs (e.g. Central Snap, architectural standing seam).</li>
+            <li><strong class="text-steel-800">Galvalume® Plus</strong> — Unpainted metallic substrate; excellent corrosion resistance.</li>
           </ul>
         </div>
         <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6">
-          <h3 class="font-bold text-lg mb-2">How we help you choose</h3>
+          <h3 class="font-bold text-lg mb-2">Manufacturer color tools</h3>
           <ul class="text-sm text-slate-600 space-y-2 leading-relaxed">
-            <li>Match roof, wall, and trim for a cohesive exterior.</li>
-            <li>Consider Middle Tennessee sun exposure and heat on dark roofs.</li>
-            <li>Coordinate with doors, canopies, and accessory finishes.</li>
-            <li>Confirm current manufacturer color charts on your quote.</li>
+            <li><a class="text-copper-600 font-semibold hover:underline" href="https://visualizer.centralstatesco.com/" target="_blank" rel="noopener">Central States visualizer</a> — see colors on a building photo.</li>
+            <li><a class="text-copper-600 font-semibold hover:underline" href="https://www.mbci.com/products/pbr/" target="_blank" rel="noopener">MBCI product color charts</a> — per-profile availability.</li>
+            <li>Ascent color selection confirmed with your Stamps Steel quote for Middle Tennessee packages.</li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SELECTION TIPS -->
+  <!-- GUIDE -->
   <section class="py-12 md:py-16 bg-slate-100">
     <div class="max-w-7xl mx-auto px-4">
       <h2 class="text-2xl md:text-3xl font-black mb-8 text-center">Quick Selection Guide</h2>
       <div class="grid md:grid-cols-3 gap-6">
         <div class="bg-white rounded-2xl p-6 border border-slate-200">
           <h3 class="font-bold text-copper-600 mb-2">Shops &amp; Garages</h3>
-          <p class="text-sm text-slate-600 leading-relaxed">PBR or multi-rib roof + wall is the most common package. Light Stone or Polar White walls with a contrasting roof (Charcoal, Burnished Slate, or Galvalume®) keep the look sharp and practical.</p>
+          <p class="text-sm text-slate-600 leading-relaxed">PBR / R-Loc roof + wall is the most common package. Light Stone or Polar White walls with Charcoal, Burnished Slate, or Galvalume® roofs stay practical and sharp.</p>
         </div>
         <div class="bg-white rounded-2xl p-6 border border-slate-200">
           <h3 class="font-bold text-copper-600 mb-2">Agricultural</h3>
-          <p class="text-sm text-slate-600 leading-relaxed">PBR / R-Panel with Galvalume® or Forest/Hunter green remains a regional favorite. Focus on durability, ventilation, and clear-span utility over architectural detail.</p>
+          <p class="text-sm text-slate-600 leading-relaxed">R-Loc / PBR or multi-rib with Galvalume® or Hunter/Forest green. Prioritize durability, ventilation, and clear-span utility.</p>
         </div>
         <div class="bg-white rounded-2xl p-6 border border-slate-200">
           <h3 class="font-bold text-copper-600 mb-2">Commercial / Auto</h3>
-          <p class="text-sm text-slate-600 leading-relaxed">PBR field panels with optional standing-seam roof or board-and-batten office accents. Medium Bronze, Slate Gray, and Black read professional for street-facing façades.</p>
+          <p class="text-sm text-slate-600 leading-relaxed">PBR field panels with optional standing seam (Double-Lok / Ultra-Dek / LokSeam) or accent walls. Medium Bronze, slate grays, and black read professional.</p>
         </div>
       </div>
     </div>
@@ -430,7 +231,7 @@
     <div class="max-w-2xl mx-auto px-4">
       <div class="text-center mb-10">
         <h2 class="text-3xl md:text-4xl font-black mb-3">Request a Panel &amp; Color Quote</h2>
-        <p class="text-slate-600">Share your preferences — no pressure. We’ll follow up with options for Middle Tennessee conditions.</p>
+        <p class="text-slate-600">Share your preferences — no pressure.</p>
       </div>
       <div class="bg-white rounded-2xl shadow-xl p-6 md:p-8 border border-slate-100">
         <form action="mailto:info@stampssteel.com" method="POST" enctype="text/plain" class="space-y-5">
@@ -453,13 +254,13 @@
               <label class="block text-sm font-semibold mb-1.5" for="panel_type">Preferred Panel</label>
               <select id="panel_type" name="panel_type" class="w-full px-4 py-3 border border-slate-200 rounded-xl bg-white focus:ring-2 focus:ring-copper-500 outline-none">
                 <option value="">Select...</option>
-                <option>PBR / R-Loc style</option>
-                <option>R-Panel</option>
-                <option>Multi-Rib / Panel-Loc style</option>
-                <option>Standing Seam — Snap-Lock</option>
-                <option>Standing Seam — Mechanically Seamed</option>
-                <option>7.2 / Deep-Rib Wall</option>
-                <option>Board &amp; Batten</option>
+                <option>PBR / R-Loc</option>
+                <option>PBU</option>
+                <option>Multi-Rib / M-Loc / Panel-Loc Plus / MasterRib</option>
+                <option>7.2 Panel</option>
+                <option>Standing Seam — Snap (LokSeam / Central Snap)</option>
+                <option>Standing Seam — Mechanically Seamed (Double-Lok)</option>
+                <option>Standing Seam — Trapezoidal Snap (Ultra-Dek)</option>
                 <option>Not sure — recommend</option>
               </select>
             </div>
@@ -503,14 +304,181 @@
           <a href="https://www.facebook.com/profile.php?id=61592282766064" target="_blank" rel="noopener noreferrer" class="hover:text-copper-400 transition font-medium">Facebook</a>
           <a href="https://www.instagram.com/stampssteel/" target="_blank" rel="noopener noreferrer" class="hover:text-copper-400 transition font-medium">Instagram</a>
         </div>
-        <p class="text-xs text-slate-500 max-w-xl mb-3">Ascent Buildings, Central States Manufacturing, MBCI, and product trade names are property of their respective owners. Stamps Steel is independent and sources materials through industry channels.</p>
+        <p class="text-xs text-slate-500 max-w-xl mb-3">Ascent Buildings, Central States Manufacturing, MBCI, Galvalume®, and product trade names are property of their respective owners. Profile imagery used for educational product selection. Stamps Steel is independent.</p>
         <p class="text-xs text-slate-500">© 2026 Stamps Steel Buildings. All rights reserved.</p>
       </div>
     </div>
   </footer>
 
+  <!-- LIGHTBOX -->
+  <div id="lightbox" class="fixed inset-0 z-[100] bg-steel-950/90 items-center justify-center p-4" role="dialog" aria-modal="true" aria-label="Panel profile image">
+    <button type="button" id="lightbox-close" class="absolute top-4 right-4 text-white/80 hover:text-white p-2 text-2xl leading-none" aria-label="Close">&times;</button>
+    <button type="button" id="lightbox-prev" class="absolute left-2 sm:left-6 text-white/80 hover:text-white p-3 text-3xl" aria-label="Previous">‹</button>
+    <img id="lightbox-img" src="" alt="" class="max-h-[85vh] max-w-full object-contain rounded-lg shadow-2xl bg-white">
+    <button type="button" id="lightbox-next" class="absolute right-2 sm:right-6 text-white/80 hover:text-white p-3 text-3xl" aria-label="Next">›</button>
+    <p id="lightbox-caption" class="absolute bottom-6 left-0 right-0 text-center text-white/80 text-sm px-4"></p>
+  </div>
+
   <script>
-    // Color palette — approximate screen swatches for common commercial metal colors
+    /**
+     * Panel catalog — images & specs from public manufacturer materials:
+     * Ascent Buildings, Central States Manufacturing, MBCI.
+     */
+    const PANELS = [
+      {
+        category: 'exposed',
+        name: 'PBR / R-Loc',
+        badge: 'Most popular',
+        desc: 'Purlin-bearing rib (PBR) exposed-fastener panel — the commercial PEB workhorse for roofs and walls. Known as R-Loc at Ascent and Central States; PBR at MBCI.',
+        specs: [
+          'Coverage ~36″ · rib height 1-1/4″ · ribs ~12″ o.c.',
+          'Min. roof slope 1/2:12 (published commercial standard)',
+          'Gauges commonly 26 painted; 26/24 Galvalume®',
+          'Roof & wall; vertical or horizontal install',
+          'Purlin-bearing leg for stronger lap connection'
+        ],
+        images: [
+          'images/panels/ascent-rloc.jpg',
+          'images/panels/mbci-pbr-profile.jpg',
+          'images/panels/mbci-pbr-double.jpg'
+        ],
+        sources: 'Ascent R-Loc photo · MBCI PBR 3D renders',
+        links: [
+          { label: 'Ascent R-Loc data sheet', href: 'images/panels/ascent-rloc-datasheet.pdf' },
+          { label: 'MBCI 3D PBR view', href: 'https://viral3d.com/V3D/PBR-Panel-v3/PBR-Panel-v3.html' },
+          { label: 'Central States R-Loc', href: 'https://centralstatesco.com/products/metal-roofing/r-loc/' }
+        ]
+      },
+      {
+        category: 'exposed',
+        name: 'PBU',
+        desc: 'Lower-profile exposed-fastener panel with a softer look than PBR — versatile and cost-efficient for roof and wall applications.',
+        specs: [
+          'Coverage 36″ · rib height 3/4″ · ribs ~6″ o.c.',
+          'Min. roof slope 1:12 (MBCI published)',
+          'Gauge 26 standard; 24/22 optional',
+          'Through-fastened over purlins or joists',
+          'Install vertically or horizontally'
+        ],
+        images: [
+          'images/panels/mbci-pbu.jpg',
+          'images/panels/mbci-pbu-panel.webp'
+        ],
+        sources: 'MBCI PBU product renders',
+        links: [
+          { label: 'MBCI 3D PBU view', href: 'https://viral3d.com/V3D/panels/PBU-Panel/PBU-Panel.html' },
+          { label: 'MBCI PBU page', href: 'https://www.mbci.com/products/pbu/' }
+        ]
+      },
+      {
+        category: 'exposed',
+        name: 'Multi-Rib / M-Loc / Panel-Loc Plus / MasterRib',
+        desc: 'Popular low- to mid-rib exposed panels for residential-scale, agricultural, and light commercial work. Includes Ascent M-Loc, Central States Panel-Loc Plus, and MBCI MasterRib families.',
+        specs: [
+          'Typical coverage 36″ · rib height ~3/4″',
+          'Panel-Loc Plus: ribs ~9″ o.c.; min. slope 2-1/2:12',
+          'MasterRib: 9″ o.c.; min. slope 3:12; 29/26 ga',
+          'Extra striations on many multi-rib products for stiffness',
+          'Roof, wall, liner, soffit, and related uses'
+        ],
+        images: [
+          'images/panels/ascent-mloc.jpg',
+          'images/panels/mbci-masterrib-profile.jpg',
+          'images/panels/csm-panellocplus-header.jpg'
+        ],
+        sources: 'Ascent M-Loc · MBCI MasterRib · Central States application photo',
+        links: [
+          { label: 'Ascent M-Loc data sheet', href: 'images/panels/ascent-mloc-datasheet.pdf' },
+          { label: 'Central States Panel-Loc Plus', href: 'https://centralstatesco.com/products/metal-roofing/panel-loc-plus/' },
+          { label: 'MBCI MasterRib 3D', href: 'https://viral3d.com/V3D/panels/Stormproof-Panel/Stormproof-Panel.html' }
+        ]
+      },
+      {
+        category: 'wall',
+        name: '7.2 Panel',
+        desc: 'Deep symmetrical rib panel for commercial and industrial walls, canopies, and carports. Excellent spanning and a classic industrial look — offered by Ascent and MBCI.',
+        specs: [
+          'Coverage 36″ (Ascent also lists 28.8″ option)',
+          'Rib spacing 7.2″ o.c. · rib height ~1-1/2″',
+          'Min. roof slope 1/2:12 when used as roof (MBCI)',
+          'Gauges: Ascent 24/26; MBCI 24 standard / 22 optional',
+          'Horizontal or vertical wall install'
+        ],
+        images: [
+          'images/panels/ascent-72.jpg',
+          'images/panels/mbci-72-profile.jpg',
+          'images/panels/mbci-72-double.jpg'
+        ],
+        sources: 'Ascent 7.2 photo · MBCI 7.2 3D renders',
+        links: [
+          { label: 'Ascent 7.2 data sheet', href: 'images/panels/ascent-72-datasheet.pdf' },
+          { label: 'MBCI 3D 7.2 view', href: 'https://viral3d.com/V3D/panels/7-2-Panel-v3/7-2-Panel-v3.html' },
+          { label: 'Ascent wall panels', href: 'https://ascentbuildings.com/commercial-wall-panels/' }
+        ]
+      },
+      {
+        category: 'standing',
+        name: 'Standing Seam — Snap-Lock',
+        desc: 'Concealed-fastener vertical-leg standing seam that snaps together — no field seaming. Architectural look for commercial and light commercial roofs (MBCI LokSeam® · Central States Central Snap®).',
+        specs: [
+          'LokSeam: 1-3/4″ rib; widths 12″ / 16″ / 18″; min. slope 3:12',
+          'Central Snap: 1-3/4″ rib; 16″ or 18″ coverage; min. slope 1:12',
+          'Snap-together joint; factory sealant on many systems',
+          'Install over open framing or solid deck (system-specific)',
+          'Premium Fluropon / PVDF finish options common'
+        ],
+        images: [
+          'images/panels/mbci-lokseam-profile.jpg'
+        ],
+        sources: 'MBCI LokSeam product render',
+        links: [
+          { label: 'MBCI LokSeam 3D', href: 'https://viral3d.com/V3D/panels/LokSeam-Striated-Panel/LokSeam-Striated-Panel.html' },
+          { label: 'MBCI LokSeam page', href: 'https://www.mbci.com/products/lokseam/' },
+          { label: 'Central States Central Snap', href: 'https://centralstatesco.com/products/metal-roofing/central-snap/' }
+        ]
+      },
+      {
+        category: 'standing',
+        name: 'Standing Seam — Mechanically Seamed',
+        desc: 'Field-seamed trapezoidal standing seam for high-performance commercial roofs and low-slope applications (MBCI Double-Lok®).',
+        specs: [
+          'Coverage widths 18″ and 24″',
+          'Min. roof slope 1/4:12',
+          'Mechanically field-seamed; concealed clips',
+          'Gauges 22 and 24 typical',
+          'Also used in retrofit over existing R-panel roofs'
+        ],
+        images: [
+          'images/panels/mbci-doublelok-profile.jpg'
+        ],
+        sources: 'MBCI Double-Lok product render',
+        links: [
+          { label: 'MBCI Double-Lok 3D', href: 'https://viral3d.com/V3D/panels/DoubleLok-Panel/DoubleLok-Panel.html' },
+          { label: 'MBCI Double-Lok page', href: 'https://www.mbci.com/products/double-lok/' }
+        ]
+      },
+      {
+        category: 'standing',
+        name: 'Standing Seam — Trapezoidal Snap',
+        desc: 'Snap-together trapezoidal-leg standing seam with air leakage and water penetration test approvals (MBCI Ultra-Dek®).',
+        specs: [
+          'Coverage widths 18″ and 24″',
+          'Min. roof slope 1/4:12',
+          'Snap-together trapezoidal leg system',
+          'Gauge 24 standard; 22 optional',
+          'Industrial, commercial, and architectural applications'
+        ],
+        images: [
+          'images/panels/mbci-ultradek.jpg'
+        ],
+        sources: 'MBCI Ultra-Dek product render',
+        links: [
+          { label: 'MBCI Ultra-Dek 3D', href: 'https://viral3d.com/V3D/panels/UltraDek-Panel/UltraDek-Panel.html' },
+          { label: 'MBCI Ultra-Dek page', href: 'https://www.mbci.com/products/ultra-dek/' }
+        ]
+      }
+    ];
+
     const COLORS = [
       { name: 'Polar White', hex: '#f5f5f0', note: 'Cool bright white' },
       { name: 'Bone White', hex: '#e8e4d9', note: 'Soft warm white' },
@@ -534,37 +502,83 @@
       { name: 'Galvalume®', hex: '#c8cdd3', note: 'Unpainted metallic', metallic: true }
     ];
 
-    const colorGrid = document.getElementById('color-grid');
+    function esc(s) {
+      return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+    }
+
+    const grid = document.getElementById('panel-grid');
+    const empty = document.getElementById('empty-panels');
+    const panelType = document.getElementById('panel_type');
     const colorPref = document.getElementById('color_pref');
 
-    colorGrid.innerHTML = COLORS.map(c => {
-      const bg = c.metallic
-        ? 'background: linear-gradient(135deg,#c8cdd3 0%,#e8eaed 35%,#9ca3af 55%,#d1d5db 100%);'
-        : `background-color: ${c.hex};`;
-      const border = (c.hex === '#f5f5f0' || c.hex === '#e8e4d9') ? 'border-slate-300' : 'border-slate-200';
-      return `
-        <button type="button" class="color-swatch text-left rounded-xl border ${border} overflow-hidden bg-white group"
-                data-color="${c.name.replace(/"/g, '')}" aria-label="Select ${c.name}">
-          <div class="h-20 sm:h-24 border-b border-slate-100" style="${bg}"></div>
-          <div class="p-3">
-            <div class="font-semibold text-sm text-steel-900 group-hover:text-copper-700 transition">${c.name}</div>
-            <div class="text-xs text-slate-500 mt-0.5">${c.note}</div>
-          </div>
-        </button>`;
-    }).join('');
+    function renderPanels() {
+      grid.innerHTML = PANELS.map(p => {
+        const imgs = p.images || [];
+        const more = Math.max(0, imgs.length - 1);
+        const gallery = esc(JSON.stringify(imgs));
+        const main = imgs[0] || '';
+        const specs = p.specs.map(s => `<li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> ${esc(s)}</li>`).join('');
+        const links = (p.links || []).map(l =>
+          `<a href="${esc(l.href)}" target="_blank" rel="noopener" class="text-xs font-semibold text-copper-600 hover:text-copper-700 hover:underline">${esc(l.label)} →</a>`
+        ).join('');
+        const badge = p.badge
+          ? `<span class="text-[10px] font-semibold uppercase tracking-wide bg-copper-100 text-copper-700 px-2 py-0.5 rounded-full shrink-0">${esc(p.badge)}</span>`
+          : '';
 
-    colorGrid.querySelectorAll('.color-swatch').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const name = btn.dataset.color;
-        if (!colorPref) return;
-        if (!colorPref.value) colorPref.value = name;
-        else if (!colorPref.value.includes(name)) colorPref.value += (colorPref.value.endsWith(', ') || colorPref.value.endsWith(',') ? ' ' : ', ') + name;
-        colorPref.focus();
+        return `
+        <article class="panel-card bg-white rounded-2xl overflow-hidden border border-slate-200 flex flex-col" data-category="${esc(p.category)}">
+          <button type="button" class="gallery-open panel-img-area relative w-full aspect-[16/10] overflow-hidden border-b border-slate-200 block text-left"
+                  data-gallery='${gallery}' data-title="${esc(p.name)}" aria-label="View profile photos of ${esc(p.name)}">
+            <img src="${esc(main)}" alt="${esc(p.name)} panel profile" class="w-full h-full object-contain p-2" loading="lazy" width="730" height="415">
+            ${more ? `<span class="absolute top-3 right-3 z-10 bg-steel-900/85 text-white text-xs font-semibold px-2.5 py-1 rounded-full">+${more} views</span>` : ''}
+          </button>
+          <div class="p-5 flex flex-col flex-1">
+            <div class="flex items-start justify-between gap-2 mb-1">
+              <h3 class="font-bold text-lg leading-snug">${esc(p.name)}</h3>
+              ${badge}
+            </div>
+            <p class="text-sm text-slate-600 leading-relaxed mb-3">${esc(p.desc)}</p>
+            <ul class="text-sm text-slate-700 space-y-1.5 flex-1">${specs}</ul>
+            <p class="text-[11px] text-slate-400 mt-3">${esc(p.sources || '')}</p>
+            <div class="mt-2 flex flex-col gap-1">${links}</div>
+            <button type="button" class="quote-pref mt-4 w-full inline-flex justify-center items-center px-3 py-2.5 rounded-xl text-sm font-semibold bg-copper-600 hover:bg-copper-500 text-white transition"
+                    data-product="${esc(p.name)}">Request Quote for This Panel</button>
+          </div>
+        </article>`;
+      }).join('');
+      bindPanelEvents();
+    }
+
+    function bindPanelEvents() {
+      document.querySelectorAll('.quote-pref').forEach(btn => {
+        btn.addEventListener('click', () => {
+          if (panelType) {
+            const name = btn.dataset.product;
+            const opt = [...panelType.options].find(o => o.value.includes(name.split('—')[0].trim().split('/')[0].trim()) || name.includes(o.value.split('/')[0].trim()));
+            // Best effort: set free text via selecting closest or first matching
+            for (const o of panelType.options) {
+              if (o.value && (name.includes(o.value.split('—')[0].trim()) || o.value.includes(name.split('/')[0].trim().slice(0, 6)))) {
+                panelType.value = o.value;
+                break;
+              }
+            }
+            if (!panelType.value && panelType.options.length) {
+              // leave select; still scroll
+            }
+          }
+          document.getElementById('quote')?.scrollIntoView({ behavior: 'smooth' });
+        });
       });
-    });
+      document.querySelectorAll('.gallery-open').forEach(btn => {
+        btn.addEventListener('click', () => {
+          let g = [];
+          try { g = JSON.parse(btn.getAttribute('data-gallery') || '[]'); } catch (e) {}
+          openLightbox(g, 0, btn.dataset.title || '');
+        });
+      });
+    }
 
     // Filters
-    const empty = document.getElementById('empty-panels');
     document.querySelectorAll('.filter-btn').forEach(btn => {
       btn.addEventListener('click', () => {
         const filter = btn.dataset.filter;
@@ -584,6 +598,31 @@
       });
     });
 
+    // Colors
+    const colorGrid = document.getElementById('color-grid');
+    colorGrid.innerHTML = COLORS.map(c => {
+      const bg = c.metallic
+        ? 'background: linear-gradient(135deg,#c8cdd3 0%,#e8eaed 35%,#9ca3af 55%,#d1d5db 100%);'
+        : `background-color: ${c.hex};`;
+      const border = (c.hex === '#f5f5f0' || c.hex === '#e8e4d9') ? 'border-slate-300' : 'border-slate-200';
+      return `<button type="button" class="color-swatch text-left rounded-xl border ${border} overflow-hidden bg-white group" data-color="${esc(c.name)}">
+        <div class="h-20 sm:h-24 border-b border-slate-100" style="${bg}"></div>
+        <div class="p-3">
+          <div class="font-semibold text-sm text-steel-900 group-hover:text-copper-700 transition">${esc(c.name)}</div>
+          <div class="text-xs text-slate-500 mt-0.5">${esc(c.note)}</div>
+        </div>
+      </button>`;
+    }).join('');
+    colorGrid.querySelectorAll('.color-swatch').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const name = btn.dataset.color;
+        if (!colorPref) return;
+        if (!colorPref.value) colorPref.value = name;
+        else if (!colorPref.value.includes(name)) colorPref.value += ', ' + name;
+        colorPref.focus();
+      });
+    });
+
     // Mobile menu
     const menuBtn = document.getElementById('menu-btn');
     const menu = document.getElementById('mobile-menu');
@@ -597,6 +636,42 @@
         menuBtn.setAttribute('aria-expanded', 'false');
       }));
     }
+
+    // Lightbox
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+    let lbGallery = [], lbIndex = 0, lbTitle = '';
+    function openLightbox(gallery, index, title) {
+      if (!gallery.length) return;
+      lbGallery = gallery; lbIndex = index; lbTitle = title;
+      updateLightbox();
+      lightbox.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+      lightbox.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    function updateLightbox() {
+      lightboxImg.src = lbGallery[lbIndex];
+      lightboxImg.alt = lbTitle;
+      lightboxCaption.textContent = lbGallery.length > 1 ? `${lbTitle} (${lbIndex + 1} / ${lbGallery.length})` : lbTitle;
+    }
+    function lbNext() { if (!lbGallery.length) return; lbIndex = (lbIndex + 1) % lbGallery.length; updateLightbox(); }
+    function lbPrev() { if (!lbGallery.length) return; lbIndex = (lbIndex - 1 + lbGallery.length) % lbGallery.length; updateLightbox(); }
+    document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
+    document.getElementById('lightbox-next').addEventListener('click', lbNext);
+    document.getElementById('lightbox-prev').addEventListener('click', lbPrev);
+    lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+    document.addEventListener('keydown', e => {
+      if (!lightbox.classList.contains('open')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowRight') lbNext();
+      if (e.key === 'ArrowLeft') lbPrev();
+    });
+
+    renderPanels();
   </script>
 </body>
 </html>
