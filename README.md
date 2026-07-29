@@ -22,8 +22,9 @@ Modern, visual, locally focused website for **Stamps Steel Buildings** — a pri
 
 | File | Description |
 |------|-------------|
-| `index.html` | Home — hero video, Why Us, Solutions, Projects, Process, Accessories teaser, About, Free Quote, footer |
+| `index.html` | Home — hero video, Why Us, Solutions, Projects, Process, Panels teaser, Accessories teaser, About, Free Quote, footer |
 | `accessories.html` | Product catalog — filters, 14 accessories, 3D placeholders, quote form |
+| `panels.html` | Panel types & colors — PBR, multi-rib, standing seam, wall specialty; color palette; materials channels (Ascent / Central States / MBCI) |
 
 **Stack:** Pure HTML + Tailwind CDN · no build step · mobile-first · GitHub Pages
 

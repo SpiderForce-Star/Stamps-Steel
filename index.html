@@ -44,7 +44,7 @@
     .hero-overlay { position: absolute; inset: 0; background: linear-gradient(105deg, rgba(2,6,23,0.92) 0%, rgba(15,23,42,0.65) 50%, rgba(15,23,42,0.4) 100%); z-index: 1; }
     .hero-content { position: relative; z-index: 2; }
     #mobile-menu { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
-    #mobile-menu.open { max-height: 520px; }
+    #mobile-menu.open { max-height: 560px; }
     .copper-gradient {
       background: linear-gradient(135deg, #e0a05a 0%, #c97b3a 50%, #b87333 100%);
       -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
@@ -87,15 +87,16 @@
         <a href="index.html" class="flex items-center gap-3 shrink-0">
           <img src="images/logo.jpg" alt="Stamps Steel Buildings" class="h-10 md:h-12 object-contain">
         </a>
-        <div class="hidden md:flex items-center space-x-1 text-sm font-medium">
-          <a href="#why" class="px-3 py-2 hover:text-copper-400 transition">Why Us</a>
-          <a href="#solutions" class="px-3 py-2 hover:text-copper-400 transition">Solutions</a>
-          <a href="#projects" class="px-3 py-2 hover:text-copper-400 transition">Projects</a>
-          <a href="#process" class="px-3 py-2 hover:text-copper-400 transition">Process</a>
-          <a href="accessories.html" class="px-3 py-2 hover:text-copper-400 transition">Accessories</a>
-          <a href="#contact" class="ml-2 bg-copper-600 hover:bg-copper-500 text-white px-5 py-2.5 rounded-lg font-semibold transition shadow-lg shadow-copper-900/30">Get Free Quote</a>
+        <div class="hidden lg:flex items-center space-x-1 text-sm font-medium">
+          <a href="#why" class="px-2.5 py-2 hover:text-copper-400 transition">Why Us</a>
+          <a href="#solutions" class="px-2.5 py-2 hover:text-copper-400 transition">Solutions</a>
+          <a href="#projects" class="px-2.5 py-2 hover:text-copper-400 transition">Projects</a>
+          <a href="#process" class="px-2.5 py-2 hover:text-copper-400 transition">Process</a>
+          <a href="accessories.html" class="px-2.5 py-2 hover:text-copper-400 transition">Accessories</a>
+          <a href="panels.html" class="px-2.5 py-2 hover:text-copper-400 transition">Panels &amp; Colors</a>
+          <a href="#contact" class="ml-2 bg-copper-600 hover:bg-copper-500 text-white px-4 py-2.5 rounded-lg font-semibold transition shadow-lg shadow-copper-900/30">Get Free Quote</a>
         </div>
-        <div class="flex items-center gap-2 md:hidden">
+        <div class="flex items-center gap-2 lg:hidden">
           <a href="#contact" class="bg-copper-600 text-white px-3 py-1.5 rounded-lg text-sm font-semibold">Quote</a>
           <button id="menu-btn" class="p-2 text-slate-200" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
@@ -103,13 +104,14 @@
         </div>
       </div>
     </div>
-    <div id="mobile-menu" class="md:hidden bg-steel-900 border-t border-steel-800">
+    <div id="mobile-menu" class="lg:hidden bg-steel-900 border-t border-steel-800">
       <div class="px-4 py-3 space-y-1 text-sm font-medium">
         <a href="#why" class="block py-3 px-3 rounded-lg hover:bg-steel-800">Why Us</a>
         <a href="#solutions" class="block py-3 px-3 rounded-lg hover:bg-steel-800">Solutions</a>
         <a href="#projects" class="block py-3 px-3 rounded-lg hover:bg-steel-800">Projects</a>
         <a href="#process" class="block py-3 px-3 rounded-lg hover:bg-steel-800">Process</a>
         <a href="accessories.html" class="block py-3 px-3 rounded-lg hover:bg-steel-800">Accessories</a>
+        <a href="panels.html" class="block py-3 px-3 rounded-lg hover:bg-steel-800">Panels &amp; Colors</a>
         <a href="#contact" class="block py-3 px-3 bg-copper-600 rounded-lg text-center font-semibold mt-2">Get Free Quote</a>
       </div>
     </div>
@@ -403,6 +405,22 @@
     </div>
   </section>
 
+  <!-- PANELS TEASER -->
+  <section id="panels-preview" class="py-14 md:py-16 bg-white border-y border-slate-200">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+        <div class="max-w-xl">
+          <p class="text-sm font-semibold text-copper-600 uppercase tracking-wide mb-2">Roof &amp; Wall Systems</p>
+          <h2 class="text-2xl md:text-3xl font-black mb-2">Panel Types &amp; Colors</h2>
+          <p class="text-slate-600 text-sm sm:text-base leading-relaxed">PBR, multi-rib, standing seam, and specialty wall profiles with commercial color options — materials sourced through industry channels including Ascent Buildings, Central States, and MBCI.</p>
+        </div>
+        <a href="panels.html" class="inline-flex justify-center items-center bg-copper-600 hover:bg-copper-500 text-white px-6 py-3 rounded-xl font-semibold transition shrink-0">
+          Explore Panels &amp; Colors
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- ACCESSORIES TEASER -->
   <section id="accessories-preview" class="py-16 md:py-20 bg-steel-950 text-white">
     <div class="max-w-7xl mx-auto px-4">
@@ -538,6 +556,7 @@
           <a href="#solutions" class="hover:text-copper-400 transition">Solutions</a>
           <a href="#projects" class="hover:text-copper-400 transition">Projects</a>
           <a href="accessories.html" class="hover:text-copper-400 transition">Accessories</a>
+          <a href="panels.html" class="hover:text-copper-400 transition">Panels &amp; Colors</a>
           <a href="#contact" class="hover:text-copper-400 transition">Get Free Quote</a>
         </div>
         <div class="flex justify-center gap-6 mb-6">
