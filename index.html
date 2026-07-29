@@ -4,7 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Stamps Steel Buildings | Custom Pre-Engineered Metal Buildings – Bethpage, Middle Tennessee</title>
-  <meta name="description" content="Stamps Steel Buildings designs and delivers custom pre-engineered metal buildings in Bethpage and Middle Tennessee.">
+  <meta name="description" content="Stamps Steel Buildings delivers custom pre-engineered metal buildings (PEBs) across Middle Tennessee. Based in Bethpage, TN. Shops, commercial, agricultural, warehouses — engineered for local codes and weather. Free quotes.">
+  <meta name="keywords" content="metal buildings Middle Tennessee, PEB Bethpage TN, steel buildings Nashville, pre-engineered metal buildings, shops garages barns warehouses TN">
+  <meta property="og:title" content="Stamps Steel Buildings | Custom Metal Buildings – Middle Tennessee">
+  <meta property="og:description" content="Local experts in Bethpage delivering high-quality pre-engineered steel buildings. Transparent process, value engineering, no high-pressure sales.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://SpiderForce-Star.github.io/Stamps-Steel/">
+  <meta name="theme-color" content="#0f172a">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -12,8 +18,15 @@
         extend: {
           fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
           colors: {
-            steel: { 50:'#f8fafc',100:'#f1f5f9',200:'#e2e8f0',300:'#cbd5e1',400:'#94a3b8',500:'#64748b',600:'#475569',700:'#334155',800:'#1e293b',900:'#0f172a',950:'#020617' },
-            brand: { 400:'#60a5fa',500:'#3b82f6',600:'#2563eb',700:'#1d4ed8',800:'#1e40af' }
+            steel: {
+              50: '#f8fafc', 100: '#f1f5f9', 200: '#e2e8f0', 300: '#cbd5e1',
+              400: '#94a3b8', 500: '#64748b', 600: '#475569', 700: '#334155',
+              800: '#1e293b', 900: '#0f172a', 950: '#020617'
+            },
+            copper: {
+              300: '#e8b878', 400: '#e0a05a', 500: '#c97b3a',
+              600: '#b87333', 700: '#9a5f28', 800: '#7a4a1f'
+            }
           }
         }
       }
@@ -21,131 +34,381 @@
   </script>
   <style>
     html { scroll-behavior: smooth; }
-    .hero-section { position: relative; min-height: 85vh; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+    .hero-section { position: relative; min-height: 90vh; display: flex; align-items: center; justify-content: center; overflow: hidden; }
     .hero-video, .hero-fallback { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
     .hero-fallback { background-image: url('images/Small%20Farm.jpg'); background-size: cover; background-position: center; }
-    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(105deg, rgba(15,23,42,0.88) 0%, rgba(15,23,42,0.55) 55%, rgba(15,23,42,0.35) 100%); z-index: 1; }
+    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(105deg, rgba(2,6,23,0.92) 0%, rgba(15,23,42,0.65) 50%, rgba(15,23,42,0.4) 100%); z-index: 1; }
     .hero-content { position: relative; z-index: 2; }
-    #mobile-menu { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
-    #mobile-menu.open { max-height: 420px; }
+    #mobile-menu { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+    #mobile-menu.open { max-height: 480px; }
+    .copper-gradient { background: linear-gradient(135deg, #e0a05a 0%, #c97b3a 50%, #b87333 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
   </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Stamps Steel Buildings",
+    "description": "Custom pre-engineered metal buildings in Bethpage and Middle Tennessee.",
+    "url": "https://SpiderForce-Star.github.io/Stamps-Steel/",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bethpage",
+      "addressRegion": "TN",
+      "postalCode": "37022",
+      "addressCountry": "US"
+    },
+    "areaServed": "Middle Tennessee",
+    "priceRange": "$$"
+  }
+  </script>
 </head>
 <body class="bg-slate-50 text-slate-900 font-sans antialiased">
-  <nav class="bg-slate-900 text-white sticky top-0 z-50 shadow-lg">
+  <!-- NAV -->
+  <nav class="bg-steel-950 text-white sticky top-0 z-50 shadow-xl border-b border-steel-800">
     <div class="max-w-7xl mx-auto px-4">
-      <div class="flex justify-between items-center h-16">
-        <a href="#home" class="text-xl font-bold">STAMPS <span class="text-blue-400">STEEL</span></a>
-        <div class="hidden md:flex space-x-6 text-sm font-medium">
-          <a href="#projects" class="hover:text-blue-300">Projects</a>
-          <a href="#services" class="hover:text-blue-300">Solutions</a>
-          <a href="#about" class="hover:text-blue-300">About</a>
-          <a href="#contact" class="bg-blue-600 px-4 py-2 rounded-lg font-semibold">Get Quote</a>
+      <div class="flex justify-between items-center h-16 md:h-18">
+        <a href="#home" class="flex items-center gap-2 group">
+          <span class="text-xl md:text-2xl font-black tracking-tight">STAMPS <span class="text-copper-500 group-hover:text-copper-400 transition">STEEL</span></span>
+        </a>
+        <div class="hidden md:flex items-center space-x-1 text-sm font-medium">
+          <a href="#why" class="px-3 py-2 hover:text-copper-400 transition">Why Us</a>
+          <a href="#solutions" class="px-3 py-2 hover:text-copper-400 transition">Solutions</a>
+          <a href="#projects" class="px-3 py-2 hover:text-copper-400 transition">Projects</a>
+          <a href="#process" class="px-3 py-2 hover:text-copper-400 transition">Process</a>
+          <a href="#contact" class="ml-2 bg-copper-600 hover:bg-copper-500 text-white px-5 py-2.5 rounded-lg font-semibold transition shadow-lg shadow-copper-900/30">Get Free Quote</a>
         </div>
         <div class="flex items-center gap-2 md:hidden">
-          <a href="#contact" class="bg-blue-600 text-white px-3 py-1.5 rounded text-sm font-semibold">Quote</a>
-          <button id="menu-btn" class="p-2" aria-label="Menu"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+          <a href="#contact" class="bg-copper-600 text-white px-3 py-1.5 rounded-lg text-sm font-semibold">Quote</a>
+          <button id="menu-btn" class="p-2 text-slate-200" aria-label="Open menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
         </div>
       </div>
     </div>
-    <div id="mobile-menu" class="md:hidden bg-slate-800">
-      <div class="px-4 py-2 space-y-1">
-        <a href="#projects" class="block py-3 px-3 rounded hover:bg-slate-700">Projects</a>
-        <a href="#services" class="block py-3 px-3 rounded hover:bg-slate-700">Solutions</a>
-        <a href="#about" class="block py-3 px-3 rounded hover:bg-slate-700">About</a>
-        <a href="#contact" class="block py-3 px-3 bg-blue-600 rounded text-center font-semibold mt-2">Get Free Quote</a>
+    <div id="mobile-menu" class="md:hidden bg-steel-900 border-t border-steel-800">
+      <div class="px-4 py-3 space-y-1">
+        <a href="#why" class="block py-3 px-3 rounded-lg hover:bg-steel-800">Why Us</a>
+        <a href="#solutions" class="block py-3 px-3 rounded-lg hover:bg-steel-800">Solutions</a>
+        <a href="#projects" class="block py-3 px-3 rounded-lg hover:bg-steel-800">Projects</a>
+        <a href="#process" class="block py-3 px-3 rounded-lg hover:bg-steel-800">Process</a>
+        <a href="#contact" class="block py-3 px-3 bg-copper-600 rounded-lg text-center font-semibold mt-2">Get Free Quote</a>
       </div>
     </div>
   </nav>
 
+  <!-- HERO -->
   <section id="home" class="hero-section text-center text-white">
     <div class="hero-fallback"></div>
     <video class="hero-video" autoplay muted loop playsinline poster="images/Small%20Farm.jpg">
-      <source src="images/hero.mp4" type="video/mp4">
+      <source src="images/Prfwh.mp4" type="video/mp4">
     </video>
     <div class="hero-overlay"></div>
-    <div class="hero-content max-w-4xl mx-auto px-4 py-20">
-      <h1 class="text-3xl sm:text-5xl font-bold mb-4">Custom Pre-Engineered<br>Metal Buildings</h1>
-      <p class="text-lg sm:text-xl mb-2 text-slate-200">Middle Tennessee | Based in Bethpage</p>
-      <p class="text-base sm:text-lg mb-8 text-slate-300">Durable. Cost-Effective. Engineered for Your Exact Needs.</p>
-      <div class="flex flex-col sm:flex-row gap-3 justify-center">
-        <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold">Request Free Quote</a>
-        <a href="#projects" class="bg-white/10 border border-white/30 text-white px-6 py-3 rounded-lg font-semibold">View Projects</a>
+    <div class="hero-content max-w-5xl mx-auto px-4 py-24">
+      <p class="text-copper-400 font-semibold tracking-widest uppercase text-sm mb-4">Bethpage • Middle Tennessee</p>
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-black mb-5 leading-tight">Custom Pre-Engineered<br><span class="copper-gradient">Metal Buildings</span></h1>
+      <p class="text-lg sm:text-xl mb-3 text-slate-200 max-w-2xl mx-auto">Durable. Cost-Effective. Engineered for Tennessee weather, codes, and your exact needs.</p>
+      <p class="text-base text-slate-300 mb-10">Local private-label specialists — transparent process, real value engineering, no high-pressure sales.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#contact" class="bg-copper-600 hover:bg-copper-500 text-white px-8 py-4 rounded-xl font-bold text-lg transition shadow-xl shadow-copper-900/40">Request Free Quote</a>
+        <a href="#projects" class="bg-white/10 hover:bg-white/20 border border-white/30 text-white px-8 py-4 rounded-xl font-semibold transition">View Projects</a>
       </div>
     </div>
   </section>
 
-  <section class="py-10 bg-white border-b">
-    <div class="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-      <div><div class="text-2xl font-bold text-blue-600">Custom</div><div class="text-xs text-slate-600">Engineered to Spec</div></div>
-      <div><div class="text-2xl font-bold text-blue-600">Local</div><div class="text-xs text-slate-600">Middle TN Experts</div></div>
-      <div><div class="text-2xl font-bold text-blue-600">Durable</div><div class="text-xs text-slate-600">Built for TN Weather</div></div>
-      <div><div class="text-2xl font-bold text-blue-600">Value</div><div class="text-xs text-slate-600">Competitive Pricing</div></div>
+  <!-- TRUST BAR -->
+  <section class="py-8 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      <div>
+        <div class="text-2xl md:text-3xl font-black text-copper-600">Custom</div>
+        <div class="text-xs md:text-sm text-slate-600 mt-1">Engineered to Your Specs</div>
+      </div>
+      <div>
+        <div class="text-2xl md:text-3xl font-black text-copper-600">Local</div>
+        <div class="text-xs md:text-sm text-slate-600 mt-1">Bethpage, Middle TN</div>
+      </div>
+      <div>
+        <div class="text-2xl md:text-3xl font-black text-copper-600">Code Ready</div>
+        <div class="text-xs md:text-sm text-slate-600 mt-1">TN Weather & Loads</div>
+      </div>
+      <div>
+        <div class="text-2xl md:text-3xl font-black text-copper-600">Value</div>
+        <div class="text-xs md:text-sm text-slate-600 mt-1">Smart Engineering</div>
+      </div>
     </div>
   </section>
 
-  <section id="projects" class="py-12 bg-slate-100">
+  <!-- WHY STAMPS -->
+  <section id="why" class="py-16 md:py-20 bg-slate-50">
     <div class="max-w-7xl mx-auto px-4">
-      <div class="text-center mb-10"><h2 class="text-2xl sm:text-3xl font-bold mb-2">Our Projects</h2><p class="text-slate-600 text-sm">Real pre-engineered metal buildings from Middle Tennessee.</p></div>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-        <div class="bg-white rounded-xl overflow-hidden shadow"><img src="images/Small%20Farm.jpg" alt="Agricultural barn" class="w-full h-48 object-cover" loading="lazy"><div class="p-4"><h3 class="font-bold">Agricultural Barn</h3><p class="text-sm text-slate-600 mt-1">Open-span with cupolas for ventilation.</p></div></div>
-        <div class="bg-white rounded-xl overflow-hidden shadow"><img src="images/13.jpg" alt="Large clear-span" class="w-full h-48 object-cover" loading="lazy"><div class="p-4"><h3 class="font-bold">Large Clear-Span</h3><p class="text-sm text-slate-600 mt-1">Expansive open-bay agricultural building.</p></div></div>
-        <div class="bg-white rounded-xl overflow-hidden shadow"><img src="images/7.jpg" alt="Shop" class="w-full h-48 object-cover" loading="lazy"><div class="p-4"><h3 class="font-bold">Custom Shop & Garage</h3><p class="text-sm text-slate-600 mt-1">Multi-door shop with clean finishes.</p></div></div>
-        <div class="bg-white rounded-xl overflow-hidden shadow"><img src="images/11.jpg" alt="Commercial" class="w-full h-48 object-cover" loading="lazy"><div class="p-4"><h3 class="font-bold">Commercial Facility</h3><p class="text-sm text-slate-600 mt-1">Professional multi-entry commercial building.</p></div></div>
-        <div class="bg-white rounded-xl overflow-hidden shadow"><img src="images/8.jpg" alt="Framing" class="w-full h-48 object-cover" loading="lazy"><div class="p-4"><h3 class="font-bold">Steel Framing</h3><p class="text-sm text-slate-600 mt-1">Precision rigid frames under construction.</p></div></div>
-        <div class="bg-white rounded-xl overflow-hidden shadow"><img src="images/2.jpg" alt="Interior" class="w-full h-48 object-cover" loading="lazy"><div class="p-4"><h3 class="font-bold">Open Interior</h3><p class="text-sm text-slate-600 mt-1">Clear-span interiors for maximum space.</p></div></div>
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-black mb-3">Why Stamps Steel</h2>
+        <p class="text-slate-600 max-w-2xl mx-auto">A fresh, local approach to pre-engineered metal buildings — quality kits, personal service, and real expertise in Middle Tennessee.</p>
       </div>
-    </div>
-  </section>
-
-  <section id="services" class="py-12 bg-white">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="text-center mb-10"><h2 class="text-2xl sm:text-3xl font-bold mb-2">Building Solutions</h2><p class="text-slate-600 text-sm">Versatile PEBs for Middle Tennessee.</p></div>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <div class="p-5 border rounded-xl"><h3 class="font-bold mb-1">Commercial & Auto</h3><p class="text-sm text-slate-600">Shops, service centers, retail.</p></div>
-        <div class="p-5 border rounded-xl"><h3 class="font-bold mb-1">Agricultural</h3><p class="text-sm text-slate-600">Barns, livestock, equipment storage.</p></div>
-        <div class="p-5 border rounded-xl"><h3 class="font-bold mb-1">Shops & Garages</h3><p class="text-sm text-slate-600">Workshops and hobby buildings.</p></div>
-        <div class="p-5 border rounded-xl"><h3 class="font-bold mb-1">Warehouses</h3><p class="text-sm text-slate-600">Expandable storage facilities.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="about" class="py-12 bg-slate-900 text-white text-center">
-    <div class="max-w-3xl mx-auto px-4">
-      <h2 class="text-2xl sm:text-3xl font-bold mb-4">About Stamps Steel Buildings</h2>
-      <p class="text-slate-300 mb-4 leading-relaxed">Based in Bethpage, Tennessee. Backed by deep industry expertise in design, estimating, and value engineering. We deliver high-quality PEBs tailored to local codes and weather.</p>
-      <p class="text-blue-300 text-sm">Bethpage, TN • Middle Tennessee • Custom PEB Specialists</p>
-    </div>
-  </section>
-
-  <section id="contact" class="py-12 bg-slate-50">
-    <div class="max-w-xl mx-auto px-4">
-      <div class="text-center mb-8"><h2 class="text-2xl sm:text-3xl font-bold mb-2">Get Your Free Quote</h2><p class="text-slate-600 text-sm">Tell us about your project.</p></div>
-      <div class="bg-white rounded-2xl shadow-lg p-6">
-        <form action="mailto:info@stampssteel.com" method="POST" enctype="text/plain" class="space-y-4">
-          <div class="grid sm:grid-cols-2 gap-4">
-            <div><label class="block text-sm font-medium mb-1">Name</label><input type="text" name="name" required class="w-full px-4 py-3 border rounded-lg"></div>
-            <div><label class="block text-sm font-medium mb-1">Phone</label><input type="tel" name="phone" class="w-full px-4 py-3 border rounded-lg"></div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 hover:shadow-md transition">
+          <div class="w-12 h-12 bg-copper-100 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-copper-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
           </div>
-          <div><label class="block text-sm font-medium mb-1">Email</label><input type="email" name="email" required class="w-full px-4 py-3 border rounded-lg"></div>
-          <div><label class="block text-sm font-medium mb-1">Project Details</label><textarea name="project" rows="3" class="w-full px-4 py-3 border rounded-lg"></textarea></div>
-          <button type="submit" class="w-full bg-blue-600 text-white font-semibold py-3 rounded-lg">Send Quote Request</button>
-        </form>
-        <p class="text-center text-sm text-slate-500 mt-4">info@stampssteel.com • (615) XXX-XXXX</p>
+          <h3 class="font-bold text-lg mb-2">Local Expertise</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">Based in Bethpage. We understand Middle Tennessee codes, soil conditions, wind/snow loads, humidity, and permitting — so your building is right the first time.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 hover:shadow-md transition">
+          <div class="w-12 h-12 bg-copper-100 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-copper-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          </div>
+          <h3 class="font-bold text-lg mb-2">Integrity First</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">We are professionals dedicated to your project success — not high-pressure telemarketers. Straight talk, clear options, and honest recommendations.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 hover:shadow-md transition">
+          <div class="w-12 h-12 bg-copper-100 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-copper-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <h3 class="font-bold text-lg mb-2">Value Engineering</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">Decades of combined industry knowledge help us design smarter — optimizing size, framing, and features so you get maximum performance for your budget.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 hover:shadow-md transition">
+          <div class="w-12 h-12 bg-copper-100 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-copper-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+          </div>
+          <h3 class="font-bold text-lg mb-2">Quality PEBs</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">Commercial-grade clear-span I-beam style buildings. Bolt-up kits, durable finishes, engineered for strength and long service life with minimal maintenance.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <footer class="bg-slate-900 text-slate-400 py-8 text-center">
-    <div class="text-white font-bold text-lg mb-1">STAMPS STEEL BUILDINGS</div>
-    <p class="text-sm">Custom Pre-Engineered Metal Buildings • Bethpage, Tennessee</p>
-    <p class="text-xs mt-2">© 2026 Stamps Steel Buildings</p>
+  <!-- SOLUTIONS -->
+  <section id="solutions" class="py-16 md:py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-black mb-3">Building Solutions</h2>
+        <p class="text-slate-600 max-w-2xl mx-auto">Versatile pre-engineered metal buildings tailored for Middle Tennessee farms, shops, businesses, and more.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="group rounded-2xl overflow-hidden border border-slate-200 hover:border-copper-300 hover:shadow-lg transition">
+          <div class="h-44 bg-slate-200 overflow-hidden">
+            <img src="images/7.jpg" alt="Custom shop and garage" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy">
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-lg mb-1">Shops, Garages & Workshops</h3>
+            <p class="text-sm text-slate-600">Fast, economical workspaces with clean finishes, multiple doors, and full-height clear span. Perfect for auto, hobby, or light industrial.</p>
+          </div>
+        </div>
+        <div class="group rounded-2xl overflow-hidden border border-slate-200 hover:border-copper-300 hover:shadow-lg transition">
+          <div class="h-44 bg-slate-200 overflow-hidden">
+            <img src="images/11.jpg" alt="Commercial multi-bay facility" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy">
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-lg mb-1">Commercial & Auto</h3>
+            <p class="text-sm text-slate-600">Warehouses, service centers, retail, manufacturing, or multi-bay auto facilities. Expandable and code-compliant for professional use.</p>
+          </div>
+        </div>
+        <div class="group rounded-2xl overflow-hidden border border-slate-200 hover:border-copper-300 hover:shadow-lg transition">
+          <div class="h-44 bg-slate-200 overflow-hidden">
+            <img src="images/Small%20Farm.jpg" alt="Agricultural barn" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy">
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-lg mb-1">Agricultural & Farm</h3>
+            <p class="text-sm text-slate-600">Barns, livestock shelters, equipment storage, and hay buildings. Low maintenance, open-span designs that stand up to Tennessee weather.</p>
+          </div>
+        </div>
+        <div class="group rounded-2xl overflow-hidden border border-slate-200 hover:border-copper-300 hover:shadow-lg transition">
+          <div class="h-44 bg-slate-200 overflow-hidden">
+            <img src="images/13.jpg" alt="Large clear-span warehouse" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy">
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-lg mb-1">Warehouses & Storage</h3>
+            <p class="text-sm text-slate-600">Expandable clear-span storage and distribution facilities. Efficient layouts that maximize usable space and future growth.</p>
+          </div>
+        </div>
+        <div class="group rounded-2xl overflow-hidden border border-slate-200 hover:border-copper-300 hover:shadow-lg transition">
+          <div class="h-44 bg-slate-200 overflow-hidden">
+            <img src="images/2.jpg" alt="Open interior clear span" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy">
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-lg mb-1">Clear-Span & Specialty</h3>
+            <p class="text-sm text-slate-600">Riding arenas, hangars, churches, and custom designs. Up to large clear spans with flexible exterior finishes.</p>
+          </div>
+        </div>
+        <div class="group rounded-2xl overflow-hidden border border-slate-200 hover:border-copper-300 hover:shadow-lg transition bg-steel-900 text-white">
+          <div class="h-44 flex items-center justify-center bg-gradient-to-br from-steel-800 to-steel-950">
+            <span class="text-4xl font-black text-copper-500">+</span>
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-lg mb-1">Your Custom Project</h3>
+            <p class="text-sm text-slate-300">Have a unique idea? We engineer around it — size, doors, lean-tos, colors, and features exactly as you need.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="py-16 md:py-20 bg-slate-100">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-black mb-3">Featured Projects</h2>
+        <p class="text-slate-600">Real pre-engineered metal buildings serving Middle Tennessee needs.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition">
+          <img src="images/Small%20Farm.jpg" alt="Agricultural barn with cupolas" class="w-full h-52 object-cover" loading="lazy">
+          <div class="p-4">
+            <h3 class="font-bold">Agricultural Barn</h3>
+            <p class="text-sm text-slate-600 mt-1">Open-span with cupolas for natural ventilation.</p>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition">
+          <img src="images/13.jpg" alt="Large clear-span building" class="w-full h-52 object-cover" loading="lazy">
+          <div class="p-4">
+            <h3 class="font-bold">Large Clear-Span</h3>
+            <p class="text-sm text-slate-600 mt-1">Expansive open-bay agricultural or storage building.</p>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition">
+          <img src="images/7.jpg" alt="Custom multi-door shop" class="w-full h-52 object-cover" loading="lazy">
+          <div class="p-4">
+            <h3 class="font-bold">Custom Shop & Garage</h3>
+            <p class="text-sm text-slate-600 mt-1">Multi-door shop with clean modern finishes.</p>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition">
+          <img src="images/11.jpg" alt="Commercial facility" class="w-full h-52 object-cover" loading="lazy">
+          <div class="p-4">
+            <h3 class="font-bold">Commercial Facility</h3>
+            <p class="text-sm text-slate-600 mt-1">Professional multi-entry commercial building.</p>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition">
+          <img src="images/8.jpg" alt="Steel framing under construction" class="w-full h-52 object-cover" loading="lazy">
+          <div class="p-4">
+            <h3 class="font-bold">Precision Framing</h3>
+            <p class="text-sm text-slate-600 mt-1">Rigid frames engineered and ready for erection.</p>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition">
+          <img src="images/2.jpg" alt="Clear-span open interior" class="w-full h-52 object-cover" loading="lazy">
+          <div class="p-4">
+            <h3 class="font-bold">Open Interior</h3>
+            <p class="text-sm text-slate-600 mt-1">Maximum usable space with true clear-span design.</p>
+          </div>
+        </div>
+      </div>
+      <p class="text-center mt-8 text-sm text-slate-500">More project photos coming soon — including modern wood-soffit shops and multi-bay commercial builds.</p>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section id="process" class="py-16 md:py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-black mb-3">Simple, Transparent Process</h2>
+        <p class="text-slate-600">From first conversation to delivered kit — clear steps, no surprises.</p>
+      </div>
+      <div class="grid md:grid-cols-4 gap-8">
+        <div class="text-center">
+          <div class="w-14 h-14 mx-auto bg-copper-600 text-white rounded-full flex items-center justify-center text-xl font-black mb-4">1</div>
+          <h3 class="font-bold mb-2">Free Consultation</h3>
+          <p class="text-sm text-slate-600">Tell us about your project, site, and goals. We listen and ask the right questions.</p>
+        </div>
+        <div class="text-center">
+          <div class="w-14 h-14 mx-auto bg-copper-600 text-white rounded-full flex items-center justify-center text-xl font-black mb-4">2</div>
+          <h3 class="font-bold mb-2">Design & Engineering</h3>
+          <p class="text-sm text-slate-600">Custom PEB design engineered to your needs and local Tennessee codes/loads.</p>
+        </div>
+        <div class="text-center">
+          <div class="w-14 h-14 mx-auto bg-copper-600 text-white rounded-full flex items-center justify-center text-xl font-black mb-4">3</div>
+          <h3 class="font-bold mb-2">Transparent Quote</h3>
+          <p class="text-sm text-slate-600">Clear pricing with value-engineering options so you can choose what fits best.</p>
+        </div>
+        <div class="text-center">
+          <div class="w-14 h-14 mx-auto bg-copper-600 text-white rounded-full flex items-center justify-center text-xl font-black mb-4">4</div>
+          <h3 class="font-bold mb-2">Delivery & Support</h3>
+          <p class="text-sm text-slate-600">Quality bolt-up kit delivered. We support you through erection and beyond.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-16 bg-steel-950 text-white">
+    <div class="max-w-3xl mx-auto px-4 text-center">
+      <h2 class="text-3xl md:text-4xl font-black mb-6">About Stamps Steel Buildings</h2>
+      <p class="text-slate-300 text-lg leading-relaxed mb-6">We are a new Middle Tennessee company focused on delivering high-quality pre-engineered metal buildings with a personal, local touch. Based in Bethpage, we combine private-label PEB excellence with deep knowledge of our region’s codes, climate, and construction realities.</p>
+      <p class="text-slate-400 mb-8">Whether you need a backyard shop, a multi-bay commercial facility, or a clear-span agricultural building, we help you get it right — efficiently and transparently.</p>
+      <p class="text-copper-400 font-semibold">Bethpage, TN • Sumner County • Serving all of Middle Tennessee</p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-16 md:py-20 bg-slate-50">
+    <div class="max-w-2xl mx-auto px-4">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl md:text-4xl font-black mb-3">Get Your Free Quote</h2>
+        <p class="text-slate-600">Tell us about your project. We’ll respond promptly with next steps — no pressure.</p>
+      </div>
+      <div class="bg-white rounded-2xl shadow-xl p-6 md:p-8 border border-slate-100">
+        <form action="mailto:info@stampssteel.com" method="POST" enctype="text/plain" class="space-y-5">
+          <div class="grid sm:grid-cols-2 gap-5">
+            <div>
+              <label class="block text-sm font-semibold mb-1.5">Name *</label>
+              <input type="text" name="name" required class="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-copper-500 focus:border-copper-500 outline-none transition" placeholder="Your name">
+            </div>
+            <div>
+              <label class="block text-sm font-semibold mb-1.5">Phone</label>
+              <input type="tel" name="phone" class="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-copper-500 focus:border-copper-500 outline-none transition" placeholder="(615) 555-0123">
+            </div>
+          </div>
+          <div>
+            <label class="block text-sm font-semibold mb-1.5">Email *</label>
+            <input type="email" name="email" required class="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-copper-500 focus:border-copper-500 outline-none transition" placeholder="you@email.com">
+          </div>
+          <div class="grid sm:grid-cols-2 gap-5">
+            <div>
+              <label class="block text-sm font-semibold mb-1.5">Building Type</label>
+              <select name="building_type" class="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-copper-500 focus:border-copper-500 outline-none transition bg-white">
+                <option value="">Select...</option>
+                <option>Shop / Garage / Workshop</option>
+                <option>Commercial / Auto</option>
+                <option>Agricultural / Barn</option>
+                <option>Warehouse / Storage</option>
+                <option>Specialty / Custom</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-sm font-semibold mb-1.5">Approx. Size</label>
+              <input type="text" name="size" class="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-copper-500 focus:border-copper-500 outline-none transition" placeholder="e.g. 40x60 or 2,400 sq ft">
+            </div>
+          </div>
+          <div>
+            <label class="block text-sm font-semibold mb-1.5">Project Details / Location</label>
+            <textarea name="project" rows="4" class="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-copper-500 focus:border-copper-500 outline-none transition" placeholder="Tell us about your site, timeline, doors, lean-tos, or any special requirements..."></textarea>
+          </div>
+          <button type="submit" class="w-full bg-copper-600 hover:bg-copper-500 text-white font-bold py-4 rounded-xl text-lg transition shadow-lg shadow-copper-900/20">Send Quote Request</button>
+        </form>
+        <p class="text-center text-sm text-slate-500 mt-6">info@stampssteel.com &nbsp;•&nbsp; (615) XXX-XXXX &nbsp;•&nbsp; Bethpage, TN 37022</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-steel-950 text-slate-400 py-10 border-t border-steel-800">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+      <div class="text-white font-black text-xl mb-2">STAMPS <span class="text-copper-500">STEEL</span> BUILDINGS</div>
+      <p class="text-sm mb-1">Custom Pre-Engineered Metal Buildings</p>
+      <p class="text-sm mb-4">Bethpage, Middle Tennessee</p>
+      <p class="text-xs">© 2026 Stamps Steel Buildings. All rights reserved.</p>
+    </div>
   </footer>
 
   <script>
     const btn = document.getElementById('menu-btn');
     const menu = document.getElementById('mobile-menu');
-    btn.addEventListener('click', () => menu.classList.toggle('open'));
-    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.remove('open')));
+    if (btn && menu) {
+      btn.addEventListener('click', () => menu.classList.toggle('open'));
+      menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.remove('open')));
+    }
   </script>
 </body>
 </html>
