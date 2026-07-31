@@ -110,9 +110,10 @@
         <strong class="text-slate-300">Metal Building Manufacturers Association (MBMA)</strong>
         and applicable OSHA safety requirements. Manufacturer erection drawings guide sequence; the erector remains responsible for safe methods and techniques.
       </p>
-      <div class="flex flex-col sm:flex-row gap-3">
+      <div class="flex flex-col sm:flex-row flex-wrap gap-3">
         <a href="#process" class="inline-flex justify-center items-center bg-copper-600 hover:bg-copper-500 text-white px-7 py-3.5 rounded-xl font-bold transition shadow-xl shadow-copper-900/40">See the Process</a>
-        <a href="#visual" class="inline-flex justify-center items-center bg-white/10 hover:bg-white/20 border border-white/30 text-white px-7 py-3.5 rounded-xl font-semibold transition">50×100×16 Visual</a>
+        <a href="#pemb-3d" class="inline-flex justify-center items-center bg-white text-steel-950 hover:bg-copper-100 px-7 py-3.5 rounded-xl font-bold transition shadow-xl">▶ 3D Erection Sequence</a>
+        <a href="#visual" class="inline-flex justify-center items-center bg-white/10 hover:bg-white/20 border border-white/30 text-white px-7 py-3.5 rounded-xl font-semibold transition">2D Stage Diagram</a>
       </div>
     </div>
   </section>
@@ -240,14 +241,59 @@
     </div>
   </section>
 
+  <!-- 3D PEMB SEQUENCE (source: Isometric-PEMB-Video-Build) -->
+  <section id="pemb-3d" class="py-14 md:py-20 bg-steel-900 text-white border-b border-steel-800">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4 mb-8">
+        <div class="max-w-3xl">
+          <p class="text-sm font-semibold text-copper-400 uppercase tracking-wide mb-2">Interactive 3D walkthrough</p>
+          <h2 class="text-3xl md:text-4xl font-black mb-3">50′ × 100′ × 20′ PEB erection</h2>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+            Silent multi-camera sequence: slab & anchors → telehandler unload → columns → rafters → secondary → insulation → sheeting → trim → doors.
+            Built for Stamps Steel in a <strong class="text-white">separate code repo</strong>
+            (<a class="text-copper-400 hover:text-copper-300 underline underline-offset-2" href="https://github.com/SpiderForce-Star/Isometric-PEMB-Video-Build" target="_blank" rel="noopener noreferrer">Isometric-PEMB-Video-Build</a>)
+            so 3D work does not block this website.
+          </p>
+        </div>
+        <div class="flex flex-wrap gap-2 shrink-0">
+          <a href="pemb-3d.html" target="_blank" rel="noopener noreferrer"
+             class="inline-flex items-center justify-center px-5 py-2.5 rounded-xl text-sm font-bold bg-copper-600 hover:bg-copper-500 text-white transition shadow-lg shadow-copper-900/30">
+            Open fullscreen 3D
+          </a>
+          <a href="https://github.com/SpiderForce-Star/Isometric-PEMB-Video-Build" target="_blank" rel="noopener noreferrer"
+             class="inline-flex items-center justify-center px-5 py-2.5 rounded-xl text-sm font-semibold border border-steel-600 text-slate-200 hover:border-copper-400 transition">
+            3D source on GitHub
+          </a>
+        </div>
+      </div>
+
+      <div class="rounded-2xl overflow-hidden border border-steel-700 bg-black shadow-2xl shadow-black/40">
+        <iframe
+          src="pemb-3d.html"
+          title="Stamps Steel 3D metal building erection sequence — 50 by 100 by 20 foot gable"
+          class="w-full block bg-black"
+          style="min-height: 560px; height: min(72vh, 780px); border: 0;"
+          allow="fullscreen; autoplay"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+      <p class="text-xs text-slate-500 mt-4 max-w-3xl">
+        Educational schematic only — not engineering drawings. Sequence aligns with MBMA-informed metal building erection practice.
+        Drag to orbit · scroll to zoom · use on-screen stage controls to play the build.
+      </p>
+    </div>
+  </section>
+
   <!-- VISUAL 50x100x16 -->
   <section id="visual" class="py-14 md:py-20 bg-steel-950 text-white">
     <div class="max-w-7xl mx-auto px-4">
       <div class="text-center mb-8">
-        <p class="text-sm font-semibold text-copper-400 uppercase tracking-wide mb-2">Interactive example</p>
-        <h2 class="text-3xl md:text-4xl font-black mb-3">50′ × 100′ × 16′ gabled building</h2>
+        <p class="text-sm font-semibold text-copper-400 uppercase tracking-wide mb-2">2D stage diagram</p>
+        <h2 class="text-3xl md:text-4xl font-black mb-3">50′ × 100′ × 16′ schematic</h2>
         <p class="text-slate-300 max-w-2xl mx-auto text-sm sm:text-base">
-          Step through a typical clear-span gable PEB. Dimensions shown: <strong class="text-white">50 ft width</strong> · <strong class="text-white">100 ft length</strong> · <strong class="text-white">16 ft eave height</strong>. Graphic is schematic for education — not engineering drawings.
+          Lightweight step-through for the same process (also see the <a href="#pemb-3d" class="text-copper-400 hover:text-copper-300 underline underline-offset-2">3D sequence</a> above).
+          Dimensions: <strong class="text-white">50 ft width</strong> · <strong class="text-white">100 ft length</strong> · <strong class="text-white">16 ft eave</strong>. Schematic only — not engineering drawings.
         </p>
       </div>
 

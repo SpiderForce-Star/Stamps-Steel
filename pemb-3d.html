@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>3D PEMB Erection | Stamps Steel</title>
+  <meta name="description" content="Interactive 3D metal building erection sequence — 50×100×20 gable for Stamps Steel." />
+  <meta name="theme-color" content="#020617" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #020617; --surface: #0f172a; --elev: #1e293b;
+      --fg: #f1f5f9; --muted: #94a3b8; --border: #334155;
+      --primary: #c97b3a; --primary-hover: #e0a05a; --primary-fg: #0f172a;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; height: 100%; background: var(--bg); color: var(--fg); font-family: Inter, system-ui, sans-serif; overflow: hidden; }
+    #c { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+    .ui { position: absolute; inset: 0; pointer-events: none; display: flex; flex-direction: column; justify-content: space-between; padding: 12px; }
+    .panel { pointer-events: auto; background: rgba(15,23,42,.92); border: 1px solid var(--border); border-radius: 12px; backdrop-filter: blur(10px); box-shadow: 0 12px 40px rgba(0,0,0,.35); }
+    .top { padding: 10px 14px; max-width: min(420px, 100%); }
+    .kicker { font-size: 10px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--primary); margin: 0; }
+    .title { margin: 2px 0 0; font-size: 16px; font-weight: 600; }
+    .mid { display: flex; justify-content: space-between; align-items: flex-end; gap: 10px; flex: 1; padding-top: 10px; }
+    .stage-card { padding: 12px 14px; max-width: min(400px, 100%); }
+    .stage-card h2 { margin: 4px 0 6px; font-size: 18px; }
+    .stage-card p { margin: 0; font-size: 13px; line-height: 1.5; color: var(--muted); }
+    .cams { display: none; flex-direction: column; gap: 6px; }
+    @media (min-width: 640px) { .cams { display: flex; } }
+    .cams button, .chips button, .transport button {
+      pointer-events: auto; cursor: pointer; border: 1px solid var(--border); background: rgba(15,23,42,.9);
+      color: var(--muted); border-radius: 8px; font: 600 12px Inter, system-ui, sans-serif; padding: 8px 10px; text-align: left;
+    }
+    .cams button.active, .chips button.active { background: var(--primary); color: var(--primary-fg); border-color: var(--primary); }
+    .cams button:hover, .chips button:hover, .transport button:hover { border-color: var(--primary); color: var(--fg); }
+    .bottom { pointer-events: auto; }
+    .chips { display: flex; gap: 6px; overflow-x: auto; padding-bottom: 8px; }
+    .chips button { border-radius: 999px; white-space: nowrap; flex-shrink: 0; }
+    .chips button.done { background: var(--elev); color: var(--fg); }
+    .transport { padding: 10px 12px; }
+    .transport input[type=range] { width: 100%; accent-color: var(--primary); margin-bottom: 8px; }
+    .row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+    .play { background: var(--primary) !important; color: var(--primary-fg) !important; border-color: var(--primary) !important; min-width: 44px; min-height: 44px; border-radius: 10px !important; font-size: 14px !important; }
+    .pct { margin-left: auto; font-family: ui-monospace, monospace; font-size: 12px; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <canvas id="c"></canvas>
+  <div class="ui">
+    <div class="top panel">
+      <p class="kicker">Stamps Steel · 3D Erection</p>
+      <h1 class="title">50′ × 100′ × 20′ Clear-Span Gable</h1>
+    </div>
+    <div class="mid">
+      <div class="stage-card panel">
+        <p class="kicker" id="stageKicker">Stage 1 of 9</p>
+        <h2 id="stageTitle">Slab with anchor bolts</h2>
+        <p id="stageBody">Existing cured concrete slab. Anchor bolts verified square and level per manufacturer plan.</p>
+      </div>
+      <div class="cams">
+        <button type="button" data-cam="iso">Isometric</button>
+        <button type="button" data-cam="side">Side</button>
+        <button type="button" data-cam="end">End</button>
+        <button type="button" data-cam="high" class="active">Overhead</button>
+        <button type="button" data-cam="bolt">Haunch bolt</button>
+        <button type="button" data-cam="tele">Telehandler</button>
+        <button type="button" data-cam="auto" class="active" id="autoCam">Auto camera</button>
+      </div>
+    </div>
+    <div class="bottom">
+      <div class="chips" id="chips"></div>
+      <div class="transport panel">
+        <input id="scrub" type="range" min="0" max="1000" value="0" aria-label="Timeline" />
+        <div class="row">
+          <button type="button" id="prev">Prev</button>
+          <button type="button" class="play" id="play">Pause</button>
+          <button type="button" id="next">Next</button>
+          <button type="button" id="restart">Restart</button>
+          <button type="button" data-speed="0.5">0.5×</button>
+          <button type="button" data-speed="1" class="active" id="spd1">1×</button>
+          <button type="button" data-speed="2">2×</button>
+          <span class="pct" id="pct">0%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.172.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.172.0/examples/jsm/"
+    }
+  }
+  </script>
+  <script type="module">
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+
+const W = 50, L = 100, H = 20, BAYS = 5, SP = 20;
+const RH = H + (W / 2) * (2 / 12);
+
+const STAGES = [
+  { id: 'foundation', short: 'Foundation', title: 'Slab with anchor bolts', body: 'Existing cured concrete slab. Anchor bolts verified square and level per manufacturer plan. Ready for primary steel.', cam: 'high', reveal: 0 },
+  { id: 'unload', short: 'Unload', title: 'Unload & stage with telehandler', body: 'Flatbed delivery. Telehandler offloads columns, rafters, secondary, panels, and trim. Center access lane left open.', cam: 'tele', reveal: 0.12 },
+  { id: 'columns', short: 'Columns', title: 'Raise columns — braced bay first', body: 'Telehandler sets rigid-frame columns on anchors. Temporary bracing for stability. Start at the braced bay.', cam: 'side', reveal: 0.25 },
+  { id: 'rafters', short: 'Rafters', title: 'Raise rafters & haunch connections', body: 'Rafters lifted and bolted at haunches. Close-up on primary connections. Plumb the first bay.', cam: 'bolt', reveal: 0.4 },
+  { id: 'secondary', short: 'Secondary', title: 'Purlins, girts & permanent bracing', body: 'Eave struts, purlins, wall girts, and permanent bracing. Keep secondary adjustable until the skeleton is plumb.', cam: 'iso', reveal: 0.55 },
+  { id: 'insulation', short: 'Insulation', title: 'Roll-out insulation before sheeting', body: 'Faced fiberglass blanket rolled over purlins and girts. Vapor retarder to the interior — installed before panels.', cam: 'high', reveal: 0.68 },
+  { id: 'sheeting', short: 'Sheeting', title: 'Wall & roof panels', body: 'Wall then roof panels with proper fastener patterns, end-laps, and sidelap sealant. Openings framed for doors.', cam: 'iso', reveal: 0.8 },
+  { id: 'trim', short: 'Trim', title: 'Trim, gutters & flashings', body: 'Base, corner, eave, rake, ridge, gutters and downspouts for a weather-tight shell.', cam: 'end', reveal: 0.9 },
+  { id: 'complete', short: 'Complete', title: 'Doors, windows & finished shell', body: 'Two large sectional overhead doors, walk doors, and windows installed. 50×100×20 gable shell ready for turn-over.', cam: 'iso', reveal: 1 },
+];
+
+const CAMS = {
+  iso:  { pos: new THREE.Vector3(70, 55, 80), look: new THREE.Vector3(0, RH / 2, 0) },
+  side: { pos: new THREE.Vector3(W / 2 + 55, 28, 10), look: new THREE.Vector3(0, H * 0.6, 0) },
+  end:  { pos: new THREE.Vector3(5, 30, L / 2 + 70), look: new THREE.Vector3(0, H * 0.7, 0) },
+  high: { pos: new THREE.Vector3(40, 90, 50), look: new THREE.Vector3(0, 2, 0) },
+  bolt: { pos: new THREE.Vector3(W / 2 + 8, H + 4, 6), look: new THREE.Vector3(W / 2, H, 0) },
+  tele: { pos: new THREE.Vector3(W / 2 + 35, 18, 15), look: new THREE.Vector3(W / 2 + 15, 6, 0) },
+};
+
+function smooth(a, b, x) {
+  const t = Math.max(0, Math.min(1, (x - a) / (b - a)));
+  return t * t * (3 - 2 * t);
+}
+
+const canvas = document.getElementById('c');
+const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, powerPreference: 'high-performance' });
+renderer.setPixelRatio(Math.min(devicePixelRatio, 1.75));
+renderer.setSize(innerWidth, innerHeight);
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+
+const scene = new THREE.Scene();
+scene.background = new THREE.Color(0x020617);
+scene.fog = new THREE.Fog(0x020617, 120, 280);
+
+const camera = new THREE.PerspectiveCamera(40, innerWidth / innerHeight, 0.5, 500);
+camera.position.copy(CAMS.high.pos);
+
+const controls = new OrbitControls(camera, canvas);
+controls.enableDamping = true;
+controls.target.set(0, 10, 0);
+controls.maxPolarAngle = Math.PI / 2.05;
+controls.minDistance = 20;
+controls.maxDistance = 180;
+controls.enabled = false;
+
+scene.add(new THREE.AmbientLight(0xffffff, 0.5));
+const sun = new THREE.DirectionalLight(0xfff5e6, 1.35);
+sun.position.set(60, 90, 40);
+sun.castShadow = true;
+sun.shadow.mapSize.set(1024, 1024);
+sun.shadow.camera.left = -80; sun.shadow.camera.right = 80;
+sun.shadow.camera.top = 80; sun.shadow.camera.bottom = -80;
+scene.add(sun);
+scene.add(new THREE.DirectionalLight(0x93c5fd, 0.4).translateX(-40).translateY(30).translateZ(-20));
+scene.add(new THREE.HemisphereLight(0x94a3b8, 0x1e293b, 0.4));
+
+const mats = {
+  concrete: new THREE.MeshStandardMaterial({ color: 0x94a3b8, roughness: 0.92, metalness: 0.05 }),
+  concreteDark: new THREE.MeshStandardMaterial({ color: 0x64748b, roughness: 0.9, metalness: 0.04 }),
+  steel: new THREE.MeshStandardMaterial({ color: 0xd1d5db, roughness: 0.4, metalness: 0.8 }),
+  steelDark: new THREE.MeshStandardMaterial({ color: 0x6b7280, roughness: 0.48, metalness: 0.72 }),
+  primed: new THREE.MeshStandardMaterial({ color: 0x6b7280, roughness: 0.55, metalness: 0.55 }),
+  panelWall: new THREE.MeshStandardMaterial({ color: 0x9ca3af, roughness: 0.52, metalness: 0.48 }),
+  panelRoof: new THREE.MeshStandardMaterial({ color: 0x4b5563, roughness: 0.48, metalness: 0.55 }),
+  trim: new THREE.MeshStandardMaterial({ color: 0xc97b3a, roughness: 0.4, metalness: 0.55 }),
+  insul: new THREE.MeshStandardMaterial({ color: 0xf59e0b, roughness: 0.98, metalness: 0, transparent: true, opacity: 0.55, side: THREE.DoubleSide, depthWrite: false }),
+  dirt: new THREE.MeshStandardMaterial({ color: 0x334155, roughness: 1 }),
+  yellow: new THREE.MeshStandardMaterial({ color: 0xeab308, roughness: 0.45, metalness: 0.25 }),
+  black: new THREE.MeshStandardMaterial({ color: 0x0f172a, roughness: 0.7 }),
+  glass: new THREE.MeshStandardMaterial({ color: 0x38bdf8, roughness: 0.15, metalness: 0.1, transparent: true, opacity: 0.45 }),
+  truck: new THREE.MeshStandardMaterial({ color: 0x1e40af, roughness: 0.5, metalness: 0.3 }),
+  wood: new THREE.MeshStandardMaterial({ color: 0x92400e, roughness: 0.9 }),
+  cable: new THREE.MeshStandardMaterial({ color: 0xc97b3a, roughness: 0.6, metalness: 0.4 }),
+};
+
+function box(w, h, d, mat, x, y, z, opts = {}) {
+  const m = new THREE.Mesh(new THREE.BoxGeometry(w, h, d), mat);
+  m.position.set(x, y, z);
+  m.castShadow = opts.cast !== false;
+  m.receiveShadow = !!opts.recv;
+  if (opts.rotZ) m.rotation.z = opts.rotZ;
+  if (opts.add !== false) scene.add(m);
+  return m;
+}
+
+// Ground + slab
+box(220, 0.2, 220, mats.dirt, 0, -0.5, 0, { cast: false, recv: true });
+box(W + 4, 0.35, L + 4, mats.concrete, 0, -0.15, 0, { recv: true });
+box(W + 2.5, 0.08, L + 2.5, mats.concreteDark, 0, 0.02, 0, { recv: true });
+
+// Anchor bolts
+const bolts = [];
+for (let i = 0; i <= BAYS; i++) {
+  const z = -L / 2 + i * SP;
+  for (const x of [-W / 2, W / 2]) {
+    const g = new THREE.Group();
+    const stem = new THREE.Mesh(new THREE.CylinderGeometry(0.08, 0.08, 0.55, 8), mats.steel);
+    stem.position.y = 0.1; stem.castShadow = true; g.add(stem);
+    const nut = new THREE.Mesh(new THREE.CylinderGeometry(0.14, 0.14, 0.08, 6), mats.steelDark);
+    nut.position.y = 0.38; g.add(nut);
+    g.position.set(x, 0, z);
+    scene.add(g); bolts.push(g);
+  }
+}
+
+// Frames
+const frames = [];
+for (let i = 0; i <= BAYS; i++) {
+  const z = -L / 2 + i * SP;
+  const mid = BAYS / 2;
+  const order = Math.abs(i - mid);
+  const start = 0.22 + order * 0.035;
+  const end = start + 0.16;
+  const half = W / 2;
+  const rise = RH - H;
+  const len = Math.hypot(half, rise);
+  const ang = Math.atan2(rise, half);
+  const g = new THREE.Group();
+  const lc = box(0.55, H, 0.75, mats.primed, -half, H / 2, 0, { add: false });
+  const rc = box(0.55, H, 0.75, mats.primed, half, H / 2, 0, { add: false });
+  const lr = box(len, 0.45, 0.65, mats.primed, -half / 2, H + rise / 2, 0, { rotZ: ang, add: false });
+  const rr = box(len, 0.45, 0.65, mats.primed, half / 2, H + rise / 2, 0, { rotZ: -ang, add: false });
+  g.add(lc, rc, lr, rr);
+  g.position.z = z;
+  scene.add(g);
+  frames.push({ g, start, end, lc, rc, lr, rr });
+}
+
+// Secondary group
+const secondary = new THREE.Group(); scene.add(secondary);
+const half = W / 2;
+for (let i = 1; i <= 5; i++) {
+  const u = i / 6;
+  const y = H + (RH - H) * (1 - u);
+  secondary.add(box(0.22, 0.28, L - 1, mats.steel, -half * u, y, 0, { add: false }));
+  secondary.add(box(0.22, 0.28, L - 1, mats.steel, half * u, y, 0, { add: false }));
+}
+secondary.add(box(0.3, 0.35, L - 0.5, mats.steel, -half, H, 0, { add: false }));
+secondary.add(box(0.3, 0.35, L - 0.5, mats.steel, half, H, 0, { add: false }));
+for (const y of [4, 8, 12, 16]) {
+  secondary.add(box(0.2, 0.28, L - 1, mats.steelDark, -half, y, 0, { add: false }));
+  secondary.add(box(0.2, 0.28, L - 1, mats.steelDark, half, y, 0, { add: false }));
+}
+
+// Insulation
+const insulation = new THREE.Group(); scene.add(insulation);
+const ang = Math.atan2(RH - H, half);
+insulation.add(box(Math.hypot(half, RH - H) * 0.92, 0.16, L * 0.9, mats.insul, -half / 2, H + (RH - H) / 2 + 0.2, 0, { rotZ: ang, cast: false }));
+insulation.add(box(Math.hypot(half, RH - H) * 0.92, 0.16, L * 0.9, mats.insul, half / 2, H + (RH - H) / 2 + 0.2, 0, { rotZ: -ang, cast: false }));
+insulation.add(box(0.12, H * 0.88, L * 0.88, mats.insul, -half - 0.2, H / 2, 0, { cast: false }));
+insulation.add(box(0.12, H * 0.88, L * 0.88, mats.insul, half + 0.2, H / 2, 0, { cast: false }));
+
+// Sheeting
+const sheeting = new THREE.Group(); scene.add(sheeting);
+const nWall = Math.floor(L / 3);
+for (let i = 0; i < nWall; i++) {
+  const z = -L / 2 + 1.5 + i * 3;
+  sheeting.add(box(0.08, H, 2.9, mats.panelWall, -half - 0.32, H / 2, z));
+  if (Math.abs(z + 15) >= 6 && Math.abs(z - 15) >= 6) {
+    sheeting.add(box(0.08, H, 2.9, mats.panelWall, half + 0.32, H / 2, z));
+  }
+}
+sheeting.add(box(W - 0.5, H, 0.08, mats.panelWall, 0, H / 2, L / 2 + 0.32));
+sheeting.add(box(Math.hypot(half, RH - H) + 0.4, 0.1, L + 0.8, mats.panelRoof, -half / 2, H + (RH - H) / 2 + 0.4, 0, { rotZ: ang }));
+sheeting.add(box(Math.hypot(half, RH - H) + 0.4, 0.1, L + 0.8, mats.panelRoof, half / 2, H + (RH - H) / 2 + 0.4, 0, { rotZ: -ang }));
+
+// Trim + doors
+const finish = new THREE.Group(); scene.add(finish);
+finish.add(box(0.55, 0.18, L + 1, mats.trim, 0, RH + 0.5, 0));
+finish.add(box(0.22, 0.18, L + 0.4, mats.trim, -half - 0.38, H + 0.12, 0));
+finish.add(box(0.22, 0.18, L + 0.4, mats.trim, half + 0.38, H + 0.12, 0));
+finish.add(box(0.18, 0.32, L, mats.trim, -half - 0.38, 0.32, 0));
+finish.add(box(0.18, 0.32, L, mats.trim, half + 0.38, 0.32, 0));
+finish.add(box(0.18, 14, 12, mats.black, half + 0.42, 7, -15));
+finish.add(box(0.18, 14, 12, mats.black, half + 0.42, 7, 15));
+finish.add(box(0.14, 7, 3.2, mats.black, -half - 0.42, 3.5, -20));
+finish.add(box(0.14, 7, 3.2, mats.black, -half - 0.42, 3.5, 20));
+finish.add(box(0.1, 3.5, 5, mats.glass, -half - 0.42, 10, -5, { cast: false }));
+finish.add(box(0.1, 3.5, 5, mats.glass, -half - 0.42, 10, 5, { cast: false }));
+finish.add(box(0.1, 3.5, 5, mats.glass, -half - 0.42, 10, 30, { cast: false }));
+
+// Telehandler + truck
+const equipment = new THREE.Group(); scene.add(equipment);
+const truck = new THREE.Group(); truck.position.set(W / 2 + 28, 0, -30); truck.rotation.y = -Math.PI / 2;
+truck.add(box(8, 3.2, 6, mats.truck, 0, 2.2, 0, { add: false }));
+truck.add(box(16, 1.2, 7, mats.steelDark, 10, 1.6, 0, { add: false }));
+truck.add(box(10, 1.2, 5, mats.primed, 8, 2.6, 0, { add: false }));
+equipment.add(truck);
+equipment.add(box(8, 1.2, 3, mats.primed, W / 2 + 10, 0.6, 20));
+equipment.add(box(6, 0.9, 2.2, mats.panelRoof, W / 2 + 10, 1.1, 26));
+
+const tele = new THREE.Group();
+tele.add(box(3.2, 1.6, 6, mats.yellow, 0, 1.2, 0, { add: false }));
+tele.add(box(2.4, 1.4, 2.2, mats.black, 0, 2.6, -1.2, { add: false }));
+const boom = new THREE.Group(); boom.position.set(0, 2.2, 2.2);
+boom.add(box(0.55, 0.45, 8, mats.yellow, 0, 0, 4, { add: false }));
+boom.add(box(0.2, 0.15, 2.2, mats.steel, -0.45, -0.9, 8.8, { add: false }));
+boom.add(box(0.2, 0.15, 2.2, mats.steel, 0.45, -0.9, 8.8, { add: false }));
+const load = box(0.5, 0.6, 4, mats.primed, 0, -1.4, 8.5, { add: false }); boom.add(load);
+tele.add(boom);
+equipment.add(tele);
+
+// State
+let progress = 0, playing = true, speed = 1, stageIndex = 0, autoCam = true, camKey = 'high';
+const camPos = CAMS.high.pos.clone();
+const camLook = CAMS.high.look.clone();
+
+const chips = document.getElementById('chips');
+STAGES.forEach((s, i) => {
+  const b = document.createElement('button');
+  b.type = 'button'; b.textContent = s.short; b.dataset.i = i;
+  b.onclick = () => goStage(i);
+  chips.appendChild(b);
+});
+
+function stageFromP(p) {
+  let cur = STAGES[0];
+  for (const s of STAGES) if (p + 0.001 >= s.reveal) cur = s;
+  return cur;
+}
+function goStage(i) {
+  stageIndex = Math.max(0, Math.min(STAGES.length - 1, i));
+  progress = STAGES[stageIndex].reveal;
+  playing = false;
+  if (autoCam) camKey = STAGES[stageIndex].cam;
+  syncUI();
+}
+function syncUI() {
+  const s = STAGES[stageIndex];
+  document.getElementById('stageKicker').textContent = `Stage ${stageIndex + 1} of ${STAGES.length}`;
+  document.getElementById('stageTitle').textContent = s.title;
+  document.getElementById('stageBody').textContent = s.body;
+  document.getElementById('pct').textContent = `${Math.round(progress * 100)}%`;
+  document.getElementById('scrub').value = Math.round(progress * 1000);
+  document.getElementById('play').textContent = playing ? 'Pause' : 'Play';
+  [...chips.children].forEach((b, i) => {
+    b.classList.toggle('active', i === stageIndex);
+    b.classList.toggle('done', i < stageIndex);
+  });
+  document.querySelectorAll('.cams button[data-cam]').forEach((b) => {
+    const k = b.dataset.cam;
+    if (k === 'auto') b.classList.toggle('active', autoCam);
+    else b.classList.toggle('active', !autoCam && camKey === k);
+  });
+  controls.enabled = !autoCam;
+}
+
+document.getElementById('play').onclick = () => { playing = !playing; syncUI(); };
+document.getElementById('prev').onclick = () => goStage(stageIndex - 1);
+document.getElementById('next').onclick = () => {
+  if (stageIndex >= STAGES.length - 1) { goStage(0); playing = true; }
+  else goStage(stageIndex + 1);
+  syncUI();
+};
+document.getElementById('restart').onclick = () => { progress = 0; stageIndex = 0; playing = true; autoCam = true; camKey = 'high'; syncUI(); };
+document.getElementById('scrub').oninput = (e) => {
+  progress = Number(e.target.value) / 1000;
+  const s = stageFromP(progress);
+  stageIndex = s.index ?? STAGES.indexOf(s);
+  if (autoCam) camKey = s.cam;
+  playing = false; syncUI();
+};
+document.querySelectorAll('[data-speed]').forEach((b) => {
+  b.onclick = () => {
+    speed = Number(b.dataset.speed);
+    document.querySelectorAll('[data-speed]').forEach((x) => x.classList.toggle('active', x === b));
+  };
+});
+document.querySelectorAll('.cams button[data-cam]').forEach((b) => {
+  b.onclick = () => {
+    const k = b.dataset.cam;
+    if (k === 'auto') { autoCam = true; camKey = STAGES[stageIndex].cam; }
+    else { autoCam = false; camKey = k; }
+    syncUI();
+  };
+});
+
+// Fix STAGES index
+STAGES.forEach((s, i) => { s.index = i; });
+
+function applyVisibility(p) {
+  frames.forEach(({ g, start, end, lc, rc, lr, rr }) => {
+    const colT = smooth(start, start + (end - start) * 0.45, p);
+    const rafT = smooth(start + (end - start) * 0.4, end, p);
+    g.visible = colT > 0.01;
+    lc.scale.y = Math.max(colT, 0.02); lc.position.y = (H * colT) / 2;
+    rc.scale.y = Math.max(colT, 0.02); rc.position.y = (H * colT) / 2;
+    lr.visible = rafT > 0.02; rr.visible = rafT > 0.02;
+    lr.scale.x = Math.max(rafT, 0.02); rr.scale.x = Math.max(rafT, 0.02);
+  });
+  const secT = smooth(0.52, 0.66, p);
+  secondary.visible = secT > 0.02;
+  secondary.scale.set(1, 1, Math.max(secT, 0.02));
+  const insT = smooth(0.66, 0.76, p);
+  insulation.visible = insT > 0.02;
+  insulation.scale.setScalar(Math.max(insT, 0.02));
+  const wallT = smooth(0.78, 0.9, p);
+  const roofT = smooth(0.82, 0.94, p);
+  sheeting.visible = wallT > 0.02 || roofT > 0.02;
+  sheeting.scale.y = Math.max(Math.max(wallT, roofT), 0.02);
+  const finT = smooth(0.88, 1, p);
+  finish.visible = finT > 0.02;
+  finish.scale.y = Math.max(finT, 0.02);
+  equipment.visible = p > 0.08 && p < 0.58;
+  load.visible = p > 0.22 && p < 0.5;
+  const phase = smooth(0.1, 0.52, p);
+  const z = -40 + phase * 80;
+  tele.position.set(W / 2 + 18, 0, z);
+  tele.rotation.y = -Math.PI / 2;
+  boom.rotation.z = -0.35 - smooth(0.2, 0.48, p) * 0.55;
+}
+
+let last = performance.now();
+function tick(now) {
+  const dt = Math.min(0.05, (now - last) / 1000); last = now;
+  if (playing) {
+    progress = Math.min(1, progress + dt * (1 / 72) * speed);
+    if (progress >= 1) playing = false;
+    const s = stageFromP(progress);
+    if (s.index !== stageIndex) {
+      stageIndex = s.index;
+      if (autoCam) camKey = s.cam;
+    }
+    syncUI();
+  }
+  applyVisibility(progress);
+  const goal = CAMS[camKey] || CAMS.iso;
+  if (autoCam) {
+    const k = 1 - Math.exp(-2.2 * dt);
+    camPos.lerp(goal.pos, k); camLook.lerp(goal.look, k);
+    camera.position.copy(camPos); camera.lookAt(camLook);
+  } else {
+    controls.update();
+  }
+  renderer.render(scene, camera);
+  requestAnimationFrame(tick);
+}
+syncUI(); applyVisibility(0); requestAnimationFrame(tick);
+
+addEventListener('resize', () => {
+  camera.aspect = innerWidth / innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(innerWidth, innerHeight);
+});
+  </script>
+</body>
+</html>
