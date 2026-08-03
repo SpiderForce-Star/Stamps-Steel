@@ -25,7 +25,7 @@
   <line x1="100" y1="177" x2="654" y2="177" stroke="#e2e8f0" stroke-width="0.5" stroke-dasharray="6 4"/>
   <!-- Labels -->
   <text x="360" y="30" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="16" font-weight="700" fill="#0f172a">Common System — Single-Layer Faced Insulation</text>
-  <text x="360" y="54" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="12" fill="#64748b">3″ · 4″ · 6″ laminated fiberglass with PSK-VR white facing</text>
+  <text x="360" y="54" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="12" fill="#64748b">3″ R-10 · 4″ R-13 · 6″ R-19 laminated fiberglass with PSK-VR facing</text>
   <text x="360" y="82" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="11" fill="#475569">Metal roof panel</text>
   <text x="210" y="135" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="12" font-weight="600" fill="#92400e">Fiberglass blanket</text>
   <text x="127" y="195" text-anchor="start" font-family="Inter,system-ui,sans-serif" font-size="11" fill="#334155">Purlin</text>
