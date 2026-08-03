@@ -26,6 +26,7 @@ Modern, visual, locally focused website for **Stamps Steel Buildings** — a pri
 | `accessories.html` | Product catalog — filters, 14 accessories, 3D placeholders, quote form |
 | `panels.html` | Panel types & colors — **real manufacturer profile photos**, data sheets, 3D panel views, color palette |
 | `about.html` | Full About Us — experience, capabilities, building types, systems (owner copy) |
+| `insulation.html` | Metal building insulation — common 3/4/6″ PSK-VR first, then high-R multi-layer |
 | `erection.html` | Professional steel erection on slab/piers — MBMA-informed process, 8-stage walkthrough, interactive **50×100×16** gable visual |
 | `images/panels/` | Cached profile images + PDF data sheets for offline/GitHub Pages display |
 

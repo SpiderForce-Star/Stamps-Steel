@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" role="img" aria-labelledby="t2 d2">
+  <title id="t2">High-R multi-layer metal building insulation</title>
+  <desc id="d2">Cross-section: unfaced insulation over purlins plus cavity fill between purlins, liner and banding below</desc>
+  <rect width="720" height="360" fill="#f8fafc"/>
+  <!-- Roof -->
+  <path d="M40 55 L100 28 L160 55 L220 28 L280 55 L340 28 L400 55 L460 28 L520 55 L580 28 L640 55 L680 38 L680 72 L40 72 Z" fill="#94a3b8"/>
+  <rect x="40" y="70" width="640" height="8" fill="#64748b"/>
+  <!-- Layer A: unfaced over purlins continuous -->
+  <rect x="50" y="78" width="620" height="36" fill="#fcd34d" stroke="#d97706" stroke-width="1"/>
+  <!-- Purlins through -->
+  <g fill="#1e293b">
+    <rect x="140" y="78" width="16" height="100"/>
+    <rect x="128" y="170" width="40" height="12"/>
+    <rect x="320" y="78" width="16" height="100"/>
+    <rect x="308" y="170" width="40" height="12"/>
+    <rect x="500" y="78" width="16" height="100"/>
+    <rect x="488" y="170" width="40" height="12"/>
+  </g>
+  <!-- Layer B: between purlins (cavity fill) -->
+  <rect x="156" y="114" width="164" height="56" fill="#fde68a" stroke="#f59e0b" stroke-width="1"/>
+  <rect x="336" y="114" width="164" height="56" fill="#fde68a" stroke="#f59e0b" stroke-width="1"/>
+  <rect x="516" y="114" width="120" height="56" fill="#fde68a" stroke="#f59e0b" stroke-width="1"/>
+  <!-- Liner fabric -->
+  <rect x="110" y="182" width="500" height="10" fill="#f8fafc" stroke="#94a3b8" stroke-width="1"/>
+  <!-- Banding -->
+  <line x1="130" y1="192" x2="130" y2="230" stroke="#475569" stroke-width="3"/>
+  <line x1="240" y1="192" x2="240" y2="230" stroke="#475569" stroke-width="3"/>
+  <line x1="360" y1="192" x2="360" y2="230" stroke="#475569" stroke-width="3"/>
+  <line x1="480" y1="192" x2="480" y2="230" stroke="#475569" stroke-width="3"/>
+  <line x1="590" y1="192" x2="590" y2="230" stroke="#475569" stroke-width="3"/>
+  <line x1="120" y1="230" x2="600" y2="230" stroke="#334155" stroke-width="4"/>
+  <!-- Labels -->
+  <text x="360" y="22" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="16" font-weight="700" fill="#0f172a">Higher R-Value System — Multi-Layer High-R</text>
+  <text x="360" y="48" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="12" fill="#64748b">Unfaced over purlins/girts + cavity fill between members</text>
+  <text x="360" y="100" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="11" font-weight="700" fill="#92400e">1 · Unfaced fiberglass over purlins/girts</text>
+  <text x="238" y="145" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="11" font-weight="700" fill="#92400e">2 · Fill between purlins</text>
+  <text x="148" y="165" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="10" fill="#e2e8f0">Purlin</text>
+  <text x="360" y="210" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="11" font-weight="600" fill="#0f172a">3 · Vapor-retarder liner + support banding</text>
+  <text x="360" y="270" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="12" fill="#475569">Continuous thermal coverage · higher system R-value · energy-code ready</text>
+  <text x="360" y="298" text-anchor="middle" font-family="Inter,system,sans-serif" font-size="12" fill="#64748b">Ideal for conditioned buildings, offices, shops with HVAC, and strict energy codes</text>
+  <text x="360" y="330" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="11" fill="#94a3b8">Also used on walls (girts) with similar over-member + cavity-fill approach</text>
+</svg>
