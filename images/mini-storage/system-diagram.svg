@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" role="img">
+  <rect width="800" height="360" fill="#f8fafc"/>
+  <text x="400" y="28" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="15" font-weight="700" fill="#0f172a">Mini Storage System — Key Construction Points</text>
+  <!-- Building cross section -->
+  <g transform="translate(80,70)">
+    <!-- continuous roof -->
+    <path d="M40 90 L320 20 L600 90" fill="none" stroke="#94a3b8" stroke-width="10" stroke-linecap="round"/>
+    <path d="M40 90 L320 20 L600 90" fill="none" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round"/>
+    <text x="320" y="12" text-anchor="middle" font-size="11" font-weight="600" fill="#b87333" font-family="Inter,system-ui,sans-serif">Continuous roof panels (no ridge cap) · up to ~45′ wide gable</text>
+    <!-- eave height -->
+    <line x1="20" y1="90" x2="20" y2="230" stroke="#c97b3a" stroke-width="2"/>
+    <line x1="14" y1="90" x2="26" y2="90" stroke="#c97b3a" stroke-width="2"/>
+    <line x1="14" y1="230" x2="26" y2="230" stroke="#c97b3a" stroke-width="2"/>
+    <text x="8" y="165" text-anchor="middle" font-size="11" font-weight="700" fill="#c97b3a" font-family="Inter,system-ui,sans-serif" transform="rotate(-90 8 165)">8′-6″ eave</text>
+    <!-- floor -->
+    <rect x="40" y="230" width="560" height="12" fill="#94a3b8"/>
+    <text x="320" y="260" text-anchor="middle" font-size="11" fill="#64748b" font-family="Inter,system-ui,sans-serif">Concrete slab</text>
+    <!-- partitions -->
+    <line x1="180" y1="95" x2="180" y2="230" stroke="#64748b" stroke-width="6"/>
+    <line x1="320" y1="55" x2="320" y2="230" stroke="#64748b" stroke-width="6"/>
+    <line x1="460" y1="95" x2="460" y2="230" stroke="#64748b" stroke-width="6"/>
+    <text x="320" y="280" text-anchor="middle" font-size="12" font-weight="600" fill="#334155" font-family="Inter,system-ui,sans-serif">Interior partitions brace the structure · typically Galvalume finish (like roof)</text>
+    <!-- units labels -->
+    <text x="110" y="170" text-anchor="middle" font-size="10" fill="#64748b" font-family="Inter,system-ui,sans-serif">Unit</text>
+    <text x="250" y="170" text-anchor="middle" font-size="10" fill="#64748b" font-family="Inter,system-ui,sans-serif">Unit</text>
+    <text x="390" y="170" text-anchor="middle" font-size="10" fill="#64748b" font-family="Inter,system-ui,sans-serif">Unit</text>
+    <text x="530" y="170" text-anchor="middle" font-size="10" fill="#64748b" font-family="Inter,system-ui,sans-serif">Unit</text>
+    <!-- rollup doors front -->
+    <rect x="70" y="150" width="70" height="80" fill="#e2e8f0" stroke="#475569"/>
+    <rect x="210" y="150" width="70" height="80" fill="#e2e8f0" stroke="#475569"/>
+    <rect x="350" y="150" width="70" height="80" fill="#e2e8f0" stroke="#475569"/>
+    <rect x="490" y="150" width="70" height="80" fill="#e2e8f0" stroke="#475569"/>
+    <text x="320" y="310" text-anchor="middle" font-size="11" fill="#64748b" font-family="Inter,system-ui,sans-serif">Steel roll-up sheet doors at each unit · matching trim at openings</text>
+  </g>
+</svg>

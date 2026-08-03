@@ -29,6 +29,7 @@ Modern, visual, locally focused website for **Stamps Steel Buildings** — a pri
 | `insulation.html` | Metal building insulation — common 3/4/6″ PSK-VR first, then high-R multi-layer |
 | `imp.html` | Insulated metal panels — thicknesses, R-values, profiles, standing seam, finishes |
 | `designer.html` | Build Your Own Building — embeds Stamps Steel 3D designer portal |
+| `mini-storage.html` | Steel mini storage / self-storage systems + roll-up door summary |
 | `erection.html` | Professional steel erection on slab/piers — MBMA-informed process, 8-stage walkthrough, interactive **50×100×16** gable visual |
 | `images/panels/` | Cached profile images + PDF data sheets for offline/GitHub Pages display |
 
