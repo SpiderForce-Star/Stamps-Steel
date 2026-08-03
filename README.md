@@ -1,6 +1,6 @@
 # Stamps Steel Buildings Website
 
-Modern, visual, locally focused website for **Stamps Steel Buildings** — a private-label / broker of pre-engineered metal buildings (PEBs) based in **Bethpage, Middle Tennessee**.
+Modern, visual, locally focused website for **Stamps Steel Buildings** — a private-label / broker of pre-engineered metal buildings (PEBs) based in **Bethpage, Middle Tennessee**, serving customers **nationwide**.
 
 **Live site:** [https://SpiderForce-Star.github.io/Stamps-Steel/](https://SpiderForce-Star.github.io/Stamps-Steel/)
 
@@ -28,6 +28,7 @@ Modern, visual, locally focused website for **Stamps Steel Buildings** — a pri
 | `about.html` | Full About Us — experience, capabilities, building types, systems (owner copy) |
 | `insulation.html` | Metal building insulation — common 3/4/6″ PSK-VR first, then high-R multi-layer |
 | `imp.html` | Insulated metal panels — thicknesses, R-values, profiles, standing seam, finishes |
+| `designer.html` | Build Your Own Building — embeds Stamps Steel 3D designer portal |
 | `erection.html` | Professional steel erection on slab/piers — MBMA-informed process, 8-stage walkthrough, interactive **50×100×16** gable visual |
 | `images/panels/` | Cached profile images + PDF data sheets for offline/GitHub Pages display |
 
@@ -104,3 +105,7 @@ GitHub Pages is enabled from `main`. After push, hard-refresh the live site if n
 ---
 
 © 2026 Stamps Steel Buildings · Bethpage, TN
+
+## Credits
+
+Website built by [Webb Spinner Visions](https://webbspinnervisions.net).
