@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 280" role="img">
+  <rect width="720" height="280" fill="#ffffff"/>
+  <text x="360" y="24" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="15" font-weight="700" fill="#0f172a">Typical Wall IMP Thickness → R-Value</text>
+  <!-- bars -->
+  <g font-family="Inter,system-ui,sans-serif">
+    <!-- 2" R16 -->
+    <rect x="80" y="200" width="70" height="40" fill="#fde68a" stroke="#d97706"/>
+    <rect x="80" y="190" width="70" height="10" fill="#cbd5e1"/><rect x="80" y="240" width="70" height="8" fill="#f1f5f9" stroke="#94a3b8"/>
+    <text x="115" y="180" text-anchor="middle" font-size="13" font-weight="800" fill="#c97b3a">R-16</text>
+    <text x="115" y="268" text-anchor="middle" font-size="12" font-weight="600" fill="#334155">2″</text>
+    <!-- 2.5 R20 -->
+    <rect x="180" y="185" width="70" height="55" fill="#fde68a" stroke="#d97706"/>
+    <rect x="180" y="175" width="70" height="10" fill="#cbd5e1"/><rect x="180" y="240" width="70" height="8" fill="#f1f5f9" stroke="#94a3b8"/>
+    <text x="215" y="165" text-anchor="middle" font-size="13" font-weight="800" fill="#c97b3a">R-20</text>
+    <text x="215" y="268" text-anchor="middle" font-size="12" font-weight="600" fill="#334155">2½″</text>
+    <!-- 3 R24 -->
+    <rect x="280" y="170" width="70" height="70" fill="#fcd34d" stroke="#d97706"/>
+    <rect x="280" y="160" width="70" height="10" fill="#cbd5e1"/><rect x="280" y="240" width="70" height="8" fill="#f1f5f9" stroke="#94a3b8"/>
+    <text x="315" y="150" text-anchor="middle" font-size="13" font-weight="800" fill="#c97b3a">R-24</text>
+    <text x="315" y="268" text-anchor="middle" font-size="12" font-weight="600" fill="#334155">3″</text>
+    <!-- 4 R32 -->
+    <rect x="380" y="140" width="70" height="100" fill="#fbbf24" stroke="#b45309"/>
+    <rect x="380" y="130" width="70" height="10" fill="#cbd5e1"/><rect x="380" y="240" width="70" height="8" fill="#f1f5f9" stroke="#94a3b8"/>
+    <text x="415" y="120" text-anchor="middle" font-size="13" font-weight="800" fill="#c97b3a">R-32</text>
+    <text x="415" y="268" text-anchor="middle" font-size="12" font-weight="600" fill="#334155">4″</text>
+    <!-- 5 R40-ish -->
+    <rect x="480" y="115" width="70" height="125" fill="#f59e0b" stroke="#b45309"/>
+    <rect x="480" y="105" width="70" height="10" fill="#cbd5e1"/><rect x="480" y="240" width="70" height="8" fill="#f1f5f9" stroke="#94a3b8"/>
+    <text x="515" y="95" text-anchor="middle" font-size="13" font-weight="800" fill="#c97b3a">R-41</text>
+    <text x="515" y="268" text-anchor="middle" font-size="12" font-weight="600" fill="#334155">5″</text>
+    <!-- 6 R49-50 -->
+    <rect x="580" y="90" width="70" height="150" fill="#d97706" stroke="#92400e"/>
+    <rect x="580" y="80" width="70" height="10" fill="#cbd5e1"/><rect x="580" y="240" width="70" height="8" fill="#f1f5f9" stroke="#94a3b8"/>
+    <text x="615" y="70" text-anchor="middle" font-size="13" font-weight="800" fill="#b45309">R-49</text>
+    <text x="615" y="268" text-anchor="middle" font-size="12" font-weight="600" fill="#334155">6″</text>
+  </g>
+  <text x="360" y="50" text-anchor="middle" font-size="11" fill="#64748b" font-family="Inter,system-ui,sans-serif">Approximate industry values (~R-8/in PIR core) — confirm manufacturer data for your project</text>
+</svg>
