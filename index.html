@@ -12,7 +12,7 @@
   <meta property="og:url" content="https://SpiderForce-Star.github.io/Stamps-Steel/">
   <meta property="og:image" content="images/logo.jpg">
   <meta name="theme-color" content="#0f172a">
-  <link rel="preload" as="image" type="image/webp" href="images/Small%20Farm-960w.webp" imagesrcset="images/Small%20Farm-640w.webp 640w, images/Small%20Farm-960w.webp 960w, images/Small%20Farm.webp 1400w" imagesizes="100vw" fetchpriority="high">
+  <link rel="preload" as="image" type="image/webp" href="images/hero/poster-960w.webp" imagesrcset="images/hero/poster-640w.webp 640w, images/hero/poster-960w.webp 960w, images/hero/poster.webp 1400w" imagesizes="100vw" fetchpriority="high">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -42,27 +42,28 @@
     /* Critical layout stability (CLS) */
     body { margin: 0; }
     nav.bg-steel-950 { min-height: 4rem; }
-    .hero-section { min-height: min(72vh, 640px); }
+    .hero-section { min-height: min(78vh, 700px); }
     @media (min-width: 640px) {
-      .hero-section { min-height: min(88vh, 860px); }
+      .hero-section { min-height: min(88vh, 900px); }
     }
 
-    .hero-section {
+.hero-section {
       position: relative;
-      min-height: min(88vh, 860px);
+      min-height: min(88vh, 900px);
       display: flex;
       align-items: center;
       overflow: hidden;
-      background: #0f172a;
+      background: #020617;
     }
     .hero-media {
       position: absolute;
       inset: 0;
       z-index: 0;
       overflow: hidden;
-      background: #0f172a;
+      background: #020617;
     }
-    .hero-media picture {
+    .hero-media picture,
+    .hero-media .hero-poster {
       position: absolute;
       inset: 0;
       display: block;
@@ -79,9 +80,24 @@
       min-width: 100%;
       min-height: 100%;
       max-width: none;
-      transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%) scale(1.04);
       object-fit: cover;
-      object-position: center 40%;
+      object-position: center 45%;
+    }
+    .hero-media video {
+      opacity: 0;
+      transition: opacity 1.1s ease;
+    }
+    .hero-media video.is-ready {
+      opacity: 1;
+    }
+    /* subtle Ken Burns on poster before/while video loads */
+    .hero-media .hero-poster img {
+      animation: hero-kenburns 22s ease-in-out infinite alternate;
+    }
+    @keyframes hero-kenburns {
+      from { transform: translate(-50%, -50%) scale(1.02); }
+      to { transform: translate(-50%, -52%) scale(1.12); }
     }
     .hero-overlay {
       position: absolute;
@@ -89,14 +105,174 @@
       z-index: 1;
       pointer-events: none;
       background:
-        linear-gradient(to top, rgba(2, 6, 23, 0.88) 0%, rgba(15, 23, 42, 0.55) 42%, rgba(15, 23, 42, 0.45) 100%),
-        linear-gradient(to right, rgba(2, 6, 23, 0.55) 0%, rgba(2, 6, 23, 0.25) 55%, rgba(2, 6, 23, 0.2) 100%);
+        linear-gradient(105deg, rgba(2,6,23,0.92) 0%, rgba(2,6,23,0.72) 42%, rgba(2,6,23,0.35) 100%),
+        linear-gradient(to top, rgba(2,6,23,0.92) 0%, rgba(2,6,23,0.35) 48%, rgba(2,6,23,0.45) 100%);
+    }
+    .hero-steel-lines {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+      opacity: 0.22;
+      background:
+        repeating-linear-gradient(
+          90deg,
+          transparent 0,
+          transparent 48px,
+          rgba(224,160,90,0.07) 48px,
+          rgba(224,160,90,0.07) 49px
+        );
+      mask-image: linear-gradient(90deg, black 0%, transparent 70%);
     }
     .hero-content {
       position: relative;
       z-index: 2;
       width: 100%;
     }
+    /* Animated stages */
+    .hero-stage {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      align-items: flex-start;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(16px);
+      transition: opacity 0.7s ease, transform 0.7s ease, visibility 0.7s;
+      pointer-events: none;
+      z-index: 1;
+    }
+    .hero-stage.is-active {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+      pointer-events: auto;
+      position: relative;
+      z-index: 2;
+    }
+    .hero-progress {
+      position: relative;
+      z-index: 3;
+    }
+    .hero-stage-inner {
+      width: 100%;
+      max-width: 48rem;
+    }
+    .hero-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      color: #e0a05a;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-size: 0.72rem;
+    }
+    @media (min-width: 640px) {
+      .hero-kicker { font-size: 0.82rem; }
+    }
+    .hero-kicker .bar {
+      width: 2rem;
+      height: 1px;
+      background: #c97b3a;
+    }
+    .hero-headline {
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      line-height: 1.08;
+      margin: 1rem 0 1.1rem;
+      font-size: clamp(1.85rem, 5.2vw, 3.4rem);
+    }
+    .hero-sub {
+      font-size: clamp(1.05rem, 2.4vw, 1.35rem);
+      color: #e2e8f0;
+      font-weight: 500;
+      line-height: 1.45;
+      max-width: 36rem;
+    }
+    .hero-sub strong {
+      color: #fff;
+      font-weight: 700;
+    }
+    .hero-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-top: 1.75rem;
+    }
+    @media (min-width: 640px) {
+      .hero-actions { flex-direction: row; gap: 1rem; }
+    }
+    .hero-progress {
+      display: flex;
+      gap: 0.45rem;
+      margin-top: 2rem;
+      align-items: center;
+      position: relative;
+      z-index: 3;
+    }
+    .hero-progress button {
+      height: 4px;
+      width: 2.25rem;
+      border-radius: 999px;
+      border: 0;
+      padding: 0;
+      background: rgba(255,255,255,0.22);
+      cursor: pointer;
+      transition: width 0.3s ease, background 0.3s ease;
+    }
+    .hero-progress button.is-active {
+      width: 2.75rem;
+      background: #c97b3a;
+    }
+    .hero-progress button:focus-visible {
+      outline: 2px solid #e0a05a;
+      outline-offset: 3px;
+    }
+    /* line draw accent */
+    .hero-line-draw {
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, #e0a05a, #c97b3a, transparent);
+      margin: 1rem 0 1.25rem;
+      transition: width 1s ease 0.25s;
+    }
+    .hero-stage.is-active .hero-line-draw {
+      width: min(12rem, 50%);
+    }
+    .hero-fade-up {
+      opacity: 0;
+      transform: translateY(14px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+    .hero-stage.is-active .hero-fade-up { opacity: 1; transform: translateY(0); }
+    .hero-stage.is-active .hero-fade-up.d1 { transition-delay: 0.12s; }
+    .hero-stage.is-active .hero-fade-up.d2 { transition-delay: 0.28s; }
+    .hero-stage.is-active .hero-fade-up.d3 { transition-delay: 0.44s; }
+    .hero-stage.is-active .hero-fade-up.d4 { transition-delay: 0.6s; }
+    .hero-cta-pulse {
+      box-shadow: 0 0 0 0 rgba(201,123,58,0.45);
+      animation: cta-pulse 2.4s ease-out infinite;
+    }
+    @keyframes cta-pulse {
+      0% { box-shadow: 0 0 0 0 rgba(201,123,58,0.45); }
+      70% { box-shadow: 0 0 0 16px rgba(201,123,58,0); }
+      100% { box-shadow: 0 0 0 0 rgba(201,123,58,0); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .hero-media .hero-poster img { animation: none; }
+      .hero-cta-pulse { animation: none; }
+      .hero-stage { transition: none; }
+      .hero-fade-up { opacity: 1; transform: none; transition: none; }
+    }
+    @media (max-width: 639px) {
+      .hero-section { min-height: min(78vh, 700px); }
+      .hero-media video,
+      .hero-media img { object-position: center 40%; }
+    }
+
     #mobile-menu { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
     #mobile-menu.open { max-height: 960px; }
     .copper-gradient {
@@ -294,43 +470,73 @@
     </div>
   </nav>
 
-  <!-- HERO -->
-  <section id="home" class="hero-section text-white" aria-label="Introduction">
+<!-- HERO -->
+  <section id="home" class="hero-section text-white" aria-label="Stamps Steel introduction">
     <div class="hero-media" aria-hidden="true">
-      <picture><source type="image/webp" srcset="images/Small%20Farm-640w.webp 640w, images/Small%20Farm-960w.webp 960w, images/Small%20Farm.webp 1400w" sizes="100vw"><img data-opt="1" src="images/Small%20Farm.jpg" alt="" width="1920" height="1080" decoding="async" loading="eager" fetchpriority="high" sizes="100vw"></picture>
-      <!-- Hero video injected on desktop only (keeps mobile LCP on poster image) -->
+      <picture class="hero-poster">
+        <source type="image/webp" srcset="images/hero/poster-640w.webp 640w, images/hero/poster-960w.webp 960w, images/hero/poster.webp 1400w" sizes="100vw">
+        <img data-opt="1" src="images/hero/poster.jpg" alt="" width="1280" height="720" decoding="async" loading="eager" fetchpriority="high" sizes="100vw">
+      </picture>
+      <!-- Video: desktop / capable devices only (JS) -->
     </div>
     <div class="hero-overlay" aria-hidden="true"></div>
+    <div class="hero-steel-lines" aria-hidden="true"></div>
+
     <div class="hero-content">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 py-20 sm:py-24 md:py-28">
-        <div class="max-w-2xl text-left">
-          <p class="inline-flex items-center gap-2 text-copper-400 font-semibold tracking-widest uppercase text-xs sm:text-sm mb-5">
-            <span class="w-8 h-px bg-copper-500" aria-hidden="true"></span>
-            Serving Nationwide
-          </p>
-          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black mb-5 leading-[1.08] tracking-tight">
-            Custom Pre-Engineered<br class="hidden sm:block">
-            <span class="copper-gradient">Metal Buildings</span>
-          </h1>
-          <p class="text-lg sm:text-xl text-slate-100 mb-3 font-medium leading-relaxed">
-            Durable. Cost-effective. Engineered for your site, codes, and climate — anywhere in the U.S.
-          </p>
-          <p class="text-base text-slate-300 mb-9 max-w-xl leading-relaxed">
-            More than a decade of hands-on PEMB experience — design online in 3D, transparent process, value engineering, and no high-pressure sales.
-          </p>
-          <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
-            <a href="designer.html" class="inline-flex justify-center items-center bg-copper-600 hover:bg-copper-500 text-white px-8 py-4 rounded-xl font-bold text-base sm:text-lg transition shadow-xl shadow-copper-900/40">
-              Build Your Own Building
-            </a>
-            <a href="#contact" class="inline-flex justify-center items-center bg-white/10 hover:bg-white/15 border border-white/25 text-white px-8 py-4 rounded-xl font-semibold transition backdrop-blur-sm">
-              Get Free Quote
-            </a>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-20 md:py-24 relative min-h-[22rem] sm:min-h-[24rem]">
+
+        <!-- STAGE 1: Brand + supplier promise -->
+        <div class="hero-stage is-active" data-stage="0" id="hero-stage-0">
+          <div class="hero-stage-inner">
+            <p class="hero-kicker hero-fade-up d1"><span class="bar" aria-hidden="true"></span> Stamps Steel Buildings</p>
+            <div class="hero-line-draw" aria-hidden="true"></div>
+            <h1 class="hero-headline hero-fade-up d2">
+              Your Professional<br class="hidden sm:block">
+              <span class="copper-gradient">Steel and Structural</span><br>
+              Building Supplier
+            </h1>
+            <p class="hero-sub hero-fade-up d3">
+              Pre-engineered metal buildings engineered for your site, codes, and climate —
+              <strong>nationwide</strong>, with a home office in Bethpage, Middle Tennessee.
+            </p>
+            <div class="hero-actions hero-fade-up d4">
+              <a href="#contact" class="inline-flex justify-center items-center bg-white/10 hover:bg-white/15 border border-white/25 text-white px-7 py-3.5 rounded-xl font-semibold transition backdrop-blur-sm">
+                Get Free Quote
+              </a>
+              <a href="tel:+16156298217" class="inline-flex justify-center items-center text-slate-200 hover:text-copper-400 px-2 py-3 font-medium transition">
+                (615) 629-8217
+              </a>
+            </div>
           </div>
-          <div class="mt-10 flex flex-wrap gap-x-6 gap-y-2 text-sm text-slate-300/90">
-            <a href="tel:+16156298217" class="hover:text-copper-400 transition font-medium">(615) 629-8217</a>
-            <span class="text-slate-600 hidden sm:inline" aria-hidden="true">|</span>
-            <a href="mailto:info@stampssteel.com" class="hover:text-copper-400 transition font-medium">info@stampssteel.com</a>
+        </div>
+
+        <!-- STAGE 2: Design your building -->
+        <div class="hero-stage" data-stage="1" id="hero-stage-1" aria-hidden="true">
+          <div class="hero-stage-inner">
+            <p class="hero-kicker hero-fade-up d1"><span class="bar" aria-hidden="true"></span> Interactive 3D Designer</p>
+            <div class="hero-line-draw" aria-hidden="true"></div>
+            <h2 class="hero-headline hero-fade-up d2">
+              Design your<br class="hidden sm:block">
+              <span class="copper-gradient">building here</span>
+            </h2>
+            <p class="hero-sub hero-fade-up d3">
+              Configure size, doors, and finishes in our free online designer — then request a Stamps Steel quote with no high-pressure sales.
+            </p>
+            <div class="hero-actions hero-fade-up d4">
+              <a href="designer.html" class="hero-cta-pulse inline-flex justify-center items-center bg-copper-600 hover:bg-copper-500 text-white px-8 py-4 rounded-xl font-bold text-base sm:text-lg transition shadow-xl shadow-copper-900/40">
+                Design Your Building Here
+              </a>
+              <a href="projects.html#designs" class="inline-flex justify-center items-center bg-white/10 hover:bg-white/15 border border-white/25 text-white px-7 py-3.5 rounded-xl font-semibold transition backdrop-blur-sm">
+                Browse Designs
+              </a>
+            </div>
           </div>
+        </div>
+
+        <!-- Stage controls -->
+        <div class="hero-progress" role="tablist" aria-label="Hero message">
+          <button type="button" class="is-active" data-go-stage="0" aria-label="Supplier message" aria-selected="true"></button>
+          <button type="button" data-go-stage="1" aria-label="Design your building" aria-selected="false"></button>
         </div>
       </div>
     </div>
@@ -794,37 +1000,84 @@
     }
   </script>
 
+
 <script>
-    // Hero video: desktop only, after idle — never competes with mobile LCP
     (function () {
+      // Hero video — desktop / capable only (poster remains LCP on mobile)
       var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       var mobile = window.matchMedia('(max-width: 767px)').matches;
       var saveData = navigator.connection && navigator.connection.saveData;
-      if (reduce || mobile || saveData) return;
       var host = document.querySelector('.hero-media');
-      if (!host) return;
-      var load = function () {
-        if (document.getElementById('hero-video')) return;
-        var v = document.createElement('video');
-        v.id = 'hero-video';
-        v.className = 'hero-video-defer';
-        v.muted = true;
-        v.loop = true;
-        v.playsInline = true;
-        v.setAttribute('playsinline', '');
-        v.preload = 'metadata';
-        v.setAttribute('aria-hidden', 'true');
-        var s = document.createElement('source');
-        s.src = 'images/Prfwh.mp4';
-        s.type = 'video/mp4';
-        v.appendChild(s);
-        host.appendChild(v);
-        var play = function () { v.play().catch(function () {}); };
-        if (v.readyState >= 2) play();
-        else v.addEventListener('loadeddata', play, { once: true });
-      };
-      if ('requestIdleCallback' in window) requestIdleCallback(load, { timeout: 2500 });
-      else setTimeout(load, 1200);
+      if (host && !reduce && !mobile && !saveData) {
+        var loadVideo = function () {
+          if (document.getElementById('hero-video')) return;
+          var v = document.createElement('video');
+          v.id = 'hero-video';
+          v.muted = true;
+          v.defaultMuted = true;
+          v.loop = true;
+          v.playsInline = true;
+          v.setAttribute('playsinline', '');
+          v.setAttribute('aria-hidden', 'true');
+          v.preload = 'metadata';
+          var s = document.createElement('source');
+          s.src = 'images/hero/stamps-hero.mp4';
+          s.type = 'video/mp4';
+          v.appendChild(s);
+          host.appendChild(v);
+          var reveal = function () {
+            v.classList.add('is-ready');
+            v.play().catch(function () {});
+          };
+          if (v.readyState >= 2) reveal();
+          else v.addEventListener('loadeddata', reveal, { once: true });
+        };
+        if ('requestIdleCallback' in window) requestIdleCallback(loadVideo, { timeout: 2000 });
+        else setTimeout(loadVideo, 900);
+      }
+
+      // Hero stages: supplier promise → design your building
+      var stages = Array.prototype.slice.call(document.querySelectorAll('.hero-stage'));
+      var dots = Array.prototype.slice.call(document.querySelectorAll('.hero-progress [data-go-stage]'));
+      if (!stages.length) return;
+      var i = 0;
+      var timer = null;
+      var dwell = [5200, 5600];
+      var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      function show(idx) {
+        i = ((idx % stages.length) + stages.length) % stages.length;
+        stages.forEach(function (el, n) {
+          var on = n === i;
+          el.classList.toggle('is-active', on);
+          el.setAttribute('aria-hidden', on ? 'false' : 'true');
+        });
+        dots.forEach(function (btn, n) {
+          var on = n === i;
+          btn.classList.toggle('is-active', on);
+          btn.setAttribute('aria-selected', on ? 'true' : 'false');
+        });
+      }
+      function schedule() {
+        if (reduced) return;
+        clearTimeout(timer);
+        timer = setTimeout(function () {
+          show(i + 1);
+          schedule();
+        }, dwell[i] || 5000);
+      }
+      dots.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          show(parseInt(btn.getAttribute('data-go-stage'), 10) || 0);
+          schedule();
+        });
+      });
+      document.addEventListener('visibilitychange', function () {
+        if (document.hidden) clearTimeout(timer);
+        else schedule();
+      });
+      show(0);
+      schedule();
     })();
 </script>
 
