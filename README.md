@@ -30,6 +30,7 @@ Modern, visual, locally focused website for **Stamps Steel Buildings** — a pri
 | `imp.html` | Insulated metal panels — thicknesses, R-values, profiles, standing seam, finishes |
 | `designer.html` | Build Your Own Building — embeds Stamps Steel 3D designer portal |
 | `mini-storage.html` | Steel mini storage / self-storage systems + roll-up door summary |
+| `projects.html` | Project gallery + framing hub |
 | `framing.html` | PEB frame types, purlins/girts, framed openings, doors/windows/vents |
 | `images/panels/` | Cached profile images + PDF data sheets for offline/GitHub Pages display |
 
