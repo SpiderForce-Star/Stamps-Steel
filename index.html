@@ -39,6 +39,14 @@
   </script>
   <style>
     html { scroll-behavior: smooth; }
+    /* Critical layout stability (CLS) */
+    body { margin: 0; }
+    nav.bg-steel-950 { min-height: 4rem; }
+    .hero-section { min-height: min(72vh, 640px); }
+    @media (min-width: 640px) {
+      .hero-section { min-height: min(88vh, 860px); }
+    }
+
     .hero-section {
       position: relative;
       min-height: min(88vh, 860px);
@@ -100,6 +108,7 @@
 
     /* Attention marquee under hero */
     .attn-ribbon {
+      min-height: 2.75rem;
       background: linear-gradient(90deg, #7a4a1f 0%, #b87333 35%, #c97b3a 50%, #b87333 65%, #7a4a1f 100%);
       color: #fff;
       overflow: hidden;
@@ -248,7 +257,7 @@
     <div class="max-w-7xl mx-auto px-4">
       <div class="flex justify-between items-center h-16">
         <a href="index.html" class="flex items-center gap-3 shrink-0">
-          <picture class="inline-block shrink-0"><source type="image/webp" srcset="images/logo.webp"><img data-opt="1" src="images/logo.jpg" alt="Stamps Steel Buildings" class="h-10 md:h-12 object-contain" decoding="async" loading="eager"></picture>
+          <picture class="inline-block shrink-0"><source type="image/webp" srcset="images/logo.webp"><img data-opt="1" src="images/logo.jpg" alt="Stamps Steel Buildings" class="h-10 md:h-12 object-contain" width="160" height="48" decoding="async" loading="eager"></picture>
         </a>
         <div class="nav-desktop hidden lg:flex items-center space-x-1 text-sm font-medium">
           <a href="about.html" class="px-2 py-2 hover:text-copper-400 transition">About</a>
@@ -289,16 +298,7 @@
   <section id="home" class="hero-section text-white" aria-label="Introduction">
     <div class="hero-media" aria-hidden="true">
       <picture><source type="image/webp" srcset="images/Small%20Farm-640w.webp 640w, images/Small%20Farm-960w.webp 960w, images/Small%20Farm.webp 1400w" sizes="100vw"><img data-opt="1" src="images/Small%20Farm.jpg" alt="" width="1920" height="1080" decoding="async" loading="eager" fetchpriority="high" sizes="100vw"></picture>
-      <video
-        id="hero-video"
-        class="hero-video-defer"
-        muted
-        loop
-        playsinline
-        preload="none"
-        poster="images/Small%20Farm.webp"
-        data-src="images/Prfwh.mp4">
-      </video>
+      <!-- Hero video injected on desktop only (keeps mobile LCP on poster image) -->
     </div>
     <div class="hero-overlay" aria-hidden="true"></div>
     <div class="hero-content">
@@ -448,7 +448,7 @@
           </div>
         </article>
         <article class="rounded-2xl border border-slate-200 overflow-hidden bg-slate-50 hover:border-copper-300 transition">
-          <picture><source type="image/webp" srcset="images/Small Farm-640w.webp 640w, images/Small Farm-960w.webp 960w, images/Small Farm.webp 1400w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"><img data-opt="1" src="images/Small%20Farm.jpg" alt="Agricultural metal building" class="w-full h-44 object-cover" width="600" height="300" decoding="async" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"></picture>
+          <picture><source type="image/webp" srcset="images/Small%20Farm-640w.webp 640w, images/Small%20Farm-960w.webp 960w, images/Small%20Farm.webp 1400w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"><img data-opt="1" src="images/Small%20Farm.jpg" alt="Agricultural metal building" class="w-full h-44 object-cover" width="600" height="300" decoding="async" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"></picture>
           <div class="p-6">
             <h3 class="font-bold text-lg mb-2">Agricultural</h3>
             <p class="text-sm text-slate-600 leading-relaxed">Barns, equipment storage, livestock shelters, and farm shops sized for real working properties.</p>
@@ -747,7 +747,7 @@
   <footer class="bg-steel-950 text-slate-400 py-12 border-t border-steel-800">
     <div class="max-w-7xl mx-auto px-4">
       <div class="flex flex-col items-center text-center">
-        <picture class="inline-block shrink-0"><source type="image/webp" srcset="images/logo.webp"><img data-opt="1" src="images/logo.jpg" alt="Stamps Steel Buildings" class="h-14 object-contain mb-5" decoding="async" loading="lazy"></picture>
+        <picture class="inline-block shrink-0"><source type="image/webp" srcset="images/logo.webp"><img data-opt="1" src="images/logo.jpg" alt="Stamps Steel Buildings" class="h-14 object-contain mb-5" width="180" height="56" decoding="async" loading="lazy"></picture>
         <p class="text-sm text-slate-300 mb-1">Custom Pre-Engineered Metal Buildings</p>
         <p class="text-sm mb-1">Serving customers nationwide</p>
         <p class="text-sm mb-4">Bethpage, Middle Tennessee</p>
@@ -795,30 +795,39 @@
   </script>
 
 <script>
-    // Defer hero video: poster-only on mobile/save-data/reduced-motion
-    (function(){
-      const v = document.getElementById('hero-video');
-      if (!v) return;
-      const src = v.getAttribute('data-src');
-      if (!src) return;
-      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      const mobile = window.matchMedia('(max-width: 767px)').matches;
-      const saveData = navigator.connection && navigator.connection.saveData;
+    // Hero video: desktop only, after idle — never competes with mobile LCP
+    (function () {
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var mobile = window.matchMedia('(max-width: 767px)').matches;
+      var saveData = navigator.connection && navigator.connection.saveData;
       if (reduce || mobile || saveData) return;
-      const load = function(){
-        if (v.querySelector('source')) return;
-        const s = document.createElement('source');
-        s.src = src;
+      var host = document.querySelector('.hero-media');
+      if (!host) return;
+      var load = function () {
+        if (document.getElementById('hero-video')) return;
+        var v = document.createElement('video');
+        v.id = 'hero-video';
+        v.className = 'hero-video-defer';
+        v.muted = true;
+        v.loop = true;
+        v.playsInline = true;
+        v.setAttribute('playsinline', '');
+        v.preload = 'metadata';
+        v.setAttribute('aria-hidden', 'true');
+        var s = document.createElement('source');
+        s.src = 'images/Prfwh.mp4';
         s.type = 'video/mp4';
         v.appendChild(s);
-        v.preload = 'metadata';
-        v.load();
-        v.play().catch(function(){});
+        host.appendChild(v);
+        var play = function () { v.play().catch(function () {}); };
+        if (v.readyState >= 2) play();
+        else v.addEventListener('loadeddata', play, { once: true });
       };
-      if ('requestIdleCallback' in window) requestIdleCallback(load, {timeout: 2500});
+      if ('requestIdleCallback' in window) requestIdleCallback(load, { timeout: 2500 });
       else setTimeout(load, 1200);
     })();
 </script>
 
+  <script src="js/web-vitals.js" defer></script>
 </body>
 </html>

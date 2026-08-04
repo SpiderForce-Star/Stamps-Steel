@@ -112,3 +112,35 @@ GitHub Pages is enabled from `main`. After push, hard-refresh the live site if n
 ## Credits
 
 Website built by [Webb Spinner Visions](https://webbspinnervisions.net).
+
+## Core Web Vitals / LCP
+
+This site measures **Core Web Vitals** in the browser via [`js/web-vitals.js`](js/web-vitals.js):
+
+| Metric | Good | Needs improvement | Poor |
+|--------|------|-------------------|------|
+| **LCP** (Largest Contentful Paint) | ≤ 2.5 s | ≤ 4.0 s | > 4.0 s |
+| **CLS** (Cumulative Layout Shift) | ≤ 0.1 | ≤ 0.25 | > 0.25 |
+| **INP** (Interaction to Next Paint) | ≤ 200 ms | ≤ 500 ms | > 500 ms |
+| **FCP** (First Contentful Paint) | ≤ 1.8 s | ≤ 3.0 s | > 3.0 s |
+| **TTFB** (Time to First Byte) | ≤ 800 ms | ≤ 1.8 s | > 1.8 s |
+
+### How metrics are collected
+- Native `PerformanceObserver` (no third-party analytics required)
+- Values stored on `window.__SSB_VITALS__`
+- Also pushed to `window.dataLayer` as `core_web_vital` events (ready for GTM/GA if added later)
+- **Visitors never see a metrics UI** by default
+
+### Developer overlay
+Append **`?vitals=1`** to any page URL to show a small floating readout (LCP, CLS, INP, FCP, TTFB + LCP element).  
+Close the panel to hide it. Copy exports JSON for notes.
+
+Example: `projects.html?vitals=1`
+
+### LCP performance practices on this site
+- Hero / LCP image: WebP + responsive `srcset`, `fetchpriority="high"`, `loading="eager"`, preload
+- Below-fold images: lazy-loaded WebP variants (640w / 960w)
+- Hero video deferred on mobile / reduced-motion / Save-Data (poster only)
+- Width/height or aspect-ratio boxes on images to limit CLS
+
+Field data (real users) may differ from lab snapshots; use PageSpeed Insights / CrUX for production monitoring.
