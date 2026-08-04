@@ -64,7 +64,7 @@
       min-height: 100%;
       transform: translate(-50%, -50%);
       object-fit: cover;
-      object-position: center center;
+      object-position: center 40%;
     }
     .hero-overlay {
       position: absolute;
@@ -148,6 +148,48 @@
       .hero-media video { display: none; }
       .attn-ribbon-inner { animation: none; }
     }
+  
+    /* Mobile-first hardening */
+    html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+    body { overflow-x: clip; }
+    img, svg, video { max-width: 100%; height: auto; }
+    img { display: block; }
+    /* Prefer content-box images in flex/grid */
+    .project-card img, .aspect-\[4\/3\] img, .aspect-\[16\/9\] img { width: 100%; height: 100%; object-fit: cover; max-width: none; }
+    /* Touch-friendly controls */
+    @media (max-width: 1023px) {
+      .nav-desktop { display: none !important; }
+      .nav-mobile-tools { display: flex !important; }
+      #menu-btn { min-width: 44px; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; }
+      a, button { -webkit-tap-highlight-color: rgba(185,115,51,0.15); }
+      /* Tables: allow swipe, prevent page blowout */
+      .overflow-x-auto { -webkit-overflow-scrolling: touch; overscroll-behavior-x: contain; }
+      /* Hero shorter on phones */
+      .hero-section { min-height: min(72vh, 640px) !important; }
+      .hero-content .max-w-2xl h1 { font-size: clamp(1.75rem, 7vw, 2.5rem); line-height: 1.15; }
+      /* Sticky double-bar: subnav under main nav */
+      .projects-subnav { top: 4rem; }
+      /* Designer embed */
+      .designer-frame-wrap { min-height: 70vh; height: 70vh !important; }
+      .designer-frame-wrap iframe { min-height: 70vh; height: 70vh !important; }
+      /* Forms */
+      input, select, textarea, button[type="submit"] { font-size: 16px !important; } /* prevent iOS zoom */
+      /* Horizontal category chips */
+      [role="tablist"] { scrollbar-width: none; }
+      [role="tablist"]::-webkit-scrollbar { display: none; }
+    }
+    @media (min-width: 1024px) {
+      .nav-desktop { display: flex !important; }
+      .nav-mobile-tools { display: none !important; }
+    }
+    @media (max-width: 639px) {
+      .attn-track { font-size: 0.72rem; padding: 0.65rem 0; }
+      .attn-item { padding: 0 0.85rem; }
+      /* Gallery cards tighter padding */
+      .project-card .p-5 { padding: 1rem; }
+      .project-card .p-4 { padding: 0.85rem; }
+    }
+
   </style>
   <script type="application/ld+json">
   {
@@ -184,7 +226,7 @@
         <a href="index.html" class="flex items-center gap-3 shrink-0">
           <img src="images/logo.jpg" alt="Stamps Steel Buildings" class="h-10 md:h-12 object-contain">
         </a>
-        <div class="hidden lg:flex items-center space-x-1 text-sm font-medium">
+        <div class="nav-desktop hidden lg:flex items-center space-x-1 text-sm font-medium">
           <a href="about.html" class="px-2 py-2 hover:text-copper-400 transition">About</a>
           <a href="designer.html" class="px-2 py-2 hover:text-copper-400 transition">3D Designer</a>
           <a href="projects.html" class="px-2 py-2 hover:text-copper-400 transition">Projects</a>
@@ -195,7 +237,7 @@
           <a href="mini-storage.html" class="px-2 py-2 hover:text-copper-400 transition">Mini Storage</a>
           <a href="#contact" class="ml-2 bg-copper-600 hover:bg-copper-500 text-white px-4 py-2.5 rounded-lg font-semibold transition shadow-lg shadow-copper-900/30">Get Free Quote</a>
         </div>
-        <div class="flex items-center gap-2 lg:hidden">
+        <div class="nav-mobile-tools flex items-center gap-2 lg:hidden">
           <a href="#contact" class="bg-copper-600 text-white px-3 py-1.5 rounded-lg text-sm font-semibold">Quote</a>
           <button id="menu-btn" class="p-2 text-slate-200" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
@@ -373,42 +415,42 @@
       </div>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <article class="rounded-2xl border border-slate-200 overflow-hidden bg-slate-50 hover:border-copper-300 transition">
-          <img src="images/1.jpg" alt="Shop and garage metal building" class="w-full h-44 object-cover" loading="lazy" width="600" height="300">
+          <img sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="async" src="images/1.jpg" alt="Shop and garage metal building" class="w-full h-44 object-cover" loading="lazy" width="600" height="300">
           <div class="p-6">
             <h3 class="font-bold text-lg mb-2">Shops & Garages</h3>
             <p class="text-sm text-slate-600 leading-relaxed">Workshops, hobby garages, and multi-bay shops with clear-span interiors and custom door packages.</p>
           </div>
         </article>
         <article class="rounded-2xl border border-slate-200 overflow-hidden bg-slate-50 hover:border-copper-300 transition">
-          <img src="images/5.jpg" alt="Commercial metal building" class="w-full h-44 object-cover" loading="lazy" width="600" height="300">
+          <img sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="async" src="images/5.jpg" alt="Commercial metal building" class="w-full h-44 object-cover" loading="lazy" width="600" height="300">
           <div class="p-6">
             <h3 class="font-bold text-lg mb-2">Commercial & Auto</h3>
             <p class="text-sm text-slate-600 leading-relaxed">Retail shells, service centers, and automotive facilities built for durability and clean presentation.</p>
           </div>
         </article>
         <article class="rounded-2xl border border-slate-200 overflow-hidden bg-slate-50 hover:border-copper-300 transition">
-          <img src="images/Small%20Farm.jpg" alt="Agricultural metal building" class="w-full h-44 object-cover" loading="lazy" width="600" height="300">
+          <img sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="async" src="images/Small%20Farm.jpg" alt="Agricultural metal building" class="w-full h-44 object-cover" loading="lazy" width="600" height="300">
           <div class="p-6">
             <h3 class="font-bold text-lg mb-2">Agricultural</h3>
             <p class="text-sm text-slate-600 leading-relaxed">Barns, equipment storage, livestock shelters, and farm shops sized for real working properties.</p>
           </div>
         </article>
         <article class="rounded-2xl border border-slate-200 overflow-hidden bg-slate-50 hover:border-copper-300 transition">
-          <img src="images/7.jpg" alt="Warehouse metal building" class="w-full h-44 object-cover" loading="lazy" width="600" height="300">
+          <img sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="async" src="images/7.jpg" alt="Warehouse metal building" class="w-full h-44 object-cover" loading="lazy" width="600" height="300">
           <div class="p-6">
             <h3 class="font-bold text-lg mb-2">Warehouses</h3>
             <p class="text-sm text-slate-600 leading-relaxed">Distribution, storage, and light industrial shells with the eave heights and bays your operation needs.</p>
           </div>
         </article>
         <article class="rounded-2xl border border-slate-200 overflow-hidden bg-slate-50 hover:border-copper-300 transition">
-          <img src="images/9.jpg" alt="Barndominium style metal building" class="w-full h-44 object-cover" loading="lazy" width="600" height="300">
+          <img sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="async" src="images/9.jpg" alt="Barndominium style metal building" class="w-full h-44 object-cover" loading="lazy" width="600" height="300">
           <div class="p-6">
             <h3 class="font-bold text-lg mb-2">Barndominiums</h3>
             <p class="text-sm text-slate-600 leading-relaxed">Living-space-ready shells with open plans, lean-tos, and exterior packages that look intentional.</p>
           </div>
         </article>
         <article class="rounded-2xl border border-slate-200 overflow-hidden bg-slate-50 hover:border-copper-300 transition">
-          <img src="images/13.jpg" alt="Custom specialty metal building" class="w-full h-44 object-cover" loading="lazy" width="600" height="300">
+          <img sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="async" src="images/13.jpg" alt="Custom specialty metal building" class="w-full h-44 object-cover" loading="lazy" width="600" height="300">
           <div class="p-6">
             <h3 class="font-bold text-lg mb-2">Specialty & Custom</h3>
             <p class="text-sm text-slate-600 leading-relaxed">Hangars, cold storage, churches, municipal, and multi-building complexes — engineered to the use.</p>
@@ -435,7 +477,7 @@
 
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
         <article class="project-card rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm flex flex-col">
-          <div class="aspect-[4/3] overflow-hidden"><img src="images/1.jpg" alt="Two-tone charcoal and red clear-span shop" class="w-full h-full object-cover" loading="lazy"></div>
+          <div class="aspect-[4/3] overflow-hidden"><img sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="async" src="images/1.jpg" alt="Two-tone charcoal and red clear-span shop" class="w-full h-full object-cover" loading="lazy"></div>
           <div class="p-4 flex-1">
             <p class="text-xs font-semibold text-copper-600 uppercase tracking-wide mb-1">Shop / Garage</p>
             <h3 class="font-bold text-steel-900 mb-1">Multi-door clear-span shop</h3>
@@ -443,7 +485,7 @@
           </div>
         </article>
         <article class="project-card rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm flex flex-col">
-          <div class="aspect-[4/3] overflow-hidden"><img src="images/2.jpg" alt="Open clear-span interior workshop" class="w-full h-full object-cover" loading="lazy"></div>
+          <div class="aspect-[4/3] overflow-hidden"><img sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="async" src="images/2.jpg" alt="Open clear-span interior workshop" class="w-full h-full object-cover" loading="lazy"></div>
           <div class="p-4 flex-1">
             <p class="text-xs font-semibold text-copper-600 uppercase tracking-wide mb-1">Interior</p>
             <h3 class="font-bold text-steel-900 mb-1">Open-floor workshop shell</h3>
@@ -451,7 +493,7 @@
           </div>
         </article>
         <article class="project-card rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm flex flex-col">
-          <div class="aspect-[4/3] overflow-hidden"><img src="images/7.jpg" alt="Aerial multi-building commercial PEB complex" class="w-full h-full object-cover" loading="lazy"></div>
+          <div class="aspect-[4/3] overflow-hidden"><img sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="async" src="images/7.jpg" alt="Aerial multi-building commercial PEB complex" class="w-full h-full object-cover" loading="lazy"></div>
           <div class="p-4 flex-1">
             <p class="text-xs font-semibold text-copper-600 uppercase tracking-wide mb-1">Commercial</p>
             <h3 class="font-bold text-steel-900 mb-1">Multi-building industrial campus</h3>
@@ -459,7 +501,7 @@
           </div>
         </article>
         <article class="project-card rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm flex flex-col">
-          <div class="aspect-[4/3] overflow-hidden"><img src="images/8.jpg" alt="Four-bay cream commercial metal building with lean-to" class="w-full h-full object-cover" loading="lazy"></div>
+          <div class="aspect-[4/3] overflow-hidden"><img sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="async" src="images/8.jpg" alt="Four-bay cream commercial metal building with lean-to" class="w-full h-full object-cover" loading="lazy"></div>
           <div class="p-4 flex-1">
             <p class="text-xs font-semibold text-copper-600 uppercase tracking-wide mb-1">Auto / Service</p>
             <h3 class="font-bold text-steel-900 mb-1">Four-bay service building</h3>
@@ -467,7 +509,7 @@
           </div>
         </article>
         <article class="project-card rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm flex flex-col">
-          <div class="aspect-[4/3] overflow-hidden"><img src="images/11.jpg" alt="Warehouse interior with mezzanine and office storefront" class="w-full h-full object-cover" loading="lazy"></div>
+          <div class="aspect-[4/3] overflow-hidden"><img sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="async" src="images/11.jpg" alt="Warehouse interior with mezzanine and office storefront" class="w-full h-full object-cover" loading="lazy"></div>
           <div class="p-4 flex-1">
             <p class="text-xs font-semibold text-copper-600 uppercase tracking-wide mb-1">Warehouse + Office</p>
             <h3 class="font-bold text-steel-900 mb-1">Hybrid office / warehouse</h3>
@@ -475,7 +517,7 @@
           </div>
         </article>
         <article class="project-card rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm flex flex-col">
-          <div class="aspect-[4/3] overflow-hidden"><img src="images/12.jpg" alt="Green PEB with stone wainscot and cupola" class="w-full h-full object-cover" loading="lazy"></div>
+          <div class="aspect-[4/3] overflow-hidden"><img sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="async" src="images/12.jpg" alt="Green PEB with stone wainscot and cupola" class="w-full h-full object-cover" loading="lazy"></div>
           <div class="p-4 flex-1">
             <p class="text-xs font-semibold text-copper-600 uppercase tracking-wide mb-1">Finished Commercial</p>
             <h3 class="font-bold text-steel-900 mb-1">Green PEB with office wing</h3>
@@ -613,7 +655,7 @@
         <a href="about.html" class="inline-flex bg-steel-900 hover:bg-steel-800 text-white px-6 py-3 rounded-xl font-semibold transition">Read Our Story</a>
       </div>
       <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-lg aspect-[4/3]">
-        <img src="images/12.jpg" alt="Stamps Steel metal building project" class="w-full h-full object-cover" loading="lazy" width="900" height="675">
+        <img sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="async" src="images/12.jpg" alt="Stamps Steel metal building project" class="w-full h-full object-cover" loading="lazy" width="900" height="675">
       </div>
     </div>
   </section>

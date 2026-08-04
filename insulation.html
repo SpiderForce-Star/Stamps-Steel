@@ -46,6 +46,48 @@
     }
     .sys-card { transition: box-shadow 0.25s ease, border-color 0.25s ease; }
     .sys-card:hover { border-color: #e0a05a; box-shadow: 0 12px 28px -8px rgba(15, 23, 42, 0.14); }
+  
+    /* Mobile-first hardening */
+    html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+    body { overflow-x: clip; }
+    img, svg, video { max-width: 100%; height: auto; }
+    img { display: block; }
+    /* Prefer content-box images in flex/grid */
+    .project-card img, .aspect-\[4\/3\] img, .aspect-\[16\/9\] img { width: 100%; height: 100%; object-fit: cover; max-width: none; }
+    /* Touch-friendly controls */
+    @media (max-width: 1023px) {
+      .nav-desktop { display: none !important; }
+      .nav-mobile-tools { display: flex !important; }
+      #menu-btn { min-width: 44px; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; }
+      a, button { -webkit-tap-highlight-color: rgba(185,115,51,0.15); }
+      /* Tables: allow swipe, prevent page blowout */
+      .overflow-x-auto { -webkit-overflow-scrolling: touch; overscroll-behavior-x: contain; }
+      /* Hero shorter on phones */
+      .hero-section { min-height: min(72vh, 640px) !important; }
+      .hero-content .max-w-2xl h1 { font-size: clamp(1.75rem, 7vw, 2.5rem); line-height: 1.15; }
+      /* Sticky double-bar: subnav under main nav */
+      .projects-subnav { top: 4rem; }
+      /* Designer embed */
+      .designer-frame-wrap { min-height: 70vh; height: 70vh !important; }
+      .designer-frame-wrap iframe { min-height: 70vh; height: 70vh !important; }
+      /* Forms */
+      input, select, textarea, button[type="submit"] { font-size: 16px !important; } /* prevent iOS zoom */
+      /* Horizontal category chips */
+      [role="tablist"] { scrollbar-width: none; }
+      [role="tablist"]::-webkit-scrollbar { display: none; }
+    }
+    @media (min-width: 1024px) {
+      .nav-desktop { display: flex !important; }
+      .nav-mobile-tools { display: none !important; }
+    }
+    @media (max-width: 639px) {
+      .attn-track { font-size: 0.72rem; padding: 0.65rem 0; }
+      .attn-item { padding: 0 0.85rem; }
+      /* Gallery cards tighter padding */
+      .project-card .p-5 { padding: 1rem; }
+      .project-card .p-4 { padding: 0.85rem; }
+    }
+
   </style>
 </head>
 <body class="bg-slate-50 text-slate-900 font-sans antialiased">
@@ -57,7 +99,7 @@
         <a href="index.html" class="flex items-center gap-3 shrink-0">
           <img src="images/logo.jpg" alt="Stamps Steel Buildings" class="h-10 md:h-12 object-contain">
         </a>
-        <div class="hidden lg:flex items-center space-x-1 text-sm font-medium">
+        <div class="nav-desktop hidden lg:flex items-center space-x-1 text-sm font-medium">
           <a href="about.html" class="px-2 py-2 hover:text-copper-400 transition">About</a>
           <a href="designer.html" class="px-2 py-2 hover:text-copper-400 transition">3D Designer</a>
           <a href="projects.html" class="px-2 py-2 hover:text-copper-400 transition">Projects</a>
@@ -68,7 +110,7 @@
           <a href="mini-storage.html" class="px-2 py-2 hover:text-copper-400 transition">Mini Storage</a>
           <a href="index.html#contact" class="ml-2 bg-copper-600 hover:bg-copper-500 text-white px-4 py-2.5 rounded-lg font-semibold transition shadow-lg shadow-copper-900/30">Get Free Quote</a>
         </div>
-        <div class="flex items-center gap-2 lg:hidden">
+        <div class="nav-mobile-tools flex items-center gap-2 lg:hidden">
           <a href="#quote" class="bg-copper-600 text-white px-3 py-1.5 rounded-lg text-sm font-semibold">Quote</a>
           <button id="menu-btn" class="p-2 text-slate-200" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
@@ -155,7 +197,7 @@
           </ul>
         </div>
         <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-lg aspect-[4/3]">
-          <img src="images/insulation/psk-rolls.jpg" alt="White PSK-faced fiberglass metal building insulation rolls" class="w-full h-full object-cover" width="900" height="675" loading="eager">
+          <img sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="async" src="images/insulation/psk-rolls.jpg" alt="White PSK-faced fiberglass metal building insulation rolls" class="w-full h-full object-cover" width="900" height="675" loading="eager">
         </div>
       </div>
     </div>
@@ -175,10 +217,10 @@
 
       <div class="grid lg:grid-cols-2 gap-8 mb-12">
         <div class="rounded-2xl overflow-hidden border border-slate-200 bg-slate-50">
-          <img src="images/insulation/diagram-single-layer.svg" alt="Diagram of single-layer faced insulation over purlins with white interior facing" class="w-full h-auto bg-white" width="720" height="320" loading="lazy">
+          <img sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="async" src="images/insulation/diagram-single-layer.svg" alt="Diagram of single-layer faced insulation over purlins with white interior facing" class="w-full h-auto bg-white" width="720" height="320" loading="lazy">
         </div>
         <div class="rounded-2xl overflow-hidden border border-slate-200 aspect-[4/3] lg:aspect-auto lg:min-h-full">
-          <img src="images/insulation/psk-interior.jpg" alt="White faced insulation installed under metal building roof structure" class="w-full h-full object-cover" width="900" height="675" loading="lazy">
+          <img sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="async" src="images/insulation/psk-interior.jpg" alt="White faced insulation installed under metal building roof structure" class="w-full h-full object-cover" width="900" height="675" loading="lazy">
         </div>
       </div>
 
@@ -295,10 +337,10 @@
 
       <div class="mt-10 grid sm:grid-cols-2 gap-4">
         <div class="rounded-xl overflow-hidden border border-slate-200 h-48 sm:h-56">
-          <img src="images/insulation/roof-install.jpg" alt="Metal building roof structure with reflective insulation under panels" class="w-full h-full object-cover" loading="lazy" width="800" height="500">
+          <img sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="async" src="images/insulation/roof-install.jpg" alt="Metal building roof structure with reflective insulation under panels" class="w-full h-full object-cover" loading="lazy" width="800" height="500">
         </div>
         <div class="rounded-xl overflow-hidden border border-slate-200 h-48 sm:h-56">
-          <img src="images/insulation/psk-rolls.jpg" alt="Stacked rolls of white faced metal building insulation" class="w-full h-full object-cover" loading="lazy" width="800" height="500">
+          <img sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="async" src="images/insulation/psk-rolls.jpg" alt="Stacked rolls of white faced metal building insulation" class="w-full h-full object-cover" loading="lazy" width="800" height="500">
         </div>
       </div>
 
@@ -325,10 +367,10 @@
 
       <div class="grid lg:grid-cols-2 gap-8 mb-12">
         <div class="rounded-2xl overflow-hidden border border-slate-200 bg-white order-2 lg:order-1">
-          <img src="images/insulation/diagram-high-r.svg" alt="Diagram of high-R system: unfaced over purlins plus fill between purlins with liner and banding" class="w-full h-auto" width="720" height="360" loading="lazy">
+          <img sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="async" src="images/insulation/diagram-high-r.svg" alt="Diagram of high-R system: unfaced over purlins plus fill between purlins with liner and banding" class="w-full h-auto" width="720" height="360" loading="lazy">
         </div>
         <div class="rounded-2xl overflow-hidden border border-slate-200 order-1 lg:order-2 aspect-[4/3] lg:aspect-auto">
-          <img src="images/insulation/high-r-cavity.jpg" alt="Multi-layer fiberglass insulation filling purlin cavities under metal roof" class="w-full h-full object-cover" width="900" height="675" loading="lazy">
+          <img sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="async" src="images/insulation/high-r-cavity.jpg" alt="Multi-layer fiberglass insulation filling purlin cavities under metal roof" class="w-full h-full object-cover" width="900" height="675" loading="lazy">
         </div>
       </div>
 
@@ -374,7 +416,7 @@
 
       <div class="grid md:grid-cols-2 gap-6 mb-10">
         <div class="rounded-2xl overflow-hidden border border-slate-200 h-56 sm:h-64">
-          <img src="images/insulation/high-r-layers.jpg" alt="High-R insulation layers at roof and wall intersection" class="w-full h-full object-cover" loading="lazy" width="800" height="500">
+          <img sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="async" src="images/insulation/high-r-layers.jpg" alt="High-R insulation layers at roof and wall intersection" class="w-full h-full object-cover" loading="lazy" width="800" height="500">
         </div>
         <div class="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8 flex flex-col justify-center">
           <h3 class="font-bold text-lg mb-3">When to choose high-R</h3>

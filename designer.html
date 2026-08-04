@@ -44,23 +44,8 @@
       background: linear-gradient(135deg, #e0a05a 0%, #c97b3a 50%, #b87333 100%);
       -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
     }
-    .designer-frame-wrap {
-      position: relative;
-      background: #0f172a;
-      border-radius: 1rem;
-      overflow: hidden;
-      border: 1px solid #1e293b;
-      min-height: min(78vh, 820px);
-      height: min(78vh, 820px);
-    }
-    .designer-frame-wrap iframe {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      border: 0;
-      background: #0f172a;
-    }
+    .designer-frame-wrap { width: 100%; height: min(80vh, 820px); min-height: 480px; }
+    .designer-frame-wrap iframe { width: 100%; height: 100%; min-height: 70vh; border: 0; display: block; }
     .designer-fallback {
       position: absolute;
       inset: 0;
@@ -73,6 +58,48 @@
       z-index: 2;
     }
     .designer-fallback.show { display: flex; }
+  
+    /* Mobile-first hardening */
+    html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+    body { overflow-x: clip; }
+    img, svg, video { max-width: 100%; height: auto; }
+    img { display: block; }
+    /* Prefer content-box images in flex/grid */
+    .project-card img, .aspect-\[4\/3\] img, .aspect-\[16\/9\] img { width: 100%; height: 100%; object-fit: cover; max-width: none; }
+    /* Touch-friendly controls */
+    @media (max-width: 1023px) {
+      .nav-desktop { display: none !important; }
+      .nav-mobile-tools { display: flex !important; }
+      #menu-btn { min-width: 44px; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; }
+      a, button { -webkit-tap-highlight-color: rgba(185,115,51,0.15); }
+      /* Tables: allow swipe, prevent page blowout */
+      .overflow-x-auto { -webkit-overflow-scrolling: touch; overscroll-behavior-x: contain; }
+      /* Hero shorter on phones */
+      .hero-section { min-height: min(72vh, 640px) !important; }
+      .hero-content .max-w-2xl h1 { font-size: clamp(1.75rem, 7vw, 2.5rem); line-height: 1.15; }
+      /* Sticky double-bar: subnav under main nav */
+      .projects-subnav { top: 4rem; }
+      /* Designer embed */
+      .designer-frame-wrap { min-height: 70vh; height: 70vh !important; }
+      .designer-frame-wrap iframe { min-height: 70vh; height: 70vh !important; }
+      /* Forms */
+      input, select, textarea, button[type="submit"] { font-size: 16px !important; } /* prevent iOS zoom */
+      /* Horizontal category chips */
+      [role="tablist"] { scrollbar-width: none; }
+      [role="tablist"]::-webkit-scrollbar { display: none; }
+    }
+    @media (min-width: 1024px) {
+      .nav-desktop { display: flex !important; }
+      .nav-mobile-tools { display: none !important; }
+    }
+    @media (max-width: 639px) {
+      .attn-track { font-size: 0.72rem; padding: 0.65rem 0; }
+      .attn-item { padding: 0 0.85rem; }
+      /* Gallery cards tighter padding */
+      .project-card .p-5 { padding: 1rem; }
+      .project-card .p-4 { padding: 0.85rem; }
+    }
+
   </style>
 </head>
 <body class="bg-slate-50 text-slate-900 font-sans antialiased">
@@ -83,7 +110,7 @@
         <a href="index.html" class="flex items-center gap-3 shrink-0">
           <img src="images/logo.jpg" alt="Stamps Steel Buildings" class="h-10 md:h-12 object-contain">
         </a>
-        <div class="hidden lg:flex items-center space-x-1 text-sm font-medium">
+        <div class="nav-desktop hidden lg:flex items-center space-x-1 text-sm font-medium">
           <a href="about.html" class="px-2 py-2 hover:text-copper-400 transition">About</a>
           <a href="designer.html" class="px-2 py-2 text-copper-400 font-semibold border-b-2 border-copper-500" aria-current="page">3D Designer</a>
           <a href="projects.html" class="px-2 py-2 hover:text-copper-400 transition">Projects</a>
@@ -94,7 +121,7 @@
           <a href="mini-storage.html" class="px-2 py-2 hover:text-copper-400 transition">Mini Storage</a>
           <a href="index.html#contact" class="ml-2 bg-copper-600 hover:bg-copper-500 text-white px-4 py-2.5 rounded-lg font-semibold transition shadow-lg shadow-copper-900/30">Get Free Quote</a>
         </div>
-        <div class="flex items-center gap-2 lg:hidden">
+        <div class="nav-mobile-tools flex items-center gap-2 lg:hidden">
           <a href="index.html#contact" class="bg-copper-600 text-white px-3 py-1.5 rounded-lg text-sm font-semibold">Quote</a>
           <button id="menu-btn" class="p-2 text-slate-200" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
@@ -184,7 +211,7 @@
         </div>
       </div>
 
-      <div class="designer-frame-wrap shadow-2xl shadow-steel-950/20" id="designer-wrap">
+      <div class="designer-frame-wrap relative w-full rounded-2xl overflow-hidden border border-slate-200 bg-slate-100 shadow-2xl shadow-steel-950/20" id="designer-wrap">
         <iframe
           id="designer-iframe"
           title="Stamps Steel 3D Metal Building Designer"

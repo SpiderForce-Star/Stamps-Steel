@@ -55,6 +55,48 @@
     .filter-sticky { top: 4rem; }
     #lightbox { display: none; }
     #lightbox.open { display: flex; }
+  
+    /* Mobile-first hardening */
+    html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+    body { overflow-x: clip; }
+    img, svg, video { max-width: 100%; height: auto; }
+    img { display: block; }
+    /* Prefer content-box images in flex/grid */
+    .project-card img, .aspect-\[4\/3\] img, .aspect-\[16\/9\] img { width: 100%; height: 100%; object-fit: cover; max-width: none; }
+    /* Touch-friendly controls */
+    @media (max-width: 1023px) {
+      .nav-desktop { display: none !important; }
+      .nav-mobile-tools { display: flex !important; }
+      #menu-btn { min-width: 44px; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; }
+      a, button { -webkit-tap-highlight-color: rgba(185,115,51,0.15); }
+      /* Tables: allow swipe, prevent page blowout */
+      .overflow-x-auto { -webkit-overflow-scrolling: touch; overscroll-behavior-x: contain; }
+      /* Hero shorter on phones */
+      .hero-section { min-height: min(72vh, 640px) !important; }
+      .hero-content .max-w-2xl h1 { font-size: clamp(1.75rem, 7vw, 2.5rem); line-height: 1.15; }
+      /* Sticky double-bar: subnav under main nav */
+      .projects-subnav { top: 4rem; }
+      /* Designer embed */
+      .designer-frame-wrap { min-height: 70vh; height: 70vh !important; }
+      .designer-frame-wrap iframe { min-height: 70vh; height: 70vh !important; }
+      /* Forms */
+      input, select, textarea, button[type="submit"] { font-size: 16px !important; } /* prevent iOS zoom */
+      /* Horizontal category chips */
+      [role="tablist"] { scrollbar-width: none; }
+      [role="tablist"]::-webkit-scrollbar { display: none; }
+    }
+    @media (min-width: 1024px) {
+      .nav-desktop { display: flex !important; }
+      .nav-mobile-tools { display: none !important; }
+    }
+    @media (max-width: 639px) {
+      .attn-track { font-size: 0.72rem; padding: 0.65rem 0; }
+      .attn-item { padding: 0 0.85rem; }
+      /* Gallery cards tighter padding */
+      .project-card .p-5 { padding: 1rem; }
+      .project-card .p-4 { padding: 0.85rem; }
+    }
+
   </style>
 </head>
 <body class="bg-slate-50 text-slate-900 font-sans antialiased">
@@ -66,7 +108,7 @@
         <a href="index.html" class="flex items-center gap-3">
           <img src="images/logo.jpg" alt="Stamps Steel Buildings" class="h-10 md:h-12 object-contain">
         </a>
-        <div class="hidden lg:flex items-center space-x-1 text-sm font-medium">
+        <div class="nav-desktop hidden lg:flex items-center space-x-1 text-sm font-medium">
           <a href="about.html" class="px-2 py-2 hover:text-copper-400 transition">About</a>
           <a href="designer.html" class="px-2 py-2 hover:text-copper-400 transition">3D Designer</a>
           <a href="projects.html" class="px-2 py-2 hover:text-copper-400 transition">Projects</a>
@@ -77,7 +119,7 @@
           <a href="mini-storage.html" class="px-2 py-2 hover:text-copper-400 transition">Mini Storage</a>
           <a href="index.html#contact" class="ml-2 bg-copper-600 hover:bg-copper-500 text-white px-4 py-2.5 rounded-lg font-semibold transition shadow-lg shadow-copper-900/30">Get Free Quote</a>
         </div>
-        <div class="flex items-center gap-2 lg:hidden">
+        <div class="nav-mobile-tools flex items-center gap-2 lg:hidden">
           <a href="#quote" class="bg-copper-600 text-white px-3 py-1.5 rounded-lg text-sm font-semibold">Quote</a>
           <button id="menu-btn" class="p-2 text-slate-200" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
@@ -239,7 +281,7 @@
   <div id="lightbox" class="fixed inset-0 z-[100] bg-steel-950/90 items-center justify-center p-4" role="dialog" aria-modal="true" aria-label="Product image">
     <button type="button" id="lightbox-close" class="absolute top-4 right-4 text-white/80 hover:text-white p-2 text-2xl leading-none" aria-label="Close">&times;</button>
     <button type="button" id="lightbox-prev" class="absolute left-2 sm:left-6 text-white/80 hover:text-white p-3 text-3xl" aria-label="Previous">‹</button>
-    <img id="lightbox-img" src="" alt="" class="max-h-[85vh] max-w-full object-contain rounded-lg shadow-2xl">
+    <img sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="async" id="lightbox-img" src="" alt="" class="max-h-[85vh] max-w-full object-contain rounded-lg shadow-2xl">
     <button type="button" id="lightbox-next" class="absolute right-2 sm:right-6 text-white/80 hover:text-white p-3 text-3xl" aria-label="Next">›</button>
     <p id="lightbox-caption" class="absolute bottom-6 left-0 right-0 text-center text-white/80 text-sm"></p>
   </div>
@@ -441,7 +483,7 @@
 
         const imageArea = hasImg
           ? `<button type="button" class="gallery-open relative w-full h-full block group" data-index="0" data-gallery='${galleryJson}' data-title="${escapeHtml(p.name)}" aria-label="View photos of ${escapeHtml(p.name)}">
-              <img src="${escapeHtml(mainSrc)}" alt="${escapeHtml(p.name)}" class="w-full h-full object-contain p-3 bg-white" loading="lazy" width="600" height="450">
+              <img sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="async" src="${escapeHtml(mainSrc)}" alt="${escapeHtml(p.name)}" class="w-full h-full object-contain p-3 bg-white" loading="lazy" width="600" height="450">
               ${more ? `<span class="absolute top-3 right-3 z-10 bg-steel-900/85 text-white text-xs font-semibold px-2.5 py-1 rounded-full backdrop-blur">+${more} more</span>` : ''}
             </button>`
           : `<div class="w-full h-full flex flex-col items-center justify-center gap-2 bg-gradient-to-br from-steel-800 to-steel-950 text-slate-300 p-6 text-center">

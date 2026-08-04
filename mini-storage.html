@@ -46,6 +46,48 @@
     }
     .card { transition: box-shadow 0.25s ease, border-color 0.25s ease; }
     .card:hover { border-color: #e0a05a; box-shadow: 0 12px 28px -8px rgba(15, 23, 42, 0.14); }
+  
+    /* Mobile-first hardening */
+    html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+    body { overflow-x: clip; }
+    img, svg, video { max-width: 100%; height: auto; }
+    img { display: block; }
+    /* Prefer content-box images in flex/grid */
+    .project-card img, .aspect-\[4\/3\] img, .aspect-\[16\/9\] img { width: 100%; height: 100%; object-fit: cover; max-width: none; }
+    /* Touch-friendly controls */
+    @media (max-width: 1023px) {
+      .nav-desktop { display: none !important; }
+      .nav-mobile-tools { display: flex !important; }
+      #menu-btn { min-width: 44px; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; }
+      a, button { -webkit-tap-highlight-color: rgba(185,115,51,0.15); }
+      /* Tables: allow swipe, prevent page blowout */
+      .overflow-x-auto { -webkit-overflow-scrolling: touch; overscroll-behavior-x: contain; }
+      /* Hero shorter on phones */
+      .hero-section { min-height: min(72vh, 640px) !important; }
+      .hero-content .max-w-2xl h1 { font-size: clamp(1.75rem, 7vw, 2.5rem); line-height: 1.15; }
+      /* Sticky double-bar: subnav under main nav */
+      .projects-subnav { top: 4rem; }
+      /* Designer embed */
+      .designer-frame-wrap { min-height: 70vh; height: 70vh !important; }
+      .designer-frame-wrap iframe { min-height: 70vh; height: 70vh !important; }
+      /* Forms */
+      input, select, textarea, button[type="submit"] { font-size: 16px !important; } /* prevent iOS zoom */
+      /* Horizontal category chips */
+      [role="tablist"] { scrollbar-width: none; }
+      [role="tablist"]::-webkit-scrollbar { display: none; }
+    }
+    @media (min-width: 1024px) {
+      .nav-desktop { display: flex !important; }
+      .nav-mobile-tools { display: none !important; }
+    }
+    @media (max-width: 639px) {
+      .attn-track { font-size: 0.72rem; padding: 0.65rem 0; }
+      .attn-item { padding: 0 0.85rem; }
+      /* Gallery cards tighter padding */
+      .project-card .p-5 { padding: 1rem; }
+      .project-card .p-4 { padding: 0.85rem; }
+    }
+
   </style>
 </head>
 <body class="bg-slate-50 text-slate-900 font-sans antialiased">
@@ -56,7 +98,7 @@
         <a href="index.html" class="flex items-center gap-3 shrink-0">
           <img src="images/logo.jpg" alt="Stamps Steel Buildings" class="h-10 md:h-12 object-contain">
         </a>
-        <div class="hidden lg:flex items-center space-x-1 text-sm font-medium">
+        <div class="nav-desktop hidden lg:flex items-center space-x-1 text-sm font-medium">
           <a href="about.html" class="px-2 py-2 hover:text-copper-400 transition">About</a>
           <a href="designer.html" class="px-2 py-2 hover:text-copper-400 transition">3D Designer</a>
           <a href="projects.html" class="px-2 py-2 hover:text-copper-400 transition">Projects</a>
@@ -67,7 +109,7 @@
           <a href="mini-storage.html" class="px-2 py-2 text-copper-400 font-semibold border-b-2 border-copper-500" aria-current="page">Mini Storage</a>
           <a href="index.html#contact" class="ml-2 bg-copper-600 hover:bg-copper-500 text-white px-4 py-2.5 rounded-lg font-semibold transition shadow-lg shadow-copper-900/30">Get Free Quote</a>
         </div>
-        <div class="flex items-center gap-2 lg:hidden">
+        <div class="nav-mobile-tools flex items-center gap-2 lg:hidden">
           <a href="#quote" class="bg-copper-600 text-white px-3 py-1.5 rounded-lg text-sm font-semibold">Quote</a>
           <button id="menu-btn" class="p-2 text-slate-200" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
@@ -159,7 +201,7 @@
         </div>
         <div class="space-y-4">
           <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-lg aspect-[4/3]">
-            <img src="images/mini-storage/drive-aisle.jpg" alt="Self-storage complex with drive aisle between two metal mini storage buildings" class="w-full h-full object-cover" width="900" height="675" loading="eager">
+            <img sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="async" src="images/mini-storage/drive-aisle.jpg" alt="Self-storage complex with drive aisle between two metal mini storage buildings" class="w-full h-full object-cover" width="900" height="675" loading="eager">
           </div>
           <p class="text-xs text-slate-500 text-center">Drive-aisle layout — parallel buildings, continuous low roofs, unit doors both sides</p>
         </div>
@@ -177,7 +219,7 @@
       </div>
 
       <div class="rounded-2xl overflow-hidden border border-slate-200 bg-slate-50 mb-10">
-        <img src="images/mini-storage/system-diagram.svg" alt="Diagram of mini storage continuous roof, 8 foot 6 inch eave, and bracing partitions" class="w-full h-auto" width="800" height="360" loading="lazy">
+        <img sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="async" src="images/mini-storage/system-diagram.svg" alt="Diagram of mini storage continuous roof, 8 foot 6 inch eave, and bracing partitions" class="w-full h-auto" width="800" height="360" loading="lazy">
       </div>
 
       <div class="grid md:grid-cols-2 gap-6">
@@ -209,10 +251,10 @@
 
       <div class="mt-10 grid sm:grid-cols-2 gap-4">
         <div class="rounded-2xl overflow-hidden border border-slate-200 h-52 sm:h-64">
-          <img src="images/mini-storage/interior-galvalume.jpg" alt="Interior of mini storage unit with Galvalume metal partitions and roof" class="w-full h-full object-cover" loading="lazy" width="800" height="500">
+          <img sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="async" src="images/mini-storage/interior-galvalume.jpg" alt="Interior of mini storage unit with Galvalume metal partitions and roof" class="w-full h-full object-cover" loading="lazy" width="800" height="500">
         </div>
         <div class="rounded-2xl overflow-hidden border border-slate-200 h-52 sm:h-64">
-          <img src="images/mini-storage/wide-gable.jpg" alt="Wide gable mini storage building with continuous roof and roll-up doors" class="w-full h-full object-cover" loading="lazy" width="800" height="500">
+          <img sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="async" src="images/mini-storage/wide-gable.jpg" alt="Wide gable mini storage building with continuous roof and roll-up doors" class="w-full h-full object-cover" loading="lazy" width="800" height="500">
         </div>
       </div>
       <p class="text-xs text-slate-500 text-center mt-3">Left: Galvalume-style interior partitions & roof underside · Right: wide continuous gable end</p>
@@ -254,10 +296,10 @@
       </div>
       <div class="mt-8 grid sm:grid-cols-2 gap-4">
         <div class="rounded-2xl overflow-hidden border border-slate-200 h-52 sm:h-60">
-          <img src="images/mini-storage/complex-gray.jpg" alt="Gray mini storage complex with black roll-up doors and paved drive" class="w-full h-full object-cover" loading="lazy">
+          <img sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="async" src="images/mini-storage/complex-gray.jpg" alt="Gray mini storage complex with black roll-up doors and paved drive" class="w-full h-full object-cover" loading="lazy">
         </div>
         <div class="rounded-2xl overflow-hidden border border-slate-200 h-52 sm:h-60">
-          <img src="images/mini-storage/green-office-end.jpg" alt="Green mini storage building with stone accent and row of white roll-up doors" class="w-full h-full object-cover" loading="lazy">
+          <img sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="async" src="images/mini-storage/green-office-end.jpg" alt="Green mini storage building with stone accent and row of white roll-up doors" class="w-full h-full object-cover" loading="lazy">
         </div>
       </div>
     </div>
@@ -334,10 +376,10 @@
         </div>
         <div class="space-y-4">
           <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-lg">
-            <img src="images/mini-storage/rollup-door.jpg" alt="Close-up of steel roll-up sheet door on mini storage unit" class="w-full h-auto object-cover" loading="lazy" width="900" height="600">
+            <img sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="async" src="images/mini-storage/rollup-door.jpg" alt="Close-up of steel roll-up sheet door on mini storage unit" class="w-full h-auto object-cover" loading="lazy" width="900" height="600">
           </div>
           <div class="rounded-2xl overflow-hidden border border-slate-200">
-            <img src="images/mini-storage/row-cream.jpg" alt="Row of cream mini storage units with white roll-up doors" class="w-full h-56 object-cover" loading="lazy">
+            <img sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="async" src="images/mini-storage/row-cream.jpg" alt="Row of cream mini storage units with white roll-up doors" class="w-full h-56 object-cover" loading="lazy">
           </div>
           <div class="bg-slate-50 rounded-2xl border border-slate-200 p-5">
             <h3 class="font-bold mb-2">Door package with the building</h3>
