@@ -144,3 +144,17 @@ Example: `projects.html?vitals=1`
 - Width/height or aspect-ratio boxes on images to limit CLS
 
 Field data (real users) may differ from lab snapshots; use PageSpeed Insights / CrUX for production monitoring.
+
+## Clear browser cache (see latest site updates)
+
+After we publish changes (new photos, logo, Accessories images), your phone or computer may still show an older saved copy.
+
+**Quick refresh**
+- **Windows:** `Ctrl` + `Shift` + `R` (or `Ctrl` + `F5`)
+- **Mac:** `Cmd` + `Shift` + `R`
+- **Phone:** pull down to refresh, or use the browser refresh control
+
+**Full steps (iPhone, Android, desktop, Facebook/Instagram in-app browser)**  
+See the public help page: [cache-help.html](cache-help.html) — also linked in the site footer as **“Seeing an old page?”**
+
+**Site maintainers:** bump `?v=` on `js/web-vitals.js` (and critical assets) when shipping visual fixes so clients fetch new files.
