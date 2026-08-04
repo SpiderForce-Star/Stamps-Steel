@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Steel Building Framing | Frame Types, Purlins & Girts – Stamps Steel</title>
+  <meta name="description" content="PEB framing guide: rigid frame types (straight, tapered, modular, single slope, lean-to), purlins and wall girts, framed openings for overhead doors, walk doors, windows, and roof vents. Nationwide quotes.">
+  <meta name="keywords" content="metal building framing, PEB rigid frame, tapered column, purlins girts, framed openings, steel building components, Stamps Steel">
+  <meta property="og:title" content="Steel Building Framing | Stamps Steel">
+  <meta property="og:description" content="Frame types, secondary members, and framed openings for pre-engineered metal buildings.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://SpiderForce-Star.github.io/Stamps-Steel/framing.html">
+  <meta property="og:image" content="images/framing/frame-exterior.jpg">
+  <meta name="theme-color" content="#0f172a">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+          colors: {
+            steel: {
+              50: '#f8fafc', 100: '#f1f5f9', 200: '#e2e8f0', 300: '#cbd5e1',
+              400: '#94a3b8', 500: '#64748b', 600: '#475569', 700: '#334155',
+              800: '#1e293b', 900: '#0f172a', 950: '#020617'
+            },
+            copper: {
+              50: '#fdf6ee', 100: '#f9ebdb', 200: '#f0d4b0', 300: '#e8b878',
+              400: '#e0a05a', 500: '#c97b3a', 600: '#b87333', 700: '#9a5f28', 800: '#7a4a1f'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    #mobile-menu { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+    #mobile-menu.open { max-height: 920px; }
+    .copper-gradient {
+      background: linear-gradient(135deg, #e0a05a 0%, #c97b3a 50%, #b87333 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .card { transition: box-shadow 0.25s ease, border-color 0.25s ease; }
+    .card:hover { border-color: #e0a05a; box-shadow: 0 12px 28px -8px rgba(15, 23, 42, 0.14); }
+    .swatch { width: 12px; height: 12px; border-radius: 9999px; display: inline-block; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans antialiased">
+
+  <nav class="bg-steel-950 text-white sticky top-0 z-50 shadow-xl border-b border-steel-800">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between items-center h-16">
+        <a href="index.html" class="flex items-center gap-3 shrink-0">
+          <img src="images/logo.jpg" alt="Stamps Steel Buildings" class="h-10 md:h-12 object-contain">
+        </a>
+        <div class="hidden lg:flex items-center space-x-1 text-sm font-medium">
+          <a href="about.html" class="px-2 py-2 hover:text-copper-400 transition">About</a>
+          <a href="designer.html" class="px-2 py-2 hover:text-copper-400 transition">3D Designer</a>
+          <a href="accessories.html" class="px-2 py-2 hover:text-copper-400 transition">Accessories</a>
+          <a href="panels.html" class="px-2 py-2 hover:text-copper-400 transition">Panels</a>
+          <a href="insulation.html" class="px-2 py-2 hover:text-copper-400 transition">Insulation</a>
+          <a href="imp.html" class="px-2 py-2 hover:text-copper-400 transition">IMP</a>
+          <a href="mini-storage.html" class="px-2 py-2 hover:text-copper-400 transition">Mini Storage</a>
+          <a href="framing.html" class="px-2 py-2 text-copper-400 font-semibold border-b-2 border-copper-500" aria-current="page">Framing</a>
+          <a href="#quote" class="ml-2 bg-copper-600 hover:bg-copper-500 text-white px-4 py-2.5 rounded-lg font-semibold transition shadow-lg shadow-copper-900/30">Get Free Quote</a>
+        </div>
+        <div class="flex items-center gap-2 lg:hidden">
+          <a href="#quote" class="bg-copper-600 text-white px-3 py-1.5 rounded-lg text-sm font-semibold">Quote</a>
+          <button id="menu-btn" class="p-2 text-slate-200" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="mobile-menu" class="lg:hidden bg-steel-900 border-t border-steel-800">
+      <div class="px-4 py-3 space-y-1 text-sm font-medium">
+        <a href="about.html" class="block py-3 px-3 rounded-lg hover:bg-steel-800">About Us</a>
+        <a href="designer.html" class="block py-3 px-3 rounded-lg hover:bg-steel-800">Build Your Own Building</a>
+        <a href="accessories.html" class="block py-3 px-3 rounded-lg hover:bg-steel-800">Accessories</a>
+        <a href="panels.html" class="block py-3 px-3 rounded-lg hover:bg-steel-800">Panels & Colors</a>
+        <a href="insulation.html" class="block py-3 px-3 rounded-lg hover:bg-steel-800">Insulation</a>
+        <a href="imp.html" class="block py-3 px-3 rounded-lg hover:bg-steel-800">Insulated Metal Panels</a>
+        <a href="mini-storage.html" class="block py-3 px-3 rounded-lg hover:bg-steel-800">Mini Storage</a>
+        <a href="framing.html" class="block py-3 px-3 rounded-lg bg-steel-800 text-copper-400 font-semibold" aria-current="page">Framing</a>
+        <a href="#quote" class="block py-3 px-3 bg-copper-600 rounded-lg text-center font-semibold mt-2">Get Free Quote</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="relative bg-steel-950 text-white overflow-hidden">
+    <div class="absolute inset-0 opacity-40" aria-hidden="true"
+         style="background-image: linear-gradient(105deg, rgba(2,6,23,0.95) 0%, rgba(15,23,42,0.88) 55%, rgba(15,23,42,0.7) 100%), url('images/framing/frame-exterior.jpg'); background-size: cover; background-position: center;"></div>
+    <div class="relative max-w-7xl mx-auto px-4 py-16 sm:py-20 md:py-24">
+      <p class="text-copper-400 font-semibold tracking-widest uppercase text-sm mb-4">Primary & Secondary Structure</p>
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-black mb-5 leading-tight tracking-tight">
+        Building<br class="hidden sm:block">
+        <span class="copper-gradient">Framing</span>
+      </h1>
+      <p class="text-lg sm:text-xl text-slate-300 max-w-2xl mb-8 leading-relaxed">
+        How a pre-engineered metal building is put together — <strong class="text-white">rigid frames</strong>, <strong class="text-white">purlins & girts</strong>, bracing, and <strong class="text-white">framed openings</strong> for doors, windows, and vents.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-3">
+        <a href="#frame-types" class="inline-flex justify-center items-center bg-copper-600 hover:bg-copper-500 text-white px-7 py-3.5 rounded-xl font-bold transition shadow-xl shadow-copper-900/40">Frame Types</a>
+        <a href="#secondary" class="inline-flex justify-center items-center bg-white/10 hover:bg-white/15 border border-white/25 text-white px-7 py-3.5 rounded-xl font-semibold transition">Purlins & Girts</a>
+        <a href="#openings" class="inline-flex justify-center items-center bg-white/10 hover:bg-white/15 border border-white/25 text-white px-7 py-3.5 rounded-xl font-semibold transition">Openings</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUICK FACTS -->
+  <section class="py-8 sm:py-10 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      <div>
+        <div class="text-xl sm:text-2xl font-black text-copper-600 tracking-tight">Primary</div>
+        <div class="text-xs sm:text-sm text-slate-600 mt-1">Rigid frames · columns & rafters</div>
+      </div>
+      <div>
+        <div class="text-xl sm:text-2xl font-black text-copper-600 tracking-tight">Secondary</div>
+        <div class="text-xs sm:text-sm text-slate-600 mt-1">Purlins · wall girts · eave struts</div>
+      </div>
+      <div>
+        <div class="text-xl sm:text-2xl font-black text-copper-600 tracking-tight">Bracing</div>
+        <div class="text-xs sm:text-sm text-slate-600 mt-1">Roof & wall X / rod systems</div>
+      </div>
+      <div>
+        <div class="text-xl sm:text-2xl font-black text-copper-600 tracking-tight">Openings</div>
+        <div class="text-xs sm:text-sm text-slate-600 mt-1">OH doors · walk · windows · vents</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTRO / ANATOMY -->
+  <section class="py-14 md:py-16">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid lg:grid-cols-2 gap-10 items-center">
+        <div>
+          <p class="text-sm font-semibold text-copper-600 uppercase tracking-wide mb-2">PEB Anatomy</p>
+          <h2 class="text-3xl md:text-4xl font-black mb-4">Components of a steel building frame</h2>
+          <p class="text-slate-600 text-lg leading-relaxed mb-4">
+            A pre-engineered metal building (PEMB / PEB) is a kit of engineered steel: <strong class="text-steel-900">primary rigid frames</strong> carry gravity and lateral loads; <strong class="text-steel-900">secondary members</strong> (purlins and girts) support roof and wall panels; <strong class="text-steel-900">bracing</strong> keeps the system stable; and <strong class="text-steel-900">framed openings</strong> land doors, windows, and vents cleanly in the wall line.
+          </p>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            Bay spacing (frame-to-frame), eave height, width, and roof slope set the geometry. Endwalls may use lighter posts and beams; sidewalls pick up girts between main frames. Everything is designed as a system for your wind, snow, and use case.
+          </p>
+          <ul class="text-sm text-slate-600 space-y-2">
+            <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> <strong>Rigid frame</strong> — main columns + rafters (often tapered / haunched)</li>
+            <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> <strong>Endwall columns</strong> — posts & beams on the short walls</li>
+            <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> <strong>Purlins</strong> — roof secondary, frame bay to frame bay</li>
+            <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> <strong>Wall girts</strong> — wall secondary for panel attachment</li>
+            <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> <strong>Eave strut / eave purlin</strong> — at the eave line</li>
+            <li class="flex gap-2"><span class="text-copper-600 font-bold">·</span> <strong>Roof & wall bracing</strong> — X-bracing, rods, or portal frames as required</li>
+          </ul>
+        </div>
+        <div class="space-y-4">
+          <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-lg bg-white">
+            <img src="images/framing/components-overview.svg" alt="Color-coded diagram of PEB framing components: rigid frames, purlins, girts, openings" class="w-full h-auto" width="960" height="620" loading="eager">
+          </div>
+          <p class="text-xs text-slate-500 text-center">Original Stamps Steel diagram — educational labels (not a manufacturer copy)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FRAME TYPES -->
+  <section id="frame-types" class="py-14 md:py-20 bg-white border-y border-slate-200">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-10">
+        <p class="text-sm font-semibold text-copper-600 uppercase tracking-wide mb-2">Primary Frames</p>
+        <h2 class="text-3xl md:text-4xl font-black mb-3">Common frame types</h2>
+        <p class="text-slate-600 max-w-2xl mx-auto">Clear-span and modular options cover shops, hangars, warehouses, retail, and lean-tos. Your loads, clear height, and interior use pick the type.</p>
+      </div>
+
+      <div class="rounded-2xl overflow-hidden border border-slate-200 bg-slate-50 mb-10 shadow-sm">
+        <img src="images/framing/frame-types.svg" alt="Seven common PEB frame types: straight column, tapered, modular spans, single slope, lean-to" class="w-full h-auto max-w-3xl mx-auto" width="720" height="980" loading="lazy">
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <article class="card rounded-2xl border border-slate-200 bg-slate-50 p-6">
+          <h3 class="font-bold text-lg mb-2">Straight column</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">Constant-depth columns with rafters forming a gable clear span. Simple geometry for many mid-size shops and barns.</p>
+        </article>
+        <article class="card rounded-2xl border border-slate-200 bg-slate-50 p-6">
+          <h3 class="font-bold text-lg mb-2">Tapered column</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">Haunched / tapered members put steel where stresses peak at the knee — efficient clear-span for wider buildings and higher loads.</p>
+        </article>
+        <article class="card rounded-2xl border border-slate-200 bg-slate-50 p-6">
+          <h3 class="font-bold text-lg mb-2">1-, 2-, 3-row modular</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">Interior column lines split the width into modules. Ideal when full clear span is not required and width grows large (warehouses, multi-bay).</p>
+        </article>
+        <article class="card rounded-2xl border border-slate-200 bg-slate-50 p-6">
+          <h3 class="font-bold text-lg mb-2">Single slope</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">One-way roof pitch — strong for drainage toward one eave, strip centers, and modern commercial elevations.</p>
+        </article>
+        <article class="card rounded-2xl border border-slate-200 bg-slate-50 p-6">
+          <h3 class="font-bold text-lg mb-2">Lean-to</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">Attached side bay sharing a main-building eave or sidewall. Covered storage, wash bays, equipment lean-tos, porch-style additions.</p>
+        </article>
+        <article class="card rounded-2xl border border-slate-200 bg-slate-50 p-6">
+          <h3 class="font-bold text-lg mb-2">Engineered for site</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">Frame size, plate thickness, and bracing respond to wind, snow, seismic, crane loads, and local code — not a one-size catalog only.</p>
+        </article>
+      </div>
+
+      <div class="mt-10 rounded-2xl overflow-hidden border border-slate-200 aspect-[16/9] max-h-[420px]">
+        <img src="images/framing/frame-exterior.jpg" alt="Red iron modular PEB frame with roof deck and wall girts on slab" class="w-full h-full object-cover" loading="lazy" width="1176" height="784">
+      </div>
+      <p class="text-xs text-slate-500 text-center mt-3">Modular clear bays · primary red iron with secondary roof & wall members</p>
+    </div>
+  </section>
+
+  <!-- SECONDARY -->
+  <section id="secondary" class="py-14 md:py-20 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-10">
+        <p class="text-sm font-semibold text-copper-600 uppercase tracking-wide mb-2">Secondary Members</p>
+        <h2 class="text-3xl md:text-4xl font-black mb-3">Purlins & wall girts</h2>
+        <p class="text-slate-600 max-w-2xl mx-auto">Secondary framing turns primary frames into a surface the panels can attach to — and carries wind and live load into the main steel.</p>
+      </div>
+
+      <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-lg mb-10">
+        <img src="images/framing/girts-purlins.svg" alt="Diagram of roof purlins on rafters and wall girts on columns" class="w-full h-auto" width="900" height="480" loading="lazy">
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6 mb-10">
+        <div class="card rounded-2xl border border-slate-200 bg-white p-6">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="swatch bg-green-500"></span>
+            <h3 class="font-bold text-lg">Roof purlins</h3>
+          </div>
+          <p class="text-sm text-slate-600 leading-relaxed mb-3">
+            Span from frame to frame (bay spacing). Support roof panels and insulation. Commonly <strong class="text-steel-900">Z-purlins</strong> or Cee sections, nested or continuous over frames, clipped to rafter flanges.
+          </p>
+          <ul class="text-sm text-slate-600 space-y-1.5">
+            <li>· Spacing set by panel type, snow/live load, and wind uplift</li>
+            <li>· Work with ridge, eave, and roof bracing</li>
+            <li>· Accept panel screws / standing-seam clips as specified</li>
+          </ul>
+        </div>
+        <div class="card rounded-2xl border border-slate-200 bg-white p-6">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="swatch bg-red-500"></span>
+            <h3 class="font-bold text-lg">Wall girts</h3>
+          </div>
+          <p class="text-sm text-slate-600 leading-relaxed mb-3">
+            Horizontal members between columns that carry <strong class="text-steel-900">wall panels</strong> and wind. Can be bypass (outside the column face) or inset / flush systems depending on finish and insulation.
+          </p>
+          <ul class="text-sm text-slate-600 space-y-1.5">
+            <li>· Girt lines coordinate with window & door heads</li>
+            <li>· Base condition may use base angle or channel</li>
+            <li>· Eave strut ties the wall system into the roof line</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="grid sm:grid-cols-2 gap-4">
+        <div class="rounded-2xl overflow-hidden border border-slate-200 h-56 sm:h-72">
+          <img src="images/framing/interior-purlins.jpg" alt="Interior view of metal building roof purlins and primary frames" class="w-full h-full object-cover" loading="lazy">
+        </div>
+        <div class="rounded-2xl border border-slate-200 bg-white p-6 flex flex-col justify-center">
+          <h3 class="font-bold text-lg mb-2">Key dimensions you’ll hear</h3>
+          <dl class="text-sm space-y-3">
+            <div>
+              <dt class="font-semibold text-steel-900">Eave height</dt>
+              <dd class="text-slate-600">Finished floor to eave strut / eave line</dd>
+            </div>
+            <div>
+              <dt class="font-semibold text-steel-900">Bay spacing</dt>
+              <dd class="text-slate-600">Distance between primary frames (often 20′–25′+)</dd>
+            </div>
+            <div>
+              <dt class="font-semibold text-steel-900">Clear span</dt>
+              <dd class="text-slate-600">Open width without interior columns</dd>
+            </div>
+            <div>
+              <dt class="font-semibold text-steel-900">Roof slope</dt>
+              <dd class="text-slate-600">Rise:run (e.g. 1:12, 2:12) — drainage & look</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OPENINGS -->
+  <section id="openings" class="py-14 md:py-20 bg-white border-y border-slate-200">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-10">
+        <p class="text-sm font-semibold text-copper-600 uppercase tracking-wide mb-2">Openings & Accessories in the Frame</p>
+        <h2 class="text-3xl md:text-4xl font-black mb-3">Framed openings, doors, windows & vents</h2>
+        <p class="text-slate-600 max-w-2xl mx-auto">Openings are engineered into the secondary system — headers, jambs, and trims — so panels finish cleanly and loads path around the hole.</p>
+      </div>
+
+      <div class="rounded-2xl overflow-hidden border border-slate-200 bg-slate-50 mb-10">
+        <img src="images/framing/framed-openings.svg" alt="Wall elevation showing framed overhead door, walk door, window, louver, and roof vent" class="w-full h-auto" width="960" height="520" loading="lazy">
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <article class="card rounded-2xl border border-slate-200 bg-slate-50 p-6">
+          <h3 class="font-bold text-lg mb-2">Overhead / roll-up openings</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">Large framed openings with structural headers and jambs sized for the door. Locations set bay-by-bay for vehicle and equipment access. Coordinated with <a href="mini-storage.html" class="text-copper-600 font-semibold hover:underline">mini storage</a> roll-up packages when needed.</p>
+        </article>
+        <article class="card rounded-2xl border border-slate-200 bg-slate-50 p-6">
+          <h3 class="font-bold text-lg mb-2">Walk doors</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">Personnel doors in framed openings — typically 3070 / 4070 and similar — with jambs tied into girts. Hardware, sidelights, and canopies available via <a href="accessories.html" class="text-copper-600 font-semibold hover:underline">accessories</a>.</p>
+        </article>
+        <article class="card rounded-2xl border border-slate-200 bg-slate-50 p-6">
+          <h3 class="font-bold text-lg mb-2">Windows</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">Framed window units (fixed, sliding, or thermal) set between girt lines. Headers and sills maintain panel module and weather line.</p>
+        </article>
+        <article class="card rounded-2xl border border-slate-200 bg-slate-50 p-6">
+          <h3 class="font-bold text-lg mb-2">Wall louvers & fans</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">Ventilation openings framed like doors/windows — intake louvers, exhaust fans, and wall vents for shops and ag buildings.</p>
+        </article>
+        <article class="card rounded-2xl border border-slate-200 bg-slate-50 p-6">
+          <h3 class="font-bold text-lg mb-2">Roof vents & ridge</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">Ridge vents, low-profile vents, cupolas, and roof curbs for HVAC. Openings and curbs must align with purlin layout and panel ribs.</p>
+        </article>
+        <article class="card rounded-2xl border border-slate-200 bg-slate-50 p-6">
+          <h3 class="font-bold text-lg mb-2">Canopies & lean-tos</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">Framed projections at walk doors or full lean-to frames. Connect to main eave or sidewall steel as engineered.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- GLOSSARY STRIP -->
+  <section class="py-14 md:py-16 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-black mb-6 text-center">Quick term guide</h2>
+      <div class="overflow-x-auto rounded-2xl border border-slate-200">
+        <table class="w-full text-left text-sm min-w-[640px]">
+          <thead class="bg-steel-950 text-white">
+            <tr>
+              <th class="px-5 py-3.5 font-semibold">Term</th>
+              <th class="px-5 py-3.5 font-semibold">What it means</th>
+            </tr>
+          </thead>
+          <tbody class="bg-white divide-y divide-slate-100">
+            <tr>
+              <td class="px-5 py-3 font-semibold text-steel-900">Rigid frame</td>
+              <td class="px-5 py-3 text-slate-600">Primary moment-resisting frame: columns + rafters forming the building “ribs”</td>
+            </tr>
+            <tr class="bg-slate-50">
+              <td class="px-5 py-3 font-semibold text-steel-900">Haunch</td>
+              <td class="px-5 py-3 text-slate-600">Deepened knee region of a tapered frame where column meets rafter</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-3 font-semibold text-steel-900">Girt clip</td>
+              <td class="px-5 py-3 text-slate-600">Connection plate/clip that attaches girts (or purlins) to primary steel</td>
+            </tr>
+            <tr class="bg-slate-50">
+              <td class="px-5 py-3 font-semibold text-steel-900">Endwall column spacing</td>
+              <td class="px-5 py-3 text-slate-600">Spacing of posts across the endwall between corner columns</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-3 font-semibold text-steel-900">Portal frame / rod bracing</td>
+              <td class="px-5 py-3 text-slate-600">Lateral-force systems when X-bracing would block a door or opening</td>
+            </tr>
+            <tr class="bg-slate-50">
+              <td class="px-5 py-3 font-semibold text-steel-900">Framed opening</td>
+              <td class="px-5 py-3 text-slate-600">Header + jambs built into the secondary system for a door, window, or vent</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-center mt-6 text-sm text-slate-600">
+        Related: <a href="panels.html" class="text-copper-600 font-semibold hover:underline">panels</a> ·
+        <a href="insulation.html" class="text-copper-600 font-semibold hover:underline">insulation</a> ·
+        <a href="accessories.html" class="text-copper-600 font-semibold hover:underline">accessories</a> ·
+        <a href="designer.html" class="text-copper-600 font-semibold hover:underline">3D designer</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-steel-950 text-white py-14">
+    <div class="max-w-3xl mx-auto px-4 text-center">
+      <h2 class="text-2xl sm:text-3xl font-black mb-4">Tell us how you’ll use the space</h2>
+      <p class="text-slate-300 mb-8 leading-relaxed">Clear span vs modular, door layout, lean-tos, and vents — we’ll match frame type and openings to your project, nationwide.</p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 mb-8">
+        <a href="tel:+16156298217" class="text-copper-400 hover:text-copper-300 font-semibold">(615) 629-8217</a>
+        <a href="mailto:info@stampssteel.com" class="text-copper-400 hover:text-copper-300 font-semibold">info@stampssteel.com</a>
+      </div>
+      <a href="#quote" class="inline-flex bg-copper-600 hover:bg-copper-500 text-white px-8 py-3.5 rounded-xl font-bold transition">Get Free Quote</a>
+    </div>
+  </section>
+
+  <!-- QUOTE -->
+  <section id="quote" class="py-16 md:py-20 bg-slate-50">
+    <div class="max-w-2xl mx-auto px-4">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl md:text-4xl font-black mb-3">Framing Quote</h2>
+        <p class="text-slate-600">Size, clear span, doors, and site — we’ll take it from there.</p>
+      </div>
+      <div class="bg-white rounded-2xl shadow-xl p-6 md:p-8 border border-slate-100">
+        <form action="mailto:info@stampssteel.com" method="POST" enctype="text/plain" class="space-y-5">
+          <div class="grid sm:grid-cols-2 gap-5">
+            <div>
+              <label class="block text-sm font-semibold mb-1.5" for="name">Name *</label>
+              <input id="name" type="text" name="name" required class="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-copper-500 outline-none" placeholder="Your name">
+            </div>
+            <div>
+              <label class="block text-sm font-semibold mb-1.5" for="phone">Phone</label>
+              <input id="phone" type="tel" name="phone" class="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-copper-500 outline-none" placeholder="(615) 555-0123">
+            </div>
+          </div>
+          <div>
+            <label class="block text-sm font-semibold mb-1.5" for="email">Email *</label>
+            <input id="email" type="email" name="email" required class="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-copper-500 outline-none" placeholder="you@email.com">
+          </div>
+          <div class="grid sm:grid-cols-2 gap-5">
+            <div>
+              <label class="block text-sm font-semibold mb-1.5" for="frame_type">Frame preference</label>
+              <select id="frame_type" name="frame_type" class="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-copper-500 outline-none bg-white">
+                <option value="">Select...</option>
+                <option>Clear span (straight / tapered)</option>
+                <option>Modular (interior columns OK)</option>
+                <option>Single slope</option>
+                <option>Main building + lean-to</option>
+                <option>Not sure — recommend</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-sm font-semibold mb-1.5" for="size">Approx. size</label>
+              <input id="size" type="text" name="size" class="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-copper-500 outline-none" placeholder="e.g. 50×100×16 eave">
+            </div>
+          </div>
+          <div>
+            <label class="block text-sm font-semibold mb-1.5" for="openings">Doors / windows / vents</label>
+            <textarea id="openings" name="openings" rows="3" class="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-copper-500 outline-none" placeholder="OH door sizes & counts, walk doors, windows, ridge vents, fans..."></textarea>
+          </div>
+          <div>
+            <label class="block text-sm font-semibold mb-1.5" for="project">Project / location</label>
+            <textarea id="project" name="project" rows="3" class="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-copper-500 outline-none" placeholder="City/state, use, timeline..."></textarea>
+          </div>
+          <button type="submit" class="w-full bg-copper-600 hover:bg-copper-500 text-white font-bold py-4 rounded-xl text-lg transition shadow-lg shadow-copper-900/20">Send Quote Request</button>
+        </form>
+        <p class="text-center text-sm text-slate-500 mt-6">
+          <a href="mailto:info@stampssteel.com" class="hover:text-copper-600 transition">info@stampssteel.com</a>
+          &nbsp;•&nbsp;
+          <a href="tel:+16156298217" class="hover:text-copper-600 transition">(615) 629-8217</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-steel-950 text-slate-400 py-12 border-t border-steel-800">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex flex-col items-center text-center">
+        <img src="images/logo.jpg" alt="Stamps Steel Buildings" class="h-14 object-contain mb-5">
+        <p class="text-sm text-slate-300 mb-1">Custom Pre-Engineered Metal Buildings</p>
+        <p class="text-sm mb-1">Serving customers nationwide</p>
+        <p class="text-sm mb-4">Home office · Bethpage, Middle Tennessee</p>
+        <p class="text-sm mb-1"><a href="tel:+16156298217" class="hover:text-copper-400 transition font-medium">(615) 629-8217</a></p>
+        <p class="text-sm mb-6"><a href="mailto:info@stampssteel.com" class="hover:text-copper-400 transition font-medium">info@stampssteel.com</a></p>
+        <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 mb-6 text-sm">
+          <a href="about.html" class="hover:text-copper-400 transition">About</a>
+          <a href="designer.html" class="hover:text-copper-400 transition">3D Designer</a>
+          <a href="mini-storage.html" class="hover:text-copper-400 transition">Mini Storage</a>
+          <a href="framing.html" class="hover:text-copper-400 transition">Framing</a>
+          <a href="panels.html" class="hover:text-copper-400 transition">Panels</a>
+          <a href="insulation.html" class="hover:text-copper-400 transition">Insulation</a>
+          <a href="imp.html" class="hover:text-copper-400 transition">IMP</a>
+          <a href="#quote" class="hover:text-copper-400 transition">Get Free Quote</a>
+        </div>
+        <div class="flex justify-center gap-6 mb-4">
+          <a href="https://www.facebook.com/profile.php?id=61592282766064" target="_blank" rel="noopener noreferrer" class="hover:text-copper-400 transition font-medium">Facebook</a>
+          <a href="https://www.instagram.com/stampssteel/" target="_blank" rel="noopener noreferrer" class="hover:text-copper-400 transition font-medium">Instagram</a>
+        </div>
+        <p class="text-xs text-slate-500 max-w-xl mb-3">Diagrams are original educational illustrations for Stamps Steel — not copies of third-party manufacturer artwork. Engineering values confirmed on your sealed drawings and quote.</p>
+        <p class="text-xs text-slate-500 mb-3">© 2026 Stamps Steel Buildings. All rights reserved.</p>
+        <p class="text-xs text-slate-500">Built by <a href="https://webbspinnervisions.net" target="_blank" rel="noopener noreferrer" class="text-copper-400 hover:text-copper-300 font-medium transition">Webb Spinner Visions</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    if (btn && menu) {
+      btn.addEventListener('click', () => {
+        const open = menu.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+        menu.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+      }));
+    }
+  </script>
+</body>
+</html>
