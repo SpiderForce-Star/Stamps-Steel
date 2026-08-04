@@ -1,4 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 320" role="img" aria-labelledby="t1 d1">
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="720" height="320" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 320" role="img" aria-labelledby="t1 d1">
   <title id="t1">Single-layer faced metal building insulation</title>
   <desc id="d1">Cross-section: roof panel, purlins, and laminated insulation with white facing toward interior</desc>
   <rect width="720" height="320" fill="#f8fafc"/>
@@ -31,5 +32,5 @@
   <text x="127" y="195" text-anchor="start" font-family="Inter,system-ui,sans-serif" font-size="11" fill="#334155">Purlin</text>
   <text x="360" y="210" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="12" font-weight="600" fill="#0f172a">White PSK-VR facing (interior side)</text>
   <text x="360" y="250" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="12" fill="#475569">Installed over / between purlins (roof) or girts (walls) · facing toward interior</text>
-  <text x="360" y="280" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="12" fill="#64748b">Most common package for shops, barns, warehouses & light commercial PEBs</text>
+  <text x="360" y="280" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="12" fill="#64748b">Most common package for shops, barns, warehouses and light commercial PEBs</text>
 </svg>

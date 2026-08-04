@@ -1,14 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" role="img">
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="480" viewBox="0 0 900 480" role="img">
   <rect width="900" height="480" fill="#0f172a"/>
-  <text x="450" y="36" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="18" font-weight="800" fill="#e0a05a">Secondary Framing — Purlins & Girts</text>
-  <text x="450" y="58" text-anchor="middle" font-size="12" fill="#94a3b8" font-family="Inter,system-ui,sans-serif">Purlins support roof panels · Girts support wall panels</text>
-
-  <!-- Roof section -->
+  <text x="450" y="36" text-anchor="middle" font-family="system-ui,sans-serif" font-size="18" font-weight="800" fill="#e0a05a">Secondary Framing — Purlins and Girts</text>
+  <text x="450" y="58" text-anchor="middle" font-size="12" fill="#94a3b8" font-family="system-ui,sans-serif">Purlins support roof panels · Girts support wall panels</text>
   <g transform="translate(40,90)">
-    <text x="200" y="0" text-anchor="middle" fill="#fff" font-size="14" font-weight="700" font-family="Inter,system-ui,sans-serif">Roof · Purlins on rafters</text>
-    <!-- rafters -->
+    <text x="200" y="0" text-anchor="middle" fill="#fff" font-size="14" font-weight="700" font-family="system-ui,sans-serif">Roof · Purlins on rafters</text>
     <path d="M40 200 L200 60 L360 200" fill="none" stroke="#b87333" stroke-width="10"/>
-    <!-- purlins as Z shapes simplified as thick bars across -->
     <g stroke="#22c55e" stroke-width="5">
       <line x1="80" y1="170" x2="160" y2="100"/>
       <line x1="110" y1="185" x2="190" y2="115"/>
@@ -17,31 +14,23 @@
       <line x1="210" y1="115" x2="290" y2="185"/>
       <line x1="240" y1="100" x2="320" y2="170"/>
     </g>
-    <!-- bay label -->
     <line x1="40" y1="230" x2="360" y2="230" stroke="#475569" stroke-width="1"/>
-    <text x="200" y="250" text-anchor="middle" fill="#94a3b8" font-size="11" font-family="Inter,system-ui,sans-serif">Bay spacing · purlins span frame-to-frame</text>
-    <text x="200" y="280" text-anchor="middle" fill="#cbd5e1" font-size="12" font-family="Inter,system-ui,sans-serif">Common: Z-purlins or Cee sections · clip to rafter flanges</text>
+    <text x="200" y="250" text-anchor="middle" fill="#94a3b8" font-size="11" font-family="system-ui,sans-serif">Bay spacing · purlins span frame-to-frame</text>
+    <text x="200" y="280" text-anchor="middle" fill="#cbd5e1" font-size="12" font-family="system-ui,sans-serif">Common: Z-purlins or Cee sections · clip to rafter flanges</text>
   </g>
-
-  <!-- Wall section -->
   <g transform="translate(480,90)">
-    <text x="180" y="0" text-anchor="middle" fill="#fff" font-size="14" font-weight="700" font-family="Inter,system-ui,sans-serif">Wall · Girts on columns</text>
-    <!-- columns -->
+    <text x="180" y="0" text-anchor="middle" fill="#fff" font-size="14" font-weight="700" font-family="system-ui,sans-serif">Wall · Girts on columns</text>
     <rect x="60" y="40" width="14" height="220" fill="#b87333"/>
     <rect x="280" y="40" width="14" height="220" fill="#b87333"/>
-    <!-- eave -->
     <rect x="50" y="40" width="204" height="10" fill="#0ea5e9"/>
-    <!-- girts -->
     <g fill="#ef4444">
       <rect x="74" y="90" width="206" height="8"/>
       <rect x="74" y="140" width="206" height="8"/>
       <rect x="74" y="190" width="206" height="8"/>
     </g>
-    <!-- base -->
     <rect x="50" y="250" width="204" height="8" fill="#64748b"/>
-    <text x="180" y="290" text-anchor="middle" fill="#94a3b8" font-size="11" font-family="Inter,system-ui,sans-serif">Girt spacing follows panel & wind design</text>
-    <text x="180" y="315" text-anchor="middle" fill="#cbd5e1" font-size="12" font-family="Inter,system-ui,sans-serif">Bypass or inset girts · flush / bypass wall systems</text>
+    <text x="180" y="290" text-anchor="middle" fill="#94a3b8" font-size="11" font-family="system-ui,sans-serif">Girt spacing follows panel and wind design</text>
+    <text x="180" y="315" text-anchor="middle" fill="#cbd5e1" font-size="12" font-family="system-ui,sans-serif">Bypass or inset girts · flush / bypass wall systems</text>
   </g>
-
-  <text x="450" y="450" text-anchor="middle" fill="#64748b" font-size="11" font-family="Inter,system-ui,sans-serif">Secondary members carry sheeting loads into the primary rigid frames</text>
+  <text x="450" y="450" text-anchor="middle" fill="#64748b" font-size="11" font-family="system-ui,sans-serif">Secondary members carry sheeting loads into the primary rigid frames</text>
 </svg>
