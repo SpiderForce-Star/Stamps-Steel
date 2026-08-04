@@ -150,11 +150,18 @@ Field data (real users) may differ from lab snapshots; use PageSpeed Insights / 
 After we publish changes (new photos, logo, Accessories images), your phone or computer may still show an older saved copy.
 
 **Quick refresh**
-- **Windows:** `Ctrl` + `Shift` + `R` (or `Ctrl` + `F5`)
-- **Mac:** `Cmd` + `Shift` + `R`
+- **Windows (Chrome, Edge, Firefox):** `Ctrl` + `Shift` + `R` (or `Ctrl` + `F5`)
+- **Mac (Chrome, Edge, Firefox, Safari):** `Cmd` + `Shift` + `R`
 - **Phone:** pull down to refresh, or use the browser refresh control
 
-**Full steps (iPhone, Android, desktop, Facebook/Instagram in-app browser)**  
+**Firefox — clear cached web content**
+1. Menu **☰** → **Settings** → **Privacy & Security**
+2. Under **Cookies and Site Data**, click **Clear Data…**
+3. Check **Cached Web Content** (optional: uncheck Cookies)
+4. Click **Clear**, then reload the site  
+   Shortcut: `Ctrl`+`Shift`+`Delete` (Windows/Linux) or `Cmd`+`Shift`+`Delete` (Mac)
+
+**Full steps (iPhone, Android, Chrome, Edge, Firefox, Safari, Facebook/Instagram in-app browser)**  
 See the public help page: [cache-help.html](cache-help.html) — also linked in the site footer as **“Seeing an old page?”**
 
 **Site maintainers:** bump `?v=` on `js/web-vitals.js` (and critical assets) when shipping visual fixes so clients fetch new files.
