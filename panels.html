@@ -387,7 +387,7 @@
   <div id="lightbox" class="fixed inset-0 z-[100] bg-steel-950/90 items-center justify-center p-4" role="dialog" aria-modal="true" aria-label="Panel profile image">
     <button type="button" id="lightbox-close" class="absolute top-4 right-4 text-white/80 hover:text-white p-2 text-2xl leading-none" aria-label="Close">&times;</button>
     <button type="button" id="lightbox-prev" class="absolute left-2 sm:left-6 text-white/80 hover:text-white p-3 text-3xl" aria-label="Previous">‹</button>
-    <img sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="async" id="lightbox-img" src="" alt="" class="max-h-[85vh] max-w-full object-contain rounded-lg shadow-2xl bg-white">
+    <img sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="async" id="lightbox-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="" class="max-h-[85vh] max-w-full object-contain rounded-lg shadow-2xl bg-white">
     <button type="button" id="lightbox-next" class="absolute right-2 sm:right-6 text-white/80 hover:text-white p-3 text-3xl" aria-label="Next">›</button>
     <p id="lightbox-caption" class="absolute bottom-6 left-0 right-0 text-center text-white/80 text-sm px-4"></p>
   </div>
@@ -583,19 +583,25 @@
     function webpSrcset(src) {
       if (!src) return '';
       const base = src.replace(/\.(jpe?g|png)$/i, '');
-      const ext = (src.match(/\.(jpe?g|png)$/i) || [''])[0];
-      if (!ext) return '';
-      // Prefer responsive webp variants when present (browser will 404 gracefully only if used in img; source is fine if files exist)
-      return `${base}-640w.webp 640w, ${base}-960w.webp 960w, ${base}.webp 1400w`;
+      if (!/\.(jpe?g|png)$/i.test(src)) return '';
+      // Responsive WebP variants (generated alongside originals)
+      return base + '-640w.webp 640w, ' + base + '-960w.webp 960w, ' + base + '.webp 1400w';
     }
     function pictureHTML(src, alt, cls) {
-      if (!src) return `<div class="w-full h-full bg-slate-100"></div>`;
+      if (!src) return '<div class="w-full h-full bg-slate-100 flex items-center justify-center text-slate-400 text-sm">No image</div>';
       const ss = webpSrcset(src);
       const c = cls || 'w-full h-full object-contain p-2';
+      const a = alt || '';
+      // Prefer WebP with PNG/JPEG fallback. onerror falls back to original if WebP missing.
       if (!ss) {
-        return `<img src="${src}" alt="${alt||''}" class="${c}" loading="lazy" decoding="async" sizes="(max-width: 640px) 100vw, 50vw, 400px">`;
+        return '<img src="' + src + '" alt="' + a + '" class="' + c + '" loading="lazy" decoding="async" sizes="(max-width: 640px) 100vw, 50vw, 400px">';
       }
-      return `<picture class="block w-full h-full"><source type="image/webp" srcset="${ss}" sizes="(max-width: 640px) 100vw, 50vw, 400px"><img data-opt="1" src="${src}" alt="${alt||''}" class="${c}" loading="lazy" decoding="async" sizes="(max-width: 640px) 100vw, 50vw, 400px"></picture>`;
+      return '<picture class="block w-full h-full">' +
+        '<source type="image/webp" srcset="' + ss + '" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px">' +
+        '<img data-opt="1" src="' + src + '" alt="' + a + '" class="' + c + '" loading="lazy" decoding="async" ' +
+        'sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px" ' +
+        'onerror="this.onerror=null;this.src=\'' + src + '\';">' +
+        '</picture>';
     }
 
     function renderPanels() {
@@ -729,6 +735,14 @@
     const lightboxImg = document.getElementById('lightbox-img');
     const lightboxCaption = document.getElementById('lightbox-caption');
     let lbGallery = [], lbIndex = 0, lbTitle = '';
+    function resolveLightboxSrc(src) {
+      if (!src) return src;
+      // Prefer full WebP when present (same basename)
+      if (/\.(jpe?g|png)$/i.test(src)) {
+        return src.replace(/\.(jpe?g|png)$/i, '.webp');
+      }
+      return src;
+    }
     function openLightbox(gallery, index, title) {
       if (!gallery.length) return;
       lbGallery = gallery; lbIndex = index; lbTitle = title;
@@ -741,7 +755,8 @@
       document.body.style.overflow = '';
     }
     function updateLightbox() {
-      lightboxImg.src = lbGallery[lbIndex];
+      lightboxImg.src = resolveLightboxSrc(lbGallery[lbIndex]);
+      lightboxImg.onerror = function(){ this.onerror=null; this.src = lbGallery[lbIndex]; };
       lightboxImg.alt = lbTitle;
       lightboxCaption.textContent = lbGallery.length > 1 ? `${lbTitle} (${lbIndex + 1} / ${lbGallery.length})` : lbTitle;
     }
