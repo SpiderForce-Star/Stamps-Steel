@@ -90,6 +90,21 @@
       .project-card .p-4 { padding: 0.85rem; }
     }
 
+  
+    /* Image perf */
+    img[data-opt] { background-color: #e2e8f0; }
+    .project-card, .concept-card { content-visibility: auto; contain-intrinsic-size: 420px; }
+    picture { display: contents; }
+    picture.inline-block { display: inline-block; }
+    .aspect-\[4\/3\] > picture,
+    .aspect-\[16\/9\] > picture,
+    .aspect-\[16\/10\] > picture,
+    .overflow-hidden > picture { display: block; width: 100%; height: 100%; }
+    .aspect-\[4\/3\] > picture > img,
+    .aspect-\[16\/9\] > picture > img,
+    .aspect-\[16\/10\] > picture > img,
+    .overflow-hidden > picture > img { width: 100%; height: 100%; object-fit: cover; }
+
   </style>
 </head>
 <body class="bg-slate-50 text-slate-900 font-sans antialiased">
@@ -98,7 +113,7 @@
     <div class="max-w-7xl mx-auto px-4">
       <div class="flex justify-between items-center h-16">
         <a href="index.html" class="flex items-center gap-3 shrink-0">
-          <img src="images/logo.jpg" alt="Stamps Steel Buildings" class="h-10 md:h-12 object-contain">
+          <picture class="inline-block shrink-0"><source type="image/webp" srcset="images/logo.webp"><img data-opt="1" src="images/logo.jpg" alt="Stamps Steel Buildings" class="h-10 md:h-12 object-contain" decoding="async" loading="eager"></picture>
         </a>
         <div class="nav-desktop hidden lg:flex items-center space-x-1 text-sm font-medium">
           <a href="about.html" class="px-2 py-2 hover:text-copper-400 transition">About</a>
@@ -138,7 +153,7 @@
   <!-- HERO -->
   <section class="relative bg-steel-950 text-white overflow-hidden">
     <div class="absolute inset-0 opacity-40" aria-hidden="true"
-         style="background-image: linear-gradient(105deg, rgba(2,6,23,0.94) 0%, rgba(15,23,42,0.85) 50%, rgba(15,23,42,0.72) 100%), url('images/1.jpg'); background-size: cover; background-position: center;"></div>
+         style="background-image: linear-gradient(105deg, rgba(2,6,23,0.94) 0%, rgba(15,23,42,0.85) 50%, rgba(15,23,42,0.72) 100%), url('images/1.webp'); background-size: cover; background-position: center;"></div>
     <div class="relative max-w-7xl mx-auto px-4 py-16 sm:py-20 md:py-24">
       <p class="text-copper-400 font-semibold tracking-widest uppercase text-sm mb-4">Gallery · Structure · Nationwide</p>
       <h1 class="text-4xl sm:text-5xl md:text-6xl font-black mb-5 leading-tight tracking-tight">
@@ -178,7 +193,7 @@
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
         <article class="project-card rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm flex flex-col">
-          <div class="aspect-[4/3] overflow-hidden"><img sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="async" src="images/1.jpg" alt="Two-tone charcoal and red clear-span shop with multiple overhead doors" class="w-full h-full object-cover" loading="eager" width="800" height="600"></div>
+          <div class="aspect-[4/3] overflow-hidden"><picture><source type="image/webp" srcset="images/1-640w.webp 640w, images/1-960w.webp 960w, images/1.webp 1400w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"><img data-opt="1" src="images/1.jpg" alt="Two-tone charcoal and red clear-span shop with multiple overhead doors" class="w-full h-full object-cover" width="800" height="600" decoding="async" loading="eager" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"></picture></div>
           <div class="p-5 flex flex-col flex-1">
             <p class="text-xs font-semibold text-copper-600 uppercase tracking-wide mb-1">Shop / Garage</p>
             <h3 class="font-bold text-lg text-steel-900 mb-2">Multi-door clear-span shop</h3>
@@ -193,7 +208,7 @@
         </article>
 
         <article class="project-card rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm flex flex-col">
-          <div class="aspect-[4/3] overflow-hidden"><img sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="async" src="images/2.jpg" alt="Interior of clear-span metal building with red iron frames and open overhead doors" class="w-full h-full object-cover" loading="lazy" width="800" height="600"></div>
+          <div class="aspect-[4/3] overflow-hidden"><picture><source type="image/webp" srcset="images/2-640w.webp 640w, images/2-960w.webp 960w, images/2.webp 1400w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"><img data-opt="1" src="images/2.jpg" alt="Interior of clear-span metal building with red iron frames and open overhead doors" class="w-full h-full object-cover" width="800" height="600" decoding="async" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"></picture></div>
           <div class="p-5 flex flex-col flex-1">
             <p class="text-xs font-semibold text-copper-600 uppercase tracking-wide mb-1">Interior · Clear Span</p>
             <h3 class="font-bold text-lg text-steel-900 mb-2">Open-floor workshop shell</h3>
@@ -208,7 +223,7 @@
         </article>
 
         <article class="project-card rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm flex flex-col">
-          <div class="aspect-[4/3] overflow-hidden"><img sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="async" src="images/5.jpg" alt="Steel building erection with red iron frames and crew on site" class="w-full h-full object-cover" loading="lazy" width="800" height="600"></div>
+          <div class="aspect-[4/3] overflow-hidden"><picture><source type="image/webp" srcset="images/5-640w.webp 640w, images/5-960w.webp 960w, images/5.webp 1400w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"><img data-opt="1" src="images/5.jpg" alt="Steel building erection with red iron frames and crew on site" class="w-full h-full object-cover" width="800" height="600" decoding="async" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"></picture></div>
           <div class="p-5 flex flex-col flex-1">
             <p class="text-xs font-semibold text-copper-600 uppercase tracking-wide mb-1">Construction Stage</p>
             <h3 class="font-bold text-lg text-steel-900 mb-2">Primary frame going up</h3>
@@ -223,7 +238,7 @@
         </article>
 
         <article class="project-card rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm flex flex-col">
-          <div class="aspect-[4/3] overflow-hidden"><img sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="async" src="images/7.jpg" alt="Aerial view of multi-building gray commercial PEB complex with parking" class="w-full h-full object-cover" loading="lazy" width="800" height="600"></div>
+          <div class="aspect-[4/3] overflow-hidden"><picture><source type="image/webp" srcset="images/7-640w.webp 640w, images/7-960w.webp 960w, images/7.webp 1400w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"><img data-opt="1" src="images/7.jpg" alt="Aerial view of multi-building gray commercial PEB complex with parking" class="w-full h-full object-cover" width="800" height="600" decoding="async" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"></picture></div>
           <div class="p-5 flex flex-col flex-1">
             <p class="text-xs font-semibold text-copper-600 uppercase tracking-wide mb-1">Commercial Complex</p>
             <h3 class="font-bold text-lg text-steel-900 mb-2">Multi-building industrial campus</h3>
@@ -238,7 +253,7 @@
         </article>
 
         <article class="project-card rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm flex flex-col">
-          <div class="aspect-[4/3] overflow-hidden"><img sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="async" src="images/25.jpg" alt="Ground view of multi-building gray metal building complex with overhead doors" class="w-full h-full object-cover" loading="lazy" width="800" height="600"></div>
+          <div class="aspect-[4/3] overflow-hidden"><picture><source type="image/webp" srcset="images/25-640w.webp 640w, images/25-960w.webp 960w, images/25.webp 1400w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"><img data-opt="1" src="images/25.jpg" alt="Ground view of multi-building gray metal building complex with overhead doors" class="w-full h-full object-cover" width="800" height="600" decoding="async" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"></picture></div>
           <div class="p-5 flex flex-col flex-1">
             <p class="text-xs font-semibold text-copper-600 uppercase tracking-wide mb-1">Warehouse / Shop Row</p>
             <h3 class="font-bold text-lg text-steel-900 mb-2">Side-by-side commercial shells</h3>
@@ -253,7 +268,7 @@
         </article>
 
         <article class="project-card rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm flex flex-col">
-          <div class="aspect-[4/3] overflow-hidden"><img sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="async" src="images/8.jpg" alt="Cream metal building with four large white overhead doors and lean-to canopy" class="w-full h-full object-cover" loading="lazy" width="800" height="600"></div>
+          <div class="aspect-[4/3] overflow-hidden"><picture><source type="image/webp" srcset="images/8-640w.webp 640w, images/8-960w.webp 960w, images/8.webp 1400w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"><img data-opt="1" src="images/8.jpg" alt="Cream metal building with four large white overhead doors and lean-to canopy" class="w-full h-full object-cover" width="800" height="600" decoding="async" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"></picture></div>
           <div class="p-5 flex flex-col flex-1">
             <p class="text-xs font-semibold text-copper-600 uppercase tracking-wide mb-1">Auto / Commercial</p>
             <h3 class="font-bold text-lg text-steel-900 mb-2">Four-bay service building with lean-to</h3>
@@ -268,7 +283,7 @@
         </article>
 
         <article class="project-card rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm flex flex-col">
-          <div class="aspect-[4/3] overflow-hidden"><img sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="async" src="images/11.jpg" alt="Interior warehouse with red iron frames, mezzanine, and storefront endwall" class="w-full h-full object-cover" loading="lazy" width="800" height="600"></div>
+          <div class="aspect-[4/3] overflow-hidden"><picture><source type="image/webp" srcset="images/11-640w.webp 640w, images/11-960w.webp 960w, images/11.webp 1400w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"><img data-opt="1" src="images/11.jpg" alt="Interior warehouse with red iron frames, mezzanine, and storefront endwall" class="w-full h-full object-cover" width="800" height="600" decoding="async" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"></picture></div>
           <div class="p-5 flex flex-col flex-1">
             <p class="text-xs font-semibold text-copper-600 uppercase tracking-wide mb-1">Warehouse + Office</p>
             <h3 class="font-bold text-lg text-steel-900 mb-2">Hybrid office / warehouse interior</h3>
@@ -283,7 +298,7 @@
         </article>
 
         <article class="project-card rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm flex flex-col">
-          <div class="aspect-[4/3] overflow-hidden"><img sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="async" src="images/12.jpg" alt="Green metal building with stone wainscot, cupola, and office wing" class="w-full h-full object-cover" loading="lazy" width="800" height="600"></div>
+          <div class="aspect-[4/3] overflow-hidden"><picture><source type="image/webp" srcset="images/12-640w.webp 640w, images/12-960w.webp 960w, images/12.webp 1400w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"><img data-opt="1" src="images/12.jpg" alt="Green metal building with stone wainscot, cupola, and office wing" class="w-full h-full object-cover" width="800" height="600" decoding="async" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"></picture></div>
           <div class="p-5 flex flex-col flex-1">
             <p class="text-xs font-semibold text-copper-600 uppercase tracking-wide mb-1">Finished Commercial</p>
             <h3 class="font-bold text-lg text-steel-900 mb-2">Green PEB with office wing & cupola</h3>
@@ -298,7 +313,7 @@
         </article>
 
         <article class="project-card rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm flex flex-col">
-          <div class="aspect-[4/3] overflow-hidden"><img sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="async" src="images/13.jpg" alt="White metal building with stone lower walls and large overhead doors" class="w-full h-full object-cover" loading="lazy" width="800" height="600"></div>
+          <div class="aspect-[4/3] overflow-hidden"><picture><source type="image/webp" srcset="images/13-640w.webp 640w, images/13-960w.webp 960w, images/13.webp 1400w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"><img data-opt="1" src="images/13.jpg" alt="White metal building with stone lower walls and large overhead doors" class="w-full h-full object-cover" width="800" height="600" decoding="async" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"></picture></div>
           <div class="p-5 flex flex-col flex-1">
             <p class="text-xs font-semibold text-copper-600 uppercase tracking-wide mb-1">Neighborhood Commercial</p>
             <h3 class="font-bold text-lg text-steel-900 mb-2">White shell with masonry base</h3>
@@ -313,7 +328,7 @@
         </article>
 
         <article class="project-card rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm flex flex-col">
-          <div class="aspect-[4/3] overflow-hidden"><img sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="async" src="images/9.jpg" alt="Cream gable metal building with stone accents and cupola" class="w-full h-full object-cover" loading="lazy" width="800" height="600"></div>
+          <div class="aspect-[4/3] overflow-hidden"><picture><source type="image/webp" srcset="images/9-640w.webp 640w, images/9-960w.webp 960w, images/9.webp 1400w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"><img data-opt="1" src="images/9.jpg" alt="Cream gable metal building with stone accents and cupola" class="w-full h-full object-cover" width="800" height="600" decoding="async" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"></picture></div>
           <div class="p-5 flex flex-col flex-1">
             <p class="text-xs font-semibold text-copper-600 uppercase tracking-wide mb-1">Ag / Barndo Style</p>
             <h3 class="font-bold text-lg text-steel-900 mb-2">Gable shell with cupola & stone</h3>
@@ -328,7 +343,7 @@
         </article>
 
         <article class="project-card rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm flex flex-col">
-          <div class="aspect-[4/3] overflow-hidden"><img sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="async" src="images/31.jpg" alt="Cream metal building with stone facade, brick columns, and cupola" class="w-full h-full object-cover" loading="lazy" width="800" height="600"></div>
+          <div class="aspect-[4/3] overflow-hidden"><picture><source type="image/webp" srcset="images/31-640w.webp 640w, images/31-960w.webp 960w, images/31.webp 1400w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"><img data-opt="1" src="images/31.jpg" alt="Cream metal building with stone facade, brick columns, and cupola" class="w-full h-full object-cover" width="800" height="600" decoding="async" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"></picture></div>
           <div class="p-5 flex flex-col flex-1">
             <p class="text-xs font-semibold text-copper-600 uppercase tracking-wide mb-1">Premium Finish</p>
             <h3 class="font-bold text-lg text-steel-900 mb-2">Stone-front PEB with brick columns</h3>
@@ -343,7 +358,7 @@
         </article>
 
         <article class="project-card rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm flex flex-col">
-          <div class="aspect-[4/3] overflow-hidden"><img sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="async" src="images/Small%20Farm.jpg" alt="Farm metal building with open bay on rural property" class="w-full h-full object-cover" loading="lazy" width="800" height="600"></div>
+          <div class="aspect-[4/3] overflow-hidden"><picture><source type="image/webp" srcset="images/Small Farm-640w.webp 640w, images/Small Farm-960w.webp 960w, images/Small Farm.webp 1400w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"><img data-opt="1" src="images/Small%20Farm.jpg" alt="Farm metal building with open bay on rural property" class="w-full h-full object-cover" width="800" height="600" decoding="async" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"></picture></div>
           <div class="p-5 flex flex-col flex-1">
             <p class="text-xs font-semibold text-copper-600 uppercase tracking-wide mb-1">Agricultural</p>
             <h3 class="font-bold text-lg text-steel-900 mb-2">Farm & rural utility building</h3>
@@ -390,9 +405,7 @@
 
         <article class="project-card concept-card rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm flex flex-col" data-tag="shop">
           <div class="aspect-[4/3] overflow-hidden bg-slate-100">
-            <img sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="async"
-                 src="images/projects/01_charcoal-3bay-walk-left.jpg" alt="Charcoal 3-bay clear-span shop"
-                 class="w-full h-full object-cover" loading="eager" width="1400" height="933">
+            <picture><source type="image/webp" srcset="images/projects/01_charcoal-3bay-walk-left-640w.webp 640w, images/projects/01_charcoal-3bay-walk-left-960w.webp 960w, images/projects/01_charcoal-3bay-walk-left.webp 1400w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"><img data-opt="1" src="images/projects/01_charcoal-3bay-walk-left.jpg" alt="Charcoal 3-bay clear-span shop" class="w-full h-full object-cover" width="1400" height="933" decoding="async" loading="eager" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"></picture>
           </div>
           <div class="p-5 flex flex-col flex-1">
             <p class="text-xs font-semibold text-copper-600 uppercase tracking-wide mb-1">Shop / Garage</p>
@@ -406,9 +419,7 @@
 
         <article class="project-card concept-card rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm flex flex-col" data-tag="shop">
           <div class="aspect-[4/3] overflow-hidden bg-slate-100">
-            <img sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="async"
-                 src="images/projects/02_tan-2bay-endwall.jpg" alt="Tan 2-bay endwall shop"
-                 class="w-full h-full object-cover" loading="eager" width="1400" height="933">
+            <picture><source type="image/webp" srcset="images/projects/02_tan-2bay-endwall-640w.webp 640w, images/projects/02_tan-2bay-endwall-960w.webp 960w, images/projects/02_tan-2bay-endwall.webp 1400w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"><img data-opt="1" src="images/projects/02_tan-2bay-endwall.jpg" alt="Tan 2-bay endwall shop" class="w-full h-full object-cover" width="1400" height="933" decoding="async" loading="eager" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"></picture>
           </div>
           <div class="p-5 flex flex-col flex-1">
             <p class="text-xs font-semibold text-copper-600 uppercase tracking-wide mb-1">Shop / Garage</p>
@@ -422,9 +433,7 @@
 
         <article class="project-card concept-card rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm flex flex-col" data-tag="wainscot">
           <div class="aspect-[4/3] overflow-hidden bg-slate-100">
-            <img sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="async"
-                 src="images/projects/03_gray-burgundy-4ft-wainscot.jpg" alt="Gray with burgundy 4′ metal wainscot"
-                 class="w-full h-full object-cover" loading="eager" width="1400" height="933">
+            <picture><source type="image/webp" srcset="images/projects/03_gray-burgundy-4ft-wainscot-640w.webp 640w, images/projects/03_gray-burgundy-4ft-wainscot-960w.webp 960w, images/projects/03_gray-burgundy-4ft-wainscot.webp 1400w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"><img data-opt="1" src="images/projects/03_gray-burgundy-4ft-wainscot.jpg" alt="Gray with burgundy 4′ metal wainscot" class="w-full h-full object-cover" width="1400" height="933" decoding="async" loading="eager" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"></picture>
           </div>
           <div class="p-5 flex flex-col flex-1">
             <p class="text-xs font-semibold text-copper-600 uppercase tracking-wide mb-1">Wainscot · Metal</p>
@@ -438,9 +447,7 @@
 
         <article class="project-card concept-card rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm flex flex-col" data-tag="wainscot">
           <div class="aspect-[4/3] overflow-hidden bg-slate-100">
-            <img sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="async"
-                 src="images/projects/04_stone-wainscot-woodgrain-oh.jpg" alt="Stone wainscot with wood-grain OH door"
-                 class="w-full h-full object-cover" loading="lazy" width="1400" height="933">
+            <picture><source type="image/webp" srcset="images/projects/04_stone-wainscot-woodgrain-oh-640w.webp 640w, images/projects/04_stone-wainscot-woodgrain-oh-960w.webp 960w, images/projects/04_stone-wainscot-woodgrain-oh.webp 1400w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"><img data-opt="1" src="images/projects/04_stone-wainscot-woodgrain-oh.jpg" alt="Stone wainscot with wood-grain OH door" class="w-full h-full object-cover" width="1400" height="933" decoding="async" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"></picture>
           </div>
           <div class="p-5 flex flex-col flex-1">
             <p class="text-xs font-semibold text-copper-600 uppercase tracking-wide mb-1">Wainscot · Stone</p>
@@ -454,9 +461,7 @@
 
         <article class="project-card concept-card rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm flex flex-col" data-tag="commercial">
           <div class="aspect-[4/3] overflow-hidden bg-slate-100">
-            <img sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="async"
-                 src="images/projects/05_white-brick-commercial.jpg" alt="White commercial with brick wainscot"
-                 class="w-full h-full object-cover" loading="lazy" width="1400" height="933">
+            <picture><source type="image/webp" srcset="images/projects/05_white-brick-commercial-640w.webp 640w, images/projects/05_white-brick-commercial-960w.webp 960w, images/projects/05_white-brick-commercial.webp 1400w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"><img data-opt="1" src="images/projects/05_white-brick-commercial.jpg" alt="White commercial with brick wainscot" class="w-full h-full object-cover" width="1400" height="933" decoding="async" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"></picture>
           </div>
           <div class="p-5 flex flex-col flex-1">
             <p class="text-xs font-semibold text-copper-600 uppercase tracking-wide mb-1">Commercial</p>
@@ -470,9 +475,7 @@
 
         <article class="project-card concept-card rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm flex flex-col" data-tag="ag">
           <div class="aspect-[4/3] overflow-hidden bg-slate-100">
-            <img sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="async"
-                 src="images/projects/06_green-ag-lean-to.jpg" alt="Forest green ag building with lean-to"
-                 class="w-full h-full object-cover" loading="lazy" width="1400" height="933">
+            <picture><source type="image/webp" srcset="images/projects/06_green-ag-lean-to-640w.webp 640w, images/projects/06_green-ag-lean-to-960w.webp 960w, images/projects/06_green-ag-lean-to.webp 1400w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"><img data-opt="1" src="images/projects/06_green-ag-lean-to.jpg" alt="Forest green ag building with lean-to" class="w-full h-full object-cover" width="1400" height="933" decoding="async" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"></picture>
           </div>
           <div class="p-5 flex flex-col flex-1">
             <p class="text-xs font-semibold text-copper-600 uppercase tracking-wide mb-1">Agricultural</p>
@@ -486,9 +489,7 @@
 
         <article class="project-card concept-card rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm flex flex-col" data-tag="commercial">
           <div class="aspect-[4/3] overflow-hidden bg-slate-100">
-            <img sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="async"
-                 src="images/projects/07_bronze-auto-shop.jpg" alt="Bronze multi-bay auto shop"
-                 class="w-full h-full object-cover" loading="lazy" width="1400" height="933">
+            <picture><source type="image/webp" srcset="images/projects/07_bronze-auto-shop-640w.webp 640w, images/projects/07_bronze-auto-shop-960w.webp 960w, images/projects/07_bronze-auto-shop.webp 1400w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"><img data-opt="1" src="images/projects/07_bronze-auto-shop.jpg" alt="Bronze multi-bay auto shop" class="w-full h-full object-cover" width="1400" height="933" decoding="async" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"></picture>
           </div>
           <div class="p-5 flex flex-col flex-1">
             <p class="text-xs font-semibold text-copper-600 uppercase tracking-wide mb-1">Auto / Service</p>
@@ -502,9 +503,7 @@
 
         <article class="project-card concept-card rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm flex flex-col" data-tag="shop">
           <div class="aspect-[4/3] overflow-hidden bg-slate-100">
-            <img sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="async"
-                 src="images/projects/08_black-glass-oh-luxury.jpg" alt="Black luxury shop with glass OH doors"
-                 class="w-full h-full object-cover" loading="lazy" width="1400" height="933">
+            <picture><source type="image/webp" srcset="images/projects/08_black-glass-oh-luxury-640w.webp 640w, images/projects/08_black-glass-oh-luxury-960w.webp 960w, images/projects/08_black-glass-oh-luxury.webp 1400w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"><img data-opt="1" src="images/projects/08_black-glass-oh-luxury.jpg" alt="Black luxury shop with glass OH doors" class="w-full h-full object-cover" width="1400" height="933" decoding="async" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"></picture>
           </div>
           <div class="p-5 flex flex-col flex-1">
             <p class="text-xs font-semibold text-copper-600 uppercase tracking-wide mb-1">Modern Shop</p>
@@ -518,9 +517,7 @@
 
         <article class="project-card concept-card rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm flex flex-col" data-tag="wainscot">
           <div class="aspect-[4/3] overflow-hidden bg-slate-100">
-            <img sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="async"
-                 src="images/projects/09_gray-white-4ft-blue-roof.jpg" alt="Two-tone gray/white with blue roof"
-                 class="w-full h-full object-cover" loading="lazy" width="1400" height="933">
+            <picture><source type="image/webp" srcset="images/projects/09_gray-white-4ft-blue-roof-640w.webp 640w, images/projects/09_gray-white-4ft-blue-roof-960w.webp 960w, images/projects/09_gray-white-4ft-blue-roof.webp 1400w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"><img data-opt="1" src="images/projects/09_gray-white-4ft-blue-roof.jpg" alt="Two-tone gray/white with blue roof" class="w-full h-full object-cover" width="1400" height="933" decoding="async" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"></picture>
           </div>
           <div class="p-5 flex flex-col flex-1">
             <p class="text-xs font-semibold text-copper-600 uppercase tracking-wide mb-1">Wainscot · Metal</p>
@@ -534,9 +531,7 @@
 
         <article class="project-card concept-card rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm flex flex-col" data-tag="barndo">
           <div class="aspect-[4/3] overflow-hidden bg-slate-100">
-            <img sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="async"
-                 src="images/projects/10_cream-barndo-stone-porch.jpg" alt="Cream barndo with stone & porch"
-                 class="w-full h-full object-cover" loading="lazy" width="1400" height="933">
+            <picture><source type="image/webp" srcset="images/projects/10_cream-barndo-stone-porch-640w.webp 640w, images/projects/10_cream-barndo-stone-porch-960w.webp 960w, images/projects/10_cream-barndo-stone-porch.webp 1400w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"><img data-opt="1" src="images/projects/10_cream-barndo-stone-porch.jpg" alt="Cream barndo with stone & porch" class="w-full h-full object-cover" width="1400" height="933" decoding="async" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"></picture>
           </div>
           <div class="p-5 flex flex-col flex-1">
             <p class="text-xs font-semibold text-copper-600 uppercase tracking-wide mb-1">Barndo Style</p>
@@ -550,9 +545,7 @@
 
         <article class="project-card concept-card rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm flex flex-col" data-tag="warehouse">
           <div class="aspect-[4/3] overflow-hidden bg-slate-100">
-            <img sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="async"
-                 src="images/projects/11_galvalume-4bay-warehouse.jpg" alt="Galvalume 4-bay warehouse"
-                 class="w-full h-full object-cover" loading="lazy" width="1400" height="933">
+            <picture><source type="image/webp" srcset="images/projects/11_galvalume-4bay-warehouse-640w.webp 640w, images/projects/11_galvalume-4bay-warehouse-960w.webp 960w, images/projects/11_galvalume-4bay-warehouse.webp 1400w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"><img data-opt="1" src="images/projects/11_galvalume-4bay-warehouse.jpg" alt="Galvalume 4-bay warehouse" class="w-full h-full object-cover" width="1400" height="933" decoding="async" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"></picture>
           </div>
           <div class="p-5 flex flex-col flex-1">
             <p class="text-xs font-semibold text-copper-600 uppercase tracking-wide mb-1">Warehouse</p>
@@ -566,9 +559,7 @@
 
         <article class="project-card concept-card rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm flex flex-col" data-tag="ag">
           <div class="aspect-[4/3] overflow-hidden bg-slate-100">
-            <img sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="async"
-                 src="images/projects/12_barn-red-black-wainscot.jpg" alt="Barn red with black metal wainscot"
-                 class="w-full h-full object-cover" loading="lazy" width="1400" height="933">
+            <picture><source type="image/webp" srcset="images/projects/12_barn-red-black-wainscot-640w.webp 640w, images/projects/12_barn-red-black-wainscot-960w.webp 960w, images/projects/12_barn-red-black-wainscot.webp 1400w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"><img data-opt="1" src="images/projects/12_barn-red-black-wainscot.jpg" alt="Barn red with black metal wainscot" class="w-full h-full object-cover" width="1400" height="933" decoding="async" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"></picture>
           </div>
           <div class="p-5 flex flex-col flex-1">
             <p class="text-xs font-semibold text-copper-600 uppercase tracking-wide mb-1">Agricultural</p>
@@ -582,9 +573,7 @@
 
         <article class="project-card concept-card rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm flex flex-col" data-tag="wainscot">
           <div class="aspect-[4/3] overflow-hidden bg-slate-100">
-            <img sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="async"
-                 src="images/projects/13_gray-charcoal-dual-walk.jpg" alt="Gray / charcoal dual walk-door shop"
-                 class="w-full h-full object-cover" loading="lazy" width="1400" height="933">
+            <picture><source type="image/webp" srcset="images/projects/13_gray-charcoal-dual-walk-640w.webp 640w, images/projects/13_gray-charcoal-dual-walk-960w.webp 960w, images/projects/13_gray-charcoal-dual-walk.webp 1400w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"><img data-opt="1" src="images/projects/13_gray-charcoal-dual-walk.jpg" alt="Gray / charcoal dual walk-door shop" class="w-full h-full object-cover" width="1400" height="933" decoding="async" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"></picture>
           </div>
           <div class="p-5 flex flex-col flex-1">
             <p class="text-xs font-semibold text-copper-600 uppercase tracking-wide mb-1">Wainscot · Metal</p>
@@ -598,9 +587,7 @@
 
         <article class="project-card concept-card rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm flex flex-col" data-tag="commercial">
           <div class="aspect-[4/3] overflow-hidden bg-slate-100">
-            <img sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="async"
-                 src="images/projects/14_terracotta-stone-canopy.jpg" alt="Terracotta with stone & canopy"
-                 class="w-full h-full object-cover" loading="lazy" width="1400" height="933">
+            <picture><source type="image/webp" srcset="images/projects/14_terracotta-stone-canopy-640w.webp 640w, images/projects/14_terracotta-stone-canopy-960w.webp 960w, images/projects/14_terracotta-stone-canopy.webp 1400w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"><img data-opt="1" src="images/projects/14_terracotta-stone-canopy.jpg" alt="Terracotta with stone & canopy" class="w-full h-full object-cover" width="1400" height="933" decoding="async" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"></picture>
           </div>
           <div class="p-5 flex flex-col flex-1">
             <p class="text-xs font-semibold text-copper-600 uppercase tracking-wide mb-1">Commercial</p>
@@ -614,9 +601,7 @@
 
         <article class="project-card concept-card rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm flex flex-col" data-tag="commercial">
           <div class="aspect-[4/3] overflow-hidden bg-slate-100">
-            <img sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="async"
-                 src="images/projects/15_navy-multi-door-commercial.jpg" alt="Navy multi-door commercial building"
-                 class="w-full h-full object-cover" loading="lazy" width="1400" height="933">
+            <picture><source type="image/webp" srcset="images/projects/15_navy-multi-door-commercial-640w.webp 640w, images/projects/15_navy-multi-door-commercial-960w.webp 960w, images/projects/15_navy-multi-door-commercial.webp 1400w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"><img data-opt="1" src="images/projects/15_navy-multi-door-commercial.jpg" alt="Navy multi-door commercial building" class="w-full h-full object-cover" width="1400" height="933" decoding="async" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"></picture>
           </div>
           <div class="p-5 flex flex-col flex-1">
             <p class="text-xs font-semibold text-copper-600 uppercase tracking-wide mb-1">Commercial</p>
@@ -630,9 +615,7 @@
 
         <article class="project-card concept-card rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm flex flex-col" data-tag="commercial">
           <div class="aspect-[4/3] overflow-hidden bg-slate-100">
-            <img sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="async"
-                 src="images/projects/16_white-brick-copper-roof.jpg" alt="White brick wainscot · copper roof"
-                 class="w-full h-full object-cover" loading="lazy" width="1400" height="933">
+            <picture><source type="image/webp" srcset="images/projects/16_white-brick-copper-roof-640w.webp 640w, images/projects/16_white-brick-copper-roof-960w.webp 960w, images/projects/16_white-brick-copper-roof.webp 1400w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"><img data-opt="1" src="images/projects/16_white-brick-copper-roof.jpg" alt="White brick wainscot · copper roof" class="w-full h-full object-cover" width="1400" height="933" decoding="async" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"></picture>
           </div>
           <div class="p-5 flex flex-col flex-1">
             <p class="text-xs font-semibold text-copper-600 uppercase tracking-wide mb-1">Premium Finish</p>
@@ -646,9 +629,7 @@
 
         <article class="project-card concept-card rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm flex flex-col" data-tag="ag">
           <div class="aspect-[4/3] overflow-hidden bg-slate-100">
-            <img sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="async"
-                 src="images/projects/17_sandstone-lean-to-stone.jpg" alt="Sandstone lean-to with stone wainscot"
-                 class="w-full h-full object-cover" loading="lazy" width="1400" height="933">
+            <picture><source type="image/webp" srcset="images/projects/17_sandstone-lean-to-stone-640w.webp 640w, images/projects/17_sandstone-lean-to-stone-960w.webp 960w, images/projects/17_sandstone-lean-to-stone.webp 1400w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"><img data-opt="1" src="images/projects/17_sandstone-lean-to-stone.jpg" alt="Sandstone lean-to with stone wainscot" class="w-full h-full object-cover" width="1400" height="933" decoding="async" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"></picture>
           </div>
           <div class="p-5 flex flex-col flex-1">
             <p class="text-xs font-semibold text-copper-600 uppercase tracking-wide mb-1">Agricultural</p>
@@ -662,9 +643,7 @@
 
         <article class="project-card concept-card rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm flex flex-col" data-tag="wainscot">
           <div class="aspect-[4/3] overflow-hidden bg-slate-100">
-            <img sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="async"
-                 src="images/projects/18_black-white-two-tone.jpg" alt="Black / white two-tone modern PEB"
-                 class="w-full h-full object-cover" loading="lazy" width="1400" height="933">
+            <picture><source type="image/webp" srcset="images/projects/18_black-white-two-tone-640w.webp 640w, images/projects/18_black-white-two-tone-960w.webp 960w, images/projects/18_black-white-two-tone.webp 1400w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"><img data-opt="1" src="images/projects/18_black-white-two-tone.jpg" alt="Black / white two-tone modern PEB" class="w-full h-full object-cover" width="1400" height="933" decoding="async" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"></picture>
           </div>
           <div class="p-5 flex flex-col flex-1">
             <p class="text-xs font-semibold text-copper-600 uppercase tracking-wide mb-1">Wainscot · Metal</p>
@@ -678,9 +657,7 @@
 
         <article class="project-card concept-card rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm flex flex-col" data-tag="specialty">
           <div class="aspect-[4/3] overflow-hidden bg-slate-100">
-            <img sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="async"
-                 src="images/projects/19_silver-hangar-tall-doors.jpg" alt="Silver hangar with tall OH doors"
-                 class="w-full h-full object-cover" loading="lazy" width="1400" height="933">
+            <picture><source type="image/webp" srcset="images/projects/19_silver-hangar-tall-doors-640w.webp 640w, images/projects/19_silver-hangar-tall-doors-960w.webp 960w, images/projects/19_silver-hangar-tall-doors.webp 1400w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"><img data-opt="1" src="images/projects/19_silver-hangar-tall-doors.jpg" alt="Silver hangar with tall OH doors" class="w-full h-full object-cover" width="1400" height="933" decoding="async" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"></picture>
           </div>
           <div class="p-5 flex flex-col flex-1">
             <p class="text-xs font-semibold text-copper-600 uppercase tracking-wide mb-1">Hangar / Specialty</p>
@@ -694,9 +671,7 @@
 
         <article class="project-card concept-card rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm flex flex-col" data-tag="storage">
           <div class="aspect-[4/3] overflow-hidden bg-slate-100">
-            <img sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="async"
-                 src="images/projects/20_green-mini-storage-stone.jpg" alt="Green mini storage with stone office end"
-                 class="w-full h-full object-cover" loading="lazy" width="1400" height="933">
+            <picture><source type="image/webp" srcset="images/projects/20_green-mini-storage-stone-640w.webp 640w, images/projects/20_green-mini-storage-stone-960w.webp 960w, images/projects/20_green-mini-storage-stone.webp 1400w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"><img data-opt="1" src="images/projects/20_green-mini-storage-stone.jpg" alt="Green mini storage with stone office end" class="w-full h-full object-cover" width="1400" height="933" decoding="async" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"></picture>
           </div>
           <div class="p-5 flex flex-col flex-1">
             <p class="text-xs font-semibold text-copper-600 uppercase tracking-wide mb-1">Mini Storage</p>
@@ -755,7 +730,7 @@
             <p class="text-sm text-slate-600 leading-relaxed">Overhead doors, walk doors, windows, louvers, and roof vents — headers and jambs integrated with the wall system.</p>
           </div>
           <div class="rounded-2xl overflow-hidden border border-slate-200 aspect-[16/10]">
-            <img sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="async" src="images/framing/frame-exterior.jpg" alt="Red iron PEB frame on slab" class="w-full h-full object-cover" loading="lazy">
+            <picture><source type="image/webp" srcset="images/framing/frame-exterior-640w.webp 640w, images/framing/frame-exterior-960w.webp 960w, images/framing/frame-exterior.webp 1400w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"><img data-opt="1" src="images/framing/frame-exterior.jpg" alt="Red iron PEB frame on slab" class="w-full h-full object-cover" decoding="async" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"></picture>
           </div>
         </div>
       </div>
@@ -792,7 +767,7 @@
   <footer class="bg-steel-950 text-slate-400 py-12 border-t border-steel-800">
     <div class="max-w-7xl mx-auto px-4">
       <div class="flex flex-col items-center text-center">
-        <img src="images/logo.jpg" alt="Stamps Steel Buildings" class="h-14 object-contain mb-5">
+        <picture class="inline-block shrink-0"><source type="image/webp" srcset="images/logo.webp"><img data-opt="1" src="images/logo.jpg" alt="Stamps Steel Buildings" class="h-14 object-contain mb-5" decoding="async" loading="lazy"></picture>
         <p class="text-sm text-slate-300 mb-1">Custom Pre-Engineered Metal Buildings</p>
         <p class="text-sm mb-1">Serving customers nationwide</p>
         <p class="text-sm mb-4">Home office · Bethpage, Middle Tennessee</p>

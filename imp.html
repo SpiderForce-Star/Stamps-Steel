@@ -88,6 +88,21 @@
       .project-card .p-4 { padding: 0.85rem; }
     }
 
+  
+    /* Image perf */
+    img[data-opt] { background-color: #e2e8f0; }
+    .project-card, .concept-card { content-visibility: auto; contain-intrinsic-size: 420px; }
+    picture { display: contents; }
+    picture.inline-block { display: inline-block; }
+    .aspect-\[4\/3\] > picture,
+    .aspect-\[16\/9\] > picture,
+    .aspect-\[16\/10\] > picture,
+    .overflow-hidden > picture { display: block; width: 100%; height: 100%; }
+    .aspect-\[4\/3\] > picture > img,
+    .aspect-\[16\/9\] > picture > img,
+    .aspect-\[16\/10\] > picture > img,
+    .overflow-hidden > picture > img { width: 100%; height: 100%; object-fit: cover; }
+
   </style>
 </head>
 <body class="bg-slate-50 text-slate-900 font-sans antialiased">
@@ -96,7 +111,7 @@
     <div class="max-w-7xl mx-auto px-4">
       <div class="flex justify-between items-center h-16">
         <a href="index.html" class="flex items-center gap-3 shrink-0">
-          <img src="images/logo.jpg" alt="Stamps Steel Buildings" class="h-10 md:h-12 object-contain">
+          <picture class="inline-block shrink-0"><source type="image/webp" srcset="images/logo.webp"><img data-opt="1" src="images/logo.jpg" alt="Stamps Steel Buildings" class="h-10 md:h-12 object-contain" decoding="async" loading="eager"></picture>
         </a>
         <div class="nav-desktop hidden lg:flex items-center space-x-1 text-sm font-medium">
           <a href="about.html" class="px-2 py-2 hover:text-copper-400 transition">About</a>
@@ -136,7 +151,7 @@
   <!-- HERO -->
   <section class="relative bg-steel-950 text-white overflow-hidden">
     <div class="absolute inset-0 opacity-45" aria-hidden="true"
-         style="background-image: linear-gradient(105deg, rgba(2,6,23,0.94) 0%, rgba(15,23,42,0.85) 50%, rgba(15,23,42,0.7) 100%), url('images/imp/building-exterior.jpg'); background-size: cover; background-position: center;"></div>
+         style="background-image: linear-gradient(105deg, rgba(2,6,23,0.94) 0%, rgba(15,23,42,0.85) 50%, rgba(15,23,42,0.7) 100%), url('images/imp/building-exterior.webp'); background-size: cover; background-position: center;"></div>
     <div class="relative max-w-7xl mx-auto px-4 py-16 sm:py-20 md:py-24">
       <p class="text-copper-400 font-semibold tracking-widest uppercase text-sm mb-4">Walls & Roofs · High-R Construction</p>
       <h1 class="text-4xl sm:text-5xl md:text-6xl font-black mb-5 leading-tight tracking-tight">
@@ -201,7 +216,7 @@
         </div>
         <div class="space-y-4">
           <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-lg aspect-[4/3]">
-            <img sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="async" src="images/imp/panel-core.jpg" alt="Insulated metal panel joint showing steel skins and foam core" class="w-full h-full object-cover" width="900" height="675" loading="eager">
+            <picture><source type="image/webp" srcset="images/imp/panel-core-640w.webp 640w, images/imp/panel-core-960w.webp 960w, images/imp/panel-core.webp 1400w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"><img data-opt="1" src="images/imp/panel-core.jpg" alt="Insulated metal panel joint showing steel skins and foam core" class="w-full h-full object-cover" width="900" height="675" decoding="async" loading="eager" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"></picture>
           </div>
           <p class="text-xs text-slate-500 text-center">Steel skins + rigid foam core + interlocking side joint — the IMP sandwich</p>
         </div>
@@ -241,10 +256,10 @@
       </div>
       <div class="mt-8 grid sm:grid-cols-2 gap-4">
         <div class="rounded-2xl overflow-hidden border border-slate-200 h-52 sm:h-64">
-          <img sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="async" src="images/imp/white-interior.jpg" alt="Bright white insulated metal panel interior walls and ceiling" class="w-full h-full object-cover" loading="lazy" width="800" height="500">
+          <picture><source type="image/webp" srcset="images/imp/white-interior-640w.webp 640w, images/imp/white-interior-960w.webp 960w, images/imp/white-interior.webp 1400w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"><img data-opt="1" src="images/imp/white-interior.jpg" alt="Bright white insulated metal panel interior walls and ceiling" class="w-full h-full object-cover" width="800" height="500" decoding="async" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"></picture>
         </div>
         <div class="rounded-2xl overflow-hidden border border-slate-200 h-52 sm:h-64">
-          <img sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="async" src="images/imp/building-exterior.jpg" alt="Commercial building with insulated metal panel walls and metal roof" class="w-full h-full object-cover" loading="lazy" width="800" height="500">
+          <picture><source type="image/webp" srcset="images/imp/building-exterior-640w.webp 640w, images/imp/building-exterior-960w.webp 960w, images/imp/building-exterior.webp 1400w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"><img data-opt="1" src="images/imp/building-exterior.jpg" alt="Commercial building with insulated metal panel walls and metal roof" class="w-full h-full object-cover" width="800" height="500" decoding="async" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"></picture>
         </div>
       </div>
     </div>
@@ -409,7 +424,7 @@
     <div class="max-w-7xl mx-auto px-4">
       <div class="grid lg:grid-cols-2 gap-10 items-center">
         <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-lg aspect-[4/3] order-2 lg:order-1">
-          <img sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="async" src="images/imp/roof-install.jpg" alt="Standing seam insulated metal roof panels being installed" class="w-full h-full object-cover" loading="lazy" width="900" height="675">
+          <picture><source type="image/webp" srcset="images/imp/roof-install-640w.webp 640w, images/imp/roof-install-960w.webp 960w, images/imp/roof-install.webp 1400w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"><img data-opt="1" src="images/imp/roof-install.jpg" alt="Standing seam insulated metal roof panels being installed" class="w-full h-full object-cover" width="900" height="675" decoding="async" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"></picture>
         </div>
         <div class="order-1 lg:order-2">
           <p class="text-sm font-semibold text-copper-600 uppercase tracking-wide mb-2">Roof Systems</p>
@@ -580,7 +595,7 @@
   <footer class="bg-steel-950 text-slate-400 py-12 border-t border-steel-800">
     <div class="max-w-7xl mx-auto px-4">
       <div class="flex flex-col items-center text-center">
-        <img src="images/logo.jpg" alt="Stamps Steel Buildings" class="h-14 object-contain mb-5">
+        <picture class="inline-block shrink-0"><source type="image/webp" srcset="images/logo.webp"><img data-opt="1" src="images/logo.jpg" alt="Stamps Steel Buildings" class="h-14 object-contain mb-5" decoding="async" loading="lazy"></picture>
         <p class="text-sm text-slate-300 mb-1">Custom Pre-Engineered Metal Buildings</p>
         <p class="text-sm mb-1">Serving customers nationwide</p>
         <p class="text-sm mb-4">Home office · Bethpage, Middle Tennessee</p>

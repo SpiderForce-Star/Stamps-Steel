@@ -100,6 +100,21 @@
       .project-card .p-4 { padding: 0.85rem; }
     }
 
+  
+    /* Image perf */
+    img[data-opt] { background-color: #e2e8f0; }
+    .project-card, .concept-card { content-visibility: auto; contain-intrinsic-size: 420px; }
+    picture { display: contents; }
+    picture.inline-block { display: inline-block; }
+    .aspect-\[4\/3\] > picture,
+    .aspect-\[16\/9\] > picture,
+    .aspect-\[16\/10\] > picture,
+    .overflow-hidden > picture { display: block; width: 100%; height: 100%; }
+    .aspect-\[4\/3\] > picture > img,
+    .aspect-\[16\/9\] > picture > img,
+    .aspect-\[16\/10\] > picture > img,
+    .overflow-hidden > picture > img { width: 100%; height: 100%; object-fit: cover; }
+
   </style>
 </head>
 <body class="bg-slate-50 text-slate-900 font-sans antialiased">
@@ -108,7 +123,7 @@
     <div class="max-w-7xl mx-auto px-4">
       <div class="flex justify-between items-center h-16">
         <a href="index.html" class="flex items-center gap-3 shrink-0">
-          <img src="images/logo.jpg" alt="Stamps Steel Buildings" class="h-10 md:h-12 object-contain">
+          <picture class="inline-block shrink-0"><source type="image/webp" srcset="images/logo.webp"><img data-opt="1" src="images/logo.jpg" alt="Stamps Steel Buildings" class="h-10 md:h-12 object-contain" decoding="async" loading="eager"></picture>
         </a>
         <div class="nav-desktop hidden lg:flex items-center space-x-1 text-sm font-medium">
           <a href="about.html" class="px-2 py-2 hover:text-copper-400 transition">About</a>
@@ -148,7 +163,7 @@
   <!-- HERO -->
   <section class="relative bg-steel-950 text-white overflow-hidden">
     <div class="absolute inset-0 opacity-40" aria-hidden="true"
-         style="background-image: linear-gradient(105deg, rgba(2,6,23,0.95) 0%, rgba(15,23,42,0.88) 55%, rgba(15,23,42,0.75) 100%), url('images/8.jpg'); background-size: cover; background-position: center;"></div>
+         style="background-image: linear-gradient(105deg, rgba(2,6,23,0.95) 0%, rgba(15,23,42,0.88) 55%, rgba(15,23,42,0.75) 100%), url('images/8.webp'); background-size: cover; background-position: center;"></div>
     <div class="relative max-w-7xl mx-auto px-4 py-14 sm:py-16 md:py-20">
       <p class="text-copper-400 font-semibold tracking-widest uppercase text-sm mb-4">Interactive 3D Tool · Nationwide Quotes</p>
       <h1 class="text-4xl sm:text-5xl md:text-6xl font-black mb-5 leading-tight tracking-tight">
@@ -252,7 +267,7 @@
   <footer class="bg-steel-950 text-slate-400 py-12 border-t border-steel-800">
     <div class="max-w-7xl mx-auto px-4">
       <div class="flex flex-col items-center text-center">
-        <img src="images/logo.jpg" alt="Stamps Steel Buildings" class="h-14 object-contain mb-5">
+        <picture class="inline-block shrink-0"><source type="image/webp" srcset="images/logo.webp"><img data-opt="1" src="images/logo.jpg" alt="Stamps Steel Buildings" class="h-14 object-contain mb-5" decoding="async" loading="lazy"></picture>
         <p class="text-sm text-slate-300 mb-1">Custom Pre-Engineered Metal Buildings</p>
         <p class="text-sm mb-1">Serving customers nationwide</p>
         <p class="text-sm mb-4">Bethpage, Middle Tennessee</p>

@@ -94,6 +94,21 @@
       .project-card .p-4 { padding: 0.85rem; }
     }
 
+  
+    /* Image perf */
+    img[data-opt] { background-color: #e2e8f0; }
+    .project-card, .concept-card { content-visibility: auto; contain-intrinsic-size: 420px; }
+    picture { display: contents; }
+    picture.inline-block { display: inline-block; }
+    .aspect-\[4\/3\] > picture,
+    .aspect-\[16\/9\] > picture,
+    .aspect-\[16\/10\] > picture,
+    .overflow-hidden > picture { display: block; width: 100%; height: 100%; }
+    .aspect-\[4\/3\] > picture > img,
+    .aspect-\[16\/9\] > picture > img,
+    .aspect-\[16\/10\] > picture > img,
+    .overflow-hidden > picture > img { width: 100%; height: 100%; object-fit: cover; }
+
   </style>
 </head>
 <body class="bg-slate-50 text-slate-900 font-sans antialiased">
@@ -103,7 +118,7 @@
     <div class="max-w-7xl mx-auto px-4">
       <div class="flex justify-between items-center h-16">
         <a href="index.html" class="flex items-center gap-3">
-          <img src="images/logo.jpg" alt="Stamps Steel Buildings" class="h-10 md:h-12 object-contain">
+          <picture class="inline-block shrink-0"><source type="image/webp" srcset="images/logo.webp"><img data-opt="1" src="images/logo.jpg" alt="Stamps Steel Buildings" class="h-10 md:h-12 object-contain" decoding="async" loading="eager"></picture>
         </a>
         <div class="nav-desktop hidden lg:flex items-center space-x-1 text-sm font-medium">
           <a href="about.html" class="px-2 py-2 hover:text-copper-400 transition">About</a>
@@ -143,7 +158,7 @@
   <!-- HERO -->
   <section class="relative bg-steel-950 text-white overflow-hidden">
     <div class="absolute inset-0 opacity-30" aria-hidden="true"
-         style="background-image: linear-gradient(105deg, rgba(2,6,23,0.95) 0%, rgba(15,23,42,0.85) 55%, rgba(15,23,42,0.7) 100%), url('images/panels/csm-panellocplus-header.jpg'); background-size: cover; background-position: center;"></div>
+         style="background-image: linear-gradient(105deg, rgba(2,6,23,0.95) 0%, rgba(15,23,42,0.85) 55%, rgba(15,23,42,0.7) 100%), url('images/panels/csm-panellocplus-header.webp'); background-size: cover; background-position: center;"></div>
     <div class="relative max-w-7xl mx-auto px-4 py-16 sm:py-20 md:py-24">
       <p class="text-copper-400 font-semibold tracking-widest uppercase text-sm mb-4">Roof &amp; Wall Systems</p>
       <h1 class="text-4xl sm:text-5xl md:text-6xl font-black mb-5 leading-tight tracking-tight">Panel Types &amp; Colors</h1>
@@ -335,7 +350,7 @@
   <footer class="bg-steel-950 text-slate-400 py-12 border-t border-steel-800">
     <div class="max-w-7xl mx-auto px-4">
       <div class="flex flex-col items-center text-center">
-        <img src="images/logo.jpg" alt="Stamps Steel Buildings" class="h-14 object-contain mb-5">
+        <picture class="inline-block shrink-0"><source type="image/webp" srcset="images/logo.webp"><img data-opt="1" src="images/logo.jpg" alt="Stamps Steel Buildings" class="h-14 object-contain mb-5" decoding="async" loading="lazy"></picture>
         <p class="text-sm text-slate-300 mb-1">Custom Pre-Engineered Metal Buildings</p>
         <p class="text-sm mb-1">Serving customers nationwide</p>
         <p class="text-sm mb-4">Home office · Bethpage, Middle Tennessee</p>
@@ -560,6 +575,25 @@
     const panelType = document.getElementById('panel_type');
     const colorPref = document.getElementById('color_pref');
 
+
+    function webpSrcset(src) {
+      if (!src) return '';
+      const base = src.replace(/\.(jpe?g|png)$/i, '');
+      const ext = (src.match(/\.(jpe?g|png)$/i) || [''])[0];
+      if (!ext) return '';
+      // Prefer responsive webp variants when present (browser will 404 gracefully only if used in img; source is fine if files exist)
+      return `${base}-640w.webp 640w, ${base}-960w.webp 960w, ${base}.webp 1400w`;
+    }
+    function pictureHTML(src, alt, cls) {
+      if (!src) return `<div class="w-full h-full bg-slate-100"></div>`;
+      const ss = webpSrcset(src);
+      const c = cls || 'w-full h-full object-contain p-2';
+      if (!ss) {
+        return `<img src="${src}" alt="${alt||''}" class="${c}" loading="lazy" decoding="async" sizes="(max-width: 640px) 100vw, 50vw, 400px">`;
+      }
+      return `<picture class="block w-full h-full"><source type="image/webp" srcset="${ss}" sizes="(max-width: 640px) 100vw, 50vw, 400px"><img data-opt="1" src="${src}" alt="${alt||''}" class="${c}" loading="lazy" decoding="async" sizes="(max-width: 640px) 100vw, 50vw, 400px"></picture>`;
+    }
+
     function renderPanels() {
       grid.innerHTML = PANELS.map(p => {
         const imgs = p.images || [];
@@ -578,7 +612,7 @@
         <article class="panel-card bg-white rounded-2xl overflow-hidden border border-slate-200 flex flex-col" data-category="${esc(p.category)}">
           <button type="button" class="gallery-open panel-img-area relative w-full aspect-[16/10] overflow-hidden border-b border-slate-200 block text-left"
                   data-gallery='${gallery}' data-title="${esc(p.name)}" aria-label="View profile photos of ${esc(p.name)}">
-            <img sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" decoding="async" src="${esc(main)}" alt="${esc(p.name)} panel profile" class="w-full h-full object-contain p-2" loading="lazy" width="730" height="415">
+            ${pictureHTML(main, esc(p.name) + ' panel profile', 'w-full h-full object-contain p-2')}
             ${more ? `<span class="absolute top-3 right-3 z-10 bg-steel-900/85 text-white text-xs font-semibold px-2.5 py-1 rounded-full">+${more} views</span>` : ''}
           </button>
           <div class="p-5 flex flex-col flex-1">
