@@ -113,46 +113,224 @@
         linear-gradient(105deg, rgba(2,6,23,0.55) 0%, rgba(2,6,23,0.28) 45%, rgba(2,6,23,0.18) 100%),
         linear-gradient(to top, rgba(2,6,23,0.78) 0%, rgba(2,6,23,0.22) 42%, rgba(2,6,23,0.25) 100%);
     }
-    @media (max-width: 767px) {
+    /* ========== MOBILE PORTRAIT: phone upright ========== */
+    @media (max-width: 767px) and (orientation: portrait) {
       .hero-overlay {
         background:
-          linear-gradient(to top, rgba(2,6,23,0.88) 0%, rgba(2,6,23,0.35) 38%, rgba(2,6,23,0.12) 62%, rgba(2,6,23,0.30) 100%);
+          linear-gradient(to top, rgba(2,6,23,0.90) 0%, rgba(2,6,23,0.32) 36%, rgba(2,6,23,0.08) 58%, rgba(2,6,23,0.28) 100%);
       }
-      /* Mobile: pin copy to bottom so the video fills the red hero zone above the marquee */
       .hero-section {
-        min-height: min(78vh, 680px) !important;
+        /* Leave clear sky for video above the copy */
+        min-height: min(70vh, 600px) !important;
+        height: auto;
         align-items: flex-end;
       }
       .hero-content {
         width: 100%;
-        padding-bottom: 0.25rem;
+        padding-bottom: 0;
       }
       .hero-content > .max-w-7xl {
         min-height: 0 !important;
-        padding-top: 1rem !important;
-        padding-bottom: 1.25rem !important;
+        padding-top: 0.75rem !important;
+        padding-bottom: 1rem !important;
       }
       .hero-headline {
-        font-size: clamp(1.55rem, 6.5vw, 2.1rem) !important;
-        line-height: 1.15 !important;
-        text-shadow: 0 2px 18px rgba(0,0,0,0.65);
+        font-size: clamp(1.4rem, 6vw, 1.95rem) !important;
+        line-height: 1.12 !important;
+        text-shadow: 0 2px 18px rgba(0,0,0,0.7);
+        margin-bottom: 0.4rem !important;
       }
       .hero-sub {
-        font-size: 0.92rem !important;
-        line-height: 1.45 !important;
-        max-width: 36rem;
+        font-size: 0.88rem !important;
+        line-height: 1.4 !important;
+        max-width: 34rem;
         text-shadow: 0 1px 12px rgba(0,0,0,0.55);
+        /* keep to ~3 lines so video stays visible */
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
       }
       .hero-kicker {
+        font-size: 0.72rem !important;
         text-shadow: 0 1px 10px rgba(0,0,0,0.5);
+        margin-bottom: 0.35rem !important;
+      }
+      .hero-line-draw { margin-bottom: 0.5rem !important; }
+      .hero-stage-inner { max-width: 100%; }
+      .hero-stage {
+        top: auto !important;
+        bottom: 2.25rem !important;
+        transform: none !important;
+      }
+      .hero-stage.is-active { transform: none !important; }
+      .hero-copy-wrap {
+        min-height: 0 !important;
+        /* give stages a bottom dock; height from padding + progress only */
+      }
+      .hero-actions {
+        gap: 0.55rem !important;
+        margin-top: 0.65rem !important;
+      }
+      .hero-actions a {
+        padding-top: 0.65rem;
+        padding-bottom: 0.65rem;
+        font-size: 0.92rem;
+      }
+      .hero-progress { margin-top: 0.65rem !important; }
+      .hero-media video,
+      .hero-media img { object-position: center 40%; }
+    }
+
+    /* ========== MOBILE / TABLET LANDSCAPE: phone sideways ==========
+       Short viewport — hero must fit in one screen so the video is visible */
+    @media (orientation: landscape) and (max-height: 520px) {
+      .hero-overlay {
+        background:
+          linear-gradient(to right, rgba(2,6,23,0.58) 0%, rgba(2,6,23,0.18) 42%, rgba(2,6,23,0.06) 100%),
+          linear-gradient(to top, rgba(2,6,23,0.62) 0%, rgba(2,6,23,0.10) 50%, rgba(2,6,23,0.15) 100%);
+      }
+      .hero-section {
+        /* Fit under nav + above marquee inside the short viewport */
+        min-height: 0 !important;
+        height: calc(100dvh - 3.9rem - 2.35rem) !important; /* nav ~62px + ribbon ~38px */
+        max-height: calc(100dvh - 3.9rem - 2.35rem) !important;
+        align-items: flex-end;
+      }
+      .hero-content {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: flex-end;
+      }
+      .hero-content > .max-w-7xl {
+        min-height: 0 !important;
+        padding-top: 0.35rem !important;
+        padding-bottom: 0.45rem !important;
+        width: 100%;
+      }
+      /* Stages fill bottom strip only — don't cover full video */
+      .hero-stage {
+        /* Anchor copy to bottom strip — top of hero stays pure video */
+        top: auto !important;
+        bottom: 1.75rem !important;
+        align-items: flex-end !important;
+        transform: none !important;
+      }
+      .hero-stage.is-active {
+        transform: none !important;
       }
       .hero-stage-inner {
-        max-width: 100%;
+        max-width: min(36rem, 72vw);
+        padding: 0.2rem 0 0;
       }
-      /* Shorter actions on mobile */
+      .hero-copy-wrap {
+        min-height: 0 !important;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+      }
+      .hero-progress {
+        position: relative;
+        z-index: 3;
+      }
+      .hero-kicker {
+        font-size: 0.65rem !important;
+        margin-bottom: 0.15rem !important;
+        letter-spacing: 0.08em;
+      }
+      .hero-line-draw {
+        display: none !important; /* save vertical space */
+      }
+      .hero-headline {
+        font-size: clamp(1.05rem, 2.6vw, 1.45rem) !important;
+        line-height: 1.15 !important;
+        margin-bottom: 0.2rem !important;
+        text-shadow: 0 2px 14px rgba(0,0,0,0.75);
+      }
+      .hero-headline br { display: none; } /* single-line flow in landscape */
+      .hero-sub {
+        display: none !important; /* body copy hides — video is the story */
+      }
+      .hero-actions {
+        flex-direction: row !important;
+        flex-wrap: wrap;
+        gap: 0.45rem !important;
+        margin-top: 0.35rem !important;
+      }
       .hero-actions a {
-        padding-top: 0.7rem;
-        padding-bottom: 0.7rem;
+        padding: 0.42rem 0.9rem !important;
+        font-size: 0.8rem !important;
+        border-radius: 0.65rem !important;
+      }
+      .hero-progress {
+        margin-top: 0.4rem !important;
+        gap: 0.4rem !important;
+      }
+      .hero-progress button {
+        width: 1.35rem !important;
+        height: 0.3rem !important;
+      }
+      .hero-media video,
+      .hero-media img {
+        object-position: center center;
+        /* fill short wide frame */
+        min-width: 100%;
+        min-height: 100%;
+      }
+      /* Marquee thinner in landscape short */
+      .attn-ribbon {
+        padding-top: 0.35rem !important;
+        padding-bottom: 0.35rem !important;
+        font-size: 0.72rem !important;
+      }
+    }
+
+    /* Very short landscape (iPhone SE / small phones sideways) */
+    @media (orientation: landscape) and (max-height: 380px) {
+      .hero-section {
+        height: calc(100dvh - 3.5rem - 2rem) !important;
+        max-height: calc(100dvh - 3.5rem - 2rem) !important;
+      }
+      .hero-headline {
+        font-size: clamp(0.95rem, 2.4vw, 1.2rem) !important;
+      }
+      .hero-kicker { display: none !important; }
+      .hero-actions a {
+        padding: 0.35rem 0.75rem !important;
+        font-size: 0.75rem !important;
+      }
+    }
+
+    /* Fallback narrow phones (portrait-ish width) if orientation not reported */
+    @media (max-width: 767px) and (min-height: 521px) {
+      .hero-overlay {
+        background:
+          linear-gradient(to top, rgba(2,6,23,0.90) 0%, rgba(2,6,23,0.32) 36%, rgba(2,6,23,0.08) 58%, rgba(2,6,23,0.28) 100%);
+      }
+      .hero-section {
+        min-height: min(70vh, 600px) !important;
+        align-items: flex-end;
+      }
+      .hero-content > .max-w-7xl {
+        min-height: 0 !important;
+        padding-top: 0.75rem !important;
+        padding-bottom: 1rem !important;
+      }
+      .hero-headline {
+        font-size: clamp(1.4rem, 6vw, 1.95rem) !important;
+        line-height: 1.12 !important;
+        text-shadow: 0 2px 18px rgba(0,0,0,0.7);
+      }
+      .hero-sub {
+        font-size: 0.88rem !important;
+        line-height: 1.4 !important;
+        text-shadow: 0 1px 12px rgba(0,0,0,0.55);
+      }
+      .hero-actions a {
+        padding-top: 0.65rem;
+        padding-bottom: 0.65rem;
       }
     }
     .hero-steel-lines {
@@ -556,7 +734,7 @@
     <div class="hero-steel-lines" aria-hidden="true"></div>
 
     <div class="hero-content">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-20 md:py-24 relative min-h-[22rem] sm:min-h-[24rem]">
+      <div class="hero-copy-wrap max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-20 md:py-24 relative min-h-[22rem] sm:min-h-[24rem]">
 
         <!-- STAGE 1: Brand + supplier promise -->
         <div class="hero-stage is-active" data-stage="0" id="hero-stage-0">
