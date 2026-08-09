@@ -1,11 +1,13 @@
-# Hero Video Update
+# Hero Video
 
-The refined 12s cinematic hero video is ready locally:
-- File: stamps-hero-refined-final.mp4 (903KB)
-- Features: exact official copper logo entrance, small lower-right watermark on building shots, full-screen "Design Your Building" CTA for last ~4s
-- No morphing/blending artifacts
-- Portrait 448x672, loops cleanly
+## Current (live)
+- **File:** `images/hero/stamps-hero.mp4`
+- **Codec:** H.264 Main, **yuv420p** (browser-safe), 1280×720, ~16s, muted loop
+- **Poster:** `images/hero/poster.webp` (+ jpg/640w/960w)
+- **Playback:** muted autoplay on all viewports except `prefers-reduced-motion` or Save-Data
+- **Content:** copper logo entrance → building sequence → lower-right watermark → “Design Your Building” CTA
 
-To complete the replace of images/hero/stamps-hero.mp4 (current SHA 606abff3e938bd729f7e17b364079dfaa9173da6), the base64 upload is prepared. Concurrent lock is active on create_or_update_file.
+## 2026-08-09 fix
+Previous encode was H.264 **High 4:4:4 / yuv444p**, which many browsers cannot decode — video never became visible. Re-encoded to yuv420p. Restored `poster.jpg` (was a 11-byte `PLACEHOLDER` from a failed replace). Enabled video on mobile (was desktop-only).
 
-Once unlocked, push will happen.
+Cache-bust query: `?v=20260809-420`
