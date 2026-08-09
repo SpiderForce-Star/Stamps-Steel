@@ -40,3 +40,13 @@ Nothing is published until you say so.
 
 - Live site pages were **not** modified.
 - Images are custom renders for Stamps Steel review (not stock with watermarks).
+
+## Agricultural gallery additions (2026-08-09)
+
+| File | Description |
+|------|-------------|
+| `../arena-riding-white.jpg` | White riding arena · brown roof · stone base · open side bay with rails |
+| `../arena-green-open.jpg` | Forest green open-side arena · charcoal roof · golden-hour hillside |
+| `../ag-barnred-lean-to.jpg` | Barn red · black metal wainscot · white roof · dual black OH · lean-to |
+
+Relisted former “White shell with masonry base” (Neighborhood Commercial) as **Agricultural · Riding Arena**.
