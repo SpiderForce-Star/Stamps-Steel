@@ -50,3 +50,18 @@ Nothing is published until you say so.
 | `../ag-barnred-lean-to.jpg` | Barn red · black metal wainscot · white roof · dual black OH · lean-to |
 
 Relisted former “White shell with masonry base” (Neighborhood Commercial) as **Agricultural · Riding Arena**.
+
+
+## Aircraft hangar additions (2026-08-09)
+
+Original generated PEB hangar photography (not stock / not third-party brands).
+
+| File | Description |
+|------|-------------|
+| `../hangar-personal-gray-bifold.jpg` | Personal gray PEB · hydraulic bifold open as canopy |
+| `../hangar-personal-blue-bifold.jpg` | Personal blue PEB · bifold open · rural airfield |
+| `../hangar-t-row-units.jpg` | Multi-unit hangar door row · ground level |
+| `../hangar-t-campus-aerial.jpg` | Nested T-hangar campus aerial near runway |
+| `../hangar-complex-aerial.jpg` | Multi-building GA hangar complex aerial |
+
+Content: personal hangars, T-hangars, bifold door note on projects.html `#hangars`.
