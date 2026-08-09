@@ -1,13 +1,25 @@
-# Hero Video
+# Hero Video — Masterclass (30s)
 
-## Current (live)
-- **File:** `images/hero/stamps-hero.mp4`
-- **Codec:** H.264 Main, **yuv420p** (browser-safe), 1280×720, ~16s, muted loop
-- **Poster:** `images/hero/poster.webp` (+ jpg/640w/960w)
-- **Playback:** muted autoplay on all viewports except `prefers-reduced-motion` or Save-Data
-- **Content:** copper logo entrance → building sequence → lower-right watermark → “Design Your Building” CTA
+## Live file
+- **Path:** `images/hero/stamps-hero.mp4`
+- **Duration:** ~30.5s · **1280×720** · H.264 Main **yuv420p** · muted loop
+- **Cache bust:** `?v=20260809-master30`
 
-## 2026-08-09 fix
-Previous encode was H.264 **High 4:4:4 / yuv444p**, which many browsers cannot decode — video never became visible. Re-encoded to yuv420p. Restored `poster.jpg` (was a 11-byte `PLACEHOLDER` from a failed replace). Enabled video on mobile (was desktop-only).
+## Structure
+| Time | Content |
+|------|---------|
+| 0–6s | Full-screen Stamps Steel logo on molten steel sparks / industrial forge (impact + strength) |
+| 6–9s | Personal garages & shops |
+| 9–11s | Small commercial |
+| 11–14s | Larger warehouse buildings |
+| 14–16s | Mixed-use facilities |
+| 16–19s | Agricultural / riding arena |
+| 19–21s | Personal aircraft hangars (bifold) |
+| 21–23s | T-hangar campuses (aerial) |
+| 23–26s | Mini storage systems |
+| 26–30s | **Design Your Building Here** CTA · free 3D designer focus |
 
-Cache-bust query: `?v=20260809-420`
+## Notes
+- Building shots derived from live site gallery / hangar / ag assets (original imagery).
+- Logo is the official Stamps Steel mark composited (exact brand, not AI-garbled text).
+- Encoded browser-safe (not 4:4:4). Autoplay on all viewports except reduced-motion / Save-Data.

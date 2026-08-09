@@ -1036,7 +1036,7 @@
           v.preload = 'auto';
           v.setAttribute('poster', 'images/hero/poster.jpg');
           var s = document.createElement('source');
-          s.src = 'images/hero/stamps-hero.mp4?v=20260809-420';
+          s.src = 'images/hero/stamps-hero.mp4?v=20260809-master30';
           s.type = 'video/mp4';
           v.appendChild(s);
           host.appendChild(v);
@@ -1069,7 +1069,7 @@
       if (!stages.length) return;
       var i = 0;
       var timer = null;
-      var dwell = [7500, 8000];
+      var dwell = [10000, 12000];
       var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
       function show(idx) {
