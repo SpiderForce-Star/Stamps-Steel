@@ -116,6 +116,9 @@
     .overflow-hidden > picture > img { width: 100%; height: 100%; object-fit: cover; }
 
   </style>
+  <link rel="stylesheet" href="css/site-extras.css">
+  <link rel="canonical" href="https://stampssteel.com/designer.html">
+
 </head>
 <body class="bg-slate-50 text-slate-900 font-sans antialiased">
 
@@ -268,6 +271,23 @@
     </div>
   </section>
 
+  
+  <section class="py-12 bg-slate-50 border-t border-slate-200" aria-label="Size estimator">
+    <div class="max-w-3xl mx-auto px-4">
+      <div data-stamps-estimator></div>
+    </div>
+  </section>
+
+  <section id="contact" class="py-14 bg-white border-t border-slate-200">
+    <div class="max-w-2xl mx-auto px-4">
+      <div class="text-center mb-8">
+        <h2 class="text-2xl md:text-3xl font-black mb-2">Designed it? Get a free quote</h2>
+        <p class="text-slate-600 text-sm">Send your size and site details — no high-pressure sales.</p>
+      </div>
+      <div data-stamps-quote data-context="designer" data-title="Quote from 3D designer"></div>
+    </div>
+  </section>
+
   <footer class="bg-steel-950 text-slate-400 py-12 border-t border-steel-800">
     <div class="max-w-7xl mx-auto px-4">
       <div class="flex flex-col items-center text-center">
@@ -279,6 +299,7 @@
         <p class="text-sm mb-6"><a href="mailto:info@stampssteel.com" class="hover:text-copper-400 transition font-medium">info@stampssteel.com</a></p>
         <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 mb-6 text-sm">
           <a href="about.html" class="hover:text-copper-400 transition">About</a>
+          <a href="faq.html" class="hover:text-copper-400 transition">FAQ</a>
           <a href="designer.html" class="hover:text-copper-400 transition">3D Designer</a>
           <a href="projects.html" class="hover:text-copper-400 transition">Projects</a>
           <a href="framing.html" class="hover:text-copper-400 transition">Framing</a>
@@ -331,5 +352,10 @@
     }
   </script>
   <script src="js/web-vitals.js?v=20260803" defer></script>
+  <script src="js/quote-form.js" defer></script>
+  <script src="js/lightbox.js" defer></script>
+  <script src="js/estimator.js" defer></script>
+  <script src="js/site-common.js" defer></script>
+
 </body>
 </html>

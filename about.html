@@ -103,6 +103,9 @@
     .overflow-hidden > picture > img { width: 100%; height: 100%; object-fit: cover; }
 
   </style>
+  <link rel="stylesheet" href="css/site-extras.css">
+  <link rel="canonical" href="https://stampssteel.com/about.html">
+
 </head>
 <body class="bg-slate-50 text-slate-900 font-sans antialiased">
 
@@ -315,6 +318,60 @@
     </div>
   </section>
 
+  
+  <!-- TESTIMONIALS / TRUST -->
+  <section id="testimonials" class="py-14 md:py-16 bg-white border-b border-slate-200" aria-label="Customer feedback">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-10">
+        <p class="text-sm font-semibold text-copper-600 uppercase tracking-wide mb-2">Trust</p>
+        <h2 class="text-3xl md:text-4xl font-black mb-3">What owners value</h2>
+        <p class="text-slate-600 max-w-2xl mx-auto text-sm md:text-base">Integrity, clear communication, and value engineering — the standards we hold on every PEB conversation.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-5 mb-8">
+        <article class="stamps-testimonial">
+          <div class="st-stars" aria-hidden="true">★★★★★</div>
+          <blockquote>“Straight answers on framing and insulation options — no pressure, no runaround. We knew exactly what was in the package.”</blockquote>
+          <div class="st-by">Shop owner</div>
+          <div class="st-meta">Middle Tennessee · Clear-span workshop</div>
+          <p class="stamps-placeholder-note">Placeholder testimonial — replace with your Google review or customer quote.</p>
+        </article>
+        <article class="stamps-testimonial">
+          <div class="st-stars" aria-hidden="true">★★★★★</div>
+          <blockquote>“They walked us through doors, eave height, and code needs for our county. Value engineering saved us from overbuilding.”</blockquote>
+          <div class="st-by">Commercial buyer</div>
+          <div class="st-meta">Greater Nashville area</div>
+          <p class="stamps-placeholder-note">Placeholder testimonial — replace with your Google review or customer quote.</p>
+        </article>
+        <article class="stamps-testimonial">
+          <div class="st-stars" aria-hidden="true">★★★★★</div>
+          <blockquote>“Local knowledge mattered. We got a PEB package sized for our site, not a one-size catalog pitch.”</blockquote>
+          <div class="st-by">Agricultural customer</div>
+          <div class="st-meta">Middle Tennessee</div>
+          <p class="stamps-placeholder-note">Placeholder testimonial — replace with your Google review or customer quote.</p>
+        </article>
+      </div>
+      <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+        <div>
+          <p class="font-bold text-steel-900">Google reviews</p>
+          <p class="text-sm text-slate-600 mt-1">Add your Google Business Profile badge or review link here when ready.</p>
+          <!-- TODO: Paste Google reviews embed / badge HTML here -->
+        </div>
+        <a href="https://www.google.com/search?q=Stamps+Steel+Buildings+Bethpage+TN" target="_blank" rel="noopener noreferrer" class="inline-flex justify-center bg-steel-900 hover:bg-steel-800 text-white px-5 py-2.5 rounded-xl text-sm font-semibold transition">Find us on Google</a>
+      </div>
+    </div>
+  </section>
+
+  
+  <section id="contact" class="py-14 md:py-16 bg-slate-50 border-t border-slate-200">
+    <div class="max-w-2xl mx-auto px-4">
+      <div class="text-center mb-8">
+        <h2 class="text-2xl md:text-3xl font-black mb-2">Talk with Stamps Steel</h2>
+        <p class="text-slate-600 text-sm">Free quote · clear options · Middle Tennessee roots, nationwide PEBs.</p>
+      </div>
+      <div data-stamps-quote data-context="about" data-title="Request a free quote"></div>
+    </div>
+  </section>
+
   <!-- FOOTER -->
   <footer class="bg-steel-950 text-slate-400 py-12 border-t border-steel-800">
     <div class="max-w-7xl mx-auto px-4">
@@ -331,6 +388,7 @@
         </p>
         <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 mb-6 text-sm">
           <a href="about.html" class="hover:text-copper-400 transition">About</a>
+          <a href="faq.html" class="hover:text-copper-400 transition">FAQ</a>
           <a href="designer.html" class="hover:text-copper-400 transition">3D Designer</a>
           <a href="projects.html" class="hover:text-copper-400 transition">Projects</a>
           <a href="framing.html" class="hover:text-copper-400 transition">Framing</a>
@@ -366,5 +424,10 @@
     }
   </script>
   <script src="js/web-vitals.js?v=20260803" defer></script>
+  <script src="js/quote-form.js" defer></script>
+  <script src="js/lightbox.js" defer></script>
+  <script src="js/estimator.js" defer></script>
+  <script src="js/site-common.js" defer></script>
+
 </body>
 </html>

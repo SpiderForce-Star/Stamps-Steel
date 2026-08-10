@@ -113,6 +113,9 @@
     .overflow-hidden > picture > img { width: 100%; height: 100%; object-fit: cover; }
 
   </style>
+  <link rel="stylesheet" href="css/site-extras.css">
+  <link rel="canonical" href="https://stampssteel.com/accessories.html">
+
 </head>
 <body class="bg-slate-50 text-slate-900 font-sans antialiased">
 
@@ -121,7 +124,7 @@
     <div class="max-w-7xl mx-auto px-4">
       <div class="flex justify-between items-center h-16">
         <a href="index.html" class="flex items-center gap-2.5 shrink-0 min-w-0" aria-label="Stamps Steel Buildings home">
-          <img src="images/logo-nav-md.webp" width="48" height="48" alt="" class="h-10 w-10 sm:h-11 sm:w-11 object-contain rounded-full bg-steel-950 shrink-0" decoding="async" loading="eager" fetchpriority="high">
+          <img data-lightbox="accessories" src="images/logo-nav-md.webp" width="48" height="48" alt="" class="h-10 w-10 sm:h-11 sm:w-11 object-contain rounded-full bg-steel-950 shrink-0" decoding="async" loading="eager" fetchpriority="high">
           <span class="font-bold text-white tracking-tight text-sm sm:text-base leading-tight">
             Stamps Steel
             <span class="block text-[0.65rem] sm:text-xs font-semibold text-copper-400 tracking-wider uppercase">Buildings</span>
@@ -225,31 +228,7 @@
         <p class="text-slate-600">Tell us what you need. We’ll respond promptly — no pressure.</p>
       </div>
       <div class="bg-white rounded-2xl shadow-xl p-6 md:p-8 border border-slate-100">
-        <form action="mailto:info@stampssteel.com" method="POST" enctype="text/plain" class="space-y-5">
-          <div class="grid sm:grid-cols-2 gap-5">
-            <div>
-              <label class="block text-sm font-semibold mb-1.5" for="name">Name *</label>
-              <input id="name" type="text" name="name" required class="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-copper-500 focus:border-copper-500 outline-none transition" placeholder="Your name">
-            </div>
-            <div>
-              <label class="block text-sm font-semibold mb-1.5" for="phone">Phone</label>
-              <input id="phone" type="tel" name="phone" class="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-copper-500 focus:border-copper-500 outline-none transition" placeholder="(615) 555-0123">
-            </div>
-          </div>
-          <div>
-            <label class="block text-sm font-semibold mb-1.5" for="email">Email *</label>
-            <input id="email" type="email" name="email" required class="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-copper-500 focus:border-copper-500 outline-none transition" placeholder="you@email.com">
-          </div>
-          <div>
-            <label class="block text-sm font-semibold mb-1.5" for="quote-product">Accessory / Product</label>
-            <input type="text" name="product" id="quote-product" class="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-copper-500 focus:border-copper-500 outline-none transition" placeholder="e.g. Continuous Ridge Vent, Roll-Up Door">
-          </div>
-          <div>
-            <label class="block text-sm font-semibold mb-1.5" for="details">Details / Quantities / Location</label>
-            <textarea id="details" name="details" rows="4" class="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-copper-500 focus:border-copper-500 outline-none transition" placeholder="Quantities, sizes, building type, site location, or any special requirements..."></textarea>
-          </div>
-          <button type="submit" class="w-full bg-copper-600 hover:bg-copper-500 text-white font-bold py-4 rounded-xl text-lg transition shadow-lg shadow-copper-900/20">Send Quote Request</button>
-        </form>
+        <div class="max-w-2xl mx-auto" data-stamps-quote data-context="accessories" data-title="Request a free quote"></div>
         <p class="text-center text-sm text-slate-500 mt-6">
           <a href="mailto:info@stampssteel.com" class="hover:text-copper-600">info@stampssteel.com</a>
           &nbsp;•&nbsp;
@@ -264,7 +243,7 @@
   <footer class="bg-steel-950 text-slate-400 py-12 border-t border-steel-800">
     <div class="max-w-7xl mx-auto px-4">
       <div class="flex flex-col items-center text-center">
-        <img src="images/logo-nav-lg.webp" width="80" height="80" alt="Stamps Steel Buildings" class="h-14 w-14 object-contain rounded-full bg-steel-950 mb-5" decoding="async" loading="lazy">
+        <img data-lightbox="accessories" src="images/logo-nav-lg.webp" width="80" height="80" alt="Stamps Steel Buildings" class="h-14 w-14 object-contain rounded-full bg-steel-950 mb-5" decoding="async" loading="lazy">
         <p class="text-sm text-slate-300 mb-1">Custom Pre-Engineered Metal Buildings</p>
         <p class="text-sm mb-1">Serving customers nationwide</p>
         <p class="text-sm mb-4">Home office · Bethpage, Middle Tennessee</p>
@@ -276,6 +255,7 @@
         </p>
         <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 mb-6 text-sm">
           <a href="about.html" class="hover:text-copper-400 transition">About</a>
+          <a href="faq.html" class="hover:text-copper-400 transition">FAQ</a>
           <a href="designer.html" class="hover:text-copper-400 transition">3D Designer</a>
           <a href="projects.html" class="hover:text-copper-400 transition">Projects</a>
           <a href="framing.html" class="hover:text-copper-400 transition">Framing</a>
@@ -680,5 +660,10 @@
     renderProducts();
   </script>
   <script src="js/web-vitals.js?v=20260803" defer></script>
+  <script src="js/quote-form.js" defer></script>
+  <script src="js/lightbox.js" defer></script>
+  <script src="js/estimator.js" defer></script>
+  <script src="js/site-common.js" defer></script>
+
 </body>
 </html>

@@ -1,0 +1,7 @@
+# Stamps Steel Buildings
+User-agent: *
+Allow: /
+
+Sitemap: https://stampssteel.com/sitemap.xml
+# Until custom domain DNS is live, also valid on GitHub Pages:
+# Sitemap: https://SpiderForce-Star.github.io/Stamps-Steel/sitemap.xml
