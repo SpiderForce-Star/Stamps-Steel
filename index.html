@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Stamps Steel Buildings | Custom Pre-Engineered Metal Buildings Nationwide</title>
-  <meta name="description" content="Stamps Steel Buildings delivers custom pre-engineered metal buildings nationwide. Based in Bethpage, TN. Design yours in 3D, get a free quote. Shops, commercial, agricultural, warehouses. (615) 629-8217">
+  <title>Stamps Steel Buildings | Design Your Metal Building in 3D â€" Nationwide PEBs</title>
+  <meta name="description" content="The most intense metal building experience online. Design your pre-engineered steel building in free 3D, get a no-pressure quote nationwide. Shops, commercial, ag, warehouses, mini storage. Bethpage, TN Â· (615) 629-8217">
   <meta name="keywords" content="metal buildings nationwide, PEB Bethpage TN, steel buildings USA, 3D metal building designer, pre-engineered metal buildings, shops garages barns warehouses, Stamps Steel">
   <meta property="og:title" content="Stamps Steel Buildings | Custom Metal Buildings Nationwide">
   <meta property="og:description" content="Furnish-and-install PEBs nationwide from Bethpage, TN. Design your building in 3D. Transparent process, value engineering, no high-pressure sales.">
@@ -108,10 +108,10 @@
       inset: 0;
       z-index: 1;
       pointer-events: none;
-      /* Keep video readable — lighter scrim so the cinematic plays through */
+      /* Keep video readable â€" lighter scrim so the cinematic plays through */
       background:
-        linear-gradient(105deg, rgba(2,6,23,0.55) 0%, rgba(2,6,23,0.28) 45%, rgba(2,6,23,0.18) 100%),
-        linear-gradient(to top, rgba(2,6,23,0.78) 0%, rgba(2,6,23,0.22) 42%, rgba(2,6,23,0.25) 100%);
+        linear-gradient(105deg, rgba(2,6,23,0.42) 0%, rgba(2,6,23,0.18) 48%, rgba(2,6,23,0.10) 100%),
+        linear-gradient(to top, rgba(2,6,23,0.72) 0%, rgba(2,6,23,0.14) 48%, rgba(2,6,23,0.18) 100%);
     }
     /* ========== MOBILE PORTRAIT: phone upright ========== */
     @media (max-width: 767px) and (orientation: portrait) {
@@ -183,7 +183,7 @@
     }
 
     /* ========== MOBILE / TABLET LANDSCAPE: phone sideways ==========
-       Short viewport — hero must fit in one screen so the video is visible */
+       Short viewport â€" hero must fit in one screen so the video is visible */
     @media (orientation: landscape) and (max-height: 520px) {
       .hero-overlay {
         background:
@@ -209,9 +209,9 @@
         padding-bottom: 0.45rem !important;
         width: 100%;
       }
-      /* Stages fill bottom strip only — don't cover full video */
+      /* Stages fill bottom strip only â€" don't cover full video */
       .hero-stage {
-        /* Anchor copy to bottom strip — top of hero stays pure video */
+        /* Anchor copy to bottom strip â€" top of hero stays pure video */
         top: auto !important;
         bottom: 1.75rem !important;
         align-items: flex-end !important;
@@ -251,7 +251,7 @@
       }
       .hero-headline br { display: none; } /* single-line flow in landscape */
       .hero-sub {
-        display: none !important; /* body copy hides — video is the story */
+        display: none !important; /* body copy hides â€" video is the story */
       }
       .hero-actions {
         flex-direction: row !important;
@@ -572,7 +572,7 @@
     html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
     body { overflow-x: clip; }
     img, svg { max-width: 100%; height: auto; }
-    /* Hero video must keep absolute cover sizing — not max-width:100% / height:auto */
+    /* Hero video must keep absolute cover sizing â€" not max-width:100% / height:auto */
     video:not(.hero-media video):not(#hero-video) { max-width: 100%; height: auto; }
     .hero-media video, #hero-video {
       max-width: none;
@@ -631,6 +631,78 @@
     .aspect-\[16\/10\] > picture > img,
     .overflow-hidden > picture > img { width: 100%; height: 100%; object-fit: cover; }
 
+
+    /* === Competitive entry upgrades === */
+    .hero-film-bar {
+      position: absolute; left: 0; right: 0; bottom: 0; height: 3px;
+      z-index: 4; background: rgba(255,255,255,0.12); pointer-events: none;
+    }
+    .hero-film-bar > span {
+      display: block; height: 100%; width: 0%;
+      background: linear-gradient(90deg, #e0a05a, #c97b3a);
+      box-shadow: 0 0 12px rgba(201,123,58,0.55);
+      transition: width 0.08s linear;
+    }
+    .hero-controls {
+      position: absolute; right: 1rem; bottom: 1rem; z-index: 5;
+      display: flex; gap: 0.5rem; align-items: center;
+    }
+    .hero-ctrl-btn {
+      background: rgba(2,6,23,0.55); border: 1px solid rgba(255,255,255,0.18);
+      color: #e2e8f0; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.06em;
+      text-transform: uppercase; padding: 0.45rem 0.7rem; border-radius: 999px;
+      backdrop-filter: blur(8px); cursor: pointer; transition: background 0.2s, border-color 0.2s;
+    }
+    .hero-ctrl-btn:hover { background: rgba(201,123,58,0.35); border-color: rgba(224,160,90,0.5); color: #fff; }
+    .hero-trust-chips {
+      display: flex; flex-wrap: wrap; gap: 0.45rem; margin-top: 1.1rem;
+    }
+    .hero-trust-chips span {
+      font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+      color: #f1f5f9; background: rgba(2,6,23,0.45); border: 1px solid rgba(224,160,90,0.35);
+      padding: 0.35rem 0.65rem; border-radius: 999px; backdrop-filter: blur(6px);
+    }
+    .vs-table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+    .vs-table th, .vs-table td { padding: 0.85rem 1rem; text-align: left; border-bottom: 1px solid #e2e8f0; }
+    .vs-table th { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: #64748b; }
+    .vs-table td:first-child { font-weight: 600; color: #0f172a; }
+    .vs-yes { color: #b87333; font-weight: 800; }
+    .vs-no { color: #94a3b8; }
+    .size-card {
+      display: flex; flex-direction: column; border: 1px solid #e2e8f0; border-radius: 1rem;
+      background: #fff; padding: 1.25rem; transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+      text-decoration: none; color: inherit;
+    }
+    .size-card:hover { border-color: #e0a05a; box-shadow: 0 12px 30px rgba(15,23,42,0.08); transform: translateY(-2px); }
+    .size-card .dim { font-size: 1.5rem; font-weight: 900; color: #0f172a; letter-spacing: -0.03em; }
+    .size-card .use { font-size: 0.8rem; font-weight: 700; color: #c97b3a; text-transform: uppercase; letter-spacing: 0.06em; margin-top: 0.25rem; }
+    .size-card p { font-size: 0.875rem; color: #64748b; margin-top: 0.5rem; flex: 1; }
+    .size-card .go { margin-top: 0.85rem; font-size: 0.85rem; font-weight: 700; color: #b87333; }
+    .mobile-sticky-cta {
+      display: none; position: fixed; left: 0; right: 0; bottom: 0; z-index: 60;
+      padding: 0.65rem 0.85rem calc(0.65rem + env(safe-area-inset-bottom));
+      background: rgba(2,6,23,0.94); border-top: 1px solid rgba(201,123,58,0.35);
+      backdrop-filter: blur(12px); gap: 0.5rem;
+    }
+    .mobile-sticky-cta a {
+      flex: 1; text-align: center; font-weight: 700; font-size: 0.85rem;
+      padding: 0.75rem 0.5rem; border-radius: 0.75rem; text-decoration: none;
+    }
+    .mobile-sticky-cta .primary { background: #c97b3a; color: #fff; }
+    .mobile-sticky-cta .secondary { background: rgba(255,255,255,0.08); color: #fff; border: 1px solid rgba(255,255,255,0.15); }
+    @media (max-width: 767px) {
+      .mobile-sticky-cta { display: flex; }
+      body { padding-bottom: 4.5rem; }
+    }
+    .diff-strip {
+      background: #020617; color: #fff; border-bottom: 1px solid #1e293b;
+    }
+    .diff-badge {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      font-size: 0.7rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase;
+      color: #e0a05a;
+    }
+
   </style>
   <script type="application/ld+json">
   {
@@ -680,7 +752,8 @@
           <a href="insulation.html" class="px-2 py-2 hover:text-copper-400 transition">Insulation</a>
           <a href="imp.html" class="px-2 py-2 hover:text-copper-400 transition">IMP</a>
           <a href="mini-storage.html" class="px-2 py-2 hover:text-copper-400 transition">Mini Storage</a>
-          <a href="#contact" class="ml-2 bg-copper-600 hover:bg-copper-500 text-white px-4 py-2.5 rounded-lg font-semibold transition shadow-lg shadow-copper-900/30">Get Free Quote</a>
+          <a href="designer.html" class="ml-2 bg-white/10 hover:bg-white/15 border border-white/20 text-white px-3 py-2.5 rounded-lg font-semibold transition">3D Design</a>
+          <a href="#contact" class="bg-copper-600 hover:bg-copper-500 text-white px-4 py-2.5 rounded-lg font-semibold transition shadow-lg shadow-copper-900/30">Free Quote</a>
         </div>
         <div class="nav-mobile-tools flex items-center gap-2 lg:hidden">
           <a href="#contact" class="bg-copper-600 text-white px-3 py-1.5 rounded-lg text-sm font-semibold">Quote</a>
@@ -695,7 +768,7 @@
         <a href="about.html" class="block py-3 px-3 rounded-lg hover:bg-steel-800">About Us</a>
         <a href="designer.html" class="block py-3 px-3 rounded-lg hover:bg-steel-800">Build Your Own Building</a>
         <a href="projects.html" class="block py-3 px-3 rounded-lg hover:bg-steel-800">Projects</a>
-        <a href="framing.html" class="block py-3 px-3 rounded-lg hover:bg-steel-800 pl-6 text-slate-300">— Building Framing</a>
+        <a href="framing.html" class="block py-3 px-3 rounded-lg hover:bg-steel-800 pl-6 text-slate-300">â€" Building Framing</a>
         <a href="accessories.html" class="block py-3 px-3 rounded-lg hover:bg-steel-800">Accessories</a>
         <a href="panels.html" class="block py-3 px-3 rounded-lg hover:bg-steel-800">Panels & Colors</a>
         <a href="insulation.html" class="block py-3 px-3 rounded-lg hover:bg-steel-800">Insulation</a>
@@ -707,13 +780,12 @@
   </nav>
 
 <!-- HERO -->
-  <section id="home" class="hero-section text-white" aria-label="Stamps Steel introduction">
+  <section id="home" class="hero-section text-white" aria-label="Stamps Steel brand film experience">
     <div class="hero-media" aria-hidden="true">
       <picture class="hero-poster">
         <source type="image/webp" srcset="images/hero/poster-640w.webp 640w, images/hero/poster-960w.webp 960w, images/hero/poster.webp 1400w" sizes="100vw">
         <img data-opt="1" src="images/hero/poster.jpg" alt="" width="1280" height="720" decoding="async" loading="eager" fetchpriority="high" sizes="100vw">
       </picture>
-      <!-- Hero cinematic: under header, above marquee — full bleed background -->
       <video
         id="hero-video"
         class="is-ready"
@@ -727,32 +799,67 @@
         poster="images/hero/poster.jpg"
         disablePictureInPicture
       >
-        <source src="images/hero/stamps-hero.mp4?v=20260809-wow11" type="video/mp4">
+        <source src="images/hero/stamps-hero.mp4?v=20260810-forge32" type="video/mp4">
       </video>
     </div>
     <div class="hero-overlay" aria-hidden="true"></div>
     <div class="hero-steel-lines" aria-hidden="true"></div>
+    <div class="hero-film-bar" aria-hidden="true"><span id="hero-film-progress"></span></div>
+    <div class="hero-controls">
+      <button type="button" class="hero-ctrl-btn" id="hero-sound-btn" aria-pressed="false" title="Toggle sound">Sound Off</button>
+      <button type="button" class="hero-ctrl-btn" id="hero-replay-btn" title="Replay brand film">Replay</button>
+    </div>
 
     <div class="hero-content">
       <div class="hero-copy-wrap max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-20 md:py-24 relative min-h-[22rem] sm:min-h-[24rem]">
 
-        <!-- STAGE 1: Brand + supplier promise -->
+        <!-- STAGE 0: Forge / power of steel (0â€"9s) -->
         <div class="hero-stage is-active" data-stage="0" id="hero-stage-0">
           <div class="hero-stage-inner">
-            <p class="hero-kicker hero-fade-up d1"><span class="bar" aria-hidden="true"></span> Stamps Steel Buildings</p>
+            <p class="hero-kicker hero-fade-up d1"><span class="bar" aria-hidden="true"></span> Born in fire Â· Built in steel</p>
             <div class="hero-line-draw" aria-hidden="true"></div>
             <h1 class="hero-headline hero-fade-up d2">
-              Your Professional<br class="hidden sm:block">
-              <span class="copper-gradient">Steel and Structural</span><br>
-              Building Supplier
+              Youâ€™ve never seen a<br class="hidden sm:block">
+              <span class="copper-gradient">steel building company</span><br class="hidden sm:block">
+              look like this
             </h1>
             <p class="hero-sub hero-fade-up d3">
-              Shops, commercial campuses, agricultural buildings, and
-              <strong>mini storage systems</strong> — engineered for your site, codes, and climate nationwide.
+              Pre-engineered metal buildings with the power and presence the industry forgot â€"
+              <strong>shops, commercial, ag, warehouses &amp; mini storage</strong> nationwide.
             </p>
+            <div class="hero-trust-chips hero-fade-up d3" aria-label="Proof points">
+              <span>Nationwide PEBs</span>
+              <span>Free 3D Designer</span>
+              <span>No High-Pressure Sales</span>
+              <span>10+ Years PEMB</span>
+            </div>
             <div class="hero-actions hero-fade-up d4">
+              <a href="designer.html" class="hero-cta-pulse inline-flex justify-center items-center bg-copper-600 hover:bg-copper-500 text-white px-8 py-4 rounded-xl font-bold text-base sm:text-lg transition shadow-xl shadow-copper-900/40">
+                Design Your Building Here
+              </a>
               <a href="#contact" class="inline-flex justify-center items-center bg-white/10 hover:bg-white/15 border border-white/25 text-white px-7 py-3.5 rounded-xl font-semibold transition backdrop-blur-sm">
                 Get Free Quote
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- STAGE 1: Real buildings (9â€"21s) -->
+        <div class="hero-stage" data-stage="1" id="hero-stage-1" aria-hidden="true">
+          <div class="hero-stage-inner">
+            <p class="hero-kicker hero-fade-up d1"><span class="bar" aria-hidden="true"></span> Real buildings Â· Real power</p>
+            <div class="hero-line-draw" aria-hidden="true"></div>
+            <h2 class="hero-headline hero-fade-up d2">
+              Massive clear-spans.<br class="hidden sm:block">
+              <span class="copper-gradient">Built to dominate</span> the site.
+            </h2>
+            <p class="hero-sub hero-fade-up d3">
+              Multi-bay shops, commercial service centers, farm structures, and finished PEBs â€"
+              engineered for your codes, climate, and ambition.
+            </p>
+            <div class="hero-actions hero-fade-up d4">
+              <a href="#projects" class="inline-flex justify-center items-center bg-copper-600 hover:bg-copper-500 text-white px-8 py-4 rounded-xl font-bold transition shadow-xl shadow-copper-900/40">
+                See Real Projects
               </a>
               <a href="tel:+16156298217" class="inline-flex justify-center items-center text-slate-200 hover:text-copper-400 px-2 py-3 font-medium transition">
                 (615) 629-8217
@@ -761,21 +868,22 @@
           </div>
         </div>
 
-        <!-- STAGE 2: Design your building -->
-        <div class="hero-stage" data-stage="1" id="hero-stage-1" aria-hidden="true">
+        <!-- STAGE 2: 3D differentiator (21â€"28s) -->
+        <div class="hero-stage" data-stage="2" id="hero-stage-2" aria-hidden="true">
           <div class="hero-stage-inner">
-            <p class="hero-kicker hero-fade-up d1"><span class="bar" aria-hidden="true"></span> Interactive 3D Designer</p>
+            <p class="hero-kicker hero-fade-up d1"><span class="bar" aria-hidden="true"></span> The differentiator most companies donâ€™t have</p>
             <div class="hero-line-draw" aria-hidden="true"></div>
             <h2 class="hero-headline hero-fade-up d2">
-              Design your<br class="hidden sm:block">
-              <span class="copper-gradient">building here</span>
+              Donâ€™t just look.<br class="hidden sm:block">
+              <span class="copper-gradient">Design yours</span> right now.
             </h2>
             <p class="hero-sub hero-fade-up d3">
-              Configure size, doors, and finishes in our free online designer — then request a Stamps Steel quote with no high-pressure sales.
+              Free interactive 3D Building Designer â€" size, doors, colors, layout â€"
+              then send it to Stamps Steel for a no-pressure quote.
             </p>
             <div class="hero-actions hero-fade-up d4">
               <a href="designer.html" class="hero-cta-pulse inline-flex justify-center items-center bg-copper-600 hover:bg-copper-500 text-white px-8 py-4 rounded-xl font-bold text-base sm:text-lg transition shadow-xl shadow-copper-900/40">
-                Design Your Building Here
+                Launch 3D Designer
               </a>
               <a href="projects.html#designs" class="inline-flex justify-center items-center bg-white/10 hover:bg-white/15 border border-white/25 text-white px-7 py-3.5 rounded-xl font-semibold transition backdrop-blur-sm">
                 Browse Designs
@@ -784,34 +892,57 @@
           </div>
         </div>
 
-        <!-- Stage controls -->
-        <div class="hero-progress" role="tablist" aria-label="Hero message">
-          <button type="button" class="is-active" data-go-stage="0" aria-label="Supplier message" aria-selected="true"></button>
-          <button type="button" data-go-stage="1" aria-label="Design your building" aria-selected="false"></button>
+        <!-- STAGE 3: Hard close (28s+) -->
+        <div class="hero-stage" data-stage="3" id="hero-stage-3" aria-hidden="true">
+          <div class="hero-stage-inner">
+            <p class="hero-kicker hero-fade-up d1"><span class="bar" aria-hidden="true"></span> Stamps Steel Buildings</p>
+            <div class="hero-line-draw" aria-hidden="true"></div>
+            <h2 class="hero-headline hero-fade-up d2">
+              <span class="copper-gradient">Design Your Building Here</span>
+            </h2>
+            <p class="hero-sub hero-fade-up d3">
+              A different class of metal building company â€" cinematic craft, clear engineering, and personal service from Bethpage, TN to every state.
+            </p>
+            <div class="hero-actions hero-fade-up d4">
+              <a href="designer.html" class="hero-cta-pulse inline-flex justify-center items-center bg-copper-600 hover:bg-copper-500 text-white px-8 py-4 rounded-xl font-bold text-base sm:text-lg transition shadow-xl shadow-copper-900/40">
+                Design Your Building Here
+              </a>
+              <a href="#contact" class="inline-flex justify-center items-center bg-white/10 hover:bg-white/15 border border-white/25 text-white px-7 py-3.5 rounded-xl font-semibold transition backdrop-blur-sm">
+                Free Quote Â· No Pressure
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-progress" role="tablist" aria-label="Hero message stages">
+          <button type="button" class="is-active" data-go-stage="0" aria-label="Power of steel" aria-selected="true"></button>
+          <button type="button" data-go-stage="1" aria-label="Real buildings" aria-selected="false"></button>
+          <button type="button" data-go-stage="2" aria-label="3D designer" aria-selected="false"></button>
+          <button type="button" data-go-stage="3" aria-label="Design your building" aria-selected="false"></button>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SCROLLING ATTENTION RIBBON -->
+<!-- SCROLLING ATTENTION RIBBON -->
   <div class="attn-ribbon" role="region" aria-label="Announcements">
     <div class="attn-ribbon-inner">
       <div class="attn-track">
-        <span class="attn-item"><span class="attn-dot" aria-hidden="true"></span><a class="attn-link" href="designer.html">Build Your Own Building — Free 3D Designer</a></span>
+        <span class="attn-item"><span class="attn-dot" aria-hidden="true"></span><a class="attn-link" href="designer.html">STOP SCROLLING â€" Design Your Steel Building Free in 3D</a></span>
         <span class="attn-item"><span class="attn-dot" aria-hidden="true"></span>Now Serving Customers Nationwide</span>
-        <span class="attn-item"><span class="attn-dot" aria-hidden="true"></span><a class="attn-link" href="#contact">Free Quotes · No High-Pressure Sales</a></span>
+        <span class="attn-item"><span class="attn-dot" aria-hidden="true"></span><a class="attn-link" href="#contact">Free Quotes Â· No High-Pressure Sales</a></span>
         <span class="attn-item"><span class="attn-dot" aria-hidden="true"></span>10+ Years PEMB Experience</span>
-        <span class="attn-item"><span class="attn-dot" aria-hidden="true"></span>Shops · Commercial · Ag · Warehouses</span>
+        <span class="attn-item"><span class="attn-dot" aria-hidden="true"></span>Shops Â· Commercial Â· Ag Â· Warehouses</span>
         <span class="attn-item"><span class="attn-dot" aria-hidden="true"></span><a class="attn-link" href="tel:+16156298217">Call (615) 629-8217</a></span>
         <span class="attn-item"><span class="attn-dot" aria-hidden="true"></span>Furnish & Install Metal Buildings</span>
       </div>
       <!-- duplicate for seamless loop -->
       <div class="attn-track" aria-hidden="true">
-        <span class="attn-item"><span class="attn-dot"></span><a class="attn-link" href="designer.html" tabindex="-1">Build Your Own Building — Free 3D Designer</a></span>
+        <span class="attn-item"><span class="attn-dot"></span><a class="attn-link" href="designer.html" tabindex="-1">STOP SCROLLING â€" Design Your Steel Building Free in 3D</a></span>
         <span class="attn-item"><span class="attn-dot"></span>Now Serving Customers Nationwide</span>
-        <span class="attn-item"><span class="attn-dot"></span><a class="attn-link" href="#contact" tabindex="-1">Free Quotes · No High-Pressure Sales</a></span>
+        <span class="attn-item"><span class="attn-dot"></span><a class="attn-link" href="#contact" tabindex="-1">Free Quotes Â· No High-Pressure Sales</a></span>
         <span class="attn-item"><span class="attn-dot"></span>10+ Years PEMB Experience</span>
-        <span class="attn-item"><span class="attn-dot"></span>Shops · Commercial · Ag · Warehouses</span>
+        <span class="attn-item"><span class="attn-dot"></span>Shops Â· Commercial Â· Ag Â· Warehouses</span>
         <span class="attn-item"><span class="attn-dot"></span><a class="attn-link" href="tel:+16156298217" tabindex="-1">Call (615) 629-8217</a></span>
         <span class="attn-item"><span class="attn-dot"></span>Furnish & Install Metal Buildings</span>
       </div>
@@ -838,6 +969,135 @@
         <div class="text-xs sm:text-sm text-slate-600 mt-1">Smart Engineering</div>
       </div>
     </div>
+
+  </section>
+
+  <!-- DIFFERENTIATOR STRIP â€" what competitors lack -->
+  <section class="diff-strip py-10 md:py-12" aria-label="Why Stamps Steel is different">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
+        <div class="max-w-xl">
+          <p class="diff-badge mb-3"><span aria-hidden="true">â—†</span> Industry reality check</p>
+          <h2 class="text-2xl md:text-3xl font-black tracking-tight mb-3">Most metal building sites sell catalogs.<br><span class="text-copper-400">We sell the power of steel.</span></h2>
+          <p class="text-slate-300 text-sm md:text-base leading-relaxed">Compared to big-box carport sellers and corporate manufacturer portals â€" Stamps Steel combines a brand-film entry, free 3D design, value engineering, and human service without the high-pressure playbook.</p>
+        </div>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 lg:gap-4 flex-1 max-w-2xl">
+          <div class="rounded-xl border border-steel-800 bg-steel-900/60 p-4 text-center">
+            <div class="text-2xl font-black text-copper-400">31s</div>
+            <div class="text-[0.7rem] uppercase tracking-wider text-slate-400 mt-1 font-semibold">Brand film hero</div>
+          </div>
+          <div class="rounded-xl border border-steel-800 bg-steel-900/60 p-4 text-center">
+            <div class="text-2xl font-black text-copper-400">3D</div>
+            <div class="text-[0.7rem] uppercase tracking-wider text-slate-400 mt-1 font-semibold">Live designer</div>
+          </div>
+          <div class="rounded-xl border border-steel-800 bg-steel-900/60 p-4 text-center">
+            <div class="text-2xl font-black text-copper-400">0</div>
+            <div class="text-[0.7rem] uppercase tracking-wider text-slate-400 mt-1 font-semibold">High-pressure sales</div>
+          </div>
+          <div class="rounded-xl border border-steel-800 bg-steel-900/60 p-4 text-center">
+            <div class="text-2xl font-black text-copper-400">US</div>
+            <div class="text-[0.7rem] uppercase tracking-wider text-slate-400 mt-1 font-semibold">Nationwide PEBs</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- START PATH / POPULAR SIZES (GenSteel-class conversion without fake prices) -->
+  <section id="start" class="py-14 md:py-16 bg-white border-b border-slate-200" aria-label="Start your building">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8">
+        <div>
+          <p class="text-sm font-semibold text-copper-600 uppercase tracking-wide mb-2">Fastest path</p>
+          <h2 class="text-3xl md:text-4xl font-black mb-2">Start with size. Finish in 3D.</h2>
+          <p class="text-slate-600 max-w-2xl">Pick a proven footprint â€" then customize doors, colors, and layout in our free designer. No cart games. No junk popups. Just steel.</p>
+        </div>
+        <a href="designer.html" class="inline-flex shrink-0 bg-steel-900 hover:bg-steel-800 text-white px-6 py-3 rounded-xl font-bold transition">Open 3D Designer â†'</a>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <a href="designer.html" class="size-card">
+          <div class="dim">30Ã—40</div>
+          <div class="use">Shop / Garage</div>
+          <p>Classic workshop footprint with room for equipment and a clean clear-span floor.</p>
+          <span class="go">Design this size â†'</span>
+        </a>
+        <a href="designer.html" class="size-card">
+          <div class="dim">40Ã—60</div>
+          <div class="use">Commercial / Auto</div>
+          <p>Service bays, retail shells, and multi-door shops that look intentional on day one.</p>
+          <span class="go">Design this size â†'</span>
+        </a>
+        <a href="designer.html" class="size-card">
+          <div class="dim">50Ã—100</div>
+          <div class="use">Warehouse / Ag</div>
+          <p>High-volume storage and farm operations â€" scalable bays without wasted structure.</p>
+          <span class="go">Design this size â†'</span>
+        </a>
+        <a href="designer.html" class="size-card">
+          <div class="dim">60Ã—100+</div>
+          <div class="use">Industrial / Campus</div>
+          <p>Large clear-spans, multi-building sites, and growth-ready commercial packages.</p>
+          <span class="go">Design this size â†'</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- VS INDUSTRY -->
+  <section id="compare" class="py-14 md:py-16 bg-slate-50 border-b border-slate-200" aria-label="Stamps Steel vs typical metal building sites">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="text-center mb-10">
+        <p class="text-sm font-semibold text-copper-600 uppercase tracking-wide mb-2">Unfair advantage</p>
+        <h2 class="text-3xl md:text-4xl font-black mb-3">Stamps Steel vs. the usual metal building website</h2>
+        <p class="text-slate-600 max-w-2xl mx-auto">After reviewing the industryâ€™s biggest portals â€" manufacturer catalogs, carport e-commerce, and corporate PEB sites â€" hereâ€™s what actually changes outcomes.</p>
+      </div>
+      <div class="overflow-x-auto rounded-2xl border border-slate-200 bg-white shadow-sm">
+        <table class="vs-table min-w-[34rem]">
+          <thead>
+            <tr>
+              <th>Capability</th>
+              <th>Typical competitor site</th>
+              <th>Stamps Steel</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Homepage entry</td>
+              <td class="vs-no">Static hero / stock montage</td>
+              <td class="vs-yes">31s forge-birth brand film</td>
+            </tr>
+            <tr>
+              <td>Interactive 3D design</td>
+              <td class="vs-no">Rare or buried</td>
+              <td class="vs-yes">Front-and-center free designer</td>
+            </tr>
+            <tr>
+              <td>Sales approach</td>
+              <td class="vs-no">Popups, RTO pressure, spam forms</td>
+              <td class="vs-yes">No high-pressure Â· straight talk</td>
+            </tr>
+            <tr>
+              <td>Engineering depth</td>
+              <td class="vs-no">Generic â€œcustomâ€ claims</td>
+              <td class="vs-yes">Code-aware PEB + value engineering</td>
+            </tr>
+            <tr>
+              <td>Product breadth</td>
+              <td class="vs-no">Carports only â€" or corporate catalog only</td>
+              <td class="vs-yes">Shops Â· commercial Â· ag Â· warehouses Â· mini storage Â· specialty</td>
+            </tr>
+            <tr>
+              <td>Human access</td>
+              <td class="vs-no">Call-center maze</td>
+              <td class="vs-yes">(615) 629-8217 Â· Bethpage, TN home base</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="text-center mt-8">
+        <a href="designer.html" class="inline-flex bg-copper-600 hover:bg-copper-500 text-white px-8 py-3.5 rounded-xl font-bold transition shadow-lg shadow-copper-900/20">Experience the difference â€" Design in 3D</a>
+      </div>
+    </div>
   </section>
 
   <!-- WHY STAMPS -->
@@ -846,7 +1106,7 @@
       <div class="text-center mb-12">
         <p class="text-sm font-semibold text-copper-600 uppercase tracking-wide mb-2">Why Us</p>
         <h2 class="text-3xl md:text-4xl font-black mb-3">Why Stamps Steel</h2>
-        <p class="text-slate-600 max-w-2xl mx-auto">Quality PEB kits, personal service, and furnish-and-install expertise for projects across the United States — rooted in Bethpage, Middle Tennessee.</p>
+        <p class="text-slate-600 max-w-2xl mx-auto">Quality PEB kits, personal service, and furnish-and-install expertise for projects across the United States â€" rooted in Bethpage, Middle Tennessee.</p>
       </div>
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
         <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 hover:shadow-md hover:border-copper-200 transition">
@@ -854,28 +1114,28 @@
             <svg class="w-6 h-6 text-copper-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
           </div>
           <h3 class="font-bold text-lg mb-2">Nationwide Reach</h3>
-          <p class="text-sm text-slate-600 leading-relaxed">We deliver and support pre-engineered metal buildings across the U.S. — code-aware packages for your site’s wind, snow, and use group.</p>
+          <p class="text-sm text-slate-600 leading-relaxed">We deliver and support pre-engineered metal buildings across the U.S. â€" code-aware packages for your siteâ€™s wind, snow, and use group.</p>
         </div>
         <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 hover:shadow-md hover:border-copper-200 transition">
           <div class="w-12 h-12 bg-copper-100 rounded-xl flex items-center justify-center mb-4">
             <svg class="w-6 h-6 text-copper-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
           </div>
           <h3 class="font-bold text-lg mb-2">Integrity First</h3>
-          <p class="text-sm text-slate-600 leading-relaxed">Professionals dedicated to your project success — not high-pressure sales. Straight talk, clear options, and honest recommendations every step of the way.</p>
+          <p class="text-sm text-slate-600 leading-relaxed">Professionals dedicated to your project success â€" not high-pressure sales. Straight talk, clear options, and honest recommendations every step of the way.</p>
         </div>
         <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 hover:shadow-md hover:border-copper-200 transition">
           <div class="w-12 h-12 bg-copper-100 rounded-xl flex items-center justify-center mb-4">
             <svg class="w-6 h-6 text-copper-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
           </div>
           <h3 class="font-bold text-lg mb-2">Value Engineering</h3>
-          <p class="text-sm text-slate-600 leading-relaxed">Smart design that saves money — optimizing size, framing, and features so you get maximum performance for your budget without cutting corners.</p>
+          <p class="text-sm text-slate-600 leading-relaxed">Smart design that saves money â€" optimizing size, framing, and features so you get maximum performance for your budget without cutting corners.</p>
         </div>
         <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 hover:shadow-md hover:border-copper-200 transition">
           <div class="w-12 h-12 bg-copper-100 rounded-xl flex items-center justify-center mb-4">
             <svg class="w-6 h-6 text-copper-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5"/></svg>
           </div>
           <h3 class="font-bold text-lg mb-2">3D Designer</h3>
-          <p class="text-sm text-slate-600 leading-relaxed">Configure your building online — size, doors, colors, and layout — then send it to us for a free quote. <a href="designer.html" class="text-copper-600 font-semibold hover:underline">Start designing →</a></p>
+          <p class="text-sm text-slate-600 leading-relaxed">Configure your building online â€" size, doors, colors, and layout â€" then send it to us for a free quote. <a href="designer.html" class="text-copper-600 font-semibold hover:underline">Start designing â†'</a></p>
         </div>
       </div>
     </div>
@@ -887,7 +1147,7 @@
       <div class="text-center mb-12">
         <p class="text-sm font-semibold text-copper-600 uppercase tracking-wide mb-2">What We Build</p>
         <h2 class="text-3xl md:text-4xl font-black mb-3">Building Solutions</h2>
-        <p class="text-slate-600 max-w-2xl mx-auto">Versatile pre-engineered metal buildings for farms, shops, businesses, and industry — delivered nationwide.</p>
+        <p class="text-slate-600 max-w-2xl mx-auto">Versatile pre-engineered metal buildings for farms, shops, businesses, and industry â€" delivered nationwide.</p>
       </div>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <article class="rounded-2xl border border-slate-200 overflow-hidden bg-slate-50 hover:border-copper-300 transition">
@@ -929,7 +1189,7 @@
           <picture><source type="image/webp" srcset="images/13-640w.webp 640w, images/13-960w.webp 960w, images/13.webp 1400w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"><img data-opt="1" src="images/13.jpg" alt="Custom specialty metal building" class="w-full h-44 object-cover" width="600" height="300" decoding="async" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"></picture>
           <div class="p-6">
             <h3 class="font-bold text-lg mb-2">Specialty & Custom</h3>
-            <p class="text-sm text-slate-600 leading-relaxed">Personal aircraft hangars, multi-plane T-hangars, cold storage, churches, municipal, and multi-building complexes — engineered to the use.</p>
+            <p class="text-sm text-slate-600 leading-relaxed">Personal aircraft hangars, multi-plane T-hangars, cold storage, churches, municipal, and multi-building complexes â€" engineered to the use.</p>
           </div>
         </article>
       </div>
@@ -948,7 +1208,7 @@
       <div class="text-center mb-12">
         <p class="text-sm font-semibold text-copper-600 uppercase tracking-wide mb-2">Recent Work</p>
         <h2 class="text-3xl md:text-4xl font-black mb-3">Project Gallery</h2>
-        <p class="text-slate-600 max-w-2xl mx-auto">Highlighted builds with short descriptions — shops, commercial campuses, service bays, and finished architectural PEBs. Open the full gallery for more detail.</p>
+        <p class="text-slate-600 max-w-2xl mx-auto">Highlighted builds with short descriptions â€" shops, commercial campuses, service bays, and finished architectural PEBs. Open the full gallery for more detail.</p>
       </div>
 
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -989,7 +1249,7 @@
           <div class="p-4 flex-1">
             <p class="text-xs font-semibold text-copper-600 uppercase tracking-wide mb-1">Warehouse + Office</p>
             <h3 class="font-bold text-steel-900 mb-1">Hybrid office / warehouse</h3>
-            <p class="text-sm text-slate-600 leading-relaxed">Clear storage volume with mezzanine and glazed office front — distribution and HQ in one shell.</p>
+            <p class="text-sm text-slate-600 leading-relaxed">Clear storage volume with mezzanine and glazed office front â€" distribution and HQ in one shell.</p>
           </div>
         </article>
         <article class="project-card rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm flex flex-col">
@@ -1002,19 +1262,19 @@
         </article>
       </div>
 
-      <p class="text-center text-sm text-slate-500 mt-8">Serving farms, shops, and businesses nationwide · Home office Bethpage, TN</p>
+      <p class="text-center text-sm text-slate-500 mt-8">Serving farms, shops, and businesses nationwide Â· Home office Bethpage, TN</p>
       <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-4xl mx-auto">
         <a href="projects.html#designs" class="rounded-2xl border border-copper-300 bg-white p-6 text-center hover:border-copper-400 transition shadow-sm ring-1 ring-copper-200/60">
           <p class="text-sm font-semibold text-copper-600 uppercase tracking-wide mb-1">New</p>
-          <p class="font-bold text-lg text-steel-900">20 building designs →</p>
+          <p class="font-bold text-lg text-steel-900">20 building designs â†'</p>
         </a>
         <a href="projects.html" class="rounded-2xl border border-slate-200 bg-white p-6 text-center hover:border-copper-400 transition shadow-sm">
           <p class="text-sm font-semibold text-copper-600 uppercase tracking-wide mb-1">Full gallery</p>
-          <p class="font-bold text-lg text-steel-900">View all projects →</p>
+          <p class="font-bold text-lg text-steel-900">View all projects â†'</p>
         </a>
         <a href="projects.html#framing" class="rounded-2xl border border-slate-200 bg-white p-6 text-center hover:border-copper-400 transition shadow-sm">
           <p class="text-sm font-semibold text-copper-600 uppercase tracking-wide mb-1">Structure</p>
-          <p class="font-bold text-lg text-steel-900">Building framing →</p>
+          <p class="font-bold text-lg text-steel-900">Building framing â†'</p>
         </a>
       </div>
     </div>
@@ -1036,7 +1296,7 @@
         <div class="text-center">
           <div class="w-14 h-14 mx-auto bg-copper-600 text-white rounded-full flex items-center justify-center text-xl font-black mb-4 shadow-lg shadow-copper-900/20">2</div>
           <h3 class="font-bold mb-2">Engineered Quote</h3>
-          <p class="text-sm text-slate-600 leading-relaxed">We package a code-ready PEB with clear options — no pressure.</p>
+          <p class="text-sm text-slate-600 leading-relaxed">We package a code-ready PEB with clear options â€" no pressure.</p>
         </div>
         <div class="text-center">
           <div class="w-14 h-14 mx-auto bg-copper-600 text-white rounded-full flex items-center justify-center text-xl font-black mb-4 shadow-lg shadow-copper-900/20">3</div>
@@ -1058,7 +1318,7 @@
       <div class="rounded-2xl border border-copper-300 bg-white p-6 flex flex-col ring-2 ring-copper-200/60 shadow-md">
         <p class="text-sm font-semibold text-copper-600 uppercase tracking-wide mb-2">Interactive</p>
         <h2 class="text-xl font-black mb-2">3D Building Designer</h2>
-        <p class="text-slate-600 text-sm leading-relaxed flex-1 mb-5">Build your own metal building online — then get a free Stamps Steel quote.</p>
+        <p class="text-slate-600 text-sm leading-relaxed flex-1 mb-5">Build your own metal building online â€" then get a free Stamps Steel quote.</p>
         <a href="designer.html" class="inline-flex justify-center items-center bg-copper-600 hover:bg-copper-500 text-white px-5 py-2.5 rounded-xl font-semibold transition text-sm self-start">Launch Designer</a>
       </div>
       <div class="rounded-2xl border border-slate-200 p-6 flex flex-col bg-white">
@@ -1070,7 +1330,7 @@
       <div class="rounded-2xl border border-slate-200 p-6 flex flex-col bg-white">
         <p class="text-sm font-semibold text-copper-600 uppercase tracking-wide mb-2">Fiberglass</p>
         <h2 class="text-xl font-black mb-2">Building Insulation</h2>
-        <p class="text-slate-600 text-sm leading-relaxed flex-1 mb-5">3″ R-10, 4″ R-13, 6″ R-19 PSK-VR · High-R multi-layer options.</p>
+        <p class="text-slate-600 text-sm leading-relaxed flex-1 mb-5">3â€³ R-10, 4â€³ R-13, 6â€³ R-19 PSK-VR Â· High-R multi-layer options.</p>
         <a href="insulation.html" class="inline-flex justify-center items-center bg-steel-900 hover:bg-steel-800 text-white px-5 py-2.5 rounded-xl font-semibold transition text-sm self-start">View Insulation</a>
       </div>
       <div class="rounded-2xl border border-slate-200 p-6 flex flex-col bg-white overflow-hidden relative">
@@ -1078,7 +1338,7 @@
         <div class="relative flex flex-col flex-1">
           <p class="text-sm font-semibold text-copper-600 uppercase tracking-wide mb-2">High-R Envelope</p>
           <h2 class="text-xl font-black mb-2">Insulated Metal Panels</h2>
-          <p class="text-slate-600 text-sm leading-relaxed flex-1 mb-5">IMP walls & standing-seam roofs · R-16 to R-50 · 26/24 ga.</p>
+          <p class="text-slate-600 text-sm leading-relaxed flex-1 mb-5">IMP walls & standing-seam roofs Â· R-16 to R-50 Â· 26/24 ga.</p>
           <a href="imp.html" class="inline-flex justify-center items-center bg-steel-900 hover:bg-steel-800 text-white px-5 py-2.5 rounded-xl font-semibold transition text-sm self-start">View IMPs</a>
         </div>
       </div>
@@ -1088,7 +1348,7 @@
         <div class="relative flex flex-col flex-1">
           <p class="text-sm font-semibold text-copper-600 uppercase tracking-wide mb-2">Self-Storage</p>
           <h2 class="text-xl font-black mb-2">Mini Storage Buildings</h2>
-          <p class="text-slate-600 text-sm leading-relaxed flex-1 mb-5">8′-6″ eave · continuous roof to 45′ · partition-braced · Galvalume · roll-up doors.</p>
+          <p class="text-slate-600 text-sm leading-relaxed flex-1 mb-5">8â€²-6â€³ eave Â· continuous roof to 45â€² Â· partition-braced Â· Galvalume Â· roll-up doors.</p>
           <a href="mini-storage.html" class="inline-flex justify-center items-center bg-steel-900 hover:bg-steel-800 text-white px-5 py-2.5 rounded-xl font-semibold transition text-sm self-start">View Mini Storage</a>
         </div>
       </div>
@@ -1098,7 +1358,7 @@
         <div class="relative flex flex-col flex-1">
           <p class="text-sm font-semibold text-copper-600 uppercase tracking-wide mb-2">Projects</p>
           <h2 class="text-xl font-black mb-2">Gallery & Framing</h2>
-          <p class="text-slate-600 text-sm leading-relaxed flex-1 mb-5">Project photos plus rigid frames, purlins, girts, and openings — under Projects.</p>
+          <p class="text-slate-600 text-sm leading-relaxed flex-1 mb-5">Project photos plus rigid frames, purlins, girts, and openings â€" under Projects.</p>
           <a href="projects.html" class="inline-flex justify-center items-center bg-steel-900 hover:bg-steel-800 text-white px-5 py-2.5 rounded-xl font-semibold transition text-sm self-start">View Projects</a>
         </div>
       </div>
@@ -1126,12 +1386,12 @@
         <p class="text-sm font-semibold text-copper-600 uppercase tracking-wide mb-2">About Stamps Steel</p>
         <h2 class="text-3xl md:text-4xl font-black mb-4">Experience you can build on</h2>
         <p class="text-slate-600 text-lg leading-relaxed mb-4">
-          More than a decade of hands-on PEMB experience — complete furnish-and-install solutions for projects across the United States.
+          More than a decade of hands-on PEMB experience â€" complete furnish-and-install solutions for projects across the United States.
         </p>
         <p class="text-slate-600 leading-relaxed mb-6">
           From preconstruction planning through final installation, we deliver efficient, cost-effective metal buildings with quality, safety, and craftsmanship first.
         </p>
-        <p class="text-copper-600 font-semibold text-sm mb-6">Home office · Bethpage, Middle Tennessee · Projects nationwide</p>
+        <p class="text-copper-600 font-semibold text-sm mb-6">Home office Â· Bethpage, Middle Tennessee Â· Projects nationwide</p>
         <a href="about.html" class="inline-flex bg-steel-900 hover:bg-steel-800 text-white px-6 py-3 rounded-xl font-semibold transition">Read Our Story</a>
       </div>
       <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-lg aspect-[4/3]">
@@ -1146,7 +1406,7 @@
       <div class="text-center mb-10">
         <p class="text-sm font-semibold text-copper-600 uppercase tracking-wide mb-2">Nationwide Quotes</p>
         <h2 class="text-3xl md:text-4xl font-black mb-3">Get a Free Quote</h2>
-        <p class="text-slate-600">Tell us about your project — size, location, and use. Or <a href="designer.html" class="text-copper-600 font-semibold hover:underline">design it first in 3D</a>.</p>
+        <p class="text-slate-600">Tell us about your project â€" size, location, and use. Or <a href="designer.html" class="text-copper-600 font-semibold hover:underline">design it first in 3D</a>.</p>
       </div>
       <div class="bg-white rounded-2xl shadow-xl p-6 md:p-8 border border-slate-100">
         <form action="mailto:info@stampssteel.com" method="POST" enctype="text/plain" class="space-y-5">
@@ -1192,9 +1452,9 @@
         </form>
         <p class="text-center text-sm text-slate-500 mt-6">
           <a href="mailto:info@stampssteel.com" class="hover:text-copper-600 transition">info@stampssteel.com</a>
-          &nbsp;•&nbsp;
+          &nbsp;â€¢&nbsp;
           <a href="tel:+16156298217" class="hover:text-copper-600 transition">(615) 629-8217</a>
-          &nbsp;•&nbsp; Bethpage, TN 37022
+          &nbsp;â€¢&nbsp; Bethpage, TN 37022
         </p>
       </div>
     </div>
@@ -1230,8 +1490,8 @@
           <a href="https://www.facebook.com/profile.php?id=61592282766064" target="_blank" rel="noopener noreferrer" class="hover:text-copper-400 transition font-medium">Facebook</a>
           <a href="https://www.instagram.com/stampssteel/" target="_blank" rel="noopener noreferrer" class="hover:text-copper-400 transition font-medium">Instagram</a>
         </div>
-        <p class="text-xs text-slate-500 mb-3">© 2026 Stamps Steel Buildings. All rights reserved.</p>
-        <p class="text-xs text-slate-500"><a href="cache-help.html" class="hover:text-copper-400 transition">Seeing an old page?</a><span class="text-slate-600 mx-2" aria-hidden="true">·</span>Built by <a href="https://webbspinnervisions.net" target="_blank" rel="noopener noreferrer" class="text-copper-400 hover:text-copper-300 font-medium transition">Webb Spinner Visions</a></p>
+        <p class="text-xs text-slate-500 mb-3">Â© 2026 Stamps Steel Buildings. All rights reserved.</p>
+        <p class="text-xs text-slate-500"><a href="cache-help.html" class="hover:text-copper-400 transition">Seeing an old page?</a><span class="text-slate-600 mx-2" aria-hidden="true">Â·</span>Built by <a href="https://webbspinnervisions.net" target="_blank" rel="noopener noreferrer" class="text-copper-400 hover:text-copper-300 font-medium transition">Webb Spinner Visions</a></p>
       </div>
     </div>
   </footer>
@@ -1254,7 +1514,7 @@
 
 <script>
     (function () {
-      // Hero video — native <video id="hero-video"> in hero-media (under header / above marquee)
+      // Hero video â€" native <video id="hero-video"> in hero-media (under header / above marquee)
       var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       var saveData = navigator.connection && (navigator.connection.saveData || (navigator.connection.effectiveType || '').indexOf('2g') !== -1);
       var v = document.getElementById('hero-video');
@@ -1296,14 +1556,19 @@
         }
       }
 
-      // Hero stages: supplier promise → design your building
+      // Hero stages synced to brand film timeline (hard cuts)
       var stages = Array.prototype.slice.call(document.querySelectorAll('.hero-stage'));
       var dots = Array.prototype.slice.call(document.querySelectorAll('.hero-progress [data-go-stage]'));
+      var filmBar = document.getElementById('hero-film-progress');
+      var soundBtn = document.getElementById('hero-sound-btn');
+      var replayBtn = document.getElementById('hero-replay-btn');
       if (!stages.length) return;
       var i = 0;
       var timer = null;
-      var dwell = [10000, 12000];
+      // Match forge film: 0 forge Â· 9 buildings Â· 21 designer Â· 28 close Â· ~31 loop
+      var stageStarts = [0, 9, 21, 28];
       var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var userLocked = false;
 
       function show(idx) {
         i = ((idx % stages.length) + stages.length) % stages.length;
@@ -1318,26 +1583,73 @@
           btn.setAttribute('aria-selected', on ? 'true' : 'false');
         });
       }
-      function schedule() {
-        if (reduced) return;
-        clearTimeout(timer);
-        timer = setTimeout(function () {
-          show(i + 1);
-          schedule();
-        }, dwell[i] || 5000);
+
+      function stageFromTime(t) {
+        var s = 0;
+        for (var n = 0; n < stageStarts.length; n++) {
+          if (t >= stageStarts[n]) s = n;
+        }
+        return s;
       }
+
+      function syncFromVideo() {
+        if (!v || userLocked) return;
+        var t = v.currentTime || 0;
+        var dur = v.duration || 31;
+        if (filmBar && dur > 0) {
+          filmBar.style.width = Math.min(100, (t / dur) * 100) + '%';
+        }
+        var next = stageFromTime(t);
+        if (next !== i) show(next);
+      }
+
+      if (v && !reduce && !saveData) {
+        v.addEventListener('timeupdate', syncFromVideo);
+        v.addEventListener('seeked', syncFromVideo);
+      } else {
+        // fallback timed rotation if no video
+        var dwell = [9000, 12000, 7000, 5000];
+        function schedule() {
+          if (reduced) return;
+          clearTimeout(timer);
+          timer = setTimeout(function () {
+            show(i + 1);
+            schedule();
+          }, dwell[i] || 5000);
+        }
+        schedule();
+      }
+
       dots.forEach(function (btn) {
         btn.addEventListener('click', function () {
-          show(parseInt(btn.getAttribute('data-go-stage'), 10) || 0);
-          schedule();
+          var idx = parseInt(btn.getAttribute('data-go-stage'), 10) || 0;
+          show(idx);
+          userLocked = true;
+          if (v && stageStarts[idx] != null) {
+            try { v.currentTime = stageStarts[idx]; v.play().catch(function () {}); } catch (e) {}
+          }
+          setTimeout(function () { userLocked = false; }, 2500);
         });
       });
-      document.addEventListener('visibilitychange', function () {
-        if (document.hidden) clearTimeout(timer);
-        else schedule();
-      });
+
+      if (soundBtn && v) {
+        soundBtn.addEventListener('click', function () {
+          v.muted = !v.muted;
+          soundBtn.setAttribute('aria-pressed', v.muted ? 'false' : 'true');
+          soundBtn.textContent = v.muted ? 'Sound Off' : 'Sound On';
+          if (!v.muted) v.play().catch(function () {});
+        });
+      }
+      if (replayBtn && v) {
+        replayBtn.addEventListener('click', function () {
+          userLocked = false;
+          v.currentTime = 0;
+          show(0);
+          v.play().catch(function () {});
+        });
+      }
+
       show(0);
-      schedule();
     })();
 </script>
 
