@@ -1280,7 +1280,7 @@
           <h3 class="text-xl font-black text-steel-900 mb-2">I need a building for my use</h3>
           <p class="text-sm text-slate-600 leading-relaxed mb-4 flex-1">Shops, commercial, ag, warehouses, and specialty PEBs (including hangars and mini storage). See the full collection, pick a footprint, design in 3D, or request a free quote.</p>
           <div class="flex flex-wrap gap-2">
-            <a href="#solutions" class="inline-flex bg-steel-900 hover:bg-steel-800 text-white px-5 py-2.5 rounded-xl text-sm font-semibold transition">What we build</a>
+            <a href="#solutions" class="inline-flex bg-steel-900 hover:bg-steel-800 text-white px-5 py-2.5 rounded-xl text-sm font-semibold transition">Building types</a>
             <a href="#start" class="inline-flex bg-copper-600 hover:bg-copper-500 text-white px-5 py-2.5 rounded-xl text-sm font-semibold transition">Start with size</a>
             <a href="designer.html" class="inline-flex border border-slate-300 hover:border-copper-400 text-steel-900 px-5 py-2.5 rounded-xl text-sm font-semibold transition">3D designer</a>
           </div>
@@ -1486,95 +1486,194 @@
     </div>
   </section>
 
-  <!-- SOLUTIONS — full PEB collection (hangars & mini storage = specialty subsets) -->
-  <section id="solutions" class="py-16 md:py-20 bg-white">
+  <!-- SOLUTIONS — Building Types (mobile-first list) -->
+  <section id="solutions" class="py-14 md:py-20 bg-white border-b border-slate-200" aria-label="Building types and solutions">
     <div class="max-w-7xl mx-auto px-4">
-      <div class="text-center mb-10">
-        <p class="text-sm font-semibold text-copper-600 uppercase tracking-wide mb-2">PEB applications</p>
-        <h2 class="text-3xl md:text-4xl font-black mb-3">The full steel building collection</h2>
-        <p class="text-slate-600 max-w-3xl mx-auto text-sm md:text-base">Core pre-engineered metal buildings for everyday commercial and rural work — with airplane hangars and mini storage available as <strong>specialty PEB applications</strong>, not the whole product line.</p>
+      <div class="text-center mb-8 md:mb-10">
+        <p class="text-sm font-semibold text-copper-600 uppercase tracking-wide mb-2">Solutions</p>
+        <h2 class="text-3xl md:text-4xl font-black mb-3 tracking-tight">Building Types</h2>
+        <p class="text-slate-600 max-w-2xl mx-auto text-sm md:text-base leading-relaxed">
+          Pre-engineered metal buildings for residential, ag, storage, aviation, commercial, industrial, and institutional use.
+          All buildings are engineered for site-specific wind, snow, and use requirements.
+        </p>
       </div>
 
-      <p class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-4">Core applications</p>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
-        <article class="rounded-2xl border border-slate-200 overflow-hidden bg-slate-50 hover:border-copper-300 transition">
-          <picture><source type="image/webp" srcset="images/1-640w.webp 640w, images/1-960w.webp 960w, images/1.webp 1400w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"><img data-lightbox="gallery" data-opt="1" src="images/1.jpg" alt="Shop and garage metal building" class="w-full h-44 object-cover" width="600" height="300" decoding="async" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"></picture>
-          <div class="p-5">
-            <h3 class="font-bold text-lg mb-1">Shops &amp; Garages</h3>
-            <p class="text-sm text-slate-600 leading-relaxed">Workshops, multi-bay shops, and clear-span interiors with custom door packages.</p>
+      <!-- Jump chips (mobile-friendly) -->
+      <nav class="flex gap-2 overflow-x-auto pb-3 mb-6 -mx-1 px-1 scrollbar-none" aria-label="Jump to building category" style="-webkit-overflow-scrolling:touch">
+        <a href="#bt-residential" class="shrink-0 text-xs font-bold uppercase tracking-wide px-3 py-2 rounded-full bg-slate-100 text-steel-900 border border-slate-200 hover:border-copper-400">Personal</a>
+        <a href="#bt-ag" class="shrink-0 text-xs font-bold uppercase tracking-wide px-3 py-2 rounded-full bg-slate-100 text-steel-900 border border-slate-200 hover:border-copper-400">Agricultural</a>
+        <a href="#bt-storage" class="shrink-0 text-xs font-bold uppercase tracking-wide px-3 py-2 rounded-full bg-slate-100 text-steel-900 border border-slate-200 hover:border-copper-400">Storage</a>
+        <a href="#bt-aviation" class="shrink-0 text-xs font-bold uppercase tracking-wide px-3 py-2 rounded-full bg-slate-100 text-steel-900 border border-slate-200 hover:border-copper-400">Aviation</a>
+        <a href="#bt-commercial" class="shrink-0 text-xs font-bold uppercase tracking-wide px-3 py-2 rounded-full bg-slate-100 text-steel-900 border border-slate-200 hover:border-copper-400">Commercial</a>
+        <a href="#bt-industrial" class="shrink-0 text-xs font-bold uppercase tracking-wide px-3 py-2 rounded-full bg-slate-100 text-steel-900 border border-slate-200 hover:border-copper-400">Industrial</a>
+        <a href="#bt-cold" class="shrink-0 text-xs font-bold uppercase tracking-wide px-3 py-2 rounded-full bg-slate-100 text-steel-900 border border-slate-200 hover:border-copper-400">Cold storage</a>
+        <a href="#bt-institutional" class="shrink-0 text-xs font-bold uppercase tracking-wide px-3 py-2 rounded-full bg-slate-100 text-steel-900 border border-slate-200 hover:border-copper-400">Institutional</a>
+        <a href="#bt-other" class="shrink-0 text-xs font-bold uppercase tracking-wide px-3 py-2 rounded-full bg-slate-100 text-steel-900 border border-slate-200 hover:border-copper-400">Other</a>
+      </nav>
+
+      <div class="grid md:grid-cols-2 gap-4 md:gap-5">
+
+        <!-- Personal & Residential -->
+        <article id="bt-residential" class="bt-card rounded-2xl border border-slate-200 bg-slate-50 p-5 sm:p-6 scroll-mt-24">
+          <h3 class="text-lg sm:text-xl font-black text-steel-900 mb-1 leading-snug">Personal &amp; Residential</h3>
+          <p class="text-xs text-copper-600 font-semibold uppercase tracking-wide mb-3">Garages · shops · barndos</p>
+          <ul class="bt-list text-sm text-slate-700 space-y-1.5 mb-4">
+            <li>Garages &amp; workshops</li>
+            <li>Hobby shops</li>
+            <li>Barndominiums (Barndo’s)</li>
+          </ul>
+          <div class="flex flex-wrap gap-2">
+            <a href="designer.html" class="text-sm font-bold text-copper-600 hover:underline">Design in 3D →</a>
+            <span class="text-slate-300" aria-hidden="true">·</span>
+            <a href="#contact" class="text-sm font-bold text-steel-900 hover:text-copper-600">Free quote →</a>
           </div>
         </article>
-        <article class="rounded-2xl border border-slate-200 overflow-hidden bg-slate-50 hover:border-copper-300 transition">
-          <picture><source type="image/webp" srcset="images/5-640w.webp 640w, images/5-960w.webp 960w, images/5.webp 1400w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"><img data-lightbox="gallery" data-opt="1" src="images/5.jpg" alt="Commercial metal building" class="w-full h-44 object-cover" width="600" height="300" decoding="async" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"></picture>
-          <div class="p-5">
-            <h3 class="font-bold text-lg mb-1">Commercial &amp; Auto</h3>
-            <p class="text-sm text-slate-600 leading-relaxed">Retail shells, service centers, and automotive facilities built for clean presentation.</p>
+
+        <!-- Agricultural -->
+        <article id="bt-ag" class="bt-card rounded-2xl border border-slate-200 bg-slate-50 p-5 sm:p-6 scroll-mt-24">
+          <h3 class="text-lg sm:text-xl font-black text-steel-900 mb-1 leading-snug">Agricultural</h3>
+          <p class="text-xs text-copper-600 font-semibold uppercase tracking-wide mb-3">Barns · arenas · equipment</p>
+          <ul class="bt-list text-sm text-slate-700 space-y-1.5 mb-4">
+            <li>Barns &amp; livestock buildings</li>
+            <li>Hay &amp; commodity storage (roof-only options)</li>
+            <li>Riding arenas</li>
+            <li>Tractor &amp; equipment storage</li>
+            <li>Buildings with large bi-fold doors for harvesting equipment</li>
+          </ul>
+          <div class="flex flex-wrap gap-2">
+            <a href="designer.html" class="text-sm font-bold text-copper-600 hover:underline">Design in 3D →</a>
+            <span class="text-slate-300" aria-hidden="true">·</span>
+            <a href="#contact" class="text-sm font-bold text-steel-900 hover:text-copper-600">Free quote →</a>
           </div>
         </article>
-        <article class="rounded-2xl border border-slate-200 overflow-hidden bg-slate-50 hover:border-copper-300 transition">
-          <picture><source type="image/webp" srcset="images/Small%20Farm-640w.webp 640w, images/Small%20Farm-960w.webp 960w, images/Small%20Farm.webp 1400w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"><img data-lightbox="gallery" data-opt="1" src="images/Small%20Farm.jpg" alt="Agricultural metal building" class="w-full h-44 object-cover" width="600" height="300" decoding="async" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"></picture>
-          <div class="p-5">
-            <h3 class="font-bold text-lg mb-1">Agricultural</h3>
-            <p class="text-sm text-slate-600 leading-relaxed">Barns, equipment storage, livestock shelters, and farm shops for working properties.</p>
+
+        <!-- Storage -->
+        <article id="bt-storage" class="bt-card rounded-2xl border border-slate-200 bg-slate-50 p-5 sm:p-6 scroll-mt-24">
+          <h3 class="text-lg sm:text-xl font-black text-steel-900 mb-1 leading-snug">Storage</h3>
+          <p class="text-xs text-copper-600 font-semibold uppercase tracking-wide mb-3">Mini-storage · boat &amp; RV</p>
+          <ul class="bt-list text-sm text-slate-700 space-y-1.5 mb-4">
+            <li>Mini-storage (exterior roll-up doors)</li>
+            <li>Climate-controlled indoor mini-storage</li>
+            <li>Boat &amp; RV storage</li>
+          </ul>
+          <div class="flex flex-wrap gap-2">
+            <a href="mini-storage.html" class="text-sm font-bold text-copper-600 hover:underline">Mini storage systems →</a>
+            <span class="text-slate-300" aria-hidden="true">·</span>
+            <a href="#contact" class="text-sm font-bold text-steel-900 hover:text-copper-600">Free quote →</a>
           </div>
         </article>
-        <article class="rounded-2xl border border-slate-200 overflow-hidden bg-slate-50 hover:border-copper-300 transition">
-          <picture><source type="image/webp" srcset="images/7-640w.webp 640w, images/7-960w.webp 960w, images/7.webp 1400w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"><img data-lightbox="gallery" data-opt="1" src="images/7.jpg" alt="Warehouse metal building" class="w-full h-44 object-cover" width="600" height="300" decoding="async" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"></picture>
-          <div class="p-5">
-            <h3 class="font-bold text-lg mb-1">Warehouses</h3>
-            <p class="text-sm text-slate-600 leading-relaxed">Distribution, storage, and light industrial shells with the eave heights and bays you need.</p>
+
+        <!-- Aviation -->
+        <article id="bt-aviation" class="bt-card rounded-2xl border border-slate-200 bg-slate-50 p-5 sm:p-6 scroll-mt-24">
+          <h3 class="text-lg sm:text-xl font-black text-steel-900 mb-1 leading-snug">Aviation</h3>
+          <p class="text-xs text-copper-600 font-semibold uppercase tracking-wide mb-3">Hangars · large openings</p>
+          <ul class="bt-list text-sm text-slate-700 space-y-1.5 mb-4">
+            <li>Hangars with bi-fold doors</li>
+            <li>Hangars with horizontal sliding doors (large aircraft)</li>
+          </ul>
+          <div class="flex flex-wrap gap-2">
+            <a href="designer.html" class="text-sm font-bold text-copper-600 hover:underline">Design in 3D →</a>
+            <span class="text-slate-300" aria-hidden="true">·</span>
+            <a href="#contact" class="text-sm font-bold text-steel-900 hover:text-copper-600">Free quote →</a>
           </div>
         </article>
-        <article class="rounded-2xl border border-slate-200 overflow-hidden bg-slate-50 hover:border-copper-300 transition">
-          <picture><source type="image/webp" srcset="images/9-640w.webp 640w, images/9-960w.webp 960w, images/9.webp 1400w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"><img data-lightbox="gallery" data-opt="1" src="images/9.jpg" alt="Barndominium style metal building" class="w-full h-44 object-cover" width="600" height="300" decoding="async" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"></picture>
-          <div class="p-5">
-            <h3 class="font-bold text-lg mb-1">Barndominiums</h3>
-            <p class="text-sm text-slate-600 leading-relaxed">Living-space-ready shells with open plans, lean-tos, and intentional exterior packages.</p>
+
+        <!-- Commercial & Retail -->
+        <article id="bt-commercial" class="bt-card rounded-2xl border border-slate-200 bg-slate-50 p-5 sm:p-6 scroll-mt-24">
+          <h3 class="text-lg sm:text-xl font-black text-steel-900 mb-1 leading-snug">Commercial &amp; Retail</h3>
+          <p class="text-xs text-copper-600 font-semibold uppercase tracking-wide mb-3">Shops · showrooms · auto</p>
+          <ul class="bt-list text-sm text-slate-700 space-y-1.5 mb-4">
+            <li>Small commercial shops</li>
+            <li>Large commercial buildings</li>
+            <li>Retail &amp; showrooms</li>
+            <li>Auto dealerships &amp; service centers</li>
+            <li>Office / flex buildings</li>
+          </ul>
+          <div class="flex flex-wrap gap-2">
+            <a href="designer.html" class="text-sm font-bold text-copper-600 hover:underline">Design in 3D →</a>
+            <span class="text-slate-300" aria-hidden="true">·</span>
+            <a href="#contact" class="text-sm font-bold text-steel-900 hover:text-copper-600">Free quote →</a>
           </div>
         </article>
-        <article class="rounded-2xl border border-slate-200 overflow-hidden bg-slate-50 hover:border-copper-300 transition">
-          <picture><source type="image/webp" srcset="images/12-640w.webp 640w, images/12-960w.webp 960w, images/12.webp 1400w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"><img data-lightbox="gallery" data-opt="1" src="images/12.jpg" alt="Finished commercial PEB with office wing" class="w-full h-44 object-cover" width="600" height="300" decoding="async" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"></picture>
-          <div class="p-5">
-            <h3 class="font-bold text-lg mb-1">Finished commercial PEBs</h3>
-            <p class="text-sm text-slate-600 leading-relaxed">Architectural shells with office wings, wainscot, and storefront packages for public-facing sites.</p>
+
+        <!-- Industrial & Warehousing -->
+        <article id="bt-industrial" class="bt-card rounded-2xl border border-slate-200 bg-slate-50 p-5 sm:p-6 scroll-mt-24">
+          <h3 class="text-lg sm:text-xl font-black text-steel-900 mb-1 leading-snug">Industrial &amp; Warehousing</h3>
+          <p class="text-xs text-copper-600 font-semibold uppercase tracking-wide mb-3">Distribution · mfg · crane</p>
+          <ul class="bt-list text-sm text-slate-700 space-y-1.5 mb-4">
+            <li>Warehouses &amp; distribution centers</li>
+            <li>Manufacturing &amp; light industrial</li>
+            <li>Overhead crane facilities</li>
+            <li>Workshops &amp; fabrication shops</li>
+          </ul>
+          <div class="flex flex-wrap gap-2">
+            <a href="designer.html" class="text-sm font-bold text-copper-600 hover:underline">Design in 3D →</a>
+            <span class="text-slate-300" aria-hidden="true">·</span>
+            <a href="#contact" class="text-sm font-bold text-steel-900 hover:text-copper-600">Free quote →</a>
+          </div>
+        </article>
+
+        <!-- Cold Storage -->
+        <article id="bt-cold" class="bt-card rounded-2xl border border-slate-200 bg-slate-50 p-5 sm:p-6 scroll-mt-24">
+          <h3 class="text-lg sm:text-xl font-black text-steel-900 mb-1 leading-snug">Cold Storage</h3>
+          <p class="text-xs text-copper-600 font-semibold uppercase tracking-wide mb-3">Refrigerated · freezer</p>
+          <ul class="bt-list text-sm text-slate-700 space-y-1.5 mb-4">
+            <li>Refrigerated &amp; freezer buildings (typically with Insulated Metal Panels)</li>
+          </ul>
+          <div class="flex flex-wrap gap-2">
+            <a href="imp.html" class="text-sm font-bold text-copper-600 hover:underline">View IMPs →</a>
+            <span class="text-slate-300" aria-hidden="true">·</span>
+            <a href="#contact" class="text-sm font-bold text-steel-900 hover:text-copper-600">Free quote →</a>
+          </div>
+        </article>
+
+        <!-- Institutional & Recreational -->
+        <article id="bt-institutional" class="bt-card rounded-2xl border border-slate-200 bg-slate-50 p-5 sm:p-6 scroll-mt-24">
+          <h3 class="text-lg sm:text-xl font-black text-steel-900 mb-1 leading-snug">Institutional &amp; Recreational</h3>
+          <p class="text-xs text-copper-600 font-semibold uppercase tracking-wide mb-3">Schools · worship · sports</p>
+          <ul class="bt-list text-sm text-slate-700 space-y-1.5 mb-4">
+            <li>Schools</li>
+            <li>Religious facilities &amp; sanctuaries</li>
+            <li>Gymnasiums &amp; multi-purpose buildings</li>
+            <li>Ice / skating rinks</li>
+            <li>Community &amp; recreation centers</li>
+          </ul>
+          <div class="flex flex-wrap gap-2">
+            <a href="designer.html" class="text-sm font-bold text-copper-600 hover:underline">Design in 3D →</a>
+            <span class="text-slate-300" aria-hidden="true">·</span>
+            <a href="#contact" class="text-sm font-bold text-steel-900 hover:text-copper-600">Free quote →</a>
+          </div>
+        </article>
+
+        <!-- Other Common Uses — full width on md -->
+        <article id="bt-other" class="bt-card rounded-2xl border border-slate-200 bg-slate-50 p-5 sm:p-6 md:col-span-2 scroll-mt-24">
+          <h3 class="text-lg sm:text-xl font-black text-steel-900 mb-1 leading-snug">Other Common Uses</h3>
+          <p class="text-xs text-copper-600 font-semibold uppercase tracking-wide mb-3">Specialty &amp; custom PEBs</p>
+          <ul class="bt-list text-sm text-slate-700 space-y-1.5 mb-4 sm:columns-2 sm:gap-x-8">
+            <li>Data centers</li>
+            <li>Food processing</li>
+            <li>Maintenance &amp; fleet shops</li>
+            <li>Exhibition / event halls</li>
+          </ul>
+          <div class="flex flex-wrap gap-2">
+            <a href="designer.html" class="text-sm font-bold text-copper-600 hover:underline">Design in 3D →</a>
+            <span class="text-slate-300" aria-hidden="true">·</span>
+            <a href="#contact" class="text-sm font-bold text-steel-900 hover:text-copper-600">Free quote →</a>
           </div>
         </article>
       </div>
 
-      <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6 md:p-8 mb-8">
-        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-3 mb-5">
-          <div>
-            <p class="text-xs font-bold uppercase tracking-wider text-copper-600 mb-1">Specialty PEB applications</p>
-            <h3 class="text-xl md:text-2xl font-black text-steel-900">Hangars &amp; mini storage — part of the same system</h3>
-            <p class="text-sm text-slate-600 mt-2 max-w-2xl">Same pre-engineered steel approach as the core line: clear-span or modular framing, panel envelope, insulation options, and openings sized to the use. Included in the package — not a separate company focus.</p>
-          </div>
-        </div>
-        <div class="grid sm:grid-cols-2 gap-5">
-          <article class="rounded-xl border border-slate-200 overflow-hidden bg-white flex flex-col sm:flex-row">
-            <picture class="sm:w-2/5 shrink-0"><source type="image/webp" srcset="images/hangar-personal-blue-bifold-640w.webp 640w, images/hangar-personal-blue-bifold-960w.webp 960w, images/hangar-personal-blue-bifold.webp 1400w" sizes="(max-width: 640px) 100vw, 40vw"><img data-lightbox="gallery" data-opt="1" src="images/hangar-personal-blue-bifold.jpg" alt="Personal aircraft hangar metal building" class="w-full h-40 sm:h-full object-cover" decoding="async" loading="lazy"></picture>
-            <div class="p-5 flex-1">
-              <p class="text-xs font-semibold text-copper-600 uppercase tracking-wide mb-1">Aviation</p>
-              <h4 class="font-bold text-steel-900 mb-1">Airplane hangars</h4>
-              <p class="text-sm text-slate-600 leading-relaxed mb-3">Personal hangars, multi-plane bays, and T-hangar style rows with large framed openings and bifold or sliding door packages.</p>
-              <a href="projects.html" class="text-sm font-semibold text-copper-600 hover:underline">See hangar projects →</a>
-            </div>
-          </article>
-          <article class="rounded-xl border border-slate-200 overflow-hidden bg-white flex flex-col sm:flex-row">
-            <picture class="sm:w-2/5 shrink-0"><source type="image/webp" srcset="images/mini-storage/row-cream-640w.webp 640w, images/mini-storage/row-cream-960w.webp 960w, images/mini-storage/row-cream.webp 1400w" sizes="(max-width: 640px) 100vw, 40vw"><img data-lightbox="gallery" data-opt="1" src="images/mini-storage/row-cream.jpg" alt="Mini storage metal building row" class="w-full h-40 sm:h-full object-cover" decoding="async" loading="lazy"></picture>
-            <div class="p-5 flex-1">
-              <p class="text-xs font-semibold text-copper-600 uppercase tracking-wide mb-1">Self-storage</p>
-              <h4 class="font-bold text-steel-900 mb-1">Mini storage buildings</h4>
-              <p class="text-sm text-slate-600 leading-relaxed mb-3">Self-storage rows with continuous roof, partition bracing, Galvalume, and roll-up door packages — PEB system, not a separate brand.</p>
-              <a href="mini-storage.html" class="text-sm font-semibold text-copper-600 hover:underline">Mini storage systems →</a>
-            </div>
-          </article>
-        </div>
-      </div>
+      <p class="text-center text-sm text-slate-600 mt-8 max-w-2xl mx-auto leading-relaxed">
+        <strong class="text-steel-900">All buildings are engineered for site-specific wind, snow, and use requirements.</strong>
+        Tell us your location and intended use on the free quote form.
+      </p>
 
-      <div class="text-center">
-        <a href="designer.html" class="inline-flex items-center gap-2 bg-steel-900 hover:bg-steel-800 text-white px-7 py-3.5 rounded-xl font-bold transition">
+      <div class="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
+        <a href="designer.html" class="inline-flex justify-center items-center gap-2 bg-copper-600 hover:bg-copper-500 text-white px-7 py-3.5 rounded-xl font-bold transition shadow-lg shadow-copper-900/20">
           Design your building in 3D
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#contact" class="inline-flex justify-center items-center bg-steel-900 hover:bg-steel-800 text-white px-7 py-3.5 rounded-xl font-bold transition">
+          Get a free quote
         </a>
       </div>
     </div>
@@ -1621,10 +1720,10 @@
           <span class="text-sm font-semibold text-copper-600">Browse accessories →</span>
         </a>
         <a href="#solutions" class="group rounded-2xl border border-slate-200 p-6 hover:border-copper-400 hover:shadow-md transition bg-slate-50">
-          <p class="text-xs font-bold uppercase tracking-wider text-copper-600 mb-2">Specialty applications</p>
-          <h3 class="font-black text-lg text-steel-900 mb-2 group-hover:text-copper-700">Hangars &amp; mini storage</h3>
-          <p class="text-sm text-slate-600 leading-relaxed mb-3">Aviation hangars and self-storage rows use the same PEB framing and envelope systems as core commercial buildings.</p>
-          <span class="text-sm font-semibold text-copper-600">View specialty PEBs →</span>
+          <p class="text-xs font-bold uppercase tracking-wider text-copper-600 mb-2">Building types</p>
+          <h3 class="font-black text-lg text-steel-900 mb-2 group-hover:text-copper-700">Full solutions list</h3>
+          <p class="text-sm text-slate-600 leading-relaxed mb-3">Residential, ag, storage, aviation, commercial, industrial, cold storage, institutional, and more.</p>
+          <span class="text-sm font-semibold text-copper-600">View building types →</span>
         </a>
       </div>
 
