@@ -70,19 +70,19 @@
       width: 100%;
       height: 100%;
     }
+    /* Cover-fit video: fills hero on any aspect without letterboxing */
     .hero-media video,
     .hero-media img {
       position: absolute;
-      top: 50%;
-      left: 50%;
-      width: auto;
-      height: auto;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      max-width: none;
       min-width: 100%;
       min-height: 100%;
-      max-width: none;
-      transform: translate(-50%, -50%) scale(1.04);
       object-fit: cover;
-      object-position: center 45%;
+      object-position: center center;
+      transform: none;
     }
     .hero-media video {
       z-index: 1;
@@ -98,10 +98,11 @@
     /* subtle Ken Burns on poster before/while video loads */
     .hero-media .hero-poster img {
       animation: hero-kenburns 22s ease-in-out infinite alternate;
+      transform-origin: center center;
     }
     @keyframes hero-kenburns {
-      from { transform: translate(-50%, -50%) scale(1.02); }
-      to { transform: translate(-50%, -52%) scale(1.12); }
+      from { transform: scale(1.02); object-position: center 42%; }
+      to { transform: scale(1.10); object-position: center 48%; }
     }
     .hero-overlay {
       position: absolute;
@@ -843,8 +844,115 @@
     .metric-rail .m { font-size: 1.35rem; font-weight: 900; color: #0f172a; letter-spacing: -0.02em; }
     .metric-rail .l { font-size: 0.72rem; font-weight: 600; color: #64748b; text-transform: uppercase; letter-spacing: 0.06em; margin-top: 0.25rem; }
     .attn-ribbon {
-      background: linear-gradient(90deg, #0f172a 0%, #1e293b 25%, #7a4a1f 50%, #1e293b 75%, #0f172a 100%) !important;
+      min-height: 2.75rem;
+      background: linear-gradient(90deg, #7a4a1f 0%, #b87333 35%, #c97b3a 50%, #b87333 65%, #7a4a1f 100%) !important;
+      color: #fff;
+      border-bottom: 1px solid rgba(15, 23, 42, 0.25);
     }
+    .attn-link {
+      color: #fff !important;
+      font-weight: 800;
+      text-decoration: none;
+      letter-spacing: 0.04em;
+    }
+    .attn-link:hover { text-decoration: underline; text-underline-offset: 3px; }
+    .attn-item.attn-hot .attn-link {
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    /* ===== HERO VIDEO: DESKTOP / TABLET ===== */
+    .hero-section {
+      min-height: min(88vh, 920px);
+      height: min(88vh, 920px);
+    }
+    @media (min-width: 1280px) {
+      .hero-section {
+        min-height: min(90vh, 980px);
+        height: min(90vh, 980px);
+      }
+      .hero-media video,
+      .hero-media img { object-position: center 42%; }
+    }
+
+    /* ===== MOBILE PORTRAIT (phone upright) — tall frame, keep action upper-center ===== */
+    @media (max-width: 767px) and (orientation: portrait) {
+      .hero-section {
+        min-height: min(78dvh, 720px) !important;
+        height: min(78dvh, 720px) !important;
+        max-height: none !important;
+        align-items: flex-end !important;
+      }
+      .hero-media video,
+      .hero-media img {
+        width: 100% !important;
+        height: 100% !important;
+        min-width: 100% !important;
+        min-height: 100% !important;
+        object-fit: cover !important;
+        /* Logo / forge action sits upper-third so it stays visible above bottom copy */
+        object-position: center 32% !important;
+        transform: none !important;
+      }
+      .hero-overlay {
+        background:
+          linear-gradient(to top, rgba(2,6,23,0.92) 0%, rgba(2,6,23,0.45) 38%, rgba(2,6,23,0.12) 58%, rgba(2,6,23,0.35) 100%) !important;
+      }
+      .hero-controls {
+        right: 0.65rem; bottom: auto; top: 0.75rem;
+      }
+      .hero-film-bar { height: 2px; }
+    }
+
+    /* ===== MOBILE / TABLET LANDSCAPE — short wide frame, fill full width ===== */
+    @media (orientation: landscape) and (max-height: 560px) {
+      .hero-section {
+        min-height: 0 !important;
+        height: calc(100dvh - 3.75rem - 2.5rem) !important; /* nav + marquee */
+        max-height: calc(100dvh - 3.75rem - 2.5rem) !important;
+        align-items: flex-end !important;
+      }
+      .hero-media video,
+      .hero-media img {
+        width: 100% !important;
+        height: 100% !important;
+        min-width: 100% !important;
+        min-height: 100% !important;
+        object-fit: cover !important;
+        object-position: center center !important;
+        transform: none !important;
+      }
+      .hero-overlay {
+        background:
+          linear-gradient(to right, rgba(2,6,23,0.62) 0%, rgba(2,6,23,0.22) 45%, rgba(2,6,23,0.08) 100%),
+          linear-gradient(to top, rgba(2,6,23,0.7) 0%, rgba(2,6,23,0.15) 55%, rgba(2,6,23,0.2) 100%) !important;
+      }
+      .hero-controls {
+        top: 0.5rem; bottom: auto; right: 0.5rem;
+      }
+      .hero-ctrl-btn { font-size: 0.62rem; padding: 0.35rem 0.55rem; }
+    }
+
+    /* Very short landscape phones */
+    @media (orientation: landscape) and (max-height: 400px) {
+      .hero-section {
+        height: calc(100dvh - 3.4rem - 2.1rem) !important;
+        max-height: calc(100dvh - 3.4rem - 2.1rem) !important;
+      }
+      .hero-media video,
+      .hero-media img { object-position: center 40% !important; }
+    }
+
+    /* Prefer dynamic viewport on modern browsers */
+    @supports (height: 100dvh) {
+      @media (min-width: 768px) {
+        .hero-section {
+          min-height: min(88dvh, 920px);
+          height: min(88dvh, 920px);
+        }
+      }
+    }
+
 
   </style>
   <script type="application/ld+json">
@@ -915,7 +1023,7 @@
     <div class="max-w-7xl mx-auto px-4">
       <div class="flex justify-between items-center h-16">
         <a href="index.html" class="flex items-center gap-2.5 shrink-0 min-w-0" aria-label="Stamps Steel Buildings home">
-          <img src="images/logo-nav-md.webp" width="48" height="48" alt=" class="h-10 w-10 sm:h-11 sm:w-11 object-contain rounded-full bg-steel-950 shrink-0" decoding="async" loading="eager" fetchpriority="high">
+          <img src="images/logo-nav-md.webp" width="48" height="48" alt="" class="h-10 w-10 sm:h-11 sm:w-11 object-contain rounded-full bg-steel-950 shrink-0" decoding="async" loading="eager" fetchpriority="high">
           <span class="font-bold text-white tracking-tight text-sm sm:text-base leading-tight">
             Stamps Steel
             <span class="block text-[0.65rem] sm:text-xs font-semibold text-copper-400 tracking-wider uppercase">Buildings</span>
@@ -977,7 +1085,7 @@
         poster="images/hero/poster.jpg"
         disablePictureInPicture
       >
-        <source src="images/hero/stamps-hero.mp4?v=20260810-forge33" type="video/mp4">
+        <source src="images/hero/stamps-hero.mp4?v=20260810-forge34" type="video/mp4">
       </video>
     </div>
     <div class="hero-overlay" aria-hidden="true"></div>
@@ -994,7 +1102,7 @@
         <!-- STAGE 0: Forge / power of steel (0–9s) -->
         <div class="hero-stage is-active" data-stage="0" id="hero-stage-0">
           <div class="hero-stage-inner">
-            <p class="hero-kicker hero-fade-up d1"><span class="bar" aria-hidden="true"></span> I-beams | Rigid frames | Stamps Steel</p>
+            <p class="hero-kicker hero-fade-up d1"><span class="bar" aria-hidden="true"></span> Stamps Steel · Born in fire</p>
             <div class="hero-line-draw" aria-hidden="true"></div>
             <h1 class="hero-headline hero-fade-up d2">
               You've never seen a<br class="hidden sm:block">
@@ -1103,26 +1211,28 @@
   </section>
 
 <!-- SCROLLING ATTENTION RIBBON -->
-  <div class="attn-ribbon" role="region" aria-label="Announcements">
+  <div class="attn-ribbon" role="region" aria-label="Create your building">
     <div class="attn-ribbon-inner">
       <div class="attn-track">
-        <span class="attn-item"><span class="attn-dot" aria-hidden="true"></span><a class="attn-link" href="designer.html">Free 3D Designer — Size · Doors · Colors · Layout</a></span>
-        <span class="attn-item"><span class="attn-dot" aria-hidden="true"></span>Now Serving Customers Nationwide</span>
+        <span class="attn-item attn-hot"><span class="attn-dot" aria-hidden="true"></span><a class="attn-link" href="designer.html">Create Your Building Here</a></span>
+        <span class="attn-item"><span class="attn-dot" aria-hidden="true"></span><a class="attn-link" href="designer.html">Free 3D Building Designer</a></span>
+        <span class="attn-item"><span class="attn-dot" aria-hidden="true"></span>Nationwide Pre-Engineered Metal Buildings</span>
         <span class="attn-item"><span class="attn-dot" aria-hidden="true"></span><a class="attn-link" href="#contact">Free Quotes · No High-Pressure Sales</a></span>
-        <span class="attn-item"><span class="attn-dot" aria-hidden="true"></span>10+ Years PEMB Experience</span>
-        <span class="attn-item"><span class="attn-dot" aria-hidden="true"></span>Shops · Commercial · Ag · Warehouses · Specialty PEBs</span>
+        <span class="attn-item"><span class="attn-dot" aria-hidden="true"></span>Shops · Commercial · Ag · Warehouses</span>
         <span class="attn-item"><span class="attn-dot" aria-hidden="true"></span><a class="attn-link" href="tel:+16156298217">Call (615) 629-8217</a></span>
-        <span class="attn-item"><span class="attn-dot" aria-hidden="true"></span>Furnish & Install Metal Buildings</span>
+        <span class="attn-item attn-hot"><span class="attn-dot" aria-hidden="true"></span><a class="attn-link" href="designer.html">Create Your Building Here</a></span>
+        <span class="attn-item"><span class="attn-dot" aria-hidden="true"></span>10+ Years PEMB Experience</span>
       </div>
       <!-- duplicate for seamless loop -->
       <div class="attn-track" aria-hidden="true">
-        <span class="attn-item"><span class="attn-dot"></span><a class="attn-link" href="designer.html" tabindex="-1">Free 3D Designer — Size · Doors · Colors · Layout</a></span>
-        <span class="attn-item"><span class="attn-dot"></span>Now Serving Customers Nationwide</span>
+        <span class="attn-item attn-hot"><span class="attn-dot"></span><a class="attn-link" href="designer.html" tabindex="-1">Create Your Building Here</a></span>
+        <span class="attn-item"><span class="attn-dot"></span><a class="attn-link" href="designer.html" tabindex="-1">Free 3D Building Designer</a></span>
+        <span class="attn-item"><span class="attn-dot"></span>Nationwide Pre-Engineered Metal Buildings</span>
         <span class="attn-item"><span class="attn-dot"></span><a class="attn-link" href="#contact" tabindex="-1">Free Quotes · No High-Pressure Sales</a></span>
-        <span class="attn-item"><span class="attn-dot"></span>10+ Years PEMB Experience</span>
-        <span class="attn-item"><span class="attn-dot"></span>Shops · Commercial · Ag · Warehouses · Specialty PEBs</span>
+        <span class="attn-item"><span class="attn-dot"></span>Shops · Commercial · Ag · Warehouses</span>
         <span class="attn-item"><span class="attn-dot"></span><a class="attn-link" href="tel:+16156298217" tabindex="-1">Call (615) 629-8217</a></span>
-        <span class="attn-item"><span class="attn-dot"></span>Furnish & Install Metal Buildings</span>
+        <span class="attn-item attn-hot"><span class="attn-dot"></span><a class="attn-link" href="designer.html" tabindex="-1">Create Your Building Here</a></span>
+        <span class="attn-item"><span class="attn-dot"></span>10+ Years PEMB Experience</span>
       </div>
     </div>
   </div>
@@ -1872,8 +1982,8 @@
       if (!stages.length) return;
       var i = 0;
       var timer = null;
-      // Match forge film: 0 forge · 11.8 buildings · 23.8 designer · 29.8 close · ~33s
-      var stageStarts = [0, 11.8, 23.8, 29.8];
+      // forge34 logo-first: 0 brand · 13.3 buildings · 22.5 designer · 27.5 close · ~31s
+      var stageStarts = [0, 13.3, 22.5, 27.5];
       var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       var userLocked = false;
 

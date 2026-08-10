@@ -1,26 +1,31 @@
-# Hero Video — Forge Birth v3 (I-beams · Rigid Frames · Logo)
+# Hero Video — forge34 (Logo-First Masterclass Entrance)
 
 ## Live
-- `images/hero/stamps-hero.mp4` · 1280×720 · 24fps · **~33s** · muted autoplay loop
+- `images/hero/stamps-hero.mp4` · 1280×720 · 24fps · **~31s** · muted autoplay loop
 - Master: `images/hero/stamps-steel-brand-film-1080p.mp4` · 1920×1080 + industrial audio
-- Cache: `?v=20260810-forge33`
-- Poster: logo-forge frame (STAMPS STEEL in red-iron structure)
+- Cache: `?v=20260810-forge34`
+- Poster: cold-open STAMPS STEEL logo with I-beam frame
 
 ## Sequence (hard cuts)
-
 | Time | Shot |
 |------|------|
-| 0–2.2s | Molten copper-bronze pour |
-| 2.2–4.0s | **I-beam** impact slam |
-| 4.0–5.8s | **Steel animation** — beams assembling |
-| 5.8–7.8s | **Rigid frame** red-iron PEB structure |
-| 7.8–11.8s | **STAMPS STEEL logo** forges (4s hold) |
-| 11.8–23.8s | PEB collection: shop · commercial · ag · interior · finished · hangar (subset) · mini storage (subset) |
-| 23.8–29.8s | 3D Building Designer |
-| 29.8–33.3s | Logo close + DESIGN YOUR BUILDING HERE |
+| 0–3.2s | **Cold open: STAMPS STEEL logo** + I-beams + sparks |
+| 3.2–5.2s | Molten copper pour |
+| 5.2–6.8s | I-beam slam |
+| 6.8–8.3s | Steel assembly animation |
+| 8.3–10.1s | Rigid-frame cathedral |
+| 10.1–13.3s | **Logo forge hold** (name locks in) |
+| 13.3–22.5s | PEB collection (shop → commercial → ag → interior → finished) |
+| 22.5–27.5s | 3D Building Designer |
+| 27.5–31s | Logo close + **CREATE YOUR BUILDING HERE** |
 
-## On-page stage sync
-`stageStarts = [0, 11.8, 23.8, 29.8]`
+## Stage sync
+`stageStarts = [0, 13.3, 22.5, 27.5]`
 
-## Rebuild
-`C:\Users\chris.woodmore\Stamps-Steel-brand-film\build_brand_film.py`
+## Responsive video
+- Desktop: `object-fit: cover`, position center ~42%
+- Mobile **portrait**: cover + `object-position: center 32%` (logo/forge stays in upper frame above copy)
+- Mobile **landscape**: full-bleed cover, `center center`, hero height = `100dvh − nav − marquee`
+
+## Marquee
+Copper ribbon under hero: **Create Your Building Here** (repeated) + designer / nationwide / quote / phone.
