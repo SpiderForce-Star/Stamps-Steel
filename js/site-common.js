@@ -146,7 +146,7 @@
     },
     churches: {
       title: 'Churches',
-      hook: 'Open-span gathering buildings sized for worship, fellowship, and growth.',
+      hook: 'Clear-span gathering buildings sized for worship, fellowship, and growth.',
       href: 'churches.html',
       img: 'images/building-types/garage-int.webp',
       alt: 'Clear-span steel interior suitable for a gathering hall'
@@ -160,7 +160,7 @@
     },
     ag: {
       title: 'Ag',
-      hook: 'Barns and farm buildings with open span for equipment, livestock, and hay.',
+      hook: 'Barns and farm buildings with clear span for equipment, livestock, and hay.',
       href: 'index.html#bt-ag',
       img: 'images/building-types/ag-ext.webp',
       alt: 'Agricultural metal barn exterior'

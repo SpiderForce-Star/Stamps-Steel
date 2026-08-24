@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Stamps Steel Buildings | Free Quote · Open-Span Steel Buildings</title>
-  <meta name="description" content="Open-span steel buildings for shops, churches, farms, warehouses, and mini-storage. Free quote. Free 3D designer. (615) 629-8217">
+  <title>Stamps Steel Buildings | Free Quote · Clear-Span Steel Buildings</title>
+  <meta name="description" content="Clear-span steel buildings for shops, churches, farms, warehouses, and mini-storage. Free quote. Free 3D designer. (615) 629-8217">
   <meta name="keywords" content="steel buildings, metal shops, churches, mini storage, agricultural buildings, warehouses, 3D metal building designer, Stamps Steel">
   <meta property="og:title" content="Stamps Steel Buildings | Free Quote">
-  <meta property="og:description" content="Open-span steel buildings. Free quote. No high-pressure sales. (615) 629-8217">
+  <meta property="og:description" content="Clear-span steel buildings. Free quote. No high-pressure sales. (615) 629-8217">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://stampssteel.com/">
   <meta property="og:image" content="images/logo.jpg">
@@ -70,7 +70,7 @@
       width: 100%;
       height: 100%;
     }
-    /* Full shop in frame — do not cover-crop to sky/roof */
+    /* Full building photos fill the hero — no letterbox bars */
     .hero-media video,
     .hero-media img {
       position: absolute;
@@ -78,8 +78,8 @@
       width: 100%;
       height: 100%;
       max-width: none;
-      object-fit: contain;
-      object-position: center center;
+      object-fit: cover;
+      object-position: center 45%;
       transform: none;
       background: #0f172a;
     }
@@ -174,7 +174,7 @@
       }
       .hero-progress { margin-top: 0.65rem !important; }
       .hero-media video,
-      .hero-media img { object-fit: contain; object-position: center center; }
+      .hero-media img { object-fit: cover; object-position: center center; }
     }
 
     /* ========== MOBILE / TABLET LANDSCAPE: phone sideways ==========
@@ -269,7 +269,7 @@
       }
       .hero-media video,
       .hero-media img {
-        object-fit: contain;
+        object-fit: cover;
         object-position: center center;
         min-width: 0;
         min-height: 0;
@@ -490,7 +490,7 @@
     @media (max-width: 639px) {
       .hero-section { min-height: min(78vh, 700px); }
       .hero-media video,
-      .hero-media img { object-fit: contain; object-position: center center; }
+      .hero-media img { object-fit: cover; object-position: center center; }
     }
 
     #mobile-menu { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
@@ -573,7 +573,7 @@
       max-width: none;
       width: 100%;
       height: 100%;
-      object-fit: contain;
+      object-fit: cover;
     }
     img { display: block; }
     /* Prefer content-box images in flex/grid */
@@ -852,7 +852,7 @@
         height: min(90vh, 980px);
       }
       .hero-media video,
-      .hero-media img { object-fit: contain; object-position: center center; }
+      .hero-media img { object-fit: cover; object-position: center center; }
     }
 
     /* ===== MOBILE PORTRAIT (phone upright) — tall frame, keep action upper-center ===== */
@@ -869,7 +869,7 @@
         height: 100% !important;
         min-width: 100% !important;
         min-height: 100% !important;
-        object-fit: contain !important;
+        object-fit: cover !important;
         object-position: center center !important;
         transform: none !important;
       }
@@ -897,7 +897,7 @@
         height: 100% !important;
         min-width: 100% !important;
         min-height: 100% !important;
-        object-fit: contain !important;
+        object-fit: cover !important;
         object-position: center center !important;
         transform: none !important;
       }
@@ -919,7 +919,7 @@
         max-height: calc(100dvh - 3.4rem - 2.1rem) !important;
       }
       .hero-media video,
-      .hero-media img { object-fit: contain !important; object-position: center center !important; }
+      .hero-media img { object-fit: cover !important; object-position: center center !important; }
     }
 
     /* Prefer dynamic viewport on modern browsers */
@@ -940,7 +940,7 @@
     "@type": "LocalBusiness",
     "additionalType": "https://schema.org/HomeAndConstructionBusiness",
     "name": "Stamps Steel Buildings",
-    "description": "Open-span steel buildings for shops, churches, farms, warehouses, and storage. More than a decade of industry experience.",
+    "description": "Clear-span steel buildings for shops, churches, farms, warehouses, and storage. More than a decade of industry experience.",
     "url": "https://stampssteel.com/",
     "telephone": "+1-615-629-8217",
     "email": "info@stampssteel.com",
@@ -1052,11 +1052,11 @@
   </nav>
 
 <!-- HERO -->
-  <section id="home" class="hero-section text-white" aria-label="Clear-span steel shop building">
+  <section id="home" class="hero-section text-white" aria-label="Clear-span steel buildings">
     <div class="hero-media" aria-hidden="true">
       <picture class="hero-poster">
         <source type="image/webp" srcset="images/hero/poster-640w.webp 640w, images/hero/poster-960w.webp 960w, images/hero/poster.webp 1400w" sizes="100vw">
-        <img data-opt="1" src="images/hero/span-still.jpg" alt="Clear-span steel shop interior: walls, open overhead door, and open concrete floor" width="1152" height="864" decoding="async" loading="eager" fetchpriority="high" sizes="100vw">
+        <img data-opt="1" src="images/hero/span-still.jpg" alt="Clear-span steel shop building with overhead doors" width="1280" height="720" decoding="async" loading="eager" fetchpriority="high" sizes="100vw">
       </picture>
       <video
         id="hero-video"
@@ -1071,8 +1071,8 @@
         poster="images/hero/span-still.jpg"
         disablePictureInPicture
       >
-        <source src="images/hero/hero-clean-mobile.mp4?v=20260810-shop-int" type="video/mp4" media="(max-width: 767px)">
-        <source src="images/hero/stamps-hero.mp4?v=20260810-shop-int" type="video/mp4">
+        <source src="images/hero/hero-clean-mobile.mp4?v=20260824-rotate" type="video/mp4" media="(max-width: 767px)">
+        <source src="images/hero/stamps-hero.mp4?v=20260824-rotate" type="video/mp4">
       </video>
     </div>
     <div class="hero-overlay" aria-hidden="true"></div>
@@ -1086,11 +1086,10 @@
           <div class="hero-stage-inner">
             <p class="hero-kicker hero-fade-up d1"><span class="bar" aria-hidden="true"></span> Pre-engineered metal buildings</p>
             <h1 class="hero-headline hero-fade-up d2">
-              A steel building that<br class="hidden sm:block">
-              <span class="copper-gradient">actually spans.</span>
+              <span class="copper-gradient">Clear-span steel buildings</span>
             </h1>
             <p class="hero-sub hero-fade-up d3">
-              Open-span steel buildings for shops, churches, farms, warehouses, and mini-storage. Free quote. No high-pressure sales.
+              Shops, churches, farms, warehouses, and mini-storage. Free quote. No high-pressure sales.
             </p>
             <div class="hero-actions hero-fade-up d4">
               <a href="#contact" class="hero-cta-pulse inline-flex justify-center items-center bg-copper-600 hover:bg-copper-500 text-white px-8 py-4 rounded-xl font-bold text-base sm:text-lg transition shadow-xl shadow-copper-900/40">
@@ -1355,7 +1354,7 @@
             <svg class="w-6 h-6 text-copper-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
           </div>
           <h3 class="font-bold text-lg mb-2">Clear-span steel</h3>
-          <p class="text-sm text-slate-600 leading-relaxed">Open-span shops, churches, farms, warehouses, and storage — sized for your site and how you will use the building.</p>
+          <p class="text-sm text-slate-600 leading-relaxed">Clear-span shops, churches, farms, warehouses, and storage — sized for your site and how you will use the building.</p>
         </div>
         <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 hover:shadow-md hover:border-copper-200 transition">
           <div class="w-12 h-12 bg-copper-100 rounded-xl flex items-center justify-center mb-4">
