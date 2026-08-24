@@ -554,11 +554,33 @@ summary:focus-visible {
   display: none;
 }
 
-/* Desktop header: never wrap building types */
+/* Desktop header: page links stay on one row */
 @media (min-width: 1024px) {
+  nav > .max-w-7xl {
+    max-width: 92rem;
+  }
   .nav-desktop {
     flex-wrap: nowrap !important;
     white-space: nowrap;
+    gap: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+    max-width: calc(100vw - 11rem);
+  }
+  .nav-desktop::-webkit-scrollbar { display: none; }
+  .nav-desktop > a {
+    font-size: 0.72rem;
+  }
+  .nav-desktop > a.nav-quote {
+    font-size: 0.72rem;
+  }
+}
+@media (min-width: 1400px) {
+  .nav-desktop > a {
+    font-size: 0.8125rem;
+  }
+  .nav-desktop > a.nav-quote {
+    font-size: 0.8125rem;
   }
 }
 
