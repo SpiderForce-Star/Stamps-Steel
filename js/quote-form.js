@@ -11,13 +11,13 @@
 
   var BUILDING_TYPES = [
     'Shop / Garage',
+    'Church',
     'Commercial',
     'Agricultural',
     'Warehouse',
     'Mini-Storage',
     'Barndominium',
     'Aircraft Hangar',
-    'Church / Religious',
     'Other'
   ];
 
@@ -57,11 +57,11 @@
 
   function buildForm(root) {
     var context = root.getAttribute('data-context') || 'website';
-    var title = root.getAttribute('data-title') || '';
+    var title = root.getAttribute('data-title') || 'Request a free quote';
     var uid = 'sq-' + Math.random().toString(36).slice(2, 9);
 
     var preferred = '';
-    if ((context || '').toLowerCase().indexOf('church') !== -1) preferred = 'Church / Religious';
+    if ((context || '').toLowerCase().indexOf('church') !== -1) preferred = 'Church';
     else if ((context || '').toLowerCase().indexOf('mini') !== -1) preferred = 'Mini-Storage';
     var typeOpts = BUILDING_TYPES.map(function (t) {
       var sel = (t === preferred) ? ' selected' : '';
@@ -107,9 +107,9 @@
               '<div class="sq-field"><label for="' + uid + '-l">Length (ft) <span class="req">*</span></label>' +
               '<input id="' + uid + '-l" name="length_ft" type="number" min="10" max="800" required placeholder="e.g. 60"></div>' +
             '</div>' +
-            '<div class="sq-field"><label for="' + uid + '-h">Eave height (ft)</label>' +
+            '<div class="sq-field"><label for="' + uid + '-h">Eave height (ft) — wall to roof</label>' +
             '<input id="' + uid + '-h" name="eave_height_ft" type="number" min="8" max="60" placeholder="e.g. 14">' +
-            '<p class="sq-hint">Approximate is fine — we refine this with you.</p></div>' +
+            '<p class="sq-hint">Eave height is the wall height up to the roof. Approximate is fine.</p></div>' +
             '<div class="sq-nav">' +
               '<button type="button" class="sq-btn sq-btn-secondary" data-back>Back</button>' +
               '<button type="button" class="sq-btn sq-btn-primary" data-next>Continue</button>' +
@@ -145,7 +145,7 @@
         '</div>' +
         '<p class="sq-footer-links">' +
           '<a href="mailto:info@stampssteel.com">info@stampssteel.com</a> · ' +
-          '<a href="tel:+16156298217">(615) 629-8217</a> · Bethpage, TN' +
+          '<a href="tel:+16156298217">(615) 629-8217</a>' +
         '</p>' +
       '</div>'
     );

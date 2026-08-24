@@ -136,9 +136,113 @@
     });
   }
 
+  var BLDG_POP = {
+    shops: {
+      title: 'Shops',
+      hook: 'Clear-span workshops and garages with overhead doors and an open floor.',
+      href: 'index.html#bt-residential',
+      img: 'images/building-types/garage-ext.webp',
+      alt: 'Metal shop building with overhead doors'
+    },
+    churches: {
+      title: 'Churches',
+      hook: 'Open-span gathering buildings sized for worship, fellowship, and growth.',
+      href: 'churches.html',
+      img: 'images/building-types/garage-int.webp',
+      alt: 'Clear-span steel interior suitable for a gathering hall'
+    },
+    storage: {
+      title: 'Storage',
+      hook: 'Mini-storage rows and multi-unit buildings built for durable, low-maintenance use.',
+      href: 'mini-storage.html',
+      img: 'images/building-types/mini-ext.webp',
+      alt: 'Mini storage metal building with roll-up doors'
+    },
+    ag: {
+      title: 'Ag',
+      hook: 'Barns and farm buildings with open span for equipment, livestock, and hay.',
+      href: 'index.html#bt-ag',
+      img: 'images/building-types/ag-ext.webp',
+      alt: 'Agricultural metal barn exterior'
+    },
+    warehouses: {
+      title: 'Warehouses',
+      hook: 'Clear-span warehouses and shops for inventory, docks, and future expansion.',
+      href: 'index.html#bt-industrial',
+      img: 'images/building-types/warehouse-ext.webp',
+      alt: 'Commercial warehouse metal building'
+    }
+  };
+
+  function buildingPopovers() {
+    var links = document.querySelectorAll('.nav-desktop [data-bldg]');
+    if (!links.length) return;
+
+    var pop = document.getElementById('bldg-pop');
+    if (!pop) {
+      pop = document.createElement('div');
+      pop.id = 'bldg-pop';
+      pop.className = 'bldg-pop';
+      pop.setAttribute('role', 'tooltip');
+      pop.innerHTML =
+        '<img alt="">' +
+        '<div class="bldg-pop-body">' +
+          '<p class="bldg-pop-title"></p>' +
+          '<p class="bldg-pop-hook"></p>' +
+          '<a class="bldg-pop-cta" href="#">Get a quote</a>' +
+        '</div>';
+      document.body.appendChild(pop);
+    }
+
+    var hideTimer = null;
+    var img = pop.querySelector('img');
+    var title = pop.querySelector('.bldg-pop-title');
+    var hook = pop.querySelector('.bldg-pop-hook');
+    var cta = pop.querySelector('.bldg-pop-cta');
+
+    function hide() {
+      pop.classList.remove('is-open');
+    }
+    function scheduleHide() {
+      clearTimeout(hideTimer);
+      hideTimer = setTimeout(hide, 160);
+    }
+    function show(link) {
+      var key = link.getAttribute('data-bldg');
+      var data = BLDG_POP[key];
+      if (!data) return;
+      clearTimeout(hideTimer);
+      img.src = data.img;
+      img.alt = data.alt;
+      title.textContent = data.title;
+      hook.textContent = data.hook;
+      cta.href = data.href;
+      cta.textContent = 'See ' + data.title;
+      pop.classList.add('is-open');
+      var r = link.getBoundingClientRect();
+      var w = pop.offsetWidth || 300;
+      var left = Math.min(window.innerWidth - w - 12, Math.max(12, r.left + r.width / 2 - w / 2));
+      var top = r.bottom + 10;
+      pop.style.left = left + 'px';
+      pop.style.top = top + 'px';
+    }
+
+    links.forEach(function (link) {
+      link.addEventListener('mouseenter', function () { show(link); });
+      link.addEventListener('focus', function () { show(link); });
+      link.addEventListener('mouseleave', scheduleHide);
+      link.addEventListener('blur', scheduleHide);
+    });
+    pop.addEventListener('mouseenter', function () { clearTimeout(hideTimer); });
+    pop.addEventListener('mouseleave', scheduleHide);
+    window.addEventListener('scroll', hide, { passive: true });
+    window.addEventListener('resize', hide, { passive: true });
+  }
+
   function init() {
     ensureSticky();
     mobileMenu();
+    buildingPopovers();
   }
 
   if (document.readyState === 'loading') {

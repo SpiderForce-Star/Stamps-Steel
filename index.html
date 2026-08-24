@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Stamps Steel Buildings | Free Quote · 3D Designer · PEBs Nationwide &amp; Middle TN</title>
-  <meta name="description" content="Custom pre-engineered metal buildings nationwide — shops, commercial, agricultural, warehouses, barndominiums, plus specialty hangars and mini storage. Free 3D designer, code-aware PEB packages. Bethpage, TN · (615) 629-8217">
-  <meta name="keywords" content="metal buildings nationwide, PEB Bethpage TN, steel buildings USA, 3D metal building designer, pre-engineered metal buildings, shops garages barns warehouses, Stamps Steel">
-  <meta property="og:title" content="Stamps Steel Buildings | Custom Metal Buildings Nationwide">
-  <meta property="og:description" content="Award-worthy PEB experience: cinematic brand film, free 3D designer, code-aware packages for shops, commercial, ag, warehouses, hangars & mini storage. Bethpage, TN.">
+  <title>Stamps Steel Buildings | Free Quote · Open-Span Steel Buildings</title>
+  <meta name="description" content="Open-span steel buildings for shops, churches, farms, warehouses, and mini-storage. Free quote. Free 3D designer. (615) 629-8217">
+  <meta name="keywords" content="steel buildings, metal shops, churches, mini storage, agricultural buildings, warehouses, 3D metal building designer, Stamps Steel">
+  <meta property="og:title" content="Stamps Steel Buildings | Free Quote">
+  <meta property="og:description" content="Open-span steel buildings. Free quote. No high-pressure sales. (615) 629-8217">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://stampssteel.com/">
   <meta property="og:image" content="images/logo.jpg">
@@ -70,7 +70,7 @@
       width: 100%;
       height: 100%;
     }
-    /* Cover-fit video: fills hero on any aspect without letterboxing */
+    /* Full shop in frame — do not cover-crop to sky/roof */
     .hero-media video,
     .hero-media img {
       position: absolute;
@@ -78,11 +78,10 @@
       width: 100%;
       height: 100%;
       max-width: none;
-      min-width: 100%;
-      min-height: 100%;
-      object-fit: cover;
+      object-fit: contain;
       object-position: center center;
       transform: none;
+      background: #0f172a;
     }
     .hero-media video {
       z-index: 1;
@@ -95,14 +94,9 @@
     .hero-media .hero-poster {
       z-index: 0;
     }
-    /* subtle Ken Burns on poster before/while video loads */
     .hero-media .hero-poster img {
-      animation: hero-kenburns 22s ease-in-out infinite alternate;
-      transform-origin: center center;
-    }
-    @keyframes hero-kenburns {
-      from { transform: scale(1.02); object-position: center 42%; }
-      to { transform: scale(1.10); object-position: center 48%; }
+      animation: none;
+      transform: none;
     }
     .hero-overlay {
       position: absolute;
@@ -180,7 +174,7 @@
       }
       .hero-progress { margin-top: 0.65rem !important; }
       .hero-media video,
-      .hero-media img { object-position: center 40%; }
+      .hero-media img { object-fit: contain; object-position: center center; }
     }
 
     /* ========== MOBILE / TABLET LANDSCAPE: phone sideways ==========
@@ -275,10 +269,10 @@
       }
       .hero-media video,
       .hero-media img {
+        object-fit: contain;
         object-position: center center;
-        /* fill short wide frame */
-        min-width: 100%;
-        min-height: 100%;
+        min-width: 0;
+        min-height: 0;
       }
       /* Marquee thinner in landscape short */
       .attn-ribbon {
@@ -496,7 +490,7 @@
     @media (max-width: 639px) {
       .hero-section { min-height: min(78vh, 700px); }
       .hero-media video,
-      .hero-media img { object-position: center 40%; }
+      .hero-media img { object-fit: contain; object-position: center center; }
     }
 
     #mobile-menu { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
@@ -577,8 +571,9 @@
     video:not(.hero-media video):not(#hero-video) { max-width: 100%; height: auto; }
     .hero-media video, #hero-video {
       max-width: none;
-      width: auto;
-      height: auto;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
     }
     img { display: block; }
     /* Prefer content-box images in flex/grid */
@@ -857,7 +852,7 @@
         height: min(90vh, 980px);
       }
       .hero-media video,
-      .hero-media img { object-position: center 42%; }
+      .hero-media img { object-fit: contain; object-position: center center; }
     }
 
     /* ===== MOBILE PORTRAIT (phone upright) — tall frame, keep action upper-center ===== */
@@ -874,9 +869,8 @@
         height: 100% !important;
         min-width: 100% !important;
         min-height: 100% !important;
-        object-fit: cover !important;
-        /* Logo / forge action sits upper-third so it stays visible above bottom copy */
-        object-position: center 32% !important;
+        object-fit: contain !important;
+        object-position: center center !important;
         transform: none !important;
       }
       .hero-overlay {
@@ -903,7 +897,7 @@
         height: 100% !important;
         min-width: 100% !important;
         min-height: 100% !important;
-        object-fit: cover !important;
+        object-fit: contain !important;
         object-position: center center !important;
         transform: none !important;
       }
@@ -925,7 +919,7 @@
         max-height: calc(100dvh - 3.4rem - 2.1rem) !important;
       }
       .hero-media video,
-      .hero-media img { object-position: center 40% !important; }
+      .hero-media img { object-fit: contain !important; object-position: center center !important; }
     }
 
     /* Prefer dynamic viewport on modern browsers */
@@ -946,7 +940,7 @@
     "@type": "LocalBusiness",
     "additionalType": "https://schema.org/HomeAndConstructionBusiness",
     "name": "Stamps Steel Buildings",
-    "description": "Custom pre-engineered metal buildings nationwide. Complete furnish-and-install PEMB solutions with more than a decade of industry experience. Based in Bethpage, Middle Tennessee.",
+    "description": "Open-span steel buildings for shops, churches, farms, warehouses, and storage. More than a decade of industry experience.",
     "url": "https://stampssteel.com/",
     "telephone": "+1-615-629-8217",
     "email": "info@stampssteel.com",
@@ -977,7 +971,7 @@
         "name": "What is included in a Stamps Steel PEB package?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Primary and secondary framing, roof and wall panels, and openings as specified, with optional insulation or IMPs, doors, ventilation, and accessories coordinated as one bolt-up system."
+          "text": "Primary and secondary framing, roof and wall panels, and openings as specified, with optional insulation or insulated wall panels, doors, ventilation, and accessories coordinated as one bolt-up system."
         }
       },
       {
@@ -1018,16 +1012,13 @@
           </span>
         </a>
         <div class="nav-desktop hidden lg:flex items-center space-x-1 text-sm font-medium">
-          <a href="designer.html" class="px-2 py-2 hover:text-copper-400 transition">3D Designer</a>
-          <a href="projects.html" class="px-2 py-2 hover:text-copper-400 transition">Projects</a>
-          <a href="erection.html" class="px-2 py-2 hover:text-copper-400 transition">Erection</a>
-          <a href="#systems" class="px-2 py-2 hover:text-copper-400 transition">Systems</a>
-          <a href="panels.html" class="px-2 py-2 hover:text-copper-400 transition">Panels</a>
-          <a href="insulation.html" class="px-2 py-2 hover:text-copper-400 transition">Insulation</a>
-          <a href="accessories.html" class="px-2 py-2 hover:text-copper-400 transition">Accessories</a>
-          <a href="about.html" class="px-2 py-2 hover:text-copper-400 transition">About</a>
-          <a href="designer.html" class="ml-2 bg-white/10 hover:bg-white/15 border border-white/20 text-white px-3 py-2.5 rounded-lg font-semibold transition">3D Design</a>
-          <a href="#contact" class="bg-copper-600 hover:bg-copper-500 text-white px-4 py-2.5 rounded-lg font-semibold transition shadow-lg shadow-copper-900/30">Free Quote</a>
+          <a href="#bt-residential" class="nav-bldg px-2 py-2 hover:text-copper-400 transition" data-bldg="shops">Shops</a>
+          <a href="churches.html" class="nav-bldg px-2 py-2 hover:text-copper-400 transition" data-bldg="churches">Churches</a>
+          <a href="mini-storage.html" class="nav-bldg px-2 py-2 hover:text-copper-400 transition" data-bldg="storage">Storage</a>
+          <a href="#bt-ag" class="nav-bldg px-2 py-2 hover:text-copper-400 transition" data-bldg="ag">Ag</a>
+          <a href="#bt-industrial" class="nav-bldg px-2 py-2 hover:text-copper-400 transition" data-bldg="warehouses">Warehouses</a>
+          <a href="tel:+16156298217" class="hidden xl:inline-flex px-2 py-2 text-copper-400 font-semibold hover:text-copper-300 transition">(615) 629-8217</a>
+          <a href="#contact" class="ml-1 bg-copper-600 hover:bg-copper-500 text-white px-4 py-2.5 rounded-lg font-semibold transition shadow-lg shadow-copper-900/30">Get Quote</a>
         </div>
         <div class="nav-mobile-tools flex items-center gap-2 lg:hidden">
           <a href="#contact" class="bg-copper-600 text-white px-3 py-1.5 rounded-lg text-sm font-semibold">Quote</a>
@@ -1039,29 +1030,33 @@
     </div>
     <div id="mobile-menu" class="lg:hidden bg-steel-900 border-t border-steel-800">
       <div class="px-4 py-3 space-y-1 text-sm font-medium">
-        <a href="about.html" class="block py-3 px-3 rounded-lg hover:bg-steel-800">About Us</a>
-        <a href="designer.html" class="block py-3 px-3 rounded-lg hover:bg-steel-800">Build Your Own Building</a>
-        <a href="#systems" class="block py-3 px-3 rounded-lg hover:bg-steel-800">Building Systems (PEB)</a>
-        <a href="projects.html" class="block py-3 px-3 rounded-lg hover:bg-steel-800">Projects</a>
-        <a href="framing.html" class="block py-3 px-3 rounded-lg hover:bg-steel-800 pl-6 text-slate-300">— Building Framing</a>
-        <a href="erection.html" class="block py-3 px-3 rounded-lg hover:bg-steel-800">Erection Services</a>
-        <a href="accessories.html" class="block py-3 px-3 rounded-lg hover:bg-steel-800">Accessories</a>
-        <a href="panels.html" class="block py-3 px-3 rounded-lg hover:bg-steel-800">Panels & Colors</a>
-        <a href="insulation.html" class="block py-3 px-3 rounded-lg hover:bg-steel-800">Insulation</a>
-        <a href="imp.html" class="block py-3 px-3 rounded-lg hover:bg-steel-800">Insulated Metal Panels</a>
-        <a href="mini-storage.html" class="block py-3 px-3 rounded-lg hover:bg-steel-800">Mini Storage</a>
+        <a href="#bt-residential" class="block py-3 px-3 rounded-lg hover:bg-steel-800">Shops</a>
         <a href="churches.html" class="block py-3 px-3 rounded-lg hover:bg-steel-800">Churches</a>
+        <a href="mini-storage.html" class="block py-3 px-3 rounded-lg hover:bg-steel-800">Storage</a>
+        <a href="#bt-ag" class="block py-3 px-3 rounded-lg hover:bg-steel-800">Ag</a>
+        <a href="#bt-industrial" class="block py-3 px-3 rounded-lg hover:bg-steel-800">Warehouses</a>
+        <a href="#bt-aviation" class="block py-3 px-3 rounded-lg hover:bg-steel-800">Hangars</a>
+        <a href="designer.html" class="block py-3 px-3 rounded-lg hover:bg-steel-800">3D Designer</a>
+        <a href="projects.html" class="block py-3 px-3 rounded-lg hover:bg-steel-800">Projects</a>
+        <a href="about.html" class="block py-3 px-3 rounded-lg hover:bg-steel-800">About</a>
+        <a href="#systems" class="block py-3 px-3 rounded-lg hover:bg-steel-800">Systems</a>
+        <a href="framing.html" class="block py-3 px-3 rounded-lg hover:bg-steel-800 pl-6 text-slate-300">Framing</a>
+        <a href="panels.html" class="block py-3 px-3 rounded-lg hover:bg-steel-800 pl-6 text-slate-300">Panels</a>
+        <a href="insulation.html" class="block py-3 px-3 rounded-lg hover:bg-steel-800 pl-6 text-slate-300">Insulation</a>
+        <a href="accessories.html" class="block py-3 px-3 rounded-lg hover:bg-steel-800 pl-6 text-slate-300">Accessories</a>
+        <a href="erection.html" class="block py-3 px-3 rounded-lg hover:bg-steel-800 pl-6 text-slate-300">Erection</a>
+        <a href="tel:+16156298217" class="block py-3 px-3 rounded-lg hover:bg-steel-800 font-semibold text-copper-400">(615) 629-8217</a>
         <a href="#contact" class="block py-3 px-3 bg-copper-600 rounded-lg text-center font-semibold mt-2">Get Free Quote</a>
       </div>
     </div>
   </nav>
 
 <!-- HERO -->
-  <section id="home" class="hero-section text-white" aria-label="Stamps Steel brand film experience">
+  <section id="home" class="hero-section text-white" aria-label="Clear-span steel shop building">
     <div class="hero-media" aria-hidden="true">
       <picture class="hero-poster">
         <source type="image/webp" srcset="images/hero/poster-640w.webp 640w, images/hero/poster-960w.webp 960w, images/hero/poster.webp 1400w" sizes="100vw">
-        <img data-opt="1" src="images/hero/poster.jpg" alt="" width="1280" height="720" decoding="async" loading="eager" fetchpriority="high" sizes="100vw">
+        <img data-opt="1" src="images/hero/span-still.jpg" alt="Clear-span steel shop interior: walls, open overhead door, and open concrete floor" width="1152" height="864" decoding="async" loading="eager" fetchpriority="high" sizes="100vw">
       </picture>
       <video
         id="hero-video"
@@ -1073,130 +1068,44 @@
         playsinline
         webkit-playsinline
         preload="auto"
-        poster="images/hero/poster.jpg"
+        poster="images/hero/span-still.jpg"
         disablePictureInPicture
       >
-        <source src="images/hero/hero-clean-mobile.mp4?v=20260810-clean-v2" type="video/mp4" media="(max-width: 767px)">
-        <source src="images/hero/stamps-hero.mp4?v=20260810-clean-v2" type="video/mp4">
+        <source src="images/hero/hero-clean-mobile.mp4?v=20260810-shop-int" type="video/mp4" media="(max-width: 767px)">
+        <source src="images/hero/stamps-hero.mp4?v=20260810-shop-int" type="video/mp4">
       </video>
     </div>
     <div class="hero-overlay" aria-hidden="true"></div>
-    <div class="hero-steel-lines" aria-hidden="true"></div>
-    <div class="hero-film-bar" aria-hidden="true"><span id="hero-film-progress"></span></div>
     <div class="hero-controls">
-      <button type="button" class="hero-ctrl-btn" id="hero-sound-btn" aria-pressed="false" title="Toggle sound">Sound Off</button>
-      <button type="button" class="hero-ctrl-btn" id="hero-replay-btn" title="Replay brand film">Replay</button>
+      <button type="button" class="hero-ctrl-btn" id="hero-pause-btn" aria-pressed="false" title="Pause or play video">Pause</button>
     </div>
 
     <div class="hero-content">
       <div class="hero-copy-wrap max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-20 md:py-24 relative min-h-[22rem] sm:min-h-[24rem]">
-
-        <!-- STAGE 0: Forge / power of steel (0–9s) -->
         <div class="hero-stage is-active" data-stage="0" id="hero-stage-0">
           <div class="hero-stage-inner">
-            <p class="hero-kicker hero-fade-up d1"><span class="bar" aria-hidden="true"></span> Stamps Steel · Born in fire</p>
-            <div class="hero-line-draw" aria-hidden="true"></div>
+            <p class="hero-kicker hero-fade-up d1"><span class="bar" aria-hidden="true"></span> Pre-engineered metal buildings</p>
             <h1 class="hero-headline hero-fade-up d2">
-              You've never seen a<br class="hidden sm:block">
-              <span class="copper-gradient">steel building company</span><br class="hidden sm:block">
-              look like this
+              A steel building that<br class="hidden sm:block">
+              <span class="copper-gradient">actually spans.</span>
             </h1>
             <p class="hero-sub hero-fade-up d3">
-              Pre-engineered metal buildings for <strong>shops, commercial, ag &amp; warehouses</strong> —
-              plus specialty hangars and mini storage. Designed in 3D, engineered for your site.
-            </p>
-            <div class="hero-trust-chips hero-fade-up d3" aria-label="Proof points">
-              <span>Nationwide PEBs</span>
-              <span>Free 3D Designer</span>
-              <span>No High-Pressure Sales</span>
-              <span>10+ Years PEMB</span>
-            </div>
-            <div class="hero-actions hero-fade-up d4">
-              <a href="designer.html" class="hero-cta-pulse inline-flex justify-center items-center bg-copper-600 hover:bg-copper-500 text-white px-8 py-4 rounded-xl font-bold text-base sm:text-lg transition shadow-xl shadow-copper-900/40">
-                Design Your Building Here
-              </a>
-              <a href="#contact" class="inline-flex justify-center items-center bg-white/10 hover:bg-white/15 border border-white/25 text-white px-7 py-3.5 rounded-xl font-semibold transition backdrop-blur-sm">
-                Get Free Quote
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- STAGE 1: Real buildings (9–21s) -->
-        <div class="hero-stage" data-stage="1" id="hero-stage-1" aria-hidden="true">
-          <div class="hero-stage-inner">
-            <p class="hero-kicker hero-fade-up d1"><span class="bar" aria-hidden="true"></span> Real buildings · Real power</p>
-            <div class="hero-line-draw" aria-hidden="true"></div>
-            <h2 class="hero-headline hero-fade-up d2">
-              Massive clear-spans.<br class="hidden sm:block">
-              <span class="copper-gradient">Built to dominate</span> the site.
-            </h2>
-            <p class="hero-sub hero-fade-up d3">
-              Multi-bay shops, commercial service centers, farm structures, and finished PEBs "
-              engineered for your codes, climate, and ambition.
+              Open-span steel buildings for shops, churches, farms, warehouses, and mini-storage. Free quote. No high-pressure sales.
             </p>
             <div class="hero-actions hero-fade-up d4">
-              <a href="#projects" class="inline-flex justify-center items-center bg-copper-600 hover:bg-copper-500 text-white px-8 py-4 rounded-xl font-bold transition shadow-xl shadow-copper-900/40">
-                See Real Projects
+              <a href="#contact" class="hero-cta-pulse inline-flex justify-center items-center bg-copper-600 hover:bg-copper-500 text-white px-8 py-4 rounded-xl font-bold text-base sm:text-lg transition shadow-xl shadow-copper-900/40">
+                Get a Free Quote
               </a>
-              <a href="tel:+16156298217" class="inline-flex justify-center items-center text-slate-200 hover:text-copper-400 px-2 py-3 font-medium transition">
-                (615) 629-8217
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- STAGE 2: 3D differentiator (21–28s) -->
-        <div class="hero-stage" data-stage="2" id="hero-stage-2" aria-hidden="true">
-          <div class="hero-stage-inner">
-            <p class="hero-kicker hero-fade-up d1"><span class="bar" aria-hidden="true"></span> The differentiator most companies don't have</p>
-            <div class="hero-line-draw" aria-hidden="true"></div>
-            <h2 class="hero-headline hero-fade-up d2">
-              Don't just look.<br class="hidden sm:block">
-              <span class="copper-gradient">Design yours</span> right now.
-            </h2>
-            <p class="hero-sub hero-fade-up d3">
-              Free interactive 3D Building Designer — size, doors, colors, layout "
-              then send it to Stamps Steel for a no-pressure quote.
-            </p>
-            <div class="hero-actions hero-fade-up d4">
-              <a href="designer.html" class="hero-cta-pulse inline-flex justify-center items-center bg-copper-600 hover:bg-copper-500 text-white px-8 py-4 rounded-xl font-bold text-base sm:text-lg transition shadow-xl shadow-copper-900/40">
-                Launch 3D Designer
-              </a>
-              <a href="projects.html#designs" class="inline-flex justify-center items-center bg-white/10 hover:bg-white/15 border border-white/25 text-white px-7 py-3.5 rounded-xl font-semibold transition backdrop-blur-sm">
-                Browse Designs
+              <a href="designer.html" class="inline-flex justify-center items-center bg-white/10 hover:bg-white/15 border border-white/25 text-white px-7 py-3.5 rounded-xl font-semibold transition backdrop-blur-sm">
+                Open 3D Designer
               </a>
             </div>
-          </div>
-        </div>
-
-        <!-- STAGE 3: Hard close (28s+) -->
-        <div class="hero-stage" data-stage="3" id="hero-stage-3" aria-hidden="true">
-          <div class="hero-stage-inner">
-            <p class="hero-kicker hero-fade-up d1"><span class="bar" aria-hidden="true"></span> Stamps Steel Buildings</p>
-            <div class="hero-line-draw" aria-hidden="true"></div>
-            <h2 class="hero-headline hero-fade-up d2">
-              <span class="copper-gradient">Design Your Building Here</span>
-            </h2>
-            <p class="hero-sub hero-fade-up d3">
-              A different class of metal building company — cinematic craft, clear engineering, and personal service from Bethpage, TN to every state.
-            </p>
-            <div class="hero-actions hero-fade-up d4">
-              <a href="designer.html" class="hero-cta-pulse inline-flex justify-center items-center bg-copper-600 hover:bg-copper-500 text-white px-8 py-4 rounded-xl font-bold text-base sm:text-lg transition shadow-xl shadow-copper-900/40">
-                Design Your Building Here
-              </a>
-              <a href="#contact" class="inline-flex justify-center items-center bg-white/10 hover:bg-white/15 border border-white/25 text-white px-7 py-3.5 rounded-xl font-semibold transition backdrop-blur-sm">
-                Free Quote · No Pressure
-              </a>
+            <div class="hero-trust-chips hero-fade-up d4" aria-label="Proof points">
+              <span>50'+ typical clear span</span>
+              <span>Your site — engineered to your location</span>
+              <span>No pressure — quote, not a pitch</span>
             </div>
           </div>
-        </div>
-
-        <div class="hero-progress" role="tablist" aria-label="Hero message stages">
-          <button type="button" class="is-active" data-go-stage="0" aria-label="Power of steel" aria-selected="true"></button>
-          <button type="button" data-go-stage="1" aria-label="Real buildings" aria-selected="false"></button>
-          <button type="button" data-go-stage="2" aria-label="3D designer" aria-selected="false"></button>
-          <button type="button" data-go-stage="3" aria-label="Design your building" aria-selected="false"></button>
         </div>
       </div>
     </div>
@@ -1208,34 +1117,34 @@
       <div class="attn-track">
         <span class="attn-item attn-hot"><span class="attn-dot" aria-hidden="true"></span><a class="attn-link" href="designer.html">Create Your Building Here</a></span>
         <span class="attn-item"><span class="attn-dot" aria-hidden="true"></span><a class="attn-link" href="designer.html">Free 3D Building Designer</a></span>
-        <span class="attn-item"><span class="attn-dot" aria-hidden="true"></span>Nationwide Pre-Engineered Metal Buildings</span>
+        <span class="attn-item"><span class="attn-dot" aria-hidden="true"></span>Shops · Churches · Storage · Ag · Warehouses</span>
         <span class="attn-item"><span class="attn-dot" aria-hidden="true"></span><a class="attn-link" href="#contact">Free Quotes · No High-Pressure Sales</a></span>
         <span class="attn-item"><span class="attn-dot" aria-hidden="true"></span>Shops · Churches · Ag · Warehouses</span>
         <span class="attn-item"><span class="attn-dot" aria-hidden="true"></span><a class="attn-link" href="tel:+16156298217">Call (615) 629-8217</a></span>
         <span class="attn-item attn-hot"><span class="attn-dot" aria-hidden="true"></span><a class="attn-link" href="designer.html">Create Your Building Here</a></span>
-        <span class="attn-item"><span class="attn-dot" aria-hidden="true"></span>10+ Years PEMB Experience</span>
+        <span class="attn-item"><span class="attn-dot" aria-hidden="true"></span>10+ Years in metal buildings</span>
       </div>
       <!-- duplicate for seamless loop -->
       <div class="attn-track" aria-hidden="true">
         <span class="attn-item attn-hot"><span class="attn-dot"></span><a class="attn-link" href="designer.html" tabindex="-1">Create Your Building Here</a></span>
         <span class="attn-item"><span class="attn-dot"></span><a class="attn-link" href="designer.html" tabindex="-1">Free 3D Building Designer</a></span>
-        <span class="attn-item"><span class="attn-dot"></span>Nationwide Pre-Engineered Metal Buildings</span>
+        <span class="attn-item"><span class="attn-dot"></span>Shops · Churches · Storage · Ag · Warehouses</span>
         <span class="attn-item"><span class="attn-dot"></span><a class="attn-link" href="#contact" tabindex="-1">Free Quotes · No High-Pressure Sales</a></span>
         <span class="attn-item"><span class="attn-dot"></span>Shops · Churches · Ag · Warehouses</span>
         <span class="attn-item"><span class="attn-dot"></span><a class="attn-link" href="tel:+16156298217" tabindex="-1">Call (615) 629-8217</a></span>
         <span class="attn-item attn-hot"><span class="attn-dot"></span><a class="attn-link" href="designer.html" tabindex="-1">Create Your Building Here</a></span>
-        <span class="attn-item"><span class="attn-dot"></span>10+ Years PEMB Experience</span>
+        <span class="attn-item"><span class="attn-dot"></span>10+ Years in metal buildings</span>
       </div>
     </div>
   </div>
 
-  <!-- TRUST BAR -->
+    <!-- TRUST BAR -->
   <section id="main-content" class="py-8 sm:py-10 bg-white border-b border-slate-200" tabindex="-1" aria-label="Key credentials">
     <div class="max-w-7xl mx-auto px-4">
       <div class="metric-rail reveal">
         <div>
-          <div class="m">Nationwide</div>
-          <div class="l">PEB projects · USA</div>
+          <div class="m">50'+</div>
+          <div class="l">Typical clear span</div>
         </div>
         <div>
           <div class="m">Free 3D</div>
@@ -1243,11 +1152,11 @@
         </div>
         <div>
           <div class="m">10+ Years</div>
-          <div class="l">PEMB experience</div>
+          <div class="l">in metal buildings</div>
         </div>
         <div>
-          <div class="m">Full PEB</div>
-          <div class="l">Frame · Panel · Thermal</div>
+          <div class="m">Complete kit</div>
+          <div class="l">Frame, roof, walls, extras</div>
         </div>
       </div>
     </div>
@@ -1258,14 +1167,14 @@
     <div class="max-w-7xl mx-auto px-4">
       <div class="text-center mb-8">
         <p class="text-sm font-semibold text-copper-600 uppercase tracking-wide mb-2">Choose your path</p>
-        <h2 class="text-2xl md:text-3xl font-black text-steel-900">New to PEBs — or ready to specify?</h2>
+        <h2 class="text-2xl md:text-3xl font-black text-steel-900">New to steel buildings — or already shopping?</h2>
         <p class="text-slate-600 max-w-2xl mx-auto mt-2 text-sm md:text-base">Same company either way. Different starting points so you are not forced through a sales maze.</p>
       </div>
       <div class="grid md:grid-cols-2 gap-5">
         <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6 md:p-8 flex flex-col">
           <p class="text-xs font-bold uppercase tracking-wider text-copper-600 mb-2">First-time buyer</p>
           <h3 class="text-xl font-black text-steel-900 mb-2">I need a building for my use</h3>
-          <p class="text-sm text-slate-600 leading-relaxed mb-4 flex-1">Shops, commercial, ag, warehouses, and specialty PEBs (including hangars and mini storage). See the full collection, pick a footprint, design in 3D, or request a free quote.</p>
+          <p class="text-sm text-slate-600 leading-relaxed mb-4 flex-1">Shops, churches, farms, warehouses, and mini-storage. See the types, pick a size, design in 3D, or request a free quote.</p>
           <div class="flex flex-wrap gap-2">
             <a href="#solutions" class="inline-flex bg-steel-900 hover:bg-steel-800 text-white px-5 py-2.5 rounded-xl text-sm font-semibold transition">Building types</a>
             <a href="#start" class="inline-flex bg-copper-600 hover:bg-copper-500 text-white px-5 py-2.5 rounded-xl text-sm font-semibold transition">Start with size</a>
@@ -1273,9 +1182,9 @@
           </div>
         </div>
         <div class="rounded-2xl border border-copper-300 bg-white p-6 md:p-8 flex flex-col ring-1 ring-copper-200/70">
-          <p class="text-xs font-bold uppercase tracking-wider text-copper-600 mb-2">Experienced PEB buyer</p>
+          <p class="text-xs font-bold uppercase tracking-wider text-copper-600 mb-2">Already shopping</p>
           <h3 class="text-xl font-black text-steel-900 mb-2">I already know the system</h3>
-          <p class="text-sm text-slate-600 leading-relaxed mb-4 flex-1">Jump to framing, panels, insulation (PSK / High-R), IMPs, and accessories — then send specs for a code-aware PEB package (including hangar or mini-storage use when needed).</p>
+          <p class="text-sm text-slate-600 leading-relaxed mb-4 flex-1">Jump to framing, panels, insulation, wall systems, and accessories — then send sizes and options for a clear package (including hangar or mini-storage when needed).</p>
           <div class="flex flex-wrap gap-2">
             <a href="#systems" class="inline-flex bg-copper-600 hover:bg-copper-500 text-white px-5 py-2.5 rounded-xl text-sm font-semibold transition">Building systems</a>
             <a href="framing.html" class="inline-flex border border-slate-300 hover:border-copper-400 text-steel-900 px-5 py-2.5 rounded-xl text-sm font-semibold transition">Framing</a>
@@ -1293,7 +1202,7 @@
         <div>
           <p class="text-sm font-semibold text-copper-600 uppercase tracking-wide mb-2">Fastest path</p>
           <h2 class="text-2xl md:text-3xl font-black mb-2">Start with a proven footprint</h2>
-          <p class="text-slate-600 max-w-2xl text-sm md:text-base">Common PEB sizes for shops through industrial shells. Customize doors, eave height, and finishes in the free 3D designer — or tell us your dimensions on the quote form.</p>
+          <p class="text-slate-600 max-w-2xl text-sm md:text-base">Common sizes for shops through industrial shells. Customize doors, eave height (wall to roof), and finishes in the free 3D designer — or tell us your dimensions on the quote form.</p>
         </div>
         <a href="designer.html" class="inline-flex shrink-0 bg-steel-900 hover:bg-steel-800 text-white px-6 py-3 rounded-xl font-bold transition text-sm">Open 3D Designer →</a>
       </div>
@@ -1341,7 +1250,7 @@
       <div class="text-center mb-10 reveal">
         <p class="section-label justify-center mb-3">First-time buyers</p>
         <h2 class="text-3xl md:text-4xl font-black text-steel-900 mb-3">What is a pre-engineered metal building?</h2>
-        <p class="text-slate-600 max-w-2xl mx-auto text-sm md:text-base">A PEB (or PEMB) is a complete steel building system — designed, fabricated, and shipped as coordinated components that bolt together on your site. Faster than conventional construction. Engineered for your wind, snow, and use group.</p>
+        <p class="text-slate-600 max-w-2xl mx-auto text-sm md:text-base">It is a steel frame, roof and walls, plus insulation and doors shipped as matching parts that bolt together on your site (a PEB). Faster than conventional construction. Sized for your weather and how you will use the building.</p>
       </div>
       <div class="peb-diagram">
         <div class="peb-step reveal reveal-d1">
@@ -1356,8 +1265,8 @@
         </div>
         <div class="peb-step reveal reveal-d3">
           <div class="step-n">3</div>
-          <h3 class="font-black text-steel-900 mb-2">Thermal &amp; openings</h3>
-          <p class="text-sm text-slate-600 leading-relaxed">Insulation or IMPs, doors, ventilation, and accessories packaged with the kit for a complete building.</p>
+          <h3 class="font-black text-steel-900 mb-2">Insulation &amp; doors</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">Insulation, doors, vents, and extras packaged with the kit so you get a complete building.</p>
         </div>
       </div>
       <p class="text-center mt-8 text-sm text-slate-500 reveal">Then you design yours in 3D — or send size and site details for a free engineered quote.</p>
@@ -1381,12 +1290,12 @@
         <div class="pillar-card reveal reveal-d2">
           <div class="num">02</div>
           <h3 class="text-xl font-black mb-2 text-white">Engineering honesty</h3>
-          <p class="text-sm text-slate-300 leading-relaxed">Code-aware packages, value engineering, and full systems: framing, panels, insulation, IMPs, accessories. No mystery scopes. No high-pressure playbook.</p>
+          <p class="text-sm text-slate-300 leading-relaxed">Code-aware packages, smart options, and full systems: framing, panels, insulation, insulated wall panels, accessories. No mystery scopes. No high-pressure playbook.</p>
         </div>
         <div class="pillar-card reveal reveal-d3">
           <div class="num">03</div>
           <h3 class="text-xl font-black mb-2 text-white">Design your building</h3>
-          <p class="text-sm text-slate-300 leading-relaxed">Free interactive 3D designer on day one — size, doors, colors, layout — then a human quote from Bethpage, TN, serving projects nationwide.</p>
+          <p class="text-sm text-slate-300 leading-relaxed">Free interactive 3D designer on day one — size, doors, colors, layout — then a human quote with no high-pressure sales.</p>
         </div>
       </div>
     </div>
@@ -1416,14 +1325,14 @@
             <span class="text-copper-600 font-black text-lg leading-none">✓</span>
             <div>
               <p class="font-bold text-steel-900 text-sm">Full PEB systems map</p>
-              <p class="text-xs text-slate-600 mt-0.5">Framing, panels, PSK / High-R insulation, IMPs, accessories — one clear path.</p>
+              <p class="text-xs text-slate-600 mt-0.5">Framing, panels, blanket and layered insulation, insulated wall panels, accessories — one clear path.</p>
             </div>
           </div>
           <div class="flex gap-3 items-start rounded-xl border border-slate-200 bg-white p-4">
             <span class="text-copper-600 font-black text-lg leading-none">✓</span>
             <div>
               <p class="font-bold text-steel-900 text-sm">Human access</p>
-              <p class="text-xs text-slate-600 mt-0.5"><a href="tel:+16156298217" class="text-copper-600 font-semibold">(615) 629-8217</a> · Bethpage, TN · Nationwide PEBs</p>
+              <p class="text-xs text-slate-600 mt-0.5"><a href="tel:+16156298217" class="text-copper-600 font-semibold">(615) 629-8217</a> · Get a free quote</p>
             </div>
           </div>
         </div>
@@ -1438,15 +1347,15 @@
       <div class="text-center mb-12">
         <p class="text-sm font-semibold text-copper-600 uppercase tracking-wide mb-2">Why Us</p>
         <h2 class="text-3xl md:text-4xl font-black mb-3">Why Stamps Steel</h2>
-        <p class="text-slate-600 max-w-2xl mx-auto">Quality PEB kits, personal service, and furnish-and-install expertise for projects across the United States — rooted in Bethpage, Middle Tennessee.</p>
+        <p class="text-slate-600 max-w-2xl mx-auto">Complete kits, personal service, and installation when you want it — for shops, churches, farms, warehouses, and storage.</p>
       </div>
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
         <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 hover:shadow-md hover:border-copper-200 transition">
           <div class="w-12 h-12 bg-copper-100 rounded-xl flex items-center justify-center mb-4">
             <svg class="w-6 h-6 text-copper-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
           </div>
-          <h3 class="font-bold text-lg mb-2">Nationwide Reach</h3>
-          <p class="text-sm text-slate-600 leading-relaxed">We deliver and support pre-engineered metal buildings across the U.S. — code-aware packages for your site's wind, snow, and use group.</p>
+          <h3 class="font-bold text-lg mb-2">Clear-span steel</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">Open-span shops, churches, farms, warehouses, and storage — sized for your site and how you will use the building.</p>
         </div>
         <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 hover:shadow-md hover:border-copper-200 transition">
           <div class="w-12 h-12 bg-copper-100 rounded-xl flex items-center justify-center mb-4">
@@ -1726,18 +1635,18 @@
               <span class="absolute top-2 left-2 z-10 text-[0.65rem] font-bold uppercase tracking-wide bg-steel-950/75 text-white px-2 py-0.5 rounded">Interior</span>
               <picture>
               <source type="image/webp" srcset="images/building-types/cold-int-640w.webp 640w, images/building-types/cold-int-960w.webp 960w, images/building-types/cold-int.webp 1200w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 280px">
-              <img data-lightbox="building-types" data-opt="1" src="images/building-types/cold-int.jpg" alt="Clean refrigerated cold storage warehouse interior with IMP walls" class="w-full h-full object-cover" width="640" height="480" decoding="async" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 280px">
+              <img data-lightbox="building-types" data-opt="1" src="images/building-types/cold-int.jpg" alt="Clean refrigerated cold storage warehouse interior with insulated panel walls" class="w-full h-full object-cover" width="640" height="480" decoding="async" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 280px">
             </picture>
             </div>
           </div>
           <div class="p-4 sm:p-5">
             <h3 class="text-lg sm:text-xl font-black text-steel-900 mb-0.5 leading-snug">Refrigerated / Cold Storage</h3>
-            <p class="text-xs text-copper-600 font-semibold uppercase tracking-wide mb-2">IMP envelope</p>
+            <p class="text-xs text-copper-600 font-semibold uppercase tracking-wide mb-2">insulated panel envelope</p>
             <ul class="bt-list text-sm text-slate-700 space-y-1 mb-3">
             <li>Refrigerated & freezer buildings (typically with Insulated Metal Panels)</li>
             </ul>
             <div class="flex flex-wrap gap-x-3 gap-y-1 text-sm font-bold">
-              <a href="imp.html" class="text-copper-600 hover:underline">View IMPs →</a><span class="text-slate-300" aria-hidden="true">·</span><a href="#contact" class="text-steel-900 hover:text-copper-600">Free quote →</a>
+              <a href="imp.html" class="text-copper-600 hover:underline">View insulated wall panels →</a><span class="text-slate-300" aria-hidden="true">·</span><a href="#contact" class="text-steel-900 hover:text-copper-600">Free quote →</a>
             </div>
           </div>
         </article>
@@ -1814,7 +1723,7 @@
       <div class="text-center mb-10">
         <p class="text-sm font-semibold text-copper-600 uppercase tracking-wide mb-2">PEB building systems</p>
         <h2 class="text-3xl md:text-4xl font-black mb-3">How a Stamps Steel package is built</h2>
-        <p class="text-slate-600 max-w-3xl mx-auto text-sm md:text-base">A complete pre-engineered metal building is more than a shell. Primary and secondary framing, roof and wall panels, insulation or IMPs, openings, and accessories are specified together for your site loads and use group.</p>
+        <p class="text-slate-600 max-w-3xl mx-auto text-sm md:text-base">A complete pre-engineered metal building is more than a shell. Primary and secondary framing, roof and wall panels, insulation or insulated wall panels, openings, and accessories are specified together for your site loads and use group.</p>
       </div>
 
       <div class="grid lg:grid-cols-3 gap-5 mb-8">
@@ -1838,9 +1747,9 @@
         </a>
         <a href="imp.html" class="group rounded-2xl border border-slate-200 p-6 hover:border-copper-400 hover:shadow-md transition bg-slate-50">
           <p class="text-xs font-bold uppercase tracking-wider text-copper-600 mb-2">High-R envelope</p>
-          <h3 class="font-black text-lg text-steel-900 mb-2 group-hover:text-copper-700">Insulated metal panels (IMP)</h3>
+          <h3 class="font-black text-lg text-steel-900 mb-2 group-hover:text-copper-700">Insulated metal panels (insulated panel)</h3>
           <p class="text-sm text-slate-600 leading-relaxed mb-3">Factory-foamed wall and standing-seam roof panels · R-16 to R-50 · 26/24 ga skins for higher thermal performance.</p>
-          <span class="text-sm font-semibold text-copper-600">View IMPs →</span>
+          <span class="text-sm font-semibold text-copper-600">View insulated wall panels →</span>
         </a>
         <a href="accessories.html" class="group rounded-2xl border border-slate-200 p-6 hover:border-copper-400 hover:shadow-md transition bg-slate-50">
           <p class="text-xs font-bold uppercase tracking-wider text-copper-600 mb-2">Openings &amp; add-ons</p>
@@ -1860,7 +1769,7 @@
         <div>
           <p class="text-xs font-bold uppercase tracking-wider text-copper-400 mb-2">Interactive</p>
           <h3 class="text-xl md:text-2xl font-black mb-2">Configure the building, then specify the system</h3>
-          <p class="text-slate-300 text-sm max-w-xl">Use the free 3D designer for size and openings, then we package framing, panels, insulation or IMPs, and accessories for your site.</p>
+          <p class="text-slate-300 text-sm max-w-xl">Use the free 3D designer for size and openings, then we package framing, panels, insulation or insulated wall panels, and accessories for your site.</p>
         </div>
         <div class="flex flex-wrap gap-3 shrink-0">
           <a href="designer.html" class="inline-flex bg-copper-600 hover:bg-copper-500 text-white px-6 py-3 rounded-xl font-bold transition text-sm">Launch 3D Designer</a>
@@ -1930,7 +1839,7 @@
         </article>
       </div>
 
-      <p class="text-center text-sm text-slate-500 mt-8">Serving farms, shops, and businesses nationwide · Home office Bethpage, TN</p>
+      <p class="text-center text-sm text-slate-500 mt-8">Shops, churches, farms, warehouses, and storage</p>
       <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-4xl mx-auto">
         <a href="projects.html#designs" class="rounded-2xl border border-copper-300 bg-white p-6 text-center hover:border-copper-400 transition shadow-sm ring-1 ring-copper-200/60">
           <p class="text-sm font-semibold text-copper-600 uppercase tracking-wide mb-1">New</p>
@@ -1953,78 +1862,35 @@
     <div class="max-w-7xl mx-auto px-4">
       <div class="text-center mb-12">
         <p class="section-label justify-center mb-3">How it works</p>
-        <h2 class="text-3xl md:text-4xl font-black mb-3">From idea to bolt-up kit</h2>
-        <p class="text-slate-600 max-w-2xl mx-auto text-sm">Transparent steps for first-time buyers and experienced PEB owners.</p>
+        <h2 class="text-3xl md:text-4xl font-black mb-3">How it works</h2>
+        <p class="text-slate-600 max-w-2xl mx-auto text-sm">Four clear steps. No high-pressure sales.</p>
       </div>
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
         <div class="text-center">
           <div class="w-14 h-14 mx-auto bg-copper-600 text-white rounded-full flex items-center justify-center text-xl font-black mb-4 shadow-lg shadow-copper-900/20">1</div>
-          <h3 class="font-bold mb-2">Design or Describe</h3>
+          <h3 class="font-bold mb-2">Design or describe</h3>
           <p class="text-sm text-slate-600 leading-relaxed">Use our <a href="designer.html" class="text-copper-600 font-semibold hover:underline">3D designer</a> or tell us size, use, and site location.</p>
         </div>
         <div class="text-center">
           <div class="w-14 h-14 mx-auto bg-copper-600 text-white rounded-full flex items-center justify-center text-xl font-black mb-4 shadow-lg shadow-copper-900/20">2</div>
-          <h3 class="font-bold mb-2">Engineered Quote</h3>
-          <p class="text-sm text-slate-600 leading-relaxed">We package a code-ready PEB with clear options — no pressure.</p>
+          <h3 class="font-bold mb-2">Get a clear quote</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">You get a written quote with clear options — no pressure.</p>
         </div>
         <div class="text-center">
           <div class="w-14 h-14 mx-auto bg-copper-600 text-white rounded-full flex items-center justify-center text-xl font-black mb-4 shadow-lg shadow-copper-900/20">3</div>
-          <h3 class="font-bold mb-2">Value Engineering</h3>
-          <p class="text-sm text-slate-600 leading-relaxed">Clear pricing with smart options so you can choose what fits best.</p>
+          <h3 class="font-bold mb-2">Choose the options</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">Doors, insulation, colors, and extras — pick what fits your budget.</p>
         </div>
         <div class="text-center">
           <div class="w-14 h-14 mx-auto bg-copper-600 text-white rounded-full flex items-center justify-center text-xl font-black mb-4 shadow-lg shadow-copper-900/20">4</div>
-          <h3 class="font-bold mb-2">Deliver &amp; Support</h3>
-          <p class="text-sm text-slate-600 leading-relaxed">Quality bolt-up kit delivered. Professional <a href="erection.html" class="text-copper-600 font-semibold hover:underline">erection services</a> and coordination available — see scope and options.</p>
+          <h3 class="font-bold mb-2">Deliver and install</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">The kit ships to your site. Professional <a href="erection.html" class="text-copper-600 font-semibold hover:underline">installation</a> is available if you want us to put it up.</p>
         </div>
       </div>
     </div>
   </section>
 
   
-
-  
-  <!-- TESTIMONIALS / TRUST -->
-  <section id="testimonials" class="py-14 md:py-16 bg-white border-b border-slate-200" aria-label="Customer feedback">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="text-center mb-10">
-        <p class="text-sm font-semibold text-copper-600 uppercase tracking-wide mb-2">Trust</p>
-        <h2 class="text-3xl md:text-4xl font-black mb-3">What owners value</h2>
-        <p class="text-slate-600 max-w-2xl mx-auto text-sm md:text-base">Integrity, clear communication, and value engineering — the standards we hold on every PEB conversation.</p>
-      </div>
-      <div class="grid md:grid-cols-3 gap-5 mb-8">
-        <article class="stamps-testimonial">
-          <div class="st-stars" aria-hidden="true">★★★★★</div>
-          <blockquote>“Straight answers on framing and insulation options — no pressure, no runaround. We knew exactly what was in the package.”</blockquote>
-          <div class="st-by">Shop owner</div>
-          <div class="st-meta">Middle Tennessee · Clear-span workshop</div>
-          <p class="stamps-placeholder-note">Placeholder testimonial — replace with your Google review or customer quote.</p>
-        </article>
-        <article class="stamps-testimonial">
-          <div class="st-stars" aria-hidden="true">★★★★★</div>
-          <blockquote>“They walked us through doors, eave height, and code needs for our county. Value engineering saved us from overbuilding.”</blockquote>
-          <div class="st-by">Commercial buyer</div>
-          <div class="st-meta">Greater Nashville area</div>
-          <p class="stamps-placeholder-note">Placeholder testimonial — replace with your Google review or customer quote.</p>
-        </article>
-        <article class="stamps-testimonial">
-          <div class="st-stars" aria-hidden="true">★★★★★</div>
-          <blockquote>“Local knowledge mattered. We got a PEB package sized for our site, not a one-size catalog pitch.”</blockquote>
-          <div class="st-by">Agricultural customer</div>
-          <div class="st-meta">Middle Tennessee</div>
-          <p class="stamps-placeholder-note">Placeholder testimonial — replace with your Google review or customer quote.</p>
-        </article>
-      </div>
-      <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-        <div>
-          <p class="font-bold text-steel-900">Google reviews</p>
-          <p class="text-sm text-slate-600 mt-1">Add your Google Business Profile badge or review link here when ready.</p>
-          <!-- TODO: Paste Google reviews embed / badge HTML here -->
-        </div>
-        <a href="https://www.google.com/search?q=Stamps+Steel+Buildings+Bethpage+TN" target="_blank" rel="noopener noreferrer" class="inline-flex justify-center bg-steel-900 hover:bg-steel-800 text-white px-5 py-2.5 rounded-xl text-sm font-semibold transition">Find us on Google</a>
-      </div>
-    </div>
-  </section>
 
   
   <!-- ERECTION TEASER -->
@@ -2032,9 +1898,9 @@
     <div class="max-w-7xl mx-auto px-4">
       <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6 md:p-8 flex flex-col md:flex-row md:items-center md:justify-between gap-5">
         <div>
-          <p class="text-xs font-bold uppercase tracking-wider text-copper-600 mb-1">Furnish &amp; install</p>
+          <p class="text-xs font-bold uppercase tracking-wider text-copper-600 mb-1">Installation</p>
           <h2 class="text-xl md:text-2xl font-black text-steel-900 mb-2">Professional erection services available</h2>
-          <p class="text-sm text-slate-600 max-w-xl">Full PEB erection packages where available, crew coordination, and clear owner vs. installer responsibilities. Stronger local coordination in Middle Tennessee.</p>
+          <p class="text-sm text-slate-600 max-w-xl">Installation available: we can put the building up on your slab or piers. You choose kit-only or install.</p>
         </div>
         <a href="erection.html" class="inline-flex shrink-0 justify-center bg-copper-600 hover:bg-copper-500 text-white px-6 py-3 rounded-xl font-bold transition">Erection services →</a>
       </div>
@@ -2063,14 +1929,14 @@
           <div class="faq-body">Yes. Airplane hangars and mini storage use the same pre-engineered steel approach as shops and warehouses — specialty applications within the PEB industry, not a separate product company. See the <a href="#solutions" class="text-copper-600 font-semibold hover:underline">full collection</a>.</div>
         </details>
         <details class="faq-item">
-          <summary>How do insulation and IMPs differ?</summary>
-          <div class="faq-body">Fiberglass systems (PSK-VR and High-R multi-layer) install with conventional panels. Insulated metal panels (IMPs) are factory-foamed wall and roof skins with higher continuous R-values. We help match thermal performance to climate and use — <a href="insulation.html" class="text-copper-600 font-semibold hover:underline">insulation</a> · <a href="imp.html" class="text-copper-600 font-semibold hover:underline">IMPs</a>.</div>
+          <summary>How do insulation and insulated wall panels differ?</summary>
+          <div class="faq-body">Fiberglass systems (faced blankets and layered systems) install with conventional panels. Insulated metal panels (insulated wall panels) are factory-foamed wall and roof skins with higher continuous R-values. We help match thermal performance to climate and use — <a href="insulation.html" class="text-copper-600 font-semibold hover:underline">insulation</a> · <a href="imp.html" class="text-copper-600 font-semibold hover:underline">insulated wall panels</a>.</div>
         </details>
         <details class="faq-item">
           
         <details class="faq-item">
           <summary>What about TN permits, codes, and foundations?</summary>
-          <div class="faq-body">Permit and foundation requirements vary by county and use group. We provide PEB reactions and package details your engineer or builder needs. For Middle Tennessee projects we can discuss typical local considerations — final permits remain with the owner/contractor and AHJ.</div>
+          <div class="faq-body">Permit and foundation requirements vary by county and use group. We provide PEB reactions and package details your engineer or builder needs. Final permits remain with the owner or contractor and the local building office.</div>
         </details>
         <details class="faq-item">
           <summary>How long does a typical PEB project take?</summary>
@@ -2094,7 +1960,7 @@
         </details>
 
         <summary>Do you use high-pressure sales?</summary>
-          <div class="faq-body">No. Clear options, value engineering, and honest recommendations. We serve projects nationwide from Bethpage, Middle Tennessee — professionals dedicated to project success, not pressure tactics.</div>
+          <div class="faq-body">No. Clear options and honest recommendations. Professionals dedicated to your project — not pressure tactics.</div>
         </details>
       </div>
     </div>
@@ -2109,7 +1975,7 @@
         <span class="copper-gradient">We’ll engineer the steel.</span>
       </h2>
       <p class="text-slate-300 text-sm md:text-base max-w-xl mx-auto mb-8">
-        Free 3D designer. Code-aware PEB packages. Nationwide from Bethpage, TN. This is what a metal building company should feel like.
+        Free 3D designer. Clear quotes. No high-pressure sales.
       </p>
       <div class="flex flex-col sm:flex-row gap-3 justify-center">
         <a href="designer.html" class="inline-flex justify-center items-center bg-copper-600 hover:bg-copper-500 text-white px-8 py-4 rounded-xl font-bold text-base transition shadow-xl shadow-copper-900/40">Design Your Building Here</a>
@@ -2125,14 +1991,14 @@
     <div class="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-10 items-center">
       <div>
         <p class="text-sm font-semibold text-copper-600 uppercase tracking-wide mb-2">About Stamps Steel</p>
-        <h2 class="text-3xl md:text-4xl font-black mb-4">Experience you can build on</h2>
+        <h2 class="text-3xl md:text-4xl font-black mb-4">A decade in metal buildings</h2>
         <p class="text-slate-600 text-lg leading-relaxed mb-4">
-          More than a decade of hands-on PEMB experience — complete furnish-and-install solutions for projects across the United States.
+          A decade in metal buildings for shops, churches, farms, warehouses, and storage.
         </p>
         <p class="text-slate-600 leading-relaxed mb-6">
-          From preconstruction planning through final installation, we deliver efficient, cost-effective metal buildings with quality, safety, and craftsmanship first.
+          We help you pick size and options, then quote a complete kit — frame, roof, walls, insulation, and doors — with installation available.
         </p>
-        <p class="text-copper-600 font-semibold text-sm mb-6">Home office · Bethpage, Middle Tennessee · Projects nationwide</p>
+        
         <a href="about.html" class="inline-flex bg-steel-900 hover:bg-steel-800 text-white px-6 py-3 rounded-xl font-semibold transition">Read Our Story</a>
       </div>
       <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-lg aspect-[4/3]">
@@ -2145,12 +2011,12 @@
   <section id="contact" class="py-16 md:py-20 bg-slate-50">
     <div class="max-w-2xl mx-auto px-4">
       <div class="text-center mb-10 reveal">
-        <p class="section-label justify-center mb-3">Nationwide quotes</p>
-        <h2 class="text-3xl md:text-4xl font-black mb-3">Get a free quote</h2>
+        <p class="section-label justify-center mb-3">Free quote</p>
+        <h2 class="text-3xl md:text-4xl font-black mb-3">Request a free quote</h2>
         <p class="text-slate-600">Tell us about your project — size, location, and use. Or <a href="designer.html" class="text-copper-600 font-semibold hover:underline">design it first in 3D</a>.</p>
       </div>
       <div class="bg-white rounded-2xl shadow-xl p-6 md:p-8 border border-slate-100">
-      <div class="max-w-2xl mx-auto" data-stamps-quote data-context="homepage" data-title="Request a free PEB quote"></div>
+      <div class="max-w-2xl mx-auto" data-stamps-quote data-context="homepage" data-title="Request a free quote"></div>
 
         </div>
     </div>
@@ -2162,8 +2028,7 @@
       <div class="flex flex-col items-center text-center">
         <img src="images/logo-nav-lg.webp" width="80" height="80" alt="Stamps Steel Buildings" class="h-14 w-14 object-contain rounded-full bg-steel-950 shrink-0" decoding="async" loading="lazy">
         <p class="text-sm text-slate-300 mb-1">Custom Pre-Engineered Metal Buildings</p>
-        <p class="text-sm mb-1">Serving customers nationwide</p>
-        <p class="text-sm mb-4">Bethpage, Middle Tennessee</p>
+        
         <p class="text-sm mb-1">
           <a href="tel:+16156298217" class="hover:text-copper-400 transition font-medium">(615) 629-8217</a>
         </p>
@@ -2181,7 +2046,7 @@
           <a href="churches.html" class="hover:text-copper-400 transition">Churches</a>
           <a href="panels.html" class="hover:text-copper-400 transition">Panels</a>
           <a href="insulation.html" class="hover:text-copper-400 transition">Insulation</a>
-          <a href="imp.html" class="hover:text-copper-400 transition">IMP</a>
+          <a href="imp.html" class="hover:text-copper-400 transition">Insulated panels</a>
           <a href="accessories.html" class="hover:text-copper-400 transition">Accessories</a>
           <a href="index.html#contact" class="hover:text-copper-400 transition">Get Free Quote</a>
         </div>
@@ -2255,100 +2120,21 @@
         }
       }
 
-      // Hero stages synced to brand film timeline (hard cuts)
-      var stages = Array.prototype.slice.call(document.querySelectorAll('.hero-stage'));
-      var dots = Array.prototype.slice.call(document.querySelectorAll('.hero-progress [data-go-stage]'));
-      var filmBar = document.getElementById('hero-film-progress');
-      var soundBtn = document.getElementById('hero-sound-btn');
-      var replayBtn = document.getElementById('hero-replay-btn');
-      if (!stages.length) return;
-      var i = 0;
-      var timer = null;
-      // forge34 logo-first: 0 brand · 13.3 buildings · 22.5 designer · 27.5 close · ~31s
-      var stageStarts = [0, 13.3, 22.5, 27.5];
-      var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      var userLocked = false;
-
-      function show(idx) {
-        i = ((idx % stages.length) + stages.length) % stages.length;
-        stages.forEach(function (el, n) {
-          var on = n === i;
-          el.classList.toggle('is-active', on);
-          el.setAttribute('aria-hidden', on ? 'false' : 'true');
-        });
-        dots.forEach(function (btn, n) {
-          var on = n === i;
-          btn.classList.toggle('is-active', on);
-          btn.setAttribute('aria-selected', on ? 'true' : 'false');
-        });
-      }
-
-      function stageFromTime(t) {
-        var s = 0;
-        for (var n = 0; n < stageStarts.length; n++) {
-          if (t >= stageStarts[n]) s = n;
-        }
-        return s;
-      }
-
-      function syncFromVideo() {
-        if (!v || userLocked) return;
-        var t = v.currentTime || 0;
-        var dur = v.duration || 31;
-        if (filmBar && dur > 0) {
-          filmBar.style.width = Math.min(100, (t / dur) * 100) + '%';
-        }
-        var next = stageFromTime(t);
-        if (next !== i) show(next);
-      }
-
-      if (v && !reduce && !saveData) {
-        v.addEventListener('timeupdate', syncFromVideo);
-        v.addEventListener('seeked', syncFromVideo);
-      } else {
-        // fallback timed rotation if no video
-        var dwell = [9000, 12000, 7000, 5000];
-        function schedule() {
-          if (reduced) return;
-          clearTimeout(timer);
-          timer = setTimeout(function () {
-            show(i + 1);
-            schedule();
-          }, dwell[i] || 5000);
-        }
-        schedule();
-      }
-
-      dots.forEach(function (btn) {
-        btn.addEventListener('click', function () {
-          var idx = parseInt(btn.getAttribute('data-go-stage'), 10) || 0;
-          show(idx);
-          userLocked = true;
-          if (v && stageStarts[idx] != null) {
-            try { v.currentTime = stageStarts[idx]; v.play().catch(function () {}); } catch (e) {}
+      // Pause / Play
+      var pauseBtn = document.getElementById('hero-pause-btn');
+      if (pauseBtn && v) {
+        pauseBtn.addEventListener('click', function () {
+          if (v.paused) {
+            v.play().catch(function () {});
+            pauseBtn.textContent = 'Pause';
+            pauseBtn.setAttribute('aria-pressed', 'false');
+          } else {
+            v.pause();
+            pauseBtn.textContent = 'Play';
+            pauseBtn.setAttribute('aria-pressed', 'true');
           }
-          setTimeout(function () { userLocked = false; }, 2500);
-        });
-      });
-
-      if (soundBtn && v) {
-        soundBtn.addEventListener('click', function () {
-          v.muted = !v.muted;
-          soundBtn.setAttribute('aria-pressed', v.muted ? 'false' : 'true');
-          soundBtn.textContent = v.muted ? 'Sound Off' : 'Sound On';
-          if (!v.muted) v.play().catch(function () {});
         });
       }
-      if (replayBtn && v) {
-        replayBtn.addEventListener('click', function () {
-          userLocked = false;
-          v.currentTime = 0;
-          show(0);
-          v.play().catch(function () {});
-        });
-      }
-
-      show(0);
     })();
 </script>
 
