@@ -17,6 +17,7 @@
     'Mini-Storage',
     'Barndominium',
     'Aircraft Hangar',
+    'Church / Religious',
     'Other'
   ];
 
@@ -59,8 +60,12 @@
     var title = root.getAttribute('data-title') || '';
     var uid = 'sq-' + Math.random().toString(36).slice(2, 9);
 
+    var preferred = '';
+    if ((context || '').toLowerCase().indexOf('church') !== -1) preferred = 'Church / Religious';
+    else if ((context || '').toLowerCase().indexOf('mini') !== -1) preferred = 'Mini-Storage';
     var typeOpts = BUILDING_TYPES.map(function (t) {
-      return '<option value="' + t + '">' + t + '</option>';
+      var sel = (t === preferred) ? ' selected' : '';
+      return '<option value="' + t + '"' + sel + '>' + t + '</option>';
     }).join('');
     var timeOpts = TIMELINES.map(function (t) {
       return '<option value="' + t + '">' + t + '</option>';

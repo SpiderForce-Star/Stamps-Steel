@@ -18,7 +18,7 @@
         '<div><label for="se-type">Building type</label>' +
         '<select id="se-type">' +
           '<option>Shop / Garage</option><option>Commercial</option><option>Agricultural</option>' +
-          '<option>Warehouse</option><option>Mini-Storage</option><option>Barndominium</option><option>Other</option>' +
+          '<option>Warehouse</option><option>Mini-Storage</option><option>Barndominium</option><option>Church / Religious</option><option>Other</option>' +
         '</select></div>' +
         '<div><label for="se-doors">Large overhead doors (approx.)</label>' +
         '<input id="se-doors" type="number" min="0" max="20" value="2"></div>' +

@@ -51,6 +51,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://stampssteel.com/churches.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://stampssteel.com/faq.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
