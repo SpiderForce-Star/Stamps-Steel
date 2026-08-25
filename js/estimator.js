@@ -8,7 +8,7 @@
     root.classList.add('stamps-estimator');
     root.innerHTML =
       '<h3>Quick size estimator</h3>' +
-      '<p class="se-sub">Get square footage and planning guidance — then request a free engineered quote. Not a price quote.</p>' +
+      '<p class="se-sub">Square footage for planning — not a price. Then request a quote.</p>' +
       '<div class="se-grid">' +
         '<div><label for="se-w">Width (ft)</label><input id="se-w" type="number" min="12" max="400" value="40"></div>' +
         '<div><label for="se-l">Length (ft)</label><input id="se-l" type="number" min="20" max="600" value="60"></div>' +
@@ -29,7 +29,7 @@
         '<p data-note>Enter dimensions to estimate footprint.</p>' +
       '</div>' +
       '<div class="se-actions">' +
-        '<a class="se-cta-primary" href="#contact" data-to-quote>Continue to free quote</a>' +
+        '<a class="se-cta-primary" href="#contact" data-to-quote>Continue to quote</a>' +
         '<a class="se-cta-secondary" href="designer.html">Open 3D designer</a>' +
       '</div>';
 

@@ -137,7 +137,7 @@
         '<div class="sq-success" data-success hidden>' +
           '<div class="sq-check" aria-hidden="true">✓</div>' +
           '<h3>Request received</h3>' +
-          '<p>We’ll review your details and reply within <strong>one business day</strong>. No high-pressure sales — just clear next steps.</p>' +
+          '<p>We’ll review your details and reply within <strong>one business day</strong>.</p>' +
           '<p style="font-size:0.875rem;color:#64748b">Need faster help? Call <a href="tel:+16156298217" style="color:#c97b3a;font-weight:700">(615) 629-8217</a></p>' +
           '<div class="sq-nav" style="justify-content:center">' +
             '<a class="sq-btn sq-btn-primary" href="designer.html" style="text-decoration:none">Explore 3D designer</a>' +
