@@ -59,7 +59,7 @@
     }
     img[data-opt] { background-color: #e2e8f0; }
   </style>
-  <link rel="stylesheet" href="css/site-extras.css">
+  <link rel="stylesheet" href="css/site-extras.css?v=20260825">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -96,18 +96,26 @@
           </span>
         </a>
                         <div class="nav-desktop hidden lg:flex items-center text-sm font-medium">
-          <a href="designer.html" class="px-1.5 xl:px-2 py-2 whitespace-nowrap hover:text-copper-400 transition">3D Designer</a>
-          <a href="about.html" class="px-1.5 xl:px-2 py-2 whitespace-nowrap hover:text-copper-400 transition">About</a>
-          <a href="faq.html" class="px-1.5 xl:px-2 py-2 whitespace-nowrap hover:text-copper-400 transition">FAQ</a>
-          <a href="projects.html" class="px-1.5 xl:px-2 py-2 whitespace-nowrap hover:text-copper-400 transition">Projects</a>
-          <a href="mini-storage.html" class="px-1.5 xl:px-2 py-2 whitespace-nowrap hover:text-copper-400 transition">Mini Storage</a>
-          <a href="framing.html" class="px-1.5 xl:px-2 py-2 whitespace-nowrap hover:text-copper-400 transition">Framing</a>
-          <a href="erection.html" class="px-1.5 xl:px-2 py-2 whitespace-nowrap text-copper-400 font-semibold" aria-current="page">Erection</a>
-          <a href="panels.html" class="px-1.5 xl:px-2 py-2 whitespace-nowrap hover:text-copper-400 transition">Panels</a>
-          <a href="insulation.html" class="px-1.5 xl:px-2 py-2 whitespace-nowrap hover:text-copper-400 transition">Insulation</a>
-          <a href="imp.html" class="px-1.5 xl:px-2 py-2 whitespace-nowrap hover:text-copper-400 transition">IMP</a>
-          <a href="accessories.html" class="px-1.5 xl:px-2 py-2 whitespace-nowrap hover:text-copper-400 transition">Accessories</a>
-          <a href="index.html#contact" class="nav-quote ml-1 bg-copper-600 hover:bg-copper-500 text-white px-3 xl:px-4 py-2 rounded-lg font-semibold transition shadow-lg shadow-copper-900/30 whitespace-nowrap">Get a Quote</a>
+          <a href="designer.html" class="px-3 py-2 whitespace-nowrap hover:text-copper-400 transition">3D Designer</a>
+          <div class="nav-drop">
+            <button type="button" class="nav-drop-btn" aria-expanded="false" aria-haspopup="true" aria-controls="nav-drop-menu">
+              Menu
+              <svg class="nav-drop-chevron" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div id="nav-drop-menu" class="nav-drop-menu">
+            <a href="about.html" class="nav-drop-link">About</a>
+            <a href="faq.html" class="nav-drop-link">FAQs</a>
+            <a href="framing.html" class="nav-drop-link">Framing</a>
+            <a href="accessories.html" class="nav-drop-link">Accessories</a>
+            <a href="panels.html" class="nav-drop-link">Panels</a>
+            <a href="insulation.html" class="nav-drop-link">Insulation</a>
+            <a href="imp.html" class="nav-drop-link">IMP</a>
+            <a href="projects.html" class="nav-drop-link">Projects</a>
+            <a href="mini-storage.html" class="nav-drop-link">Mini Storage</a>
+            </div>
+          </div>
+          <a href="erection.html" class="px-3 py-2 whitespace-nowrap text-copper-400 font-semibold" aria-current="page">Erection</a>
+          <a href="index.html#contact" class="nav-quote ml-2 bg-copper-600 hover:bg-copper-500 text-white px-4 py-2 rounded-lg font-semibold transition shadow-lg shadow-copper-900/30 whitespace-nowrap">Get a Quote</a>
         </div>
         <div class="nav-mobile-tools flex items-center gap-2 lg:hidden">
           <a href="#quote" class="bg-copper-600 text-white px-3 py-1.5 rounded-lg text-sm font-semibold">Quote</a>
@@ -121,15 +129,15 @@
       <div class="px-4 py-3 space-y-1 text-sm font-medium">
         <a href="designer.html" class="block py-3 px-3 rounded-lg hover:bg-steel-800">3D Designer</a>
         <a href="about.html" class="block py-3 px-3 rounded-lg hover:bg-steel-800">About</a>
-        <a href="faq.html" class="block py-3 px-3 rounded-lg hover:bg-steel-800">FAQ</a>
-        <a href="projects.html" class="block py-3 px-3 rounded-lg hover:bg-steel-800">Projects</a>
-        <a href="mini-storage.html" class="block py-3 px-3 rounded-lg hover:bg-steel-800">Mini Storage</a>
+        <a href="faq.html" class="block py-3 px-3 rounded-lg hover:bg-steel-800">FAQs</a>
         <a href="framing.html" class="block py-3 px-3 rounded-lg hover:bg-steel-800">Framing</a>
-        <a href="erection.html" class="block py-3 px-3 rounded-lg bg-steel-800 text-copper-400 font-semibold" aria-current="page">Erection</a>
+        <a href="accessories.html" class="block py-3 px-3 rounded-lg hover:bg-steel-800">Accessories</a>
         <a href="panels.html" class="block py-3 px-3 rounded-lg hover:bg-steel-800">Panels</a>
         <a href="insulation.html" class="block py-3 px-3 rounded-lg hover:bg-steel-800">Insulation</a>
         <a href="imp.html" class="block py-3 px-3 rounded-lg hover:bg-steel-800">IMP</a>
-        <a href="accessories.html" class="block py-3 px-3 rounded-lg hover:bg-steel-800">Accessories</a>
+        <a href="projects.html" class="block py-3 px-3 rounded-lg hover:bg-steel-800">Projects</a>
+        <a href="mini-storage.html" class="block py-3 px-3 rounded-lg hover:bg-steel-800">Mini Storage</a>
+        <a href="erection.html" class="block py-3 px-3 rounded-lg bg-steel-800 text-copper-400 font-semibold" aria-current="page">Erection</a>
         <a href="tel:+16156298217" class="block py-3 px-3 rounded-lg hover:bg-steel-800 font-semibold text-copper-400">(615) 629-8217</a>
         <a href="index.html#contact" class="block py-3 px-3 bg-copper-600 rounded-lg text-center font-semibold mt-2">Get a Quote</a>
       </div>
@@ -422,6 +430,6 @@
   <script src="js/web-vitals.js?v=20260803" defer></script>
   <script src="js/quote-form.js" defer></script>
   <script src="js/lightbox.js" defer></script>
-  <script src="js/site-common.js" defer></script>
+  <script src="js/site-common.js?v=20260825" defer></script>
 </body>
 </html>
