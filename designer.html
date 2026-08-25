@@ -187,8 +187,8 @@
         Configure size, style, doors, colors, and layout in our online 3D designer — then send the design to Stamps Steel for a free quote. Serving customers nationwide from Bethpage, Tennessee.
       </p>
       <div class="flex flex-col sm:flex-row gap-3">
-        <a href="#designer" class="inline-flex justify-center items-center bg-copper-600 hover:bg-copper-500 text-white px-7 py-3.5 rounded-xl font-bold transition shadow-xl shadow-copper-900/40">Launch Designer</a>
-        <a href="https://stampssteelllc.easybuildingdesigner.com/" target="_blank" rel="noopener noreferrer" class="inline-flex justify-center items-center bg-white/10 hover:bg-white/15 border border-white/25 text-white px-7 py-3.5 rounded-xl font-semibold transition">Open Full Screen</a>
+        <a href="https://stampssteelllc.easybuildingdesigner.com/" target="_blank" rel="noopener noreferrer" class="inline-flex justify-center items-center bg-copper-600 hover:bg-copper-500 text-white px-7 py-3.5 rounded-xl font-bold transition shadow-xl shadow-copper-900/40">Launch Designer</a>
+        <a href="#designer" class="inline-flex justify-center items-center bg-white/10 hover:bg-white/15 border border-white/25 text-white px-7 py-3.5 rounded-xl font-semibold transition">How it works</a>
       </div>
     </div>
   </section>
@@ -231,33 +231,34 @@
           <h2 class="text-2xl sm:text-3xl font-black">Live building configurator</h2>
         </div>
         <div class="flex flex-wrap gap-3">
-          <a href="https://stampssteelllc.easybuildingdesigner.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-steel-900 hover:bg-steel-800 text-white px-5 py-2.5 rounded-xl text-sm font-semibold transition">
-            Open in new tab
+          <a href="https://stampssteelllc.easybuildingdesigner.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-copper-600 hover:bg-copper-500 text-white px-5 py-2.5 rounded-xl text-sm font-semibold transition">
+            Open 3D Designer
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
           </a>
-          <a href="index.html#contact" class="inline-flex items-center bg-copper-600 hover:bg-copper-500 text-white px-5 py-2.5 rounded-xl text-sm font-semibold transition">Request Quote</a>
+          <a href="index.html#contact" class="inline-flex items-center bg-steel-900 hover:bg-steel-800 text-white px-5 py-2.5 rounded-xl text-sm font-semibold transition">Request Quote</a>
         </div>
       </div>
 
-      <div class="designer-frame-wrap relative w-full rounded-2xl overflow-hidden border border-slate-200 bg-slate-100 shadow-2xl shadow-steel-950/20" id="designer-wrap">
-        <iframe
-          id="designer-iframe"
-          title="Stamps Steel 3D Metal Building Designer"
-          src="https://stampssteelllc.easybuildingdesigner.com/"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          allow="fullscreen; xr-spatial-tracking; clipboard-write"
-          allowfullscreen></iframe>
-        <div class="designer-fallback" id="designer-fallback" role="status">
-          <div class="max-w-md">
-            <p class="text-white text-xl font-bold mb-3">Open the full designer</p>
-            <p class="text-slate-300 text-sm mb-6 leading-relaxed">Some browsers block embedded design tools. Use the full-screen designer — same Stamps Steel portal — then come back here for a quote.</p>
-            <a href="https://stampssteelllc.easybuildingdesigner.com/" target="_blank" rel="noopener noreferrer" class="inline-flex bg-copper-600 hover:bg-copper-500 text-white px-6 py-3 rounded-xl font-bold transition">Launch 3D Designer</a>
-          </div>
+      <a
+        href="https://stampssteelllc.easybuildingdesigner.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="designer-frame-wrap relative w-full rounded-2xl overflow-hidden border border-slate-200 bg-steel-950 shadow-2xl shadow-steel-950/20 block group"
+        id="designer-wrap"
+        aria-label="Open the Stamps Steel 3D designer"
+      >
+        <img src="images/building-types/garage-ext.jpg" alt="" class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-50 transition" width="1152" height="864" decoding="async">
+        <div class="absolute inset-0 bg-gradient-to-t from-steel-950 via-steel-950/70 to-steel-950/40"></div>
+        <div class="relative z-10 flex flex-col items-center justify-center text-center px-6 py-16 min-h-[22rem] sm:min-h-[28rem]">
+          <p class="text-copper-400 font-semibold tracking-widest uppercase text-xs mb-3">Stamps Steel LLC · Easy Building Designer</p>
+          <h3 class="text-white text-2xl sm:text-3xl font-black mb-3">Open the live 3D designer</h3>
+          <p class="text-slate-300 text-sm sm:text-base max-w-lg mb-8 leading-relaxed">The building configurator runs on Stamps Steel’s design portal. Open it in a new tab so the tool can load fully — embedding it on this page was causing the application error.</p>
+          <span class="inline-flex items-center gap-2 bg-copper-600 group-hover:bg-copper-500 text-white px-8 py-3.5 rounded-xl font-bold transition">Launch 3D Designer</span>
         </div>
-      </div>
+      </a>
       <p class="text-xs text-slate-500 mt-4 text-center max-w-2xl mx-auto">
-        Designer powered for Stamps Steel. For the best experience on phones, use <strong class="text-slate-600">Open in new tab</strong>. When you’re ready, call
+        Live portal: <a href="https://stampssteelllc.easybuildingdesigner.com/" target="_blank" rel="noopener noreferrer" class="text-copper-600 font-semibold hover:underline">stampssteelllc.easybuildingdesigner.com</a>.
+        When you’re ready, call
         <a href="tel:+16156298217" class="text-copper-600 font-semibold hover:underline">(615) 629-8217</a>
         or
         <a href="index.html#contact" class="text-copper-600 font-semibold hover:underline">request a free quote</a>.
@@ -340,22 +341,6 @@
       }));
     }
 
-    // If iframe fails to load (blocked embed), show fallback after timeout
-    const iframe = document.getElementById('designer-iframe');
-    const fallback = document.getElementById('designer-fallback');
-    let loaded = false;
-    if (iframe) {
-      iframe.addEventListener('load', () => { loaded = true; });
-      setTimeout(() => {
-        // Can't always detect X-Frame blocks reliably; leave iframe visible.
-        // Show soft hint only if iframe has zero height content (rare).
-        try {
-          if (!loaded && fallback) {
-            // keep iframe; user still has open-in-new-tab CTAs
-          }
-        } catch (_) {}
-      }, 8000);
-    }
   </script>
   <script src="js/web-vitals.js?v=20260803" defer></script>
   <script src="js/quote-form.js" defer></script>
