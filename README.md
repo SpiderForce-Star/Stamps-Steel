@@ -1,6 +1,6 @@
-# Stamps Steel Buildings Website
+# One World Steel Website
 
-Modern, visual, locally focused website for **Stamps Steel Buildings** — a private-label / broker of pre-engineered metal buildings (PEBs) based in **Bethpage, Middle Tennessee**, serving customers **nationwide**.
+Modern, visual, locally focused website for **One World Steel** — a private-label / broker of pre-engineered metal buildings (PEBs) based in **Bethpage, Middle Tennessee**, serving customers **nationwide**.
 
 **Live site:** [https://SpiderForce-Star.github.io/Stamps-Steel/](https://SpiderForce-Star.github.io/Stamps-Steel/)
 
@@ -11,8 +11,8 @@ Modern, visual, locally focused website for **Stamps Steel Buildings** — a pri
 | | |
 |---|---|
 | **Phone** | [(615) 629-8217](tel:+16156298217) |
-| **Email** | [info@stampssteel.com](mailto:info@stampssteel.com) |
-| **Facebook** | [Stamps Steel](https://www.facebook.com/profile.php?id=61592282766064) |
+| **Email** | [info@oneworldsteel.com](mailto:info@oneworldsteel.com) |
+| **Facebook** | [One World Steel](https://www.facebook.com/profile.php?id=61592282766064) |
 | **Instagram** | [@stampssteel](https://www.instagram.com/stampssteel/) |
 | **Location** | Bethpage, TN 37022 · Middle Tennessee |
 
@@ -28,7 +28,7 @@ Modern, visual, locally focused website for **Stamps Steel Buildings** — a pri
 | `about.html` | Full About Us — experience, capabilities, building types, systems (owner copy) |
 | `insulation.html` | Metal building insulation — common 3/4/6″ PSK-VR first, then high-R multi-layer |
 | `imp.html` | Insulated metal panels — thicknesses, R-values, profiles, standing seam, finishes |
-| `designer.html` | Build Your Own Building — embeds Stamps Steel 3D designer portal |
+| `designer.html` | Build Your Own Building — embeds One World Steel 3D designer portal |
 | `mini-storage.html` | Steel mini storage / self-storage systems + roll-up door summary |
 | `projects.html` | Project gallery, 20 PEB design concepts, framing hub |
 | `images/projects/` | 20 new building design renders (colors, wainscot, doors) |
@@ -41,18 +41,13 @@ Modern, visual, locally focused website for **Stamps Steel Buildings** — a pri
 
 ## Branding
 
-- **Steel:** `#0f172a` (dark slate / industrial)
-- **Copper CTAs:** `#c97b3a` / `#b87333`
-- **Logo:** `images/logo.jpg` — copper STAMPS over I-beam STEEL
+- **Steel:** `#0f172a` / `#020617`
+- **Brand red:** `#EE131B` / hover `#B80A12`
+- **Logo:** `images/logo.png` — official circular globe (red continents, black grid, white WORLD, red ONE and STEEL). Transparent 1080px PNG. Do not use copper I-beam marks or a globe without the wordmark.
 - **Tone:** Professional, straightforward, no high-pressure language
 
-### Core messaging
+Custom domain: keep `CNAME` as `stampssteel.com` until `oneworldsteel.com` is registered and pointed. Do not flip GitHub Pages custom domain yet.
 
-1. **Local Expertise** — Middle Tennessee codes, weather, conditions  
-2. **Integrity** — Straight talk, no high-pressure tactics  
-3. **Value Engineering** — Smart design that saves money  
-
----
 
 ## Accessories product assets (`images/`)
 
@@ -101,13 +96,13 @@ GitHub Pages is enabled from `main`. After push, hard-refresh the live site if n
 ## Future ideas
 
 - Formspree / Netlify Forms for reliable form delivery  
-- Custom domain (e.g. stampssteel.com)  
+- Custom domain oneworldsteel.com — wait to point DNS / flip CNAME until the domain is registered  
 - Product photos + optional multi-image lightbox  
 - Simple size estimator or 3D configurator  
 
 ---
 
-© 2026 Stamps Steel Buildings · Bethpage, TN
+© 2026 One World Steel · Bethpage, TN
 
 ## Credits
 

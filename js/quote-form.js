@@ -1,5 +1,5 @@
 /**
- * Stamps Steel multi-step quote form → Formspree
+ * One World Steel multi-step quote form → Formspree
  * SETUP: Replace FORMSPREE_ENDPOINT with your form ID from https://formspree.io
  * Example: https://formspree.io/f/xxxxxxxx
  */
@@ -82,7 +82,7 @@
         '<p class="sq-step-label"><span data-step-text>Step 1 of 3 — Contact</span></p>' +
         '<div class="sq-alert" role="alert" data-alert></div>' +
         '<form novalidate data-sq-form>' +
-          '<input type="hidden" name="_subject" value="Stamps Steel quote request">' +
+          '<input type="hidden" name="_subject" value="One World Steel quote request">' +
           '<input type="hidden" name="form_context" value="' + context + '">' +
           '<input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">' +
 
@@ -138,13 +138,13 @@
           '<div class="sq-check" aria-hidden="true">✓</div>' +
           '<h3>Request received</h3>' +
           '<p>We’ll review your details and reply within <strong>one business day</strong>.</p>' +
-          '<p style="font-size:0.875rem;color:#64748b">Need faster help? Call <a href="tel:+16156298217" style="color:#c97b3a;font-weight:700">(615) 629-8217</a></p>' +
+          '<p style="font-size:0.875rem;color:#64748b">Need faster help? Call <a href="tel:+16156298217" style="color:#EE131B;font-weight:700">(615) 629-8217</a></p>' +
           '<div class="sq-nav" style="justify-content:center">' +
             '<a class="sq-btn sq-btn-primary" href="designer.html" style="text-decoration:none">Explore 3D designer</a>' +
           '</div>' +
         '</div>' +
         '<p class="sq-footer-links">' +
-          '<a href="mailto:info@stampssteel.com">info@stampssteel.com</a> · ' +
+          '<a href="mailto:info@oneworldsteel.com">info@oneworldsteel.com</a> · ' +
           '<a href="tel:+16156298217">(615) 629-8217</a>' +
         '</p>' +
       '</div>'
@@ -240,8 +240,8 @@
             '\nTimeline: ' + (form.elements.timeline.value || '') +
             '\nMessage: ' + (form.elements.message.value || '');
           window.location.href =
-            'mailto:info@stampssteel.com?subject=' +
-            encodeURIComponent('Stamps Steel quote request') +
+            'mailto:info@oneworldsteel.com?subject=' +
+            encodeURIComponent('One World Steel quote request') +
             '&body=' + encodeURIComponent(body);
         } catch (err) { /* ignore */ }
         showSuccess();
@@ -274,7 +274,7 @@
         })
         .catch(function () {
           alertBox.textContent =
-            'We couldn’t send the form right now. Please call (615) 629-8217 or email info@stampssteel.com.';
+            'We couldn’t send the form right now. Please call (615) 629-8217 or email info@oneworldsteel.com.';
           alertBox.classList.add('is-visible');
           submitBtn.disabled = false;
           submitBtn.textContent = 'Send free quote request';

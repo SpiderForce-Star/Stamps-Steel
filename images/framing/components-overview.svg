@@ -2,10 +2,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="960" height="620" viewBox="0 0 960 620" role="img">
   <rect width="960" height="620" fill="#f8fafc"/>
   <text x="480" y="36" text-anchor="middle" font-family="system-ui,sans-serif" font-size="20" font-weight="800" fill="#0f172a">Primary and Secondary Framing Components</text>
-  <text x="480" y="58" text-anchor="middle" font-size="12" fill="#64748b" font-family="system-ui,sans-serif">Color-coded educational diagram · Stamps Steel Buildings</text>
+  <text x="480" y="58" text-anchor="middle" font-size="12" fill="#64748b" font-family="system-ui,sans-serif">Color-coded educational diagram · One World Steel</text>
   <rect x="80" y="520" width="800" height="14" fill="#94a3b8"/>
-  <path d="M160 520 L160 280 L480 160 L800 280 L800 520" fill="none" stroke="#b87333" stroke-width="16" stroke-linejoin="round"/>
-  <text x="480" y="250" text-anchor="middle" font-size="13" font-weight="700" fill="#b87333" font-family="system-ui,sans-serif">Primary rigid frame (rafter + columns)</text>
+  <path d="M160 520 L160 280 L480 160 L800 280 L800 520" fill="none" stroke="#B80A12" stroke-width="16" stroke-linejoin="round"/>
+  <text x="480" y="250" text-anchor="middle" font-size="13" font-weight="700" fill="#B80A12" font-family="system-ui,sans-serif">Primary rigid frame (rafter + columns)</text>
   <g stroke="#16a34a" stroke-width="6">
     <line x1="220" y1="300" x2="420" y2="210"/>
     <line x1="280" y1="320" x2="480" y2="220"/>
@@ -29,7 +29,7 @@
   <rect x="400" y="380" width="160" height="140" fill="none" stroke="#7c3aed" stroke-width="5"/>
   <text x="480" y="370" text-anchor="middle" font-size="12" font-weight="700" fill="#7c3aed" font-family="system-ui,sans-serif">Framed opening</text>
   <g font-family="system-ui,sans-serif" font-size="12">
-    <rect x="80" y="560" width="14" height="14" fill="#b87333"/><text x="100" y="572" fill="#334155">Primary frame</text>
+    <rect x="80" y="560" width="14" height="14" fill="#B80A12"/><text x="100" y="572" fill="#334155">Primary frame</text>
     <rect x="230" y="560" width="14" height="14" fill="#16a34a"/><text x="250" y="572" fill="#334155">Purlins</text>
     <rect x="340" y="560" width="14" height="14" fill="#dc2626"/><text x="360" y="572" fill="#334155">Girts</text>
     <rect x="430" y="560" width="14" height="14" fill="#0ea5e9"/><text x="450" y="572" fill="#334155">Eave</text>

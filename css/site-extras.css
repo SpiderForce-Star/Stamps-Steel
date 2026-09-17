@@ -1,9 +1,9 @@
-/* Stamps Steel — shared upgrade styles (forms, sticky, lightbox, estimator) */
+/* One World Steel — shared upgrade styles (forms, sticky, lightbox, estimator) */
 /* FORMSPREE: set endpoint in js/quote-form.js */
 
 .stamps-quote {
-  --sq-copper: #c97b3a;
-  --sq-copper-dark: #b87333;
+  --sq-brand: #EE131B;
+  --sq-brand-dark: #B80A12;
   --sq-steel: #0f172a;
   background: #fff;
   border: 1px solid #e2e8f0;
@@ -27,7 +27,7 @@
   transition: background 0.25s;
 }
 .stamps-quote .sq-step-dot.is-done,
-.stamps-quote .sq-step-dot.is-active { background: var(--sq-copper); }
+.stamps-quote .sq-step-dot.is-active { background: var(--sq-brand); }
 .stamps-quote .sq-step-label {
   font-size: 0.7rem;
   font-weight: 700;
@@ -50,7 +50,7 @@
   margin-bottom: 0.4rem;
   color: #0f172a;
 }
-.stamps-quote .req { color: var(--sq-copper); }
+.stamps-quote .req { color: var(--sq-brand); }
 .stamps-quote input,
 .stamps-quote select,
 .stamps-quote textarea {
@@ -67,8 +67,8 @@
 .stamps-quote input:focus,
 .stamps-quote select:focus,
 .stamps-quote textarea:focus {
-  border-color: var(--sq-copper);
-  box-shadow: 0 0 0 3px rgba(201, 123, 58, 0.2);
+  border-color: var(--sq-brand);
+  box-shadow: 0 0 0 3px rgba(238, 19, 27, 0.2);
 }
 .stamps-quote input.is-invalid,
 .stamps-quote select.is-invalid,
@@ -115,12 +115,12 @@
 }
 .stamps-quote .sq-btn:disabled { opacity: 0.65; cursor: wait; }
 .stamps-quote .sq-btn-primary {
-  background: var(--sq-copper);
+  background: var(--sq-brand);
   color: #fff;
   flex: 1;
   min-width: 8rem;
 }
-.stamps-quote .sq-btn-primary:hover { background: var(--sq-copper-dark); }
+.stamps-quote .sq-btn-primary:hover { background: var(--sq-brand-dark); }
 .stamps-quote .sq-btn-secondary {
   background: #f1f5f9;
   color: var(--sq-steel);
@@ -172,7 +172,7 @@
   color: #64748b;
   margin-top: 1.25rem;
 }
-.stamps-quote .sq-footer-links a { color: var(--sq-copper); font-weight: 600; }
+.stamps-quote .sq-footer-links a { color: var(--sq-brand); font-weight: 600; }
 
 /* ========== Sticky mobile bottom CTA ========== */
 .stamps-sticky-cta {
@@ -184,7 +184,7 @@
   z-index: 70; /* below nothing critical; above content, below lightbox (100) */
   padding: 0.6rem 0.75rem calc(0.6rem + env(safe-area-inset-bottom, 0px));
   background: rgba(15, 23, 42, 0.97);
-  border-top: 1px solid rgba(201, 123, 58, 0.45);
+  border-top: 1px solid rgba(238, 19, 27, 0.45);
   box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.28);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
@@ -225,7 +225,7 @@
 }
 .stamps-sticky-btn:active { transform: scale(0.98); }
 .stamps-sticky-btn:focus-visible {
-  outline: 2px solid #e0a05a;
+  outline: 2px solid #EE131B;
   outline-offset: 2px;
 }
 .stamps-sticky-icon {
@@ -240,17 +240,17 @@
 }
 .stamps-sticky-call:hover {
   background: #334155;
-  border-color: rgba(224, 160, 90, 0.45);
+  border-color: rgba(238, 19, 27, 0.45);
   color: #fff;
 }
 .stamps-sticky-quote {
-  background: #c97b3a;
+  background: #EE131B;
   color: #fff;
   border: 1px solid transparent;
-  box-shadow: 0 4px 14px rgba(201, 123, 58, 0.35);
+  box-shadow: 0 4px 14px rgba(238, 19, 27, 0.35);
 }
 .stamps-sticky-quote:hover {
-  background: #b87333;
+  background: #B80A12;
   color: #fff;
 }
 .stamps-sticky-label-short { display: none; }
@@ -278,7 +278,7 @@
   color: #fff;
 }
 .stamps-sticky-dismiss:focus-visible {
-  outline: 2px solid #e0a05a;
+  outline: 2px solid #EE131B;
   outline-offset: 2px;
 }
 
@@ -354,8 +354,8 @@ body:has(#mobile-menu.open) .stamps-sticky-cta.is-visible {
 .stamps-estimator input:focus,
 .stamps-estimator select:focus {
   outline: none;
-  border-color: #c97b3a;
-  box-shadow: 0 0 0 3px rgba(201, 123, 58, 0.15);
+  border-color: #EE131B;
+  box-shadow: 0 0 0 3px rgba(238, 19, 27, 0.15);
 }
 .stamps-estimator .se-grid {
   display: grid;
@@ -375,7 +375,7 @@ body:has(#mobile-menu.open) .stamps-sticky-cta.is-visible {
 .stamps-estimator .se-result .se-sqft {
   font-size: 1.75rem;
   font-weight: 900;
-  color: #e0a05a;
+  color: #EE131B;
   letter-spacing: -0.02em;
 }
 .stamps-estimator .se-result p {
@@ -401,7 +401,7 @@ body:has(#mobile-menu.open) .stamps-sticky-cta.is-visible {
   text-decoration: none;
 }
 .stamps-estimator .se-cta-primary {
-  background: #c97b3a;
+  background: #EE131B;
   color: #fff;
 }
 .stamps-estimator .se-cta-secondary {
@@ -466,7 +466,7 @@ input:focus-visible,
 select:focus-visible,
 textarea:focus-visible,
 summary:focus-visible {
-  outline: 2px solid #c97b3a;
+  outline: 2px solid #EE131B;
   outline-offset: 2px;
 }
 
@@ -478,7 +478,7 @@ summary:focus-visible {
   padding: 1.35rem 1.4rem;
   height: 100%;
 }
-.stamps-testimonial .st-stars { color: #c97b3a; letter-spacing: 0.1em; font-size: 0.85rem; margin-bottom: 0.65rem; }
+.stamps-testimonial .st-stars { color: #EE131B; letter-spacing: 0.1em; font-size: 0.85rem; margin-bottom: 0.65rem; }
 .stamps-testimonial blockquote {
   font-size: 0.95rem;
   color: #334155;
@@ -510,9 +510,9 @@ summary:focus-visible {
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: #b87333;
-  background: #fdf6ee;
-  border: 1px solid #f0d4b0;
+  color: #B80A12;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
   padding: 0.2rem 0.5rem;
   border-radius: 999px;
   margin-right: 0.35rem;
@@ -538,13 +538,13 @@ summary:focus-visible {
   width: 5px;
   height: 5px;
   border-radius: 999px;
-  background: #c97b3a;
+  background: #EE131B;
 }
 .bt-card {
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 .bt-card:hover {
-  border-color: #e0a05a;
+  border-color: #EE131B;
   box-shadow: 0 10px 28px rgba(15, 23, 42, 0.06);
 }
 .scrollbar-none {
@@ -580,7 +580,7 @@ summary:focus-visible {
 .nav-drop:focus-within .nav-drop-btn,
 .nav-drop.is-open .nav-drop-btn,
 .nav-drop-btn.is-current {
-  color: #e0a05a;
+  color: #EE131B;
 }
 .nav-drop-chevron {
   width: 0.7rem;
@@ -631,13 +631,13 @@ summary:focus-visible {
 .nav-drop-link:hover,
 .nav-drop-link:focus {
   background: rgba(255, 255, 255, 0.06);
-  color: #e0a05a;
+  color: #EE131B;
   outline: none;
 }
 .nav-drop-link.is-current {
-  color: #e0a05a;
+  color: #EE131B;
   font-weight: 600;
-  background: rgba(201, 123, 58, 0.12);
+  background: rgba(238, 19, 27, 0.12);
 }
 
 /* ONE fixed building-type photo popover */
@@ -674,7 +674,7 @@ summary:focus-visible {
   font-weight: 800;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: #e0a05a;
+  color: #EE131B;
   margin: 0 0 0.25rem;
 }
 .bldg-pop .bldg-pop-hook {
@@ -688,12 +688,12 @@ summary:focus-visible {
   font-size: 0.8rem;
   font-weight: 700;
   color: #fff;
-  background: #b87333;
+  background: #B80A12;
   padding: 0.4rem 0.7rem;
   border-radius: 0.5rem;
   text-decoration: none;
 }
-.bldg-pop .bldg-pop-cta:hover { background: #c97b3a; }
+.bldg-pop .bldg-pop-cta:hover { background: #EE131B; }
 @media (max-width: 1023px) {
   .bldg-pop { display: none !important; }
 }

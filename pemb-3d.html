@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script>if(location.protocol==='http:'&&/(^|\.)stampssteel\.com$/i.test(location.hostname))location.replace('https://'+location.host+location.pathname+location.search+location.hash);</script>
+  <script>if(location.protocol==='http:'&&/(^|\.)(stampssteel|oneworldsteel)\.com$/i.test(location.hostname))location.replace('https://'+location.host+location.pathname+location.search+location.hash);</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>3D PEMB Erection | Stamps Steel</title>
-  <meta name="description" content="Interactive 3D metal building erection sequence — 50×100×20 gable for Stamps Steel." />
+  <title>3D PEMB Erection | One World Steel</title>
+  <meta name="description" content="Interactive 3D metal building erection sequence — 50×100×20 gable for One World Steel." />
   <meta name="theme-color" content="#020617" />
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     :root {
       --bg: #020617; --surface: #0f172a; --elev: #1e293b;
       --fg: #f1f5f9; --muted: #94a3b8; --border: #334155;
-      --primary: #c97b3a; --primary-hover: #e0a05a; --primary-fg: #0f172a;
+      --primary: #EE131B; --primary-hover: #B80A12; --primary-fg: #fff;
     }
     * { box-sizing: border-box; }
     html, body { margin: 0; height: 100%; background: var(--bg); color: var(--fg); font-family: Inter, system-ui, sans-serif; overflow: hidden; }
@@ -45,15 +47,15 @@
     .play { background: var(--primary) !important; color: var(--primary-fg) !important; border-color: var(--primary) !important; min-width: 44px; min-height: 44px; border-radius: 10px !important; font-size: 14px !important; }
     .pct { margin-left: auto; font-family: ui-monospace, monospace; font-size: 12px; color: var(--muted); }
   </style>
-  <link rel="stylesheet" href="css/site-extras.css?v=20260825">
-  <link rel="canonical" href="https://stampssteel.com/pemb-3d.html">
+  <link rel="stylesheet" href="css/site-extras.css?v=20260917">
+  <link rel="canonical" href="https://oneworldsteel.com/pemb-3d.html">
 
 </head>
 <body>
   <canvas id="c"></canvas>
   <div class="ui">
     <div class="top panel">
-      <p class="kicker">Stamps Steel · 3D Erection</p>
+      <p class="kicker">One World Steel · 3D Erection</p>
       <h1 class="title">50′ × 100′ × 20′ Clear-Span Gable</h1>
     </div>
     <div class="mid">
@@ -455,7 +457,7 @@ addEventListener('resize', () => {
   <script src="js/quote-form.js" defer></script>
   <script src="js/lightbox.js" defer></script>
   <script src="js/estimator.js" defer></script>
-  <script src="js/site-common.js?v=20260825" defer></script>
+  <script src="js/site-common.js?v=20260917" defer></script>
 
 </body>
 </html>

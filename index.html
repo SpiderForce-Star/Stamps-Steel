@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script>if(location.protocol==='http:'&&/(^|\.)stampssteel\.com$/i.test(location.hostname))location.replace('https://'+location.host+location.pathname+location.search+location.hash);</script>
+  <script>if(location.protocol==='http:'&&/(^|\.)(stampssteel|oneworldsteel)\.com$/i.test(location.hostname))location.replace('https://'+location.host+location.pathname+location.search+location.hash);</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Stamps Steel Buildings | Quality Steel Frame Buildings</title>
+  <title>One World Steel | Quality Steel Frame Buildings</title>
   <meta name="description" content="Quality steel frame buildings for shops, churches, farms, warehouses, and storage. Free quote. 3D designer. (615) 629-8217">
-  <meta name="keywords" content="steel buildings, metal shops, churches, mini storage, agricultural buildings, warehouses, 3D metal building designer, Stamps Steel">
-  <meta property="og:title" content="Stamps Steel Buildings | Free Quote">
+  <meta name="keywords" content="steel buildings, metal shops, churches, mini storage, agricultural buildings, warehouses, 3D metal building designer, One World Steel">
+  <meta property="og:title" content="One World Steel | Free Quote">
   <meta property="og:description" content="Quality steel frame buildings. Free quote. (615) 629-8217">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://stampssteel.com/">
-  <meta property="og:image" content="images/logo.jpg">
+  <meta property="og:url" content="https://oneworldsteel.com/">
+  <meta property="og:image" content="images/og.jpg">
   <meta name="theme-color" content="#0f172a">
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
   <link rel="preload" as="image" type="image/webp" href="images/hero/poster-960w.webp" imagesrcset="images/hero/poster-640w.webp 640w, images/hero/poster-960w.webp 960w, images/hero/poster.webp 1400w" imagesizes="100vw" fetchpriority="high">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,9 +31,9 @@
               400: '#94a3b8', 500: '#64748b', 600: '#475569', 700: '#334155',
               800: '#1e293b', 900: '#0f172a', 950: '#020617'
             },
-            copper: {
-              50: '#fdf6ee', 100: '#f9ebdb', 200: '#f0d4b0', 300: '#e8b878',
-              400: '#e0a05a', 500: '#c97b3a', 600: '#b87333', 700: '#9a5f28', 800: '#7a4a1f'
+            brand: {
+              50: '#fef2f2', 100: '#fee2e2', 200: '#fecaca', 300: '#fca5a5',
+              400: '#EE131B', 500: '#EE131B', 600: '#EE131B', 700: '#B80A12', 800: '#8f080e', 900: '#5c0509'
             }
           }
         }
@@ -340,8 +342,8 @@
           90deg,
           transparent 0,
           transparent 48px,
-          rgba(224,160,90,0.07) 48px,
-          rgba(224,160,90,0.07) 49px
+          rgba(238,19,27,0.07) 48px,
+          rgba(238,19,27,0.07) 49px
         );
       mask-image: linear-gradient(90deg, black 0%, transparent 70%);
     }
@@ -385,7 +387,7 @@
       display: inline-flex;
       align-items: center;
       gap: 0.6rem;
-      color: #e0a05a;
+      color: #EE131B;
       font-weight: 700;
       letter-spacing: 0.16em;
       text-transform: uppercase;
@@ -397,7 +399,7 @@
     .hero-kicker .bar {
       width: 2rem;
       height: 1px;
-      background: #c97b3a;
+      background: #EE131B;
     }
     .hero-headline {
       font-weight: 900;
@@ -446,17 +448,17 @@
     }
     .hero-progress button.is-active {
       width: 2.75rem;
-      background: #c97b3a;
+      background: #EE131B;
     }
     .hero-progress button:focus-visible {
-      outline: 2px solid #e0a05a;
+      outline: 2px solid #EE131B;
       outline-offset: 3px;
     }
     /* line draw accent */
     .hero-line-draw {
       width: 0;
       height: 2px;
-      background: linear-gradient(90deg, #e0a05a, #c97b3a, transparent);
+      background: linear-gradient(90deg, #EE131B, #EE131B, transparent);
       margin: 1rem 0 1.25rem;
       transition: width 1s ease 0.25s;
     }
@@ -474,13 +476,13 @@
     .hero-stage.is-active .hero-fade-up.d3 { transition-delay: 0.44s; }
     .hero-stage.is-active .hero-fade-up.d4 { transition-delay: 0.6s; }
     .hero-cta-pulse {
-      box-shadow: 0 0 0 0 rgba(201,123,58,0.45);
+      box-shadow: 0 0 0 0 rgba(238,19,27,0.45);
       animation: cta-pulse 2.4s ease-out infinite;
     }
     @keyframes cta-pulse {
-      0% { box-shadow: 0 0 0 0 rgba(201,123,58,0.45); }
-      70% { box-shadow: 0 0 0 16px rgba(201,123,58,0); }
-      100% { box-shadow: 0 0 0 0 rgba(201,123,58,0); }
+      0% { box-shadow: 0 0 0 0 rgba(238,19,27,0.45); }
+      70% { box-shadow: 0 0 0 16px rgba(238,19,27,0); }
+      100% { box-shadow: 0 0 0 0 rgba(238,19,27,0); }
     }
     @media (prefers-reduced-motion: reduce) {
       .hero-media .hero-poster img { animation: none; }
@@ -496,8 +498,8 @@
 
     #mobile-menu { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
     #mobile-menu.open { max-height: 960px; }
-    .copper-gradient {
-      background: linear-gradient(135deg, #e0a05a 0%, #c97b3a 50%, #b87333 100%);
+    .brand-gradient {
+      background: linear-gradient(135deg, #EE131B 0%, #EE131B 50%, #B80A12 100%);
       -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
     }
     .project-card img { transition: transform 0.45s ease; }
@@ -506,7 +508,7 @@
     /* Attention marquee under hero */
     .attn-ribbon {
       min-height: 2.75rem;
-      background: linear-gradient(90deg, #7a4a1f 0%, #b87333 35%, #c97b3a 50%, #b87333 65%, #7a4a1f 100%);
+      background: linear-gradient(90deg, #5c0509 0%, #B80A12 35%, #EE131B 50%, #B80A12 65%, #5c0509 100%);
       color: #fff;
       overflow: hidden;
       border-bottom: 1px solid rgba(15, 23, 42, 0.25);
@@ -584,7 +586,7 @@
       .nav-desktop { display: none !important; }
       .nav-mobile-tools { display: flex !important; }
       #menu-btn { min-width: 44px; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; }
-      a, button { -webkit-tap-highlight-color: rgba(185,115,51,0.15); }
+      a, button { -webkit-tap-highlight-color: rgba(238,19,27,0.15); }
       /* Tables: allow swipe, prevent page blowout */
       .overflow-x-auto { -webkit-overflow-scrolling: touch; overscroll-behavior-x: contain; }
       /* Hero shorter on phones */
@@ -636,8 +638,8 @@
     }
     .hero-film-bar > span {
       display: block; height: 100%; width: 0%;
-      background: linear-gradient(90deg, #e0a05a, #c97b3a);
-      box-shadow: 0 0 12px rgba(201,123,58,0.55);
+      background: linear-gradient(90deg, #EE131B, #EE131B);
+      box-shadow: 0 0 12px rgba(238,19,27,0.55);
       transition: width 0.08s linear;
     }
     .hero-controls {
@@ -650,23 +652,23 @@
       text-transform: uppercase; padding: 0.45rem 0.7rem; border-radius: 999px;
       backdrop-filter: blur(8px); cursor: pointer; transition: background 0.2s, border-color 0.2s;
     }
-    .hero-ctrl-btn:hover { background: rgba(201,123,58,0.35); border-color: rgba(224,160,90,0.5); color: #fff; }
+    .hero-ctrl-btn:hover { background: rgba(238,19,27,0.35); border-color: rgba(238,19,27,0.5); color: #fff; }
     .vs-table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
     .vs-table th, .vs-table td { padding: 0.85rem 1rem; text-align: left; border-bottom: 1px solid #e2e8f0; }
     .vs-table th { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: #64748b; }
     .vs-table td:first-child { font-weight: 600; color: #0f172a; }
-    .vs-yes { color: #b87333; font-weight: 800; }
+    .vs-yes { color: #B80A12; font-weight: 800; }
     .vs-no { color: #94a3b8; }
     .size-card {
       display: flex; flex-direction: column; border: 1px solid #e2e8f0; border-radius: 1rem;
       background: #fff; padding: 1.25rem; transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
       text-decoration: none; color: inherit;
     }
-    .size-card:hover { border-color: #e0a05a; box-shadow: 0 12px 30px rgba(15,23,42,0.08); transform: translateY(-2px); }
+    .size-card:hover { border-color: #EE131B; box-shadow: 0 12px 30px rgba(15,23,42,0.08); transform: translateY(-2px); }
     .size-card .dim { font-size: 1.5rem; font-weight: 900; color: #0f172a; letter-spacing: -0.03em; }
-    .size-card .use { font-size: 0.8rem; font-weight: 700; color: #c97b3a; text-transform: uppercase; letter-spacing: 0.06em; margin-top: 0.25rem; }
+    .size-card .use { font-size: 0.8rem; font-weight: 700; color: #EE131B; text-transform: uppercase; letter-spacing: 0.06em; margin-top: 0.25rem; }
     .size-card p { font-size: 0.875rem; color: #64748b; margin-top: 0.5rem; flex: 1; }
-    .size-card .go { margin-top: 0.85rem; font-size: 0.85rem; font-weight: 700; color: #b87333; }
+    .size-card .go { margin-top: 0.85rem; font-size: 0.85rem; font-weight: 700; color: #B80A12; }
     /* Mobile sticky CTA lives in css/site-extras.css + js/site-common.js */
     .diff-strip {
       background: #020617; color: #fff; border-bottom: 1px solid #1e293b;
@@ -674,14 +676,14 @@
     .diff-badge {
       display: inline-flex; align-items: center; gap: 0.4rem;
       font-size: 0.7rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase;
-      color: #e0a05a;
+      color: #EE131B;
     }
 
 
     /* ========== MASTERCLASS DESIGN SYSTEM ========== */
     .skip-link {
       position: absolute; left: 1rem; top: -4rem; z-index: 100;
-      background: #c97b3a; color: #fff; padding: 0.65rem 1rem; border-radius: 0.5rem;
+      background: #EE131B; color: #fff; padding: 0.65rem 1rem; border-radius: 0.5rem;
       font-weight: 700; font-size: 0.875rem; transition: top 0.2s;
     }
     .skip-link:focus { top: 1rem; outline: 2px solid #fff; outline-offset: 2px; }
@@ -708,11 +710,11 @@
     .section-label {
       display: inline-flex; align-items: center; gap: 0.65rem;
       font-size: 0.72rem; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase;
-      color: #c97b3a;
+      color: #EE131B;
     }
     .section-label::before {
       content: ""; width: 1.75rem; height: 2px;
-      background: linear-gradient(90deg, #e0a05a, #c97b3a);
+      background: linear-gradient(90deg, #EE131B, #EE131B);
     }
     .pillar-card {
       position: relative; overflow: hidden;
@@ -722,13 +724,13 @@
       transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
     }
     .pillar-card:hover {
-      border-color: rgba(201,123,58,0.55);
+      border-color: rgba(238,19,27,0.55);
       transform: translateY(-3px);
       box-shadow: 0 20px 40px rgba(0,0,0,0.25);
     }
     .pillar-card .num {
       font-size: 2.75rem; font-weight: 900; line-height: 1;
-      background: linear-gradient(135deg, #e0a05a, #c97b3a);
+      background: linear-gradient(135deg, #EE131B, #EE131B);
       -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
       margin-bottom: 0.75rem;
     }
@@ -741,14 +743,14 @@
       padding: 1.35rem 1.25rem; position: relative;
       transition: border-color 0.2s, box-shadow 0.2s;
     }
-    .peb-step:hover { border-color: #e0a05a; box-shadow: 0 10px 28px rgba(15,23,42,0.06); }
+    .peb-step:hover { border-color: #EE131B; box-shadow: 0 10px 28px rgba(15,23,42,0.06); }
     .peb-step .step-n {
       width: 2rem; height: 2rem; border-radius: 999px;
       background: #0f172a; color: #fff; font-weight: 800; font-size: 0.85rem;
       display: inline-flex; align-items: center; justify-content: center; margin-bottom: 0.75rem;
     }
     .proof-quote {
-      border-left: 3px solid #c97b3a; padding-left: 1.25rem;
+      border-left: 3px solid #EE131B; padding-left: 1.25rem;
       font-size: 1.05rem; line-height: 1.55; color: #334155; font-weight: 500;
     }
     .faq-item {
@@ -762,7 +764,7 @@
     }
     .faq-item summary::-webkit-details-marker { display: none; }
     .faq-item summary::after {
-      content: "+"; font-size: 1.35rem; font-weight: 400; color: #c97b3a; flex-shrink: 0;
+      content: "+"; font-size: 1.35rem; font-weight: 400; color: #EE131B; flex-shrink: 0;
     }
     .faq-item[open] summary::after { content: "−"; }
     .faq-item .faq-body {
@@ -776,7 +778,7 @@
     .theater-cta::before {
       content: ""; position: absolute; inset: 0;
       background:
-        radial-gradient(ellipse 60% 80% at 20% 50%, rgba(201,123,58,0.18), transparent 60%),
+        radial-gradient(ellipse 60% 80% at 20% 50%, rgba(238,19,27,0.18), transparent 60%),
         radial-gradient(ellipse 50% 70% at 85% 40%, rgba(30,41,59,0.9), transparent 55%);
       pointer-events: none;
     }
@@ -793,8 +795,8 @@
       transition: border-color 0.15s, box-shadow 0.15s;
     }
     .quote-shell input:focus, .quote-shell select:focus, .quote-shell textarea:focus {
-      border-color: #c97b3a !important;
-      box-shadow: 0 0 0 3px rgba(201,123,58,0.2) !important;
+      border-color: #EE131B !important;
+      box-shadow: 0 0 0 3px rgba(238,19,27,0.2) !important;
       outline: none;
     }
     .metric-rail {
@@ -818,7 +820,7 @@
     .metric-rail .l { font-size: 0.72rem; font-weight: 600; color: #64748b; text-transform: uppercase; letter-spacing: 0.06em; margin-top: 0.25rem; }
     .attn-ribbon {
       min-height: 2.75rem;
-      background: linear-gradient(90deg, #7a4a1f 0%, #b87333 35%, #c97b3a 50%, #b87333 65%, #7a4a1f 100%) !important;
+      background: linear-gradient(90deg, #5c0509 0%, #B80A12 35%, #EE131B 50%, #B80A12 65%, #5c0509 100%) !important;
       color: #fff;
       border-bottom: 1px solid rgba(15, 23, 42, 0.25);
     }
@@ -932,12 +934,12 @@
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "additionalType": "https://schema.org/HomeAndConstructionBusiness",
-    "name": "Stamps Steel Buildings",
+    "name": "One World Steel",
     "description": "Quality steel frame buildings for shops, churches, farms, warehouses, and storage. More than a decade of industry experience.",
-    "url": "https://stampssteel.com/",
+    "url": "https://oneworldsteel.com/",
     "telephone": "+1-615-629-8217",
-    "email": "info@stampssteel.com",
-    "image": "https://stampssteel.com/images/logo.jpg",
+    "email": "info@oneworldsteel.com",
+    "image": "https://oneworldsteel.com/images/og.jpg",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Bethpage",
@@ -961,7 +963,7 @@
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "What's in a Stamps Steel package?",
+        "name": "What's in a One World Steel package?",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Frame, roof and wall panels, and openings as specified. Insulation, doors, vents, and extras are added to match your use and budget."
@@ -1003,8 +1005,8 @@
   }
   </script>
 
-  <link rel="stylesheet" href="css/site-extras.css?v=20260825">
-  <link rel="canonical" href="https://stampssteel.com/">
+  <link rel="stylesheet" href="css/site-extras.css?v=20260917">
+  <link rel="canonical" href="https://oneworldsteel.com/">
 
 </head>
 <body class="bg-slate-50 text-slate-900 font-sans antialiased">
@@ -1013,15 +1015,15 @@
   <nav class="site-nav bg-steel-950 text-white sticky top-0 z-50 shadow-xl border-b border-steel-800" id="site-nav">
     <div class="max-w-7xl mx-auto px-4">
       <div class="flex justify-between items-center h-16">
-        <a href="index.html" class="flex items-center gap-2.5 shrink-0 min-w-0" aria-label="Stamps Steel Buildings home">
-          <img src="images/logo-nav-md.webp" width="48" height="48" alt="" class="h-10 w-10 sm:h-11 sm:w-11 object-contain rounded-full bg-steel-950 shrink-0" decoding="async" loading="eager" fetchpriority="high">
-          <span class="font-bold text-white tracking-tight text-sm sm:text-base leading-tight">
-            Stamps Steel
-            <span class="block text-[0.65rem] sm:text-xs font-semibold text-copper-400 tracking-wider uppercase">Buildings</span>
+                <a href="index.html" class="flex items-center gap-2.5 shrink-0 min-w-0" aria-label="One World Steel home">
+          <img src="images/logo.png" width="48" height="48" alt="One World Steel" class="h-11 w-11 sm:h-12 sm:w-12 object-contain shrink-0" decoding="async" loading="eager" fetchpriority="high">
+          <span class="font-extrabold text-white tracking-tight text-sm sm:text-base leading-[1.05] uppercase">
+            One World
+            <span class="block text-[0.7rem] sm:text-xs font-extrabold tracking-[0.18em] text-[#EE131B]">Steel</span>
           </span>
         </a>
                 <div class="nav-desktop hidden lg:flex items-center text-sm font-medium">
-          <a href="designer.html" class="px-3 py-2 whitespace-nowrap hover:text-copper-400 transition">3D Designer</a>
+          <a href="designer.html" class="px-3 py-2 whitespace-nowrap hover:text-brand-400 transition">3D Designer</a>
           <div class="nav-drop">
             <button type="button" class="nav-drop-btn" aria-expanded="false" aria-haspopup="true" aria-controls="nav-drop-menu">
               Menu
@@ -1039,11 +1041,11 @@
             <a href="mini-storage.html" class="nav-drop-link">Mini Storage</a>
             </div>
           </div>
-          <a href="erection.html" class="px-3 py-2 whitespace-nowrap hover:text-copper-400 transition">Erection</a>
-          <a href="#contact" class="nav-quote ml-2 bg-copper-600 hover:bg-copper-500 text-white px-4 py-2 rounded-lg font-semibold transition shadow-lg shadow-copper-900/30 whitespace-nowrap">Get a Quote</a>
+          <a href="erection.html" class="px-3 py-2 whitespace-nowrap hover:text-brand-400 transition">Erection</a>
+          <a href="#contact" class="nav-quote ml-2 bg-brand-600 hover:bg-brand-700 text-white px-4 py-2 rounded-lg font-semibold transition shadow-lg shadow-brand-900/30 whitespace-nowrap">Request a Quote</a>
         </div>
         <div class="nav-mobile-tools flex items-center gap-2 lg:hidden">
-          <a href="#contact" class="bg-copper-600 text-white px-3 py-1.5 rounded-lg text-sm font-semibold">Quote</a>
+          <a href="#contact" class="bg-brand-600 text-white px-3 py-1.5 rounded-lg text-sm font-semibold">Quote</a>
           <button id="menu-btn" class="p-2 text-slate-200" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
           </button>
@@ -1063,8 +1065,8 @@
         <a href="projects.html" class="block py-3 px-3 rounded-lg hover:bg-steel-800">Projects</a>
         <a href="mini-storage.html" class="block py-3 px-3 rounded-lg hover:bg-steel-800">Mini Storage</a>
         <a href="erection.html" class="block py-3 px-3 rounded-lg hover:bg-steel-800">Erection</a>
-        <a href="tel:+16156298217" class="block py-3 px-3 rounded-lg hover:bg-steel-800 font-semibold text-copper-400">(615) 629-8217</a>
-        <a href="#contact" class="block py-3 px-3 bg-copper-600 rounded-lg text-center font-semibold mt-2">Get a Quote</a>
+        <a href="tel:+16156298217" class="block py-3 px-3 rounded-lg hover:bg-steel-800 font-semibold text-brand-400">(615) 629-8217</a>
+        <a href="#contact" class="block py-3 px-3 bg-brand-600 rounded-lg text-center font-semibold mt-2">Request a Quote</a>
       </div>
     </div>
   </nav>
@@ -1090,7 +1092,7 @@
         disablePictureInPicture
       >
         <source src="images/hero/hero-clean-mobile.mp4?v=20260824-cuts" type="video/mp4" media="(max-width: 767px)">
-        <source src="images/hero/stamps-hero.mp4?v=20260824-cuts" type="video/mp4">
+        <source src="images/hero/hero-clean.mp4?v=20260824-cuts" type="video/mp4">
       </video>
     </div>
     <div class="hero-overlay" aria-hidden="true"></div>
@@ -1104,14 +1106,14 @@
           <div class="hero-stage-inner">
             <p class="hero-kicker hero-fade-up d1"><span class="bar" aria-hidden="true"></span> Pre-engineered metal buildings</p>
             <h1 class="hero-headline hero-fade-up d2">
-              <span class="copper-gradient">Quality Steel Frame Buildings</span>
+              <span class="brand-gradient">Quality Steel Frame Buildings</span>
             </h1>
             <p class="hero-sub hero-fade-up d3">
               Shops, churches, farms, warehouses, and storage.
             </p>
             <div class="hero-actions hero-fade-up d4">
-              <a href="#contact" class="hero-cta-pulse inline-flex justify-center items-center bg-copper-600 hover:bg-copper-500 text-white px-8 py-4 rounded-xl font-bold text-base sm:text-lg transition shadow-xl shadow-copper-900/40">
-                Get a Free Quote
+              <a href="#contact" class="hero-cta-pulse inline-flex justify-center items-center bg-brand-600 hover:bg-brand-700 text-white px-8 py-4 rounded-xl font-bold text-base sm:text-lg transition shadow-xl shadow-brand-900/40">
+                Request a Quote
               </a>
               <a href="designer.html" class="inline-flex justify-center items-center bg-white/10 hover:bg-white/15 border border-white/25 text-white px-7 py-3.5 rounded-xl font-semibold transition backdrop-blur-sm">
                 Open 3D Designer
@@ -1152,7 +1154,7 @@
         </div>
         <div>
           <div class="m">3D</div>
-          <div class="l"><a href="designer.html" class="hover:text-copper-600">Design online</a></div>
+          <div class="l"><a href="designer.html" class="hover:text-brand-600">Design online</a></div>
         </div>
         <div>
           <div class="m">10+ Years</div>
@@ -1171,7 +1173,7 @@
     <div class="max-w-7xl mx-auto px-4">
       <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8">
         <div>
-          <p class="text-sm font-semibold text-copper-600 uppercase tracking-wide mb-2">Popular sizes</p>
+          <p class="text-sm font-semibold text-brand-600 uppercase tracking-wide mb-2">Popular sizes</p>
           <h2 class="text-2xl md:text-3xl font-black mb-2">Start with a size</h2>
           <p class="text-slate-600 max-w-2xl text-sm md:text-base">Common footprints. Adjust doors, height, and colors in 3D — or send your size on the quote form.</p>
         </div>
@@ -1244,41 +1246,41 @@
     </div>
   </section>
 
-  <!-- WHY STAMPS -->
+  <!-- WHY ONE WORLD STEEL -->
   <section id="why" class="py-16 md:py-20 bg-slate-50">
     <div class="max-w-7xl mx-auto px-4">
       <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-4xl font-black mb-3">Why Stamps Steel</h2>
+        <h2 class="text-3xl md:text-4xl font-black mb-3">Why One World Steel</h2>
         <p class="text-slate-600 max-w-2xl mx-auto">Clear-span kits, straight talk, and installation when you want it.</p>
       </div>
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 hover:shadow-md hover:border-copper-200 transition">
-          <div class="w-12 h-12 bg-copper-100 rounded-xl flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-copper-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 hover:shadow-md hover:border-brand-200 transition">
+          <div class="w-12 h-12 bg-brand-100 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
           </div>
           <h3 class="font-bold text-lg mb-2">Clear-span steel</h3>
           <p class="text-sm text-slate-600 leading-relaxed">Open floor, no posts in the way. Sized for your site and how you use it.</p>
         </div>
-        <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 hover:shadow-md hover:border-copper-200 transition">
-          <div class="w-12 h-12 bg-copper-100 rounded-xl flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-copper-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 hover:shadow-md hover:border-brand-200 transition">
+          <div class="w-12 h-12 bg-brand-100 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
           </div>
           <h3 class="font-bold text-lg mb-2">Straight talk</h3>
           <p class="text-sm text-slate-600 leading-relaxed">Clear options and honest recommendations.</p>
         </div>
-        <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 hover:shadow-md hover:border-copper-200 transition">
-          <div class="w-12 h-12 bg-copper-100 rounded-xl flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-copper-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 hover:shadow-md hover:border-brand-200 transition">
+          <div class="w-12 h-12 bg-brand-100 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
           </div>
           <h3 class="font-bold text-lg mb-2">Right-sized kits</h3>
           <p class="text-sm text-slate-600 leading-relaxed">Pay for the frame and options you need.</p>
         </div>
-        <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 hover:shadow-md hover:border-copper-200 transition">
-          <div class="w-12 h-12 bg-copper-100 rounded-xl flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-copper-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5"/></svg>
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 hover:shadow-md hover:border-brand-200 transition">
+          <div class="w-12 h-12 bg-brand-100 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5"/></svg>
           </div>
           <h3 class="font-bold text-lg mb-2">3D Designer</h3>
-          <p class="text-sm text-slate-600 leading-relaxed">Set size, doors, and colors online, then send it in for a quote. <a href="designer.html" class="text-copper-600 font-semibold hover:underline">Open 3D Designer →</a></p>
+          <p class="text-sm text-slate-600 leading-relaxed">Set size, doors, and colors online, then send it in for a quote. <a href="designer.html" class="text-brand-600 font-semibold hover:underline">Open 3D Designer →</a></p>
         </div>
       </div>
     </div>
@@ -1288,7 +1290,7 @@
   <section id="solutions" class="py-14 md:py-20 bg-white border-b border-slate-200" aria-label="Building types and solutions">
     <div class="max-w-7xl mx-auto px-4">
       <div class="text-center mb-8 md:mb-10">
-        <p class="text-sm font-semibold text-copper-600 uppercase tracking-wide mb-2">Building types</p>
+        <p class="text-sm font-semibold text-brand-600 uppercase tracking-wide mb-2">Building types</p>
         <h2 class="text-3xl md:text-4xl font-black mb-3 tracking-tight">What we build</h2>
         <p class="text-slate-600 max-w-2xl mx-auto text-sm md:text-base leading-relaxed">
           Choose a type, then design it in 3D or request a quote.
@@ -1296,16 +1298,16 @@
       </div>
 
       <nav class="flex gap-2 overflow-x-auto pb-3 mb-6 -mx-1 px-1 scrollbar-none" aria-label="Jump to building category" style="-webkit-overflow-scrolling:touch">
-        <a href="#bt-residential" class="shrink-0 text-xs font-bold uppercase tracking-wide px-3 py-2 rounded-full bg-slate-100 text-steel-900 border border-slate-200 hover:border-copper-400">Garage</a>
-        <a href="#bt-barndo" class="shrink-0 text-xs font-bold uppercase tracking-wide px-3 py-2 rounded-full bg-slate-100 text-steel-900 border border-slate-200 hover:border-copper-400">Barndo</a>
-        <a href="#bt-ag" class="shrink-0 text-xs font-bold uppercase tracking-wide px-3 py-2 rounded-full bg-slate-100 text-steel-900 border border-slate-200 hover:border-copper-400">Agricultural</a>
-        <a href="#bt-storage" class="shrink-0 text-xs font-bold uppercase tracking-wide px-3 py-2 rounded-full bg-slate-100 text-steel-900 border border-slate-200 hover:border-copper-400">Mini-storage</a>
-        <a href="#bt-aviation" class="shrink-0 text-xs font-bold uppercase tracking-wide px-3 py-2 rounded-full bg-slate-100 text-steel-900 border border-slate-200 hover:border-copper-400">Hangar</a>
-        <a href="#bt-industrial" class="shrink-0 text-xs font-bold uppercase tracking-wide px-3 py-2 rounded-full bg-slate-100 text-steel-900 border border-slate-200 hover:border-copper-400">Warehouse</a>
-        <a href="#bt-commercial" class="shrink-0 text-xs font-bold uppercase tracking-wide px-3 py-2 rounded-full bg-slate-100 text-steel-900 border border-slate-200 hover:border-copper-400">Retail</a>
-        <a href="#bt-cold" class="shrink-0 text-xs font-bold uppercase tracking-wide px-3 py-2 rounded-full bg-slate-100 text-steel-900 border border-slate-200 hover:border-copper-400">Cold storage</a>
-        <a href="#bt-institutional" class="shrink-0 text-xs font-bold uppercase tracking-wide px-3 py-2 rounded-full bg-slate-100 text-steel-900 border border-slate-200 hover:border-copper-400">Institutional</a>
-        <a href="projects.html#churches" class="shrink-0 text-xs font-bold uppercase tracking-wide px-3 py-2 rounded-full bg-slate-100 text-steel-900 border border-slate-200 hover:border-copper-400">Churches</a>
+        <a href="#bt-residential" class="shrink-0 text-xs font-bold uppercase tracking-wide px-3 py-2 rounded-full bg-slate-100 text-steel-900 border border-slate-200 hover:border-brand-400">Garage</a>
+        <a href="#bt-barndo" class="shrink-0 text-xs font-bold uppercase tracking-wide px-3 py-2 rounded-full bg-slate-100 text-steel-900 border border-slate-200 hover:border-brand-400">Barndo</a>
+        <a href="#bt-ag" class="shrink-0 text-xs font-bold uppercase tracking-wide px-3 py-2 rounded-full bg-slate-100 text-steel-900 border border-slate-200 hover:border-brand-400">Agricultural</a>
+        <a href="#bt-storage" class="shrink-0 text-xs font-bold uppercase tracking-wide px-3 py-2 rounded-full bg-slate-100 text-steel-900 border border-slate-200 hover:border-brand-400">Mini-storage</a>
+        <a href="#bt-aviation" class="shrink-0 text-xs font-bold uppercase tracking-wide px-3 py-2 rounded-full bg-slate-100 text-steel-900 border border-slate-200 hover:border-brand-400">Hangar</a>
+        <a href="#bt-industrial" class="shrink-0 text-xs font-bold uppercase tracking-wide px-3 py-2 rounded-full bg-slate-100 text-steel-900 border border-slate-200 hover:border-brand-400">Warehouse</a>
+        <a href="#bt-commercial" class="shrink-0 text-xs font-bold uppercase tracking-wide px-3 py-2 rounded-full bg-slate-100 text-steel-900 border border-slate-200 hover:border-brand-400">Retail</a>
+        <a href="#bt-cold" class="shrink-0 text-xs font-bold uppercase tracking-wide px-3 py-2 rounded-full bg-slate-100 text-steel-900 border border-slate-200 hover:border-brand-400">Cold storage</a>
+        <a href="#bt-institutional" class="shrink-0 text-xs font-bold uppercase tracking-wide px-3 py-2 rounded-full bg-slate-100 text-steel-900 border border-slate-200 hover:border-brand-400">Institutional</a>
+        <a href="projects.html#churches" class="shrink-0 text-xs font-bold uppercase tracking-wide px-3 py-2 rounded-full bg-slate-100 text-steel-900 border border-slate-200 hover:border-brand-400">Churches</a>
       </nav>
 
       <div class="grid md:grid-cols-2 gap-4 md:gap-5">
@@ -1329,13 +1331,13 @@
           </div>
           <div class="p-4 sm:p-5">
             <h3 class="text-lg sm:text-xl font-black text-steel-900 mb-0.5 leading-snug">Personal Garage / Workshop</h3>
-            <p class="text-xs text-copper-600 font-semibold uppercase tracking-wide mb-2">Garages · hobby shops · barndos</p>
+            <p class="text-xs text-brand-600 font-semibold uppercase tracking-wide mb-2">Garages · hobby shops · barndos</p>
             <ul class="bt-list text-sm text-slate-700 space-y-1 mb-3">
             <li>Garages & workshops</li>
             <li>Hobby shops</li>
             </ul>
             <div class="flex flex-wrap gap-x-3 gap-y-1 text-sm font-bold">
-              <a href="designer.html" class="text-copper-600 hover:underline">Design in 3D →</a><span class="text-slate-300" aria-hidden="true">·</span><a href="#contact" class="text-steel-900 hover:text-copper-600">Free quote →</a>
+              <a href="designer.html" class="text-brand-600 hover:underline">Design in 3D →</a><span class="text-slate-300" aria-hidden="true">·</span><a href="#contact" class="text-steel-900 hover:text-brand-600">Free quote →</a>
             </div>
           </div>
         </article>
@@ -1358,13 +1360,13 @@
           </div>
           <div class="p-4 sm:p-5">
             <h3 class="text-lg sm:text-xl font-black text-steel-900 mb-0.5 leading-snug">Barndominium</h3>
-            <p class="text-xs text-copper-600 font-semibold uppercase tracking-wide mb-2">Residential-style metal building</p>
+            <p class="text-xs text-brand-600 font-semibold uppercase tracking-wide mb-2">Residential-style metal building</p>
             <ul class="bt-list text-sm text-slate-700 space-y-1 mb-3">
             <li>Attractive exterior packages</li>
             <li>Open shell or finished living layouts</li>
             </ul>
             <div class="flex flex-wrap gap-x-3 gap-y-1 text-sm font-bold">
-              <a href="designer.html" class="text-copper-600 hover:underline">Design in 3D →</a><span class="text-slate-300" aria-hidden="true">·</span><a href="#contact" class="text-steel-900 hover:text-copper-600">Free quote →</a>
+              <a href="designer.html" class="text-brand-600 hover:underline">Design in 3D →</a><span class="text-slate-300" aria-hidden="true">·</span><a href="#contact" class="text-steel-900 hover:text-brand-600">Free quote →</a>
             </div>
           </div>
         </article>
@@ -1387,7 +1389,7 @@
           </div>
           <div class="p-4 sm:p-5">
             <h3 class="text-lg sm:text-xl font-black text-steel-900 mb-0.5 leading-snug">Agricultural Building / Barn</h3>
-            <p class="text-xs text-copper-600 font-semibold uppercase tracking-wide mb-2">Barns · arenas · equipment</p>
+            <p class="text-xs text-brand-600 font-semibold uppercase tracking-wide mb-2">Barns · arenas · equipment</p>
             <ul class="bt-list text-sm text-slate-700 space-y-1 mb-3">
             <li>Barns & livestock buildings</li>
             <li>Hay & commodity storage (roof-only options)</li>
@@ -1396,7 +1398,7 @@
             <li>Large bi-fold doors for harvesting equipment</li>
             </ul>
             <div class="flex flex-wrap gap-x-3 gap-y-1 text-sm font-bold">
-              <a href="designer.html" class="text-copper-600 hover:underline">Design in 3D →</a><span class="text-slate-300" aria-hidden="true">·</span><a href="#contact" class="text-steel-900 hover:text-copper-600">Free quote →</a>
+              <a href="designer.html" class="text-brand-600 hover:underline">Design in 3D →</a><span class="text-slate-300" aria-hidden="true">·</span><a href="#contact" class="text-steel-900 hover:text-brand-600">Free quote →</a>
             </div>
           </div>
         </article>
@@ -1419,14 +1421,14 @@
           </div>
           <div class="p-4 sm:p-5">
             <h3 class="text-lg sm:text-xl font-black text-steel-900 mb-0.5 leading-snug">Mini-Storage Facility</h3>
-            <p class="text-xs text-copper-600 font-semibold uppercase tracking-wide mb-2">Self-storage · boat & RV</p>
+            <p class="text-xs text-brand-600 font-semibold uppercase tracking-wide mb-2">Self-storage · boat & RV</p>
             <ul class="bt-list text-sm text-slate-700 space-y-1 mb-3">
             <li>Mini-storage with exterior roll-up doors</li>
             <li>Climate-controlled indoor mini-storage</li>
             <li>Boat & RV storage</li>
             </ul>
             <div class="flex flex-wrap gap-x-3 gap-y-1 text-sm font-bold">
-              <a href="mini-storage.html" class="text-copper-600 hover:underline">Mini storage →</a><span class="text-slate-300" aria-hidden="true">·</span><a href="#contact" class="text-steel-900 hover:text-copper-600">Free quote →</a>
+              <a href="mini-storage.html" class="text-brand-600 hover:underline">Mini storage →</a><span class="text-slate-300" aria-hidden="true">·</span><a href="#contact" class="text-steel-900 hover:text-brand-600">Free quote →</a>
             </div>
           </div>
         </article>
@@ -1449,13 +1451,13 @@
           </div>
           <div class="p-4 sm:p-5">
             <h3 class="text-lg sm:text-xl font-black text-steel-900 mb-0.5 leading-snug">Airplane Hangar</h3>
-            <p class="text-xs text-copper-600 font-semibold uppercase tracking-wide mb-2">Bi-fold · sliding doors</p>
+            <p class="text-xs text-brand-600 font-semibold uppercase tracking-wide mb-2">Bi-fold · sliding doors</p>
             <ul class="bt-list text-sm text-slate-700 space-y-1 mb-3">
             <li>Hangars with bi-fold doors</li>
             <li>Hangars with horizontal sliding doors (large aircraft)</li>
             </ul>
             <div class="flex flex-wrap gap-x-3 gap-y-1 text-sm font-bold">
-              <a href="designer.html" class="text-copper-600 hover:underline">Design in 3D →</a><span class="text-slate-300" aria-hidden="true">·</span><a href="#contact" class="text-steel-900 hover:text-copper-600">Free quote →</a>
+              <a href="designer.html" class="text-brand-600 hover:underline">Design in 3D →</a><span class="text-slate-300" aria-hidden="true">·</span><a href="#contact" class="text-steel-900 hover:text-brand-600">Free quote →</a>
             </div>
           </div>
         </article>
@@ -1478,7 +1480,7 @@
           </div>
           <div class="p-4 sm:p-5">
             <h3 class="text-lg sm:text-xl font-black text-steel-900 mb-0.5 leading-snug">Warehouse / Distribution</h3>
-            <p class="text-xs text-copper-600 font-semibold uppercase tracking-wide mb-2">Clear-span · high eave</p>
+            <p class="text-xs text-brand-600 font-semibold uppercase tracking-wide mb-2">Clear-span · high eave</p>
             <ul class="bt-list text-sm text-slate-700 space-y-1 mb-3">
             <li>Warehouses & distribution centers</li>
             <li>Manufacturing & light industrial</li>
@@ -1486,7 +1488,7 @@
             <li>Workshops & fabrication shops</li>
             </ul>
             <div class="flex flex-wrap gap-x-3 gap-y-1 text-sm font-bold">
-              <a href="designer.html" class="text-copper-600 hover:underline">Design in 3D →</a><span class="text-slate-300" aria-hidden="true">·</span><a href="#contact" class="text-steel-900 hover:text-copper-600">Free quote →</a>
+              <a href="designer.html" class="text-brand-600 hover:underline">Design in 3D →</a><span class="text-slate-300" aria-hidden="true">·</span><a href="#contact" class="text-steel-900 hover:text-brand-600">Free quote →</a>
             </div>
           </div>
         </article>
@@ -1509,7 +1511,7 @@
           </div>
           <div class="p-4 sm:p-5">
             <h3 class="text-lg sm:text-xl font-black text-steel-900 mb-0.5 leading-snug">Retail / Commercial Shop</h3>
-            <p class="text-xs text-copper-600 font-semibold uppercase tracking-wide mb-2">Storefront · auto · flex</p>
+            <p class="text-xs text-brand-600 font-semibold uppercase tracking-wide mb-2">Storefront · auto · flex</p>
             <ul class="bt-list text-sm text-slate-700 space-y-1 mb-3">
             <li>Small commercial shops</li>
             <li>Large commercial buildings</li>
@@ -1518,7 +1520,7 @@
             <li>Office / flex buildings</li>
             </ul>
             <div class="flex flex-wrap gap-x-3 gap-y-1 text-sm font-bold">
-              <a href="designer.html" class="text-copper-600 hover:underline">Design in 3D →</a><span class="text-slate-300" aria-hidden="true">·</span><a href="#contact" class="text-steel-900 hover:text-copper-600">Free quote →</a>
+              <a href="designer.html" class="text-brand-600 hover:underline">Design in 3D →</a><span class="text-slate-300" aria-hidden="true">·</span><a href="#contact" class="text-steel-900 hover:text-brand-600">Free quote →</a>
             </div>
           </div>
         </article>
@@ -1541,12 +1543,12 @@
           </div>
           <div class="p-4 sm:p-5">
             <h3 class="text-lg sm:text-xl font-black text-steel-900 mb-0.5 leading-snug">Refrigerated / Cold Storage</h3>
-            <p class="text-xs text-copper-600 font-semibold uppercase tracking-wide mb-2">insulated panel envelope</p>
+            <p class="text-xs text-brand-600 font-semibold uppercase tracking-wide mb-2">insulated panel envelope</p>
             <ul class="bt-list text-sm text-slate-700 space-y-1 mb-3">
             <li>Refrigerated and freezer buildings with insulated metal panels</li>
             </ul>
             <div class="flex flex-wrap gap-x-3 gap-y-1 text-sm font-bold">
-              <a href="imp.html" class="text-copper-600 hover:underline">View insulated wall panels →</a><span class="text-slate-300" aria-hidden="true">·</span><a href="#contact" class="text-steel-900 hover:text-copper-600">Free quote →</a>
+              <a href="imp.html" class="text-brand-600 hover:underline">View insulated wall panels →</a><span class="text-slate-300" aria-hidden="true">·</span><a href="#contact" class="text-steel-900 hover:text-brand-600">Free quote →</a>
             </div>
           </div>
         </article>
@@ -1570,7 +1572,7 @@
           </div>
           <div class="p-4 sm:p-5">
             <h3 class="text-lg sm:text-xl font-black text-steel-900 mb-0.5 leading-snug">Institutional & Recreational</h3>
-            <p class="text-xs text-copper-600 font-semibold uppercase tracking-wide mb-2">Churches · schools · sports</p>
+            <p class="text-xs text-brand-600 font-semibold uppercase tracking-wide mb-2">Churches · schools · sports</p>
             <ul class="bt-list text-sm text-slate-700 space-y-1 mb-3">
             <li>Religious facilities & 50′+ clear-span sanctuaries</li>
             <li>Fellowship halls & education wings</li>
@@ -1579,13 +1581,13 @@
             <li>Ice / skating rinks · community centers</li>
             </ul>
             <div class="flex flex-wrap gap-x-3 gap-y-1 text-sm font-bold">
-              <a href="churches.html" class="text-copper-600 hover:underline">Church buildings →</a><span class="text-slate-300" aria-hidden="true">·</span><a href="#contact" class="text-steel-900 hover:text-copper-600">Free quote →</a>
+              <a href="churches.html" class="text-brand-600 hover:underline">Church buildings →</a><span class="text-slate-300" aria-hidden="true">·</span><a href="#contact" class="text-steel-900 hover:text-brand-600">Free quote →</a>
             </div>
           </div>
         </article>
         <article id="bt-other" class="bt-card rounded-2xl border border-slate-200 bg-slate-50 p-5 sm:p-6 scroll-mt-24">
           <h3 class="text-lg sm:text-xl font-black text-steel-900 mb-1 leading-snug">Other Common Uses</h3>
-          <p class="text-xs text-copper-600 font-semibold uppercase tracking-wide mb-3">Specialty &amp; custom PEBs</p>
+          <p class="text-xs text-brand-600 font-semibold uppercase tracking-wide mb-3">Specialty &amp; custom PEBs</p>
           <ul class="bt-list text-sm text-slate-700 space-y-1.5 mb-4">
             <li>Data centers</li>
             <li>Food processing</li>
@@ -1593,20 +1595,20 @@
             <li>Exhibition / event halls</li>
           </ul>
           <div class="flex flex-wrap gap-2 text-sm font-bold">
-            <a href="designer.html" class="text-copper-600 hover:underline">Design in 3D →</a>
+            <a href="designer.html" class="text-brand-600 hover:underline">Design in 3D →</a>
             <span class="text-slate-300" aria-hidden="true">·</span>
-            <a href="#contact" class="text-steel-900 hover:text-copper-600">Free quote →</a>
+            <a href="#contact" class="text-steel-900 hover:text-brand-600">Free quote →</a>
           </div>
         </article>
 
       </div>
 
       <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
-        <a href="designer.html" class="inline-flex justify-center items-center gap-2 bg-copper-600 hover:bg-copper-500 text-white px-7 py-3.5 rounded-xl font-bold transition shadow-lg shadow-copper-900/20">
+        <a href="designer.html" class="inline-flex justify-center items-center gap-2 bg-brand-600 hover:bg-brand-700 text-white px-7 py-3.5 rounded-xl font-bold transition shadow-lg shadow-brand-900/20">
           Design your building in 3D
         </a>
         <a href="#contact" class="inline-flex justify-center items-center bg-steel-900 hover:bg-steel-800 text-white px-7 py-3.5 rounded-xl font-bold transition">
-          Get a free quote
+          Request a quote
         </a>
       </div>
     </div>
@@ -1616,59 +1618,59 @@
   <section id="systems" class="py-14 md:py-16 bg-white border-y border-slate-200" aria-label="Pre-engineered metal building systems">
     <div class="max-w-7xl mx-auto px-4">
       <div class="text-center mb-10">
-        <p class="text-sm font-semibold text-copper-600 uppercase tracking-wide mb-2">Building systems</p>
+        <p class="text-sm font-semibold text-brand-600 uppercase tracking-wide mb-2">Building systems</p>
         <h2 class="text-3xl md:text-4xl font-black mb-3">The parts of the kit</h2>
         <p class="text-slate-600 max-w-3xl mx-auto text-sm md:text-base">Frame, panels, insulation, openings, and extras specified together for your site.</p>
       </div>
 
       <div class="grid lg:grid-cols-3 gap-5 mb-8">
-        <a href="framing.html" class="group rounded-2xl border border-slate-200 p-6 hover:border-copper-400 hover:shadow-md transition bg-slate-50">
-          <p class="text-xs font-bold uppercase tracking-wider text-copper-600 mb-2">Structure</p>
-          <h3 class="font-black text-lg text-steel-900 mb-2 group-hover:text-copper-700">Primary &amp; secondary framing</h3>
+        <a href="framing.html" class="group rounded-2xl border border-slate-200 p-6 hover:border-brand-400 hover:shadow-md transition bg-slate-50">
+          <p class="text-xs font-bold uppercase tracking-wider text-brand-600 mb-2">Structure</p>
+          <h3 class="font-black text-lg text-steel-900 mb-2 group-hover:text-brand-700">Primary &amp; secondary framing</h3>
           <p class="text-sm text-slate-600 leading-relaxed mb-3">Rigid frames, purlins, girts, and framed openings — the skeleton that carries wind, snow, and clear-span requirements.</p>
-          <span class="text-sm font-semibold text-copper-600">View framing →</span>
+          <span class="text-sm font-semibold text-brand-600">View framing →</span>
         </a>
-        <a href="panels.html" class="group rounded-2xl border border-slate-200 p-6 hover:border-copper-400 hover:shadow-md transition bg-slate-50">
-          <p class="text-xs font-bold uppercase tracking-wider text-copper-600 mb-2">Envelope</p>
-          <h3 class="font-black text-lg text-steel-900 mb-2 group-hover:text-copper-700">Roof &amp; wall panels</h3>
+        <a href="panels.html" class="group rounded-2xl border border-slate-200 p-6 hover:border-brand-400 hover:shadow-md transition bg-slate-50">
+          <p class="text-xs font-bold uppercase tracking-wider text-brand-600 mb-2">Envelope</p>
+          <h3 class="font-black text-lg text-steel-900 mb-2 group-hover:text-brand-700">Roof &amp; wall panels</h3>
           <p class="text-sm text-slate-600 leading-relaxed mb-3">PBR, multi-rib, standing seam, and specialty profiles with color systems for PEB walls and roofs.</p>
-          <span class="text-sm font-semibold text-copper-600">Explore panels →</span>
+          <span class="text-sm font-semibold text-brand-600">Explore panels →</span>
         </a>
-        <a href="insulation.html" class="group rounded-2xl border border-slate-200 p-6 hover:border-copper-400 hover:shadow-md transition bg-slate-50">
-          <p class="text-xs font-bold uppercase tracking-wider text-copper-600 mb-2">Thermal</p>
-          <h3 class="font-black text-lg text-steel-900 mb-2 group-hover:text-copper-700">Fiberglass insulation systems</h3>
+        <a href="insulation.html" class="group rounded-2xl border border-slate-200 p-6 hover:border-brand-400 hover:shadow-md transition bg-slate-50">
+          <p class="text-xs font-bold uppercase tracking-wider text-brand-600 mb-2">Thermal</p>
+          <h3 class="font-black text-lg text-steel-900 mb-2 group-hover:text-brand-700">Fiberglass insulation systems</h3>
           <p class="text-sm text-slate-600 leading-relaxed mb-3">Single-layer PSK-VR (3″ R-10 · 4″ R-13 · 6″ R-19) and High-R multi-layer cavity systems for controlled interiors.</p>
-          <span class="text-sm font-semibold text-copper-600">View insulation →</span>
+          <span class="text-sm font-semibold text-brand-600">View insulation →</span>
         </a>
-        <a href="imp.html" class="group rounded-2xl border border-slate-200 p-6 hover:border-copper-400 hover:shadow-md transition bg-slate-50">
-          <p class="text-xs font-bold uppercase tracking-wider text-copper-600 mb-2">High-R envelope</p>
-          <h3 class="font-black text-lg text-steel-900 mb-2 group-hover:text-copper-700">Insulated metal panels</h3>
+        <a href="imp.html" class="group rounded-2xl border border-slate-200 p-6 hover:border-brand-400 hover:shadow-md transition bg-slate-50">
+          <p class="text-xs font-bold uppercase tracking-wider text-brand-600 mb-2">High-R envelope</p>
+          <h3 class="font-black text-lg text-steel-900 mb-2 group-hover:text-brand-700">Insulated metal panels</h3>
           <p class="text-sm text-slate-600 leading-relaxed mb-3">Factory foam-core walls and roofs when you need higher R-value and a finished interior.</p>
-          <span class="text-sm font-semibold text-copper-600">View insulated wall panels →</span>
+          <span class="text-sm font-semibold text-brand-600">View insulated wall panels →</span>
         </a>
-        <a href="accessories.html" class="group rounded-2xl border border-slate-200 p-6 hover:border-copper-400 hover:shadow-md transition bg-slate-50">
-          <p class="text-xs font-bold uppercase tracking-wider text-copper-600 mb-2">Openings &amp; add-ons</p>
-          <h3 class="font-black text-lg text-steel-900 mb-2 group-hover:text-copper-700">Accessories</h3>
+        <a href="accessories.html" class="group rounded-2xl border border-slate-200 p-6 hover:border-brand-400 hover:shadow-md transition bg-slate-50">
+          <p class="text-xs font-bold uppercase tracking-wider text-brand-600 mb-2">Openings &amp; add-ons</p>
+          <h3 class="font-black text-lg text-steel-900 mb-2 group-hover:text-brand-700">Accessories</h3>
           <p class="text-sm text-slate-600 leading-relaxed mb-3">Doors, operators, ventilation, canopies, windows, roof curbs, and hardware coordinated with the PEB package.</p>
-          <span class="text-sm font-semibold text-copper-600">Browse accessories →</span>
+          <span class="text-sm font-semibold text-brand-600">Browse accessories →</span>
         </a>
-        <a href="erection.html" class="group rounded-2xl border border-slate-200 p-6 hover:border-copper-400 hover:shadow-md transition bg-slate-50">
-          <p class="text-xs font-bold uppercase tracking-wider text-copper-600 mb-2">Installation</p>
-          <h3 class="font-black text-lg text-steel-900 mb-2 group-hover:text-copper-700">Erection</h3>
+        <a href="erection.html" class="group rounded-2xl border border-slate-200 p-6 hover:border-brand-400 hover:shadow-md transition bg-slate-50">
+          <p class="text-xs font-bold uppercase tracking-wider text-brand-600 mb-2">Installation</p>
+          <h3 class="font-black text-lg text-steel-900 mb-2 group-hover:text-brand-700">Erection</h3>
           <p class="text-sm text-slate-600 leading-relaxed mb-3">Kit-only, or we put it up on your slab or piers when the project allows.</p>
-          <span class="text-sm font-semibold text-copper-600">Erection services →</span>
+          <span class="text-sm font-semibold text-brand-600">Erection services →</span>
         </a>
       </div>
 
       <div class="rounded-2xl border border-steel-800 bg-steel-950 text-white p-6 md:p-8 flex flex-col md:flex-row md:items-center md:justify-between gap-5">
         <div>
-          <p class="text-xs font-bold uppercase tracking-wider text-copper-400 mb-2">Interactive</p>
+          <p class="text-xs font-bold uppercase tracking-wider text-brand-400 mb-2">Interactive</p>
           <h3 class="text-xl md:text-2xl font-black mb-2">Design it, then we spec the kit</h3>
           <p class="text-slate-300 text-sm max-w-xl">Set size and openings in 3D. We match framing, panels, insulation, and extras to your site.</p>
         </div>
         <div class="flex flex-wrap gap-3 shrink-0">
-          <a href="designer.html" class="inline-flex bg-copper-600 hover:bg-copper-500 text-white px-6 py-3 rounded-xl font-bold transition text-sm">Launch 3D Designer</a>
-          <a href="projects.html" class="inline-flex border border-white/20 hover:border-copper-400 text-white px-6 py-3 rounded-xl font-semibold transition text-sm">Projects &amp; designs</a>
+          <a href="designer.html" class="inline-flex bg-brand-600 hover:bg-brand-700 text-white px-6 py-3 rounded-xl font-bold transition text-sm">Launch 3D Designer</a>
+          <a href="projects.html" class="inline-flex border border-white/20 hover:border-brand-400 text-white px-6 py-3 rounded-xl font-semibold transition text-sm">Projects &amp; designs</a>
         </div>
       </div>
     </div>
@@ -1678,7 +1680,7 @@
   <section id="projects" class="py-16 md:py-20 bg-slate-50">
     <div class="max-w-7xl mx-auto px-4">
       <div class="text-center mb-12">
-        <p class="text-sm font-semibold text-copper-600 uppercase tracking-wide mb-2">Recent Work</p>
+        <p class="text-sm font-semibold text-brand-600 uppercase tracking-wide mb-2">Recent Work</p>
         <h2 class="text-3xl md:text-4xl font-black mb-3">Project Gallery</h2>
         <p class="text-slate-600 max-w-2xl mx-auto">A few highlighted builds. See the full gallery for more.</p>
       </div>
@@ -1687,7 +1689,7 @@
         <article class="project-card rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm flex flex-col">
           <div class="aspect-[4/3] overflow-hidden"><picture><source type="image/webp" srcset="images/1-640w.webp 640w, images/1-960w.webp 960w, images/1.webp 1400w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"><img data-lightbox="gallery" data-opt="1" src="images/1.jpg" alt="Two-tone charcoal and red clear-span shop" class="w-full h-full object-cover" decoding="async" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"></picture></div>
           <div class="p-4 flex-1">
-            <p class="text-xs font-semibold text-copper-600 uppercase tracking-wide mb-1">Shop / Garage</p>
+            <p class="text-xs font-semibold text-brand-600 uppercase tracking-wide mb-1">Shop / Garage</p>
             <h3 class="font-bold text-steel-900 mb-1">Multi-door clear-span shop</h3>
             <p class="text-sm text-slate-600 leading-relaxed">Charcoal and red exterior with a full line of overhead doors for equipment and vehicle access on a rural site.</p>
           </div>
@@ -1695,7 +1697,7 @@
         <article class="project-card rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm flex flex-col">
           <div class="aspect-[4/3] overflow-hidden"><picture><source type="image/webp" srcset="images/2-640w.webp 640w, images/2-960w.webp 960w, images/2.webp 1400w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"><img data-lightbox="gallery" data-opt="1" src="images/2.jpg" alt="Open clear-span interior workshop" class="w-full h-full object-cover" decoding="async" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"></picture></div>
           <div class="p-4 flex-1">
-            <p class="text-xs font-semibold text-copper-600 uppercase tracking-wide mb-1">Interior</p>
+            <p class="text-xs font-semibold text-brand-600 uppercase tracking-wide mb-1">Interior</p>
             <h3 class="font-bold text-steel-900 mb-1">Open-floor workshop shell</h3>
             <p class="text-sm text-slate-600 leading-relaxed">Red-iron frames and insulated roof deck leave a wide clear work floor with endwall overhead access.</p>
           </div>
@@ -1703,7 +1705,7 @@
         <article class="project-card rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm flex flex-col">
           <div class="aspect-[4/3] overflow-hidden"><picture><source type="image/webp" srcset="images/7-640w.webp 640w, images/7-960w.webp 960w, images/7.webp 1400w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"><img data-lightbox="gallery" data-opt="1" src="images/7.jpg" alt="Aerial multi-building commercial PEB complex" class="w-full h-full object-cover" decoding="async" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"></picture></div>
           <div class="p-4 flex-1">
-            <p class="text-xs font-semibold text-copper-600 uppercase tracking-wide mb-1">Commercial</p>
+            <p class="text-xs font-semibold text-brand-600 uppercase tracking-wide mb-1">Commercial</p>
             <h3 class="font-bold text-steel-900 mb-1">Multi-building industrial campus</h3>
             <p class="text-sm text-slate-600 leading-relaxed">Coordinated gray PEBs with high-eave bays, full door elevations, and site parking for growth.</p>
           </div>
@@ -1711,7 +1713,7 @@
         <article class="project-card rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm flex flex-col">
           <div class="aspect-[4/3] overflow-hidden"><picture><source type="image/webp" srcset="images/8-640w.webp 640w, images/8-960w.webp 960w, images/8.webp 1400w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"><img data-lightbox="gallery" data-opt="1" src="images/8.jpg" alt="Four-bay cream commercial metal building with lean-to" class="w-full h-full object-cover" decoding="async" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"></picture></div>
           <div class="p-4 flex-1">
-            <p class="text-xs font-semibold text-copper-600 uppercase tracking-wide mb-1">Auto / Service</p>
+            <p class="text-xs font-semibold text-brand-600 uppercase tracking-wide mb-1">Auto / Service</p>
             <h3 class="font-bold text-steel-900 mb-1">Four-bay service building</h3>
             <p class="text-sm text-slate-600 leading-relaxed">Four full-height overhead doors, lean-to canopy, and wainscot trim for a polished multi-bay shop.</p>
           </div>
@@ -1719,7 +1721,7 @@
         <article class="project-card rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm flex flex-col">
           <div class="aspect-[4/3] overflow-hidden"><picture><source type="image/webp" srcset="images/11-640w.webp 640w, images/11-960w.webp 960w, images/11.webp 1400w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"><img data-lightbox="gallery" data-opt="1" src="images/11.jpg" alt="Warehouse interior with mezzanine and office storefront" class="w-full h-full object-cover" decoding="async" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"></picture></div>
           <div class="p-4 flex-1">
-            <p class="text-xs font-semibold text-copper-600 uppercase tracking-wide mb-1">Warehouse + Office</p>
+            <p class="text-xs font-semibold text-brand-600 uppercase tracking-wide mb-1">Warehouse + Office</p>
             <h3 class="font-bold text-steel-900 mb-1">Hybrid office / warehouse</h3>
             <p class="text-sm text-slate-600 leading-relaxed">Clear storage volume with mezzanine and glazed office front — distribution and HQ in one shell.</p>
           </div>
@@ -1727,7 +1729,7 @@
         <article class="project-card rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm flex flex-col">
           <div class="aspect-[4/3] overflow-hidden"><picture><source type="image/webp" srcset="images/12-640w.webp 640w, images/12-960w.webp 960w, images/12.webp 1400w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"><img data-lightbox="gallery" data-opt="1" src="images/12.jpg" alt="Green PEB with stone wainscot and cupola" class="w-full h-full object-cover" decoding="async" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"></picture></div>
           <div class="p-4 flex-1">
-            <p class="text-xs font-semibold text-copper-600 uppercase tracking-wide mb-1">Finished Commercial</p>
+            <p class="text-xs font-semibold text-brand-600 uppercase tracking-wide mb-1">Finished Commercial</p>
             <h3 class="font-bold text-steel-900 mb-1">Green PEB with office wing</h3>
             <p class="text-sm text-slate-600 leading-relaxed">Stone wainscot, cupola, and attached office/retail wing with storefront entry canopy.</p>
           </div>
@@ -1736,16 +1738,16 @@
 
       <p class="text-center text-sm text-slate-500 mt-8">Shops, churches, farms, warehouses, and storage</p>
       <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-4xl mx-auto">
-        <a href="projects.html#designs" class="rounded-2xl border border-slate-200 bg-white p-6 text-center hover:border-copper-400 transition shadow-sm">
-          <p class="text-sm font-semibold text-copper-600 uppercase tracking-wide mb-1">Designs</p>
+        <a href="projects.html#designs" class="rounded-2xl border border-slate-200 bg-white p-6 text-center hover:border-brand-400 transition shadow-sm">
+          <p class="text-sm font-semibold text-brand-600 uppercase tracking-wide mb-1">Designs</p>
           <p class="font-bold text-lg text-steel-900">Building designs →</p>
         </a>
-        <a href="projects.html" class="rounded-2xl border border-slate-200 bg-white p-6 text-center hover:border-copper-400 transition shadow-sm">
-          <p class="text-sm font-semibold text-copper-600 uppercase tracking-wide mb-1">Full gallery</p>
+        <a href="projects.html" class="rounded-2xl border border-slate-200 bg-white p-6 text-center hover:border-brand-400 transition shadow-sm">
+          <p class="text-sm font-semibold text-brand-600 uppercase tracking-wide mb-1">Full gallery</p>
           <p class="font-bold text-lg text-steel-900">View all projects →</p>
         </a>
-        <a href="projects.html#framing" class="rounded-2xl border border-slate-200 bg-white p-6 text-center hover:border-copper-400 transition shadow-sm">
-          <p class="text-sm font-semibold text-copper-600 uppercase tracking-wide mb-1">Structure</p>
+        <a href="projects.html#framing" class="rounded-2xl border border-slate-200 bg-white p-6 text-center hover:border-brand-400 transition shadow-sm">
+          <p class="text-sm font-semibold text-brand-600 uppercase tracking-wide mb-1">Structure</p>
           <p class="font-bold text-lg text-steel-900">Building framing →</p>
         </a>
       </div>
@@ -1761,24 +1763,24 @@
       </div>
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
         <div class="text-center">
-          <div class="w-14 h-14 mx-auto bg-copper-600 text-white rounded-full flex items-center justify-center text-xl font-black mb-4 shadow-lg shadow-copper-900/20">1</div>
+          <div class="w-14 h-14 mx-auto bg-brand-600 text-white rounded-full flex items-center justify-center text-xl font-black mb-4 shadow-lg shadow-brand-900/20">1</div>
           <h3 class="font-bold mb-2">Design or describe</h3>
-          <p class="text-sm text-slate-600 leading-relaxed">Use our <a href="designer.html" class="text-copper-600 font-semibold hover:underline">3D designer</a> or tell us size, use, and site location.</p>
+          <p class="text-sm text-slate-600 leading-relaxed">Use our <a href="designer.html" class="text-brand-600 font-semibold hover:underline">3D designer</a> or tell us size, use, and site location.</p>
         </div>
         <div class="text-center">
-          <div class="w-14 h-14 mx-auto bg-copper-600 text-white rounded-full flex items-center justify-center text-xl font-black mb-4 shadow-lg shadow-copper-900/20">2</div>
+          <div class="w-14 h-14 mx-auto bg-brand-600 text-white rounded-full flex items-center justify-center text-xl font-black mb-4 shadow-lg shadow-brand-900/20">2</div>
           <h3 class="font-bold mb-2">Get a clear quote</h3>
           <p class="text-sm text-slate-600 leading-relaxed">A written quote with the options spelled out.</p>
         </div>
         <div class="text-center">
-          <div class="w-14 h-14 mx-auto bg-copper-600 text-white rounded-full flex items-center justify-center text-xl font-black mb-4 shadow-lg shadow-copper-900/20">3</div>
+          <div class="w-14 h-14 mx-auto bg-brand-600 text-white rounded-full flex items-center justify-center text-xl font-black mb-4 shadow-lg shadow-brand-900/20">3</div>
           <h3 class="font-bold mb-2">Choose the options</h3>
           <p class="text-sm text-slate-600 leading-relaxed">Doors, insulation, colors, and extras — pick what fits your budget.</p>
         </div>
         <div class="text-center">
-          <div class="w-14 h-14 mx-auto bg-copper-600 text-white rounded-full flex items-center justify-center text-xl font-black mb-4 shadow-lg shadow-copper-900/20">4</div>
+          <div class="w-14 h-14 mx-auto bg-brand-600 text-white rounded-full flex items-center justify-center text-xl font-black mb-4 shadow-lg shadow-brand-900/20">4</div>
           <h3 class="font-bold mb-2">Deliver and install</h3>
-          <p class="text-sm text-slate-600 leading-relaxed">The kit ships to your site. <a href="erection.html" class="text-copper-600 font-semibold hover:underline">Installation</a> is available if you want us to put it up.</p>
+          <p class="text-sm text-slate-600 leading-relaxed">The kit ships to your site. <a href="erection.html" class="text-brand-600 font-semibold hover:underline">Installation</a> is available if you want us to put it up.</p>
         </div>
       </div>
     </div>
@@ -1789,11 +1791,11 @@
     <div class="max-w-3xl mx-auto px-4">
       <div class="text-center mb-10 reveal">
         <h2 class="text-3xl md:text-4xl font-black text-steel-900 mb-2">Common questions</h2>
-        <p class="text-slate-600 text-sm">Short answers. More on the <a href="faq.html" class="text-copper-600 font-semibold hover:underline">FAQ page</a>.</p>
+        <p class="text-slate-600 text-sm">Short answers. More on the <a href="faq.html" class="text-brand-600 font-semibold hover:underline">FAQ page</a>.</p>
       </div>
       <div class="reveal">
         <details class="faq-item">
-          <summary>What’s in a Stamps Steel package?</summary>
+          <summary>What’s in a One World Steel package?</summary>
           <div class="faq-body">Frame, roof and wall panels, and openings as specified. Insulation, doors, vents, and extras are added to match your use and budget.</div>
         </details>
         <details class="faq-item">
@@ -1820,16 +1822,16 @@
   <section id="about" class="py-16 md:py-20 bg-white">
     <div class="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-10 items-center">
       <div>
-        <p class="text-sm font-semibold text-copper-600 uppercase tracking-wide mb-2">About Stamps Steel</p>
+        <p class="text-sm font-semibold text-brand-600 uppercase tracking-wide mb-2">About One World Steel</p>
         <h2 class="text-3xl md:text-4xl font-black mb-4">A decade in metal buildings</h2>
         <p class="text-slate-600 text-lg leading-relaxed mb-6">
           We help you pick size and options, then quote a complete kit — with installation available.
         </p>
         
-        <a href="about.html" class="inline-flex bg-steel-900 hover:bg-steel-800 text-white px-6 py-3 rounded-xl font-semibold transition">About Stamps Steel</a>
+        <a href="about.html" class="inline-flex bg-steel-900 hover:bg-steel-800 text-white px-6 py-3 rounded-xl font-semibold transition">About One World Steel</a>
       </div>
       <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-lg aspect-[4/3]">
-        <picture><source type="image/webp" srcset="images/12-640w.webp 640w, images/12-960w.webp 960w, images/12.webp 1400w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"><img data-lightbox="gallery" data-opt="1" src="images/12.jpg" alt="Stamps Steel metal building project" class="w-full h-full object-cover" width="900" height="675" decoding="async" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"></picture>
+        <picture><source type="image/webp" srcset="images/12-640w.webp 640w, images/12-960w.webp 960w, images/12.webp 1400w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"><img data-lightbox="gallery" data-opt="1" src="images/12.jpg" alt="One World Steel metal building project" class="w-full h-full object-cover" width="900" height="675" decoding="async" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"></picture>
       </div>
     </div>
   </section>
@@ -1839,7 +1841,7 @@
     <div class="max-w-2xl mx-auto px-4">
       <div class="text-center mb-10 reveal">
         <h2 class="text-3xl md:text-4xl font-black mb-3">Request a quote</h2>
-        <p class="text-slate-600">Size, location, and use. Or <a href="designer.html" class="text-copper-600 font-semibold hover:underline">open the 3D designer</a> first.</p>
+        <p class="text-slate-600">Size, location, and use. Or <a href="designer.html" class="text-brand-600 font-semibold hover:underline">open the 3D designer</a> first.</p>
       </div>
       <div class="bg-white rounded-2xl shadow-xl p-6 md:p-8 border border-slate-100">
       <div class="max-w-2xl mx-auto" data-stamps-quote data-context="homepage" data-title="Request a free quote"></div>
@@ -1852,36 +1854,36 @@
   <footer class="bg-steel-950 text-slate-400 py-12 border-t border-steel-800">
     <div class="max-w-7xl mx-auto px-4">
       <div class="flex flex-col items-center text-center">
-        <img src="images/logo-nav-lg.webp" width="80" height="80" alt="Stamps Steel Buildings" class="h-14 w-14 object-contain rounded-full bg-steel-950 shrink-0" decoding="async" loading="lazy">
+        <img src="images/logo.png" width="80" height="80" alt="One World Steel" class="h-14 w-14 object-contain shrink-0" decoding="async" loading="lazy">
         <p class="text-sm text-slate-300 mb-1">Custom Pre-Engineered Metal Buildings</p>
         
         <p class="text-sm mb-1">
-          <a href="tel:+16156298217" class="hover:text-copper-400 transition font-medium">(615) 629-8217</a>
+          <a href="tel:+16156298217" class="hover:text-brand-400 transition font-medium">(615) 629-8217</a>
         </p>
         <p class="text-sm mb-6">
-          <a href="mailto:info@stampssteel.com" class="hover:text-copper-400 transition font-medium">info@stampssteel.com</a>
+          <a href="mailto:info@oneworldsteel.com" class="hover:text-brand-400 transition font-medium">info@oneworldsteel.com</a>
         </p>
         <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 mb-6 text-sm">
-          <a href="about.html" class="hover:text-copper-400 transition">About</a>
-          <a href="faq.html" class="hover:text-copper-400 transition">FAQ</a>
-          <a href="designer.html" class="hover:text-copper-400 transition">3D Designer</a>
-          <a href="projects.html" class="hover:text-copper-400 transition">Projects</a>
-          <a href="framing.html" class="hover:text-copper-400 transition">Framing</a>
-          <a href="erection.html" class="hover:text-copper-400 transition">Erection</a>
-          <a href="mini-storage.html" class="hover:text-copper-400 transition">Mini Storage</a>
-          <a href="churches.html" class="hover:text-copper-400 transition">Churches</a>
-          <a href="panels.html" class="hover:text-copper-400 transition">Panels</a>
-          <a href="insulation.html" class="hover:text-copper-400 transition">Insulation</a>
-          <a href="imp.html" class="hover:text-copper-400 transition">Insulated panels</a>
-          <a href="accessories.html" class="hover:text-copper-400 transition">Accessories</a>
-          <a href="index.html#contact" class="hover:text-copper-400 transition">Get a Quote</a>
+          <a href="about.html" class="hover:text-brand-400 transition">About</a>
+          <a href="faq.html" class="hover:text-brand-400 transition">FAQ</a>
+          <a href="designer.html" class="hover:text-brand-400 transition">3D Designer</a>
+          <a href="projects.html" class="hover:text-brand-400 transition">Projects</a>
+          <a href="framing.html" class="hover:text-brand-400 transition">Framing</a>
+          <a href="erection.html" class="hover:text-brand-400 transition">Erection</a>
+          <a href="mini-storage.html" class="hover:text-brand-400 transition">Mini Storage</a>
+          <a href="churches.html" class="hover:text-brand-400 transition">Churches</a>
+          <a href="panels.html" class="hover:text-brand-400 transition">Panels</a>
+          <a href="insulation.html" class="hover:text-brand-400 transition">Insulation</a>
+          <a href="imp.html" class="hover:text-brand-400 transition">Insulated panels</a>
+          <a href="accessories.html" class="hover:text-brand-400 transition">Accessories</a>
+          <a href="index.html#contact" class="hover:text-brand-400 transition">Request a Quote</a>
         </div>
         <div class="flex justify-center gap-6 mb-4">
-          <a href="https://www.facebook.com/profile.php?id=61592282766064" target="_blank" rel="noopener noreferrer" class="hover:text-copper-400 transition font-medium">Facebook</a>
-          <a href="https://www.instagram.com/stampssteel/" target="_blank" rel="noopener noreferrer" class="hover:text-copper-400 transition font-medium">Instagram</a>
+          <a href="https://www.facebook.com/profile.php?id=61592282766064" target="_blank" rel="noopener noreferrer" class="hover:text-brand-400 transition font-medium">Facebook</a>
+          <a href="https://www.instagram.com/stampssteel/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-400 transition font-medium">Instagram</a>
         </div>
-        <p class="text-xs text-slate-500 mb-3">© 2026 Stamps Steel Buildings. All rights reserved.</p>
-        <p class="text-xs text-slate-500"><a href="cache-help.html" class="hover:text-copper-400 transition">Seeing an old page?</a><span class="text-slate-600 mx-2" aria-hidden="true">·</span>Built by <a href="https://webbspinnervisions.net" target="_blank" rel="noopener noreferrer" class="text-copper-400 hover:text-copper-300 font-medium transition">Webb Spinner Visions</a></p>
+        <p class="text-xs text-slate-500 mb-3">© 2026 One World Steel. All rights reserved.</p>
+        <p class="text-xs text-slate-500"><a href="cache-help.html" class="hover:text-brand-400 transition">Seeing an old page?</a><span class="text-slate-600 mx-2" aria-hidden="true">·</span>Built by <a href="https://webbspinnervisions.net" target="_blank" rel="noopener noreferrer" class="text-brand-400 hover:text-brand-300 font-medium transition">Webb Spinner Visions</a></p>
       </div>
     </div>
   </footer>
@@ -1964,7 +1966,7 @@
     })();
 </script>
 
-  <script src="js/web-vitals.js?v=20260803" defer></script>
+  <script src="js/web-vitals.js?v=20260917" defer></script>
 
 <script>
 (function () {
@@ -2003,7 +2005,7 @@
   <script src="js/quote-form.js" defer></script>
   <script src="js/lightbox.js" defer></script>
   <script src="js/estimator.js" defer></script>
-  <script src="js/site-common.js?v=20260825" defer></script>
+  <script src="js/site-common.js?v=20260917" defer></script>
 
 </body>
 </html>

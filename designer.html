@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script>if(location.protocol==='http:'&&/(^|\.)stampssteel\.com$/i.test(location.hostname))location.replace('https://'+location.host+location.pathname+location.search+location.hash);</script>
+  <script>if(location.protocol==='http:'&&/(^|\.)(stampssteel|oneworldsteel)\.com$/i.test(location.hostname))location.replace('https://'+location.host+location.pathname+location.search+location.hash);</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Build Your Own Building | 3D Metal Building Designer – Stamps Steel</title>
+  <title>Build Your Own Building | 3D Metal Building Designer – One World Steel</title>
   <meta name="description" content="Design your pre-engineered metal building in 3D. Set size, doors, colors, and layout — then request a quote.">
-  <meta name="keywords" content="build your own metal building, 3D metal building designer, PEB designer, design steel building online, Stamps Steel">
-  <meta property="og:title" content="Build Your Own Building | Stamps Steel 3D Designer">
+  <meta name="keywords" content="build your own metal building, 3D metal building designer, PEB designer, design steel building online, One World Steel">
+  <meta property="og:title" content="Build Your Own Building | One World Steel 3D Designer">
   <meta property="og:description" content="Interactive 3D metal building designer — configure your PEB and request a quote.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://SpiderForce-Star.github.io/Stamps-Steel/designer.html">
-  <meta property="og:image" content="images/logo.jpg">
+  <meta property="og:image" content="images/og.jpg">
   <meta name="theme-color" content="#0f172a">
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -28,9 +30,9 @@
               400: '#94a3b8', 500: '#64748b', 600: '#475569', 700: '#334155',
               800: '#1e293b', 900: '#0f172a', 950: '#020617'
             },
-            copper: {
-              50: '#fdf6ee', 100: '#f9ebdb', 200: '#f0d4b0', 300: '#e8b878',
-              400: '#e0a05a', 500: '#c97b3a', 600: '#b87333', 700: '#9a5f28', 800: '#7a4a1f'
+            brand: {
+              50: '#fef2f2', 100: '#fee2e2', 200: '#fecaca', 300: '#fca5a5',
+              400: '#EE131B', 500: '#EE131B', 600: '#EE131B', 700: '#B80A12', 800: '#8f080e', 900: '#5c0509'
             }
           }
         }
@@ -41,8 +43,8 @@
     html { scroll-behavior: smooth; }
     #mobile-menu { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
     #mobile-menu.open { max-height: 820px; }
-    .copper-gradient {
-      background: linear-gradient(135deg, #e0a05a 0%, #c97b3a 50%, #b87333 100%);
+    .brand-gradient {
+      background: linear-gradient(135deg, #EE131B 0%, #EE131B 50%, #B80A12 100%);
       -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
     }
     .designer-frame-wrap { width: 100%; height: min(80vh, 820px); min-height: 480px; }
@@ -72,7 +74,7 @@
       .nav-desktop { display: none !important; }
       .nav-mobile-tools { display: flex !important; }
       #menu-btn { min-width: 44px; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; }
-      a, button { -webkit-tap-highlight-color: rgba(185,115,51,0.15); }
+      a, button { -webkit-tap-highlight-color: rgba(238,19,27,0.15); }
       /* Tables: allow swipe, prevent page blowout */
       .overflow-x-auto { -webkit-overflow-scrolling: touch; overscroll-behavior-x: contain; }
       /* Hero shorter on phones */
@@ -117,8 +119,8 @@
     .overflow-hidden > picture > img { width: 100%; height: 100%; object-fit: cover; }
 
   </style>
-  <link rel="stylesheet" href="css/site-extras.css?v=20260825">
-  <link rel="canonical" href="https://stampssteel.com/designer.html">
+  <link rel="stylesheet" href="css/site-extras.css?v=20260917">
+  <link rel="canonical" href="https://oneworldsteel.com/designer.html">
 
 </head>
 <body class="bg-slate-50 text-slate-900 font-sans antialiased">
@@ -126,15 +128,15 @@
   <nav class="bg-steel-950 text-white sticky top-0 z-50 shadow-xl border-b border-steel-800">
     <div class="max-w-7xl mx-auto px-4">
       <div class="flex justify-between items-center h-16">
-        <a href="index.html" class="flex items-center gap-2.5 shrink-0 min-w-0" aria-label="Stamps Steel Buildings home">
-          <img src="images/logo-nav-md.webp" width="48" height="48" alt="" class="h-10 w-10 sm:h-11 sm:w-11 object-contain rounded-full bg-steel-950 shrink-0" decoding="async" loading="eager" fetchpriority="high">
-          <span class="font-bold text-white tracking-tight text-sm sm:text-base leading-tight">
-            Stamps Steel
-            <span class="block text-[0.65rem] sm:text-xs font-semibold text-copper-400 tracking-wider uppercase">Buildings</span>
+                <a href="index.html" class="flex items-center gap-2.5 shrink-0 min-w-0" aria-label="One World Steel home">
+          <img src="images/logo.png" width="48" height="48" alt="One World Steel" class="h-11 w-11 sm:h-12 sm:w-12 object-contain shrink-0" decoding="async" loading="eager" fetchpriority="high">
+          <span class="font-extrabold text-white tracking-tight text-sm sm:text-base leading-[1.05] uppercase">
+            One World
+            <span class="block text-[0.7rem] sm:text-xs font-extrabold tracking-[0.18em] text-[#EE131B]">Steel</span>
           </span>
         </a>
                         <div class="nav-desktop hidden lg:flex items-center text-sm font-medium">
-          <a href="designer.html" class="px-3 py-2 whitespace-nowrap text-copper-400 font-semibold" aria-current="page">3D Designer</a>
+          <a href="designer.html" class="px-3 py-2 whitespace-nowrap text-brand-400 font-semibold" aria-current="page">3D Designer</a>
           <div class="nav-drop">
             <button type="button" class="nav-drop-btn" aria-expanded="false" aria-haspopup="true" aria-controls="nav-drop-menu">
               Menu
@@ -152,11 +154,11 @@
             <a href="mini-storage.html" class="nav-drop-link">Mini Storage</a>
             </div>
           </div>
-          <a href="erection.html" class="px-3 py-2 whitespace-nowrap hover:text-copper-400 transition">Erection</a>
-          <a href="index.html#contact" class="nav-quote ml-2 bg-copper-600 hover:bg-copper-500 text-white px-4 py-2 rounded-lg font-semibold transition shadow-lg shadow-copper-900/30 whitespace-nowrap">Get a Quote</a>
+          <a href="erection.html" class="px-3 py-2 whitespace-nowrap hover:text-brand-400 transition">Erection</a>
+          <a href="index.html#contact" class="nav-quote ml-2 bg-brand-600 hover:bg-brand-700 text-white px-4 py-2 rounded-lg font-semibold transition shadow-lg shadow-brand-900/30 whitespace-nowrap">Request a Quote</a>
         </div>
         <div class="nav-mobile-tools flex items-center gap-2 lg:hidden">
-          <a href="index.html#contact" class="bg-copper-600 text-white px-3 py-1.5 rounded-lg text-sm font-semibold">Quote</a>
+          <a href="index.html#contact" class="bg-brand-600 text-white px-3 py-1.5 rounded-lg text-sm font-semibold">Quote</a>
           <button id="menu-btn" class="p-2 text-slate-200" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
           </button>
@@ -165,7 +167,7 @@
     </div>
     <div id="mobile-menu" class="lg:hidden bg-steel-900 border-t border-steel-800">
       <div class="px-4 py-3 space-y-1 text-sm font-medium">
-        <a href="designer.html" class="block py-3 px-3 rounded-lg bg-steel-800 text-copper-400 font-semibold" aria-current="page">3D Designer</a>
+        <a href="designer.html" class="block py-3 px-3 rounded-lg bg-steel-800 text-brand-400 font-semibold" aria-current="page">3D Designer</a>
         <a href="about.html" class="block py-3 px-3 rounded-lg hover:bg-steel-800">About</a>
         <a href="faq.html" class="block py-3 px-3 rounded-lg hover:bg-steel-800">FAQs</a>
         <a href="framing.html" class="block py-3 px-3 rounded-lg hover:bg-steel-800">Framing</a>
@@ -176,8 +178,8 @@
         <a href="projects.html" class="block py-3 px-3 rounded-lg hover:bg-steel-800">Projects</a>
         <a href="mini-storage.html" class="block py-3 px-3 rounded-lg hover:bg-steel-800">Mini Storage</a>
         <a href="erection.html" class="block py-3 px-3 rounded-lg hover:bg-steel-800">Erection</a>
-        <a href="tel:+16156298217" class="block py-3 px-3 rounded-lg hover:bg-steel-800 font-semibold text-copper-400">(615) 629-8217</a>
-        <a href="index.html#contact" class="block py-3 px-3 bg-copper-600 rounded-lg text-center font-semibold mt-2">Get a Quote</a>
+        <a href="tel:+16156298217" class="block py-3 px-3 rounded-lg hover:bg-steel-800 font-semibold text-brand-400">(615) 629-8217</a>
+        <a href="index.html#contact" class="block py-3 px-3 bg-brand-600 rounded-lg text-center font-semibold mt-2">Request a Quote</a>
       </div>
     </div>
   </nav>
@@ -187,16 +189,16 @@
     <div class="absolute inset-0 opacity-40" aria-hidden="true"
          style="background-image: linear-gradient(105deg, rgba(2,6,23,0.95) 0%, rgba(15,23,42,0.88) 55%, rgba(15,23,42,0.75) 100%), url('images/8.webp'); background-size: cover; background-position: center;"></div>
     <div class="relative max-w-7xl mx-auto px-4 py-14 sm:py-16 md:py-20">
-      <p class="text-copper-400 font-semibold tracking-widest uppercase text-sm mb-4">3D designer</p>
+      <p class="text-brand-400 font-semibold tracking-widest uppercase text-sm mb-4">3D designer</p>
       <h1 class="text-4xl sm:text-5xl md:text-6xl font-black mb-5 leading-tight tracking-tight">
         Build Your Own<br class="hidden sm:block">
-        <span class="copper-gradient">Metal Building</span>
+        <span class="brand-gradient">Metal Building</span>
       </h1>
       <p class="text-lg sm:text-xl text-slate-300 max-w-2xl mb-6 leading-relaxed">
         Set size, doors, colors, and layout — then send it in for a quote.
       </p>
       <div class="flex flex-col sm:flex-row gap-3">
-        <a href="https://stampssteelllc.easybuildingdesigner.com/" target="_blank" rel="noopener noreferrer" class="inline-flex justify-center items-center bg-copper-600 hover:bg-copper-500 text-white px-7 py-3.5 rounded-xl font-bold transition shadow-xl shadow-copper-900/40">Launch Designer</a>
+        <a href="https://stampssteelllc.easybuildingdesigner.com/" target="_blank" rel="noopener noreferrer" class="inline-flex justify-center items-center bg-brand-600 hover:bg-brand-700 text-white px-7 py-3.5 rounded-xl font-bold transition shadow-xl shadow-brand-900/40">Launch Designer</a>
         <a href="#designer" class="inline-flex justify-center items-center bg-white/10 hover:bg-white/15 border border-white/25 text-white px-7 py-3.5 rounded-xl font-semibold transition">How it works</a>
       </div>
     </div>
@@ -207,23 +209,23 @@
     <div class="max-w-7xl mx-auto px-4">
       <div class="grid sm:grid-cols-3 gap-6">
         <div class="flex gap-4">
-          <div class="w-10 h-10 shrink-0 rounded-xl bg-copper-100 text-copper-700 font-black flex items-center justify-center">1</div>
+          <div class="w-10 h-10 shrink-0 rounded-xl bg-brand-100 text-brand-700 font-black flex items-center justify-center">1</div>
           <div>
             <h2 class="font-bold text-steel-900 mb-1">Design in 3D</h2>
             <p class="text-sm text-slate-600 leading-relaxed">Set building size, roof style, bay layout, openings, and exterior colors in real time.</p>
           </div>
         </div>
         <div class="flex gap-4">
-          <div class="w-10 h-10 shrink-0 rounded-xl bg-copper-100 text-copper-700 font-black flex items-center justify-center">2</div>
+          <div class="w-10 h-10 shrink-0 rounded-xl bg-brand-100 text-brand-700 font-black flex items-center justify-center">2</div>
           <div>
             <h2 class="font-bold text-steel-900 mb-1">Save or share</h2>
             <p class="text-sm text-slate-600 leading-relaxed">Use the designer tools to capture your configuration — then tell us what you built.</p>
           </div>
         </div>
         <div class="flex gap-4">
-          <div class="w-10 h-10 shrink-0 rounded-xl bg-copper-100 text-copper-700 font-black flex items-center justify-center">3</div>
+          <div class="w-10 h-10 shrink-0 rounded-xl bg-brand-100 text-brand-700 font-black flex items-center justify-center">3</div>
           <div>
-            <h2 class="font-bold text-steel-900 mb-1">Get a free quote</h2>
+            <h2 class="font-bold text-steel-900 mb-1">Request a quote</h2>
             <p class="text-sm text-slate-600 leading-relaxed">Send the design for a written quote.</p>
           </div>
         </div>
@@ -236,11 +238,11 @@
     <div class="max-w-7xl mx-auto px-4">
       <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-6">
         <div>
-          <p class="text-sm font-semibold text-copper-600 uppercase tracking-wide mb-1">Stamps Steel 3D Designer</p>
+          <p class="text-sm font-semibold text-brand-600 uppercase tracking-wide mb-1">One World Steel 3D Designer</p>
           <h2 class="text-2xl sm:text-3xl font-black">Open the 3D designer</h2>
         </div>
         <div class="flex flex-wrap gap-3">
-          <a href="https://stampssteelllc.easybuildingdesigner.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-copper-600 hover:bg-copper-500 text-white px-5 py-2.5 rounded-xl text-sm font-semibold transition">
+          <a href="https://stampssteelllc.easybuildingdesigner.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-brand-600 hover:bg-brand-700 text-white px-5 py-2.5 rounded-xl text-sm font-semibold transition">
             Open 3D Designer
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
           </a>
@@ -254,23 +256,23 @@
         rel="noopener noreferrer"
         class="designer-frame-wrap relative w-full rounded-2xl overflow-hidden border border-slate-200 bg-steel-950 shadow-2xl shadow-steel-950/20 block group"
         id="designer-wrap"
-        aria-label="Open the Stamps Steel 3D designer"
+        aria-label="Open the One World Steel 3D designer"
       >
         <img src="images/building-types/garage-ext.jpg" alt="" class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-50 transition" width="1152" height="864" decoding="async">
         <div class="absolute inset-0 bg-gradient-to-t from-steel-950 via-steel-950/70 to-steel-950/40"></div>
         <div class="relative z-10 flex flex-col items-center justify-center text-center px-6 py-16 min-h-[22rem] sm:min-h-[28rem]">
-          <p class="text-copper-400 font-semibold tracking-widest uppercase text-xs mb-3">Easy Building Designer</p>
+          <p class="text-brand-400 font-semibold tracking-widest uppercase text-xs mb-3">Easy Building Designer</p>
           <h3 class="text-white text-2xl sm:text-3xl font-black mb-3">Launch the 3D designer</h3>
           <p class="text-slate-300 text-sm sm:text-base max-w-lg mb-8 leading-relaxed">Opens in a new tab so the tool can load fully.</p>
-          <span class="inline-flex items-center gap-2 bg-copper-600 group-hover:bg-copper-500 text-white px-8 py-3.5 rounded-xl font-bold transition">Launch 3D Designer</span>
+          <span class="inline-flex items-center gap-2 bg-brand-600 group-hover:bg-brand-700 text-white px-8 py-3.5 rounded-xl font-bold transition">Launch 3D Designer</span>
         </div>
       </a>
       <p class="text-xs text-slate-500 mt-4 text-center max-w-2xl mx-auto">
-        Live portal: <a href="https://stampssteelllc.easybuildingdesigner.com/" target="_blank" rel="noopener noreferrer" class="text-copper-600 font-semibold hover:underline">stampssteelllc.easybuildingdesigner.com</a>.
+        Live portal: <a href="https://stampssteelllc.easybuildingdesigner.com/" target="_blank" rel="noopener noreferrer" class="text-brand-600 font-semibold hover:underline">stampssteelllc.easybuildingdesigner.com</a>.
         When you’re ready, call
-        <a href="tel:+16156298217" class="text-copper-600 font-semibold hover:underline">(615) 629-8217</a>
+        <a href="tel:+16156298217" class="text-brand-600 font-semibold hover:underline">(615) 629-8217</a>
         or
-        <a href="index.html#contact" class="text-copper-600 font-semibold hover:underline">request a free quote</a>.
+        <a href="index.html#contact" class="text-brand-600 font-semibold hover:underline">request a free quote</a>.
       </p>
     </div>
   </section>
@@ -294,31 +296,31 @@
   <footer class="bg-steel-950 text-slate-400 py-12 border-t border-steel-800">
     <div class="max-w-7xl mx-auto px-4">
       <div class="flex flex-col items-center text-center">
-        <img src="images/logo-nav-lg.webp" width="80" height="80" alt="Stamps Steel Buildings" class="h-14 w-14 object-contain rounded-full bg-steel-950 shrink-0" decoding="async" loading="lazy">
+        <img src="images/logo.png" width="80" height="80" alt="One World Steel" class="h-14 w-14 object-contain shrink-0" decoding="async" loading="lazy">
         <p class="text-sm text-slate-300 mb-1">Custom Pre-Engineered Metal Buildings</p>
-        <p class="text-sm mb-1"><a href="tel:+16156298217" class="hover:text-copper-400 transition font-medium">(615) 629-8217</a></p>
-        <p class="text-sm mb-6"><a href="mailto:info@stampssteel.com" class="hover:text-copper-400 transition font-medium">info@stampssteel.com</a></p>
+        <p class="text-sm mb-1"><a href="tel:+16156298217" class="hover:text-brand-400 transition font-medium">(615) 629-8217</a></p>
+        <p class="text-sm mb-6"><a href="mailto:info@oneworldsteel.com" class="hover:text-brand-400 transition font-medium">info@oneworldsteel.com</a></p>
         <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 mb-6 text-sm">
-          <a href="about.html" class="hover:text-copper-400 transition">About</a>
-          <a href="faq.html" class="hover:text-copper-400 transition">FAQ</a>
-          <a href="designer.html" class="hover:text-copper-400 transition">3D Designer</a>
-          <a href="projects.html" class="hover:text-copper-400 transition">Projects</a>
-          <a href="framing.html" class="hover:text-copper-400 transition">Framing</a>
-          <a href="erection.html" class="hover:text-copper-400 transition">Erection</a>
-          <a href="mini-storage.html" class="hover:text-copper-400 transition">Mini Storage</a>
-          <a href="churches.html" class="hover:text-copper-400 transition">Churches</a>
-          <a href="panels.html" class="hover:text-copper-400 transition">Panels</a>
-          <a href="insulation.html" class="hover:text-copper-400 transition">Insulation</a>
-          <a href="imp.html" class="hover:text-copper-400 transition">IMP</a>
-          <a href="accessories.html" class="hover:text-copper-400 transition">Accessories</a>
-          <a href="index.html#contact" class="hover:text-copper-400 transition">Get a Quote</a>
+          <a href="about.html" class="hover:text-brand-400 transition">About</a>
+          <a href="faq.html" class="hover:text-brand-400 transition">FAQ</a>
+          <a href="designer.html" class="hover:text-brand-400 transition">3D Designer</a>
+          <a href="projects.html" class="hover:text-brand-400 transition">Projects</a>
+          <a href="framing.html" class="hover:text-brand-400 transition">Framing</a>
+          <a href="erection.html" class="hover:text-brand-400 transition">Erection</a>
+          <a href="mini-storage.html" class="hover:text-brand-400 transition">Mini Storage</a>
+          <a href="churches.html" class="hover:text-brand-400 transition">Churches</a>
+          <a href="panels.html" class="hover:text-brand-400 transition">Panels</a>
+          <a href="insulation.html" class="hover:text-brand-400 transition">Insulation</a>
+          <a href="imp.html" class="hover:text-brand-400 transition">IMP</a>
+          <a href="accessories.html" class="hover:text-brand-400 transition">Accessories</a>
+          <a href="index.html#contact" class="hover:text-brand-400 transition">Request a Quote</a>
         </div>
         <div class="flex justify-center gap-6 mb-4">
-          <a href="https://www.facebook.com/profile.php?id=61592282766064" target="_blank" rel="noopener noreferrer" class="hover:text-copper-400 transition font-medium">Facebook</a>
-          <a href="https://www.instagram.com/stampssteel/" target="_blank" rel="noopener noreferrer" class="hover:text-copper-400 transition font-medium">Instagram</a>
+          <a href="https://www.facebook.com/profile.php?id=61592282766064" target="_blank" rel="noopener noreferrer" class="hover:text-brand-400 transition font-medium">Facebook</a>
+          <a href="https://www.instagram.com/stampssteel/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-400 transition font-medium">Instagram</a>
         </div>
-        <p class="text-xs text-slate-500 mb-3">© 2026 Stamps Steel Buildings. All rights reserved.</p>
-        <p class="text-xs text-slate-500"><a href="cache-help.html" class="hover:text-copper-400 transition">Seeing an old page?</a><span class="text-slate-600 mx-2" aria-hidden="true">·</span>Built by <a href="https://webbspinnervisions.net" target="_blank" rel="noopener noreferrer" class="text-copper-400 hover:text-copper-300 font-medium transition">Webb Spinner Visions</a></p>
+        <p class="text-xs text-slate-500 mb-3">© 2026 One World Steel. All rights reserved.</p>
+        <p class="text-xs text-slate-500"><a href="cache-help.html" class="hover:text-brand-400 transition">Seeing an old page?</a><span class="text-slate-600 mx-2" aria-hidden="true">·</span>Built by <a href="https://webbspinnervisions.net" target="_blank" rel="noopener noreferrer" class="text-brand-400 hover:text-brand-300 font-medium transition">Webb Spinner Visions</a></p>
       </div>
     </div>
   </footer>
@@ -338,11 +340,11 @@
     }
 
   </script>
-  <script src="js/web-vitals.js?v=20260803" defer></script>
+  <script src="js/web-vitals.js?v=20260917" defer></script>
   <script src="js/quote-form.js" defer></script>
   <script src="js/lightbox.js" defer></script>
   <script src="js/estimator.js" defer></script>
-  <script src="js/site-common.js?v=20260825" defer></script>
+  <script src="js/site-common.js?v=20260917" defer></script>
 
 </body>
 </html>
