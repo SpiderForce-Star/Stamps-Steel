@@ -3,20 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Under Construction | Stamps Steel Buildings</title>
-  <meta name="description" content="Stamps Steel Buildings is temporarily under construction.">
-  <meta name="robots" content="noindex, nofollow">
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-  <meta http-equiv="Pragma" content="no-cache">
-  <meta http-equiv="Expires" content="0">
+  <title>Page not found | One World Steel</title>
+  <meta name="robots" content="noindex">
   <meta name="theme-color" content="#020617">
-  <link rel="icon" href="images/logo-nav-lg.webp">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" href="images/favicon-32.png">
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    html, body { height: 100%; }
     body {
       min-height: 100dvh;
       display: flex;
@@ -29,60 +21,24 @@
       text-align: center;
     }
     main { max-width: 36rem; }
-    img {
-      height: 56px;
-      width: auto;
-      max-width: min(280px, 80vw);
-      object-fit: contain;
-      margin: 0 auto 28px;
-      display: block;
-    }
-    .kicker {
-      letter-spacing: 0.28em;
-      text-transform: uppercase;
-      font-size: 0.72rem;
-      font-weight: 700;
-      color: #c97b3a;
-      margin-bottom: 14px;
-    }
-    h1 {
-      font-size: clamp(2.4rem, 8vw, 4rem);
-      font-weight: 900;
-      letter-spacing: -0.04em;
-      line-height: 1.05;
-      margin-bottom: 16px;
-    }
-    p {
-      color: #94a3b8;
-      font-size: 1.05rem;
-      line-height: 1.55;
-      margin-bottom: 28px;
-    }
-    a {
-      color: #e0a05a;
-      font-weight: 700;
-      font-size: 1.15rem;
-      text-decoration: none;
-      letter-spacing: 0.02em;
-    }
-    a:hover { color: #f3c78a; }
+    .kicker { letter-spacing: 0.22em; text-transform: uppercase; font-size: 0.72rem; font-weight: 700; color: #EE131B; margin-bottom: 14px; }
+    h1 { font-size: clamp(2rem, 6vw, 3.2rem); font-weight: 800; letter-spacing: -0.03em; margin-bottom: 12px; }
+    p { color: #94a3b8; line-height: 1.55; margin-bottom: 24px; }
+    a { color: #f8fafc; font-weight: 700; text-decoration: none; }
+    .row { display: flex; gap: 18px; justify-content: center; flex-wrap: wrap; }
+    a.btn { background: #EE131B; color: #fff; padding: 12px 18px; border-radius: 10px; }
   </style>
 </head>
 <body>
-  <!-- TEMPORARY under-construction mode. Revert this commit to restore the full site. -->
   <main>
-    <img src="images/logo-nav-lg.webp" alt="Stamps Steel Buildings" onerror="this.style.display='none'">
-    <div class="kicker">Stamps Steel Buildings</div>
-    <h1>Under Construction</h1>
-    <p>This website is temporarily closed. Please check back soon.</p>
-    <a href="tel:+16156298217">(615) 629-8217</a>
+    <div class="kicker">One World Steel</div>
+    <h1>Page not found</h1>
+    <p>That page isn’t on this site. Head home, or call or email and we’ll help.</p>
+    <div class="row">
+      <a class="btn" href="/">Back home</a>
+      <a href="tel:+16156298217">(615) 629-8217</a>
+      <a href="mailto:sales@oneworldsteel.com">sales@oneworldsteel.com</a>
+    </div>
   </main>
-  <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.getRegistrations().then(function (regs) {
-        regs.forEach(function (reg) { reg.unregister(); });
-      });
-    }
-  </script>
 </body>
 </html>

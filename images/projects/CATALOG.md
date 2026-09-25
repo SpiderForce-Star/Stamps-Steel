@@ -1,4 +1,4 @@
-# Stamps Steel — PEB Photo Candidates (Review Only)
+# One World Steel — PEB Photo Candidates (Review Only)
 
 **Status:** Not on the live website. Approve before any deploy.
 
@@ -39,7 +39,7 @@ Nothing is published until you say so.
 ## Notes
 
 - Live site pages were **not** modified.
-- Images are custom renders for Stamps Steel review (not stock with watermarks).
+- Images are custom renders for One World Steel review (not stock with watermarks).
 
 ## Agricultural gallery additions (2026-08-09)
 

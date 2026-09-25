@@ -1,5 +1,5 @@
 /**
- * Stamps Steel — Core Web Vitals collector (LCP, CLS, INP, FCP, TTFB)
+ * One World Steel — Core Web Vitals collector (LCP, CLS, INP, FCP, TTFB)
  * - Silent by default (dataLayer + window.__SSB_VITALS__)
  * - Optional overlay: add ?vitals=1 to any page URL
  * Thresholds match Google's Core Web Vitals guidance (good / needs improvement / poor)
@@ -238,7 +238,7 @@
       '@media (max-width:390px){#ssb-vitals-overlay{right:8px;bottom:8px;left:8px;max-width:none;}}' +
       '</style>' +
       '<div class="card">' +
-      '<div class="head"><div><div class="title">Core Web Vitals</div><div class="sub">Lab snapshot · Stamps Steel</div></div>' +
+      '<div class="head"><div><div class="title">Core Web Vitals</div><div class="sub">Lab snapshot · One World Steel</div></div>' +
       '<div><button type="button" id="ssb-vitals-copy" title="Copy JSON">Copy</button> <button type="button" id="ssb-vitals-close" title="Hide panel" aria-label="Close">✕</button></div></div>' +
       '<table aria-live="polite">' +
       '<tr><td class="k">LCP</td><td class="v" data-m="LCP">—</td><td class="r"><span class="pill unknown" data-r="LCP">…</span></td></tr>' +

@@ -1,3 +1,7 @@
-# Stamps Steel Buildings — temporarily offline
+# One World Steel
 User-agent: *
-Disallow: /
+Allow: /
+
+Sitemap: https://oneworldsteel.com/sitemap.xml
+# Until custom domain DNS is live, also valid on GitHub Pages:
+# Sitemap: https://SpiderForce-Star.github.io/Stamps-Steel/sitemap.xml

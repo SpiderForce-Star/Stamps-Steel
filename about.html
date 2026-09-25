@@ -1,14 +1,412 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script>if(location.protocol==='http:'&&/(^|\.)(stampssteel|oneworldsteel)\.com$/i.test(location.hostname))location.replace('https://'+location.host+location.pathname+location.search+location.hash);</script>
   <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="0; url=/">
-  <meta name="robots" content="noindex, nofollow">
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-  <title>Under Construction | Stamps Steel Buildings</title>
-  <script>location.replace('/');</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>About | One World Steel</title>
+  <meta name="description" content="A decade in metal buildings. One World Steel quotes complete steel kits and can install on your slab or piers.">
+  <meta name="keywords" content="One World Steel about, pre-engineered metal buildings, PEMB furnish and install">
+  <meta property="og:title" content="About | One World Steel">
+  <meta property="og:description" content="A decade in metal buildings. Complete kits. Installation available.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://oneworldsteel.com/about.html">
+  <meta property="og:image" content="images/og.jpg">
+  <meta name="theme-color" content="#0f172a">
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+          colors: {
+            steel: {
+              50: '#f8fafc', 100: '#f1f5f9', 200: '#e2e8f0', 300: '#cbd5e1',
+              400: '#94a3b8', 500: '#64748b', 600: '#475569', 700: '#334155',
+              800: '#1e293b', 900: '#0f172a', 950: '#020617'
+            },
+            brand: {
+              50: '#fef2f2', 100: '#fee2e2', 200: '#fecaca', 300: '#fca5a5',
+              400: '#EE131B', 500: '#EE131B', 600: '#EE131B', 700: '#B80A12', 800: '#8f080e', 900: '#5c0509'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    #mobile-menu { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+    #mobile-menu.open { max-height: 960px; }
+    .brand-gradient {
+      background: linear-gradient(135deg, #EE131B 0%, #EE131B 50%, #B80A12 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .prose-about p { margin-bottom: 1.25rem; }
+  
+    /* Mobile-first hardening */
+    html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+    body { overflow-x: clip; }
+    img, svg, video { max-width: 100%; height: auto; }
+    img { display: block; }
+    /* Prefer content-box images in flex/grid */
+    .project-card img, .aspect-\[4\/3\] img, .aspect-\[16\/9\] img { width: 100%; height: 100%; object-fit: cover; max-width: none; }
+    /* Touch-friendly controls */
+    @media (max-width: 1023px) {
+      .nav-desktop { display: none !important; }
+      .nav-mobile-tools { display: flex !important; }
+      #menu-btn { min-width: 44px; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; }
+      a, button { -webkit-tap-highlight-color: rgba(238,19,27,0.15); }
+      /* Tables: allow swipe, prevent page blowout */
+      .overflow-x-auto { -webkit-overflow-scrolling: touch; overscroll-behavior-x: contain; }
+      /* Hero shorter on phones */
+      .hero-section { min-height: min(72vh, 640px) !important; }
+      .hero-content .max-w-2xl h1 { font-size: clamp(1.75rem, 7vw, 2.5rem); line-height: 1.15; }
+      /* Sticky double-bar: subnav under main nav */
+      .projects-subnav { top: 4rem; }
+      /* Designer embed */
+      .designer-frame-wrap { min-height: 70vh; height: 70vh !important; }
+      .designer-frame-wrap iframe { min-height: 70vh; height: 70vh !important; }
+      /* Forms */
+      input, select, textarea, button[type="submit"] { font-size: 16px !important; } /* prevent iOS zoom */
+      /* Horizontal category chips */
+      [role="tablist"] { scrollbar-width: none; }
+      [role="tablist"]::-webkit-scrollbar { display: none; }
+    }
+    @media (min-width: 1024px) {
+      .nav-desktop { display: flex !important; }
+      .nav-mobile-tools { display: none !important; }
+    }
+    @media (max-width: 639px) {
+      .attn-track { font-size: 0.72rem; padding: 0.65rem 0; }
+      .attn-item { padding: 0 0.85rem; }
+      /* Gallery cards tighter padding */
+      .project-card .p-5 { padding: 1rem; }
+      .project-card .p-4 { padding: 0.85rem; }
+    }
+
+  
+    /* Image perf */
+    img[data-opt] { background-color: #e2e8f0; }
+    .project-card, .concept-card { content-visibility: auto; contain-intrinsic-size: 420px; }
+    picture { display: contents; }
+    picture.inline-block { display: inline-block; }
+    .aspect-\[4\/3\] > picture,
+    .aspect-\[16\/9\] > picture,
+    .aspect-\[16\/10\] > picture,
+    .overflow-hidden > picture { display: block; width: 100%; height: 100%; }
+    .aspect-\[4\/3\] > picture > img,
+    .aspect-\[16\/9\] > picture > img,
+    .aspect-\[16\/10\] > picture > img,
+    .overflow-hidden > picture > img { width: 100%; height: 100%; object-fit: cover; }
+
+  </style>
+  <link rel="stylesheet" href="css/site-extras.css?v=20260917">
+  <link rel="canonical" href="https://oneworldsteel.com/about.html">
+
 </head>
-<body>
-  <p>Under Construction. <a href="/">Continue</a></p>
+<body class="bg-slate-50 text-slate-900 font-sans antialiased">
+
+  <!-- NAV -->
+  <nav class="bg-steel-950 text-white sticky top-0 z-50 shadow-xl border-b border-steel-800">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="flex items-center gap-2.5 shrink-0 min-w-0" aria-label="One World Steel home">
+          <img src="images/logo.png" width="48" height="48" alt="One World Steel" class="h-11 w-11 sm:h-12 sm:w-12 object-contain shrink-0" decoding="async" loading="eager" fetchpriority="high">
+          <span class="font-extrabold text-white tracking-tight text-sm sm:text-base leading-[1.05] uppercase">
+            One World
+            <span class="block text-[0.7rem] sm:text-xs font-extrabold tracking-[0.18em] text-[#EE131B]">Steel</span>
+          </span>
+        </a>
+                        <div class="nav-desktop hidden lg:flex items-center text-sm font-medium">
+          <a href="designer.html" class="px-3 py-2 whitespace-nowrap hover:text-brand-400 transition">3D Designer</a>
+          <div class="nav-drop">
+            <button type="button" class="nav-drop-btn is-current" aria-expanded="false" aria-haspopup="true" aria-controls="nav-drop-menu">
+              Menu
+              <svg class="nav-drop-chevron" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div id="nav-drop-menu" class="nav-drop-menu">
+            <a href="about.html" class="nav-drop-link is-current" aria-current="page">About</a>
+            <a href="faq.html" class="nav-drop-link">FAQs</a>
+            <a href="framing.html" class="nav-drop-link">Framing</a>
+            <a href="accessories.html" class="nav-drop-link">Accessories</a>
+            <a href="panels.html" class="nav-drop-link">Panels</a>
+            <a href="insulation.html" class="nav-drop-link">Insulation</a>
+            <a href="imp.html" class="nav-drop-link">IMP</a>
+            <a href="projects.html" class="nav-drop-link">Projects</a>
+            <a href="mini-storage.html" class="nav-drop-link">Mini Storage</a>
+            </div>
+          </div>
+          <a href="erection.html" class="px-3 py-2 whitespace-nowrap hover:text-brand-400 transition">Erection</a>
+          <a href="index.html#contact" class="nav-quote ml-2 bg-brand-600 hover:bg-brand-700 text-white px-4 py-2 rounded-lg font-semibold transition shadow-lg shadow-brand-900/30 whitespace-nowrap">Request a Quote</a>
+        </div>
+        <div class="nav-mobile-tools flex items-center gap-2 lg:hidden">
+          <a href="index.html#contact" class="bg-brand-600 text-white px-3 py-1.5 rounded-lg text-sm font-semibold">Quote</a>
+          <button id="menu-btn" class="p-2 text-slate-200" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="mobile-menu" class="lg:hidden bg-steel-900 border-t border-steel-800">
+      <div class="px-4 py-3 space-y-1 text-sm font-medium">
+        <a href="designer.html" class="block py-3 px-3 rounded-lg hover:bg-steel-800">3D Designer</a>
+        <a href="about.html" class="block py-3 px-3 rounded-lg bg-steel-800 text-brand-400 font-semibold" aria-current="page">About</a>
+        <a href="faq.html" class="block py-3 px-3 rounded-lg hover:bg-steel-800">FAQs</a>
+        <a href="framing.html" class="block py-3 px-3 rounded-lg hover:bg-steel-800">Framing</a>
+        <a href="accessories.html" class="block py-3 px-3 rounded-lg hover:bg-steel-800">Accessories</a>
+        <a href="panels.html" class="block py-3 px-3 rounded-lg hover:bg-steel-800">Panels</a>
+        <a href="insulation.html" class="block py-3 px-3 rounded-lg hover:bg-steel-800">Insulation</a>
+        <a href="imp.html" class="block py-3 px-3 rounded-lg hover:bg-steel-800">IMP</a>
+        <a href="projects.html" class="block py-3 px-3 rounded-lg hover:bg-steel-800">Projects</a>
+        <a href="mini-storage.html" class="block py-3 px-3 rounded-lg hover:bg-steel-800">Mini Storage</a>
+        <a href="erection.html" class="block py-3 px-3 rounded-lg hover:bg-steel-800">Erection</a>
+        <a href="tel:+16156298217" class="block py-3 px-3 rounded-lg hover:bg-steel-800 font-semibold text-brand-400">(615) 629-8217</a>
+        <a href="index.html#contact" class="block py-3 px-3 bg-brand-600 rounded-lg text-center font-semibold mt-2">Request a Quote</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="relative bg-steel-950 text-white overflow-hidden">
+    <div class="absolute inset-0 opacity-40" aria-hidden="true"
+         style="background-image: linear-gradient(105deg, rgba(2,6,23,0.95) 0%, rgba(15,23,42,0.88) 50%, rgba(15,23,42,0.75) 100%), url('images/8.webp'); background-size: cover; background-position: center;"></div>
+    <div class="relative max-w-7xl mx-auto px-4 py-16 sm:py-20 md:py-24">
+      <p class="text-brand-400 font-semibold tracking-widest uppercase text-sm mb-4">About One World Steel</p>
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-black mb-5 leading-tight tracking-tight">
+        A decade in<br class="hidden sm:block">
+        <span class="brand-gradient">metal buildings</span>
+      </h1>
+      <p class="text-lg sm:text-xl text-slate-300 max-w-2xl leading-relaxed">
+        From first sketch through delivery and installation.
+      </p>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="py-8 sm:py-10 bg-white border-b border-slate-200" aria-label="Highlights">
+    <div class="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      <div>
+        <div class="text-2xl sm:text-3xl font-black text-brand-600 tracking-tight">10+ Years</div>
+        <div class="text-xs sm:text-sm text-slate-600 mt-1">Industry Experience</div>
+      </div>
+      <div>
+        <div class="text-2xl sm:text-3xl font-black text-brand-600 tracking-tight">Furnish & Install</div>
+        <div class="text-xs sm:text-sm text-slate-600 mt-1">Complete Solutions</div>
+      </div>
+      <div>
+        <div class="text-2xl sm:text-3xl font-black text-brand-600 tracking-tight">50'+</div>
+        <div class="text-xs sm:text-sm text-slate-600 mt-1">Typical clear span</div>
+      </div>
+      <div>
+        <div class="text-2xl sm:text-3xl font-black text-brand-600 tracking-tight">Complete kit</div>
+        <div class="text-xs sm:text-sm text-slate-600 mt-1">Frame, roof, walls, extras</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FULL ABOUT COPY -->
+  <section class="py-14 md:py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid lg:grid-cols-12 gap-10 lg:gap-14">
+
+        <!-- Main narrative -->
+        <div class="lg:col-span-8 prose-about">
+          <p class="text-slate-700 text-lg leading-relaxed">
+            At One World Steel, we bring more than a decade of hands-on experience in metal buildings (PEBs). We quote complete kits — steel frame, roof and walls, insulation and doors — and we can install on your slab or piers. Our work covers planning, quoting, delivery, and installation with quality, safety, and craftsmanship first.
+          </p>
+          <p class="text-slate-700 text-lg leading-relaxed">
+            We work on shops, storage, farms, hangars, churches, barndos, warehouses, and commercial buildings — from a single garage to a multi-building site.
+          </p>
+
+          <div class="my-10 rounded-2xl overflow-hidden border border-slate-200 shadow-sm">
+            <picture><source type="image/webp" srcset="images/13-640w.webp 640w, images/13-960w.webp 960w, images/13.webp 1400w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"><img data-opt="1" src="images/13.jpg" alt="Clear-span pre-engineered metal building" class="w-full h-56 sm:h-72 object-cover" width="1200" height="600" decoding="async" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"></picture>
+          </div>
+
+          <h2 class="text-2xl sm:text-3xl font-black text-steel-900 mb-4">Roof, walls, and extras</h2>
+          <p class="text-slate-700 text-lg leading-relaxed">
+            Insulated metal panels, standing-seam and screw-down roofs, liners, canopies, and trim — finished so they weather well and look right.
+          </p>
+
+          <h2 class="text-2xl sm:text-3xl font-black text-steel-900 mb-4 mt-10">Specialty steel</h2>
+          <p class="text-slate-700 text-lg leading-relaxed">
+            Roof curbs, framed openings, mezzanines, stairs, crane support, and related steel — coordinated with the manufacturer, engineer, and builder.
+          </p>
+
+          <div class="my-10 grid sm:grid-cols-2 gap-4">
+            <div class="rounded-2xl overflow-hidden border border-slate-200">
+              <picture><source type="image/webp" srcset="images/8-640w.webp 640w, images/8-960w.webp 960w, images/8.webp 1400w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"><img data-opt="1" src="images/8.jpg" alt="Precision steel framing under construction" class="w-full h-48 object-cover" width="600" height="400" decoding="async" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"></picture>
+            </div>
+            <div class="rounded-2xl overflow-hidden border border-slate-200">
+              <picture><source type="image/webp" srcset="images/2-640w.webp 640w, images/2-960w.webp 960w, images/2.webp 1400w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"><img data-opt="1" src="images/2.jpg" alt="Clear-span open interior" class="w-full h-48 object-cover" width="600" height="400" decoding="async" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"></picture>
+            </div>
+          </div>
+
+          <h2 class="text-2xl sm:text-3xl font-black text-steel-900 mb-4">How we work</h2>
+          <p class="text-slate-700 text-lg leading-relaxed">
+            We quote a complete kit, keep scope clear, and stay in touch through delivery and installation.
+          </p>
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="lg:col-span-4 space-y-6">
+          <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm sticky top-24">
+            <h3 class="font-bold text-lg mb-4 text-steel-900">Building Types We Know</h3>
+            <ul class="text-sm text-slate-600 space-y-2 leading-relaxed columns-1 sm:columns-2 lg:columns-1 gap-x-6">
+              <li class="flex gap-2"><span class="text-brand-600 font-bold shrink-0">·</span> Manufacturing facilities</li>
+              <li class="flex gap-2"><span class="text-brand-600 font-bold shrink-0">·</span> Warehouses & distribution</li>
+              <li class="flex gap-2"><span class="text-brand-600 font-bold shrink-0">·</span> Mini storage complexes</li>
+              <li class="flex gap-2"><span class="text-brand-600 font-bold shrink-0">·</span> Agricultural buildings</li>
+              <li class="flex gap-2"><span class="text-brand-600 font-bold shrink-0">·</span> Barndominiums</li>
+              <li class="flex gap-2"><span class="text-brand-600 font-bold shrink-0">·</span> Garages & shops</li>
+              <li class="flex gap-2"><span class="text-brand-600 font-bold shrink-0">·</span> Automotive & service centers</li>
+              <li class="flex gap-2"><span class="text-brand-600 font-bold shrink-0">·</span> Cold storage</li>
+              <li class="flex gap-2"><span class="text-brand-600 font-bold shrink-0">·</span> Aircraft hangars</li>
+              <li class="flex gap-2"><span class="text-brand-600 font-bold shrink-0">·</span> Retail & office</li>
+              <li class="flex gap-2"><span class="text-brand-600 font-bold shrink-0">·</span> Municipal facilities</li>
+              <li class="flex gap-2"><span class="text-brand-600 font-bold shrink-0">·</span> Industrial complexes</li>
+              <li class="flex gap-2"><span class="text-brand-600 font-bold shrink-0">·</span> Churches & recreation</li>
+            </ul>
+            <div class="mt-6 pt-6 border-t border-slate-100">
+              <p class="text-sm text-slate-500 mb-4">Size, location, and use.</p>
+          <a href="index.html#contact" class="inline-flex w-full justify-center items-center bg-brand-600 hover:bg-brand-700 text-white px-5 py-3 rounded-xl font-semibold transition">Request a Quote</a>
+              <a href="tel:+16156298217" class="mt-3 inline-flex w-full justify-center text-sm font-semibold text-brand-600 hover:text-brand-700">(615) 629-8217</a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- SYSTEMS GRID -->
+  <section class="py-14 md:py-16 bg-white border-y border-slate-200">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-10">
+        <p class="text-sm font-semibold text-brand-600 uppercase tracking-wide mb-2">What we install</p>
+        <h2 class="text-3xl md:text-4xl font-black mb-3">What goes on the kit</h2>
+        <p class="text-slate-600 max-w-2xl mx-auto">Weather-tight systems with a finished look that lasts.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="rounded-xl border border-slate-200 bg-slate-50 p-5">
+          <h3 class="font-bold text-steel-900 mb-1">Roof Systems</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">Standing seam, screw-down, insulated roof assemblies, translucent daylighting panels.</p>
+        </div>
+        <div class="rounded-xl border border-slate-200 bg-slate-50 p-5">
+          <h3 class="font-bold text-steel-900 mb-1">Wall Systems</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">Insulated metal panels (IMP), concealed fastener walls, architectural wall panels.</p>
+        </div>
+        <div class="rounded-xl border border-slate-200 bg-slate-50 p-5">
+          <h3 class="font-bold text-steel-900 mb-1">Interior Liners</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">Liner panel systems and Skyliner® interior liner systems for clean, finished interiors.</p>
+        </div>
+        <div class="rounded-xl border border-slate-200 bg-slate-50 p-5">
+          <h3 class="font-bold text-steel-900 mb-1">Exterior Details</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">Canopies, soffit and fascia systems, expansion joints, and custom trim packages.</p>
+        </div>
+        <div class="rounded-xl border border-slate-200 bg-slate-50 p-5">
+          <h3 class="font-bold text-steel-900 mb-1">Specialty Steel</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">Roof curbs, framed openings, equipment supports, stairs, handrails, grating, mezzanines.</p>
+        </div>
+        <div class="rounded-xl border border-slate-200 bg-slate-50 p-5">
+          <h3 class="font-bold text-steel-900 mb-1">Heavy Structure</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">Crane runway support steel, platforms, and custom structural & architectural elements.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="py-14 md:py-16 bg-slate-50 border-t border-slate-200">
+    <div class="max-w-2xl mx-auto px-4">
+      <div class="text-center mb-8">
+        <h2 class="text-2xl md:text-3xl font-black mb-2">Request a quote</h2>
+        <p class="text-slate-600 text-sm">Tell us size, location, and use.</p>
+      </div>
+      <div data-stamps-quote data-context="about" data-title="Request a free quote"></div>
+    </div>
+  </section>
+
+  
+  <!-- ERECTION CALLOUT -->
+  <section class="py-12 bg-slate-50 border-y border-slate-200" aria-label="Erection services">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="rounded-2xl border border-slate-200 bg-white p-6 md:p-8 grid md:grid-cols-2 gap-6 items-center">
+        <div>
+          <p class="text-sm font-semibold text-brand-600 uppercase tracking-wide mb-2">Beyond the kit</p>
+          <h2 class="text-2xl md:text-3xl font-black text-steel-900 mb-3">Installation available</h2>
+          <p class="text-slate-600 text-sm leading-relaxed mb-4">We can put the building up when the project and region allow — or help your crew. Foundation and site work stay with you.</p>
+          <a href="erection.html" class="inline-flex bg-steel-900 hover:bg-steel-800 text-white px-6 py-3 rounded-xl font-semibold transition">Learn about erection services</a>
+        </div>
+        <ul class="text-sm text-slate-700 space-y-2">
+          <li class="flex gap-2"><span class="text-brand-600 font-bold">✓</span> Full erection packages where available</li>
+          <li class="flex gap-2"><span class="text-brand-600 font-bold">✓</span> Coordination &amp; crew guidance</li>
+          <li class="flex gap-2"><span class="text-brand-600 font-bold">✓</span> Specialty systems (IMP, standing seam, liners)</li>
+          <li class="flex gap-2"><span class="text-brand-600 font-bold">✓</span> Transparent scope — shell vs. site work</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-steel-950 text-slate-400 py-12 border-t border-steel-800">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex flex-col items-center text-center">
+        <img src="images/logo.png" width="80" height="80" alt="One World Steel" class="h-14 w-14 object-contain shrink-0" decoding="async" loading="lazy">
+        <p class="text-sm text-slate-300 mb-1">Custom Pre-Engineered Metal Buildings</p>
+        <p class="text-sm mb-1">
+          <a href="tel:+16156298217" class="hover:text-brand-400 transition font-medium">(615) 629-8217</a>
+        </p>
+        <p class="text-sm mb-6">
+          <a href="mailto:sales@oneworldsteel.com" class="hover:text-brand-400 transition font-medium">sales@oneworldsteel.com</a>
+        </p>
+        <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 mb-6 text-sm">
+          <a href="about.html" class="hover:text-brand-400 transition">About</a>
+          <a href="faq.html" class="hover:text-brand-400 transition">FAQ</a>
+          <a href="designer.html" class="hover:text-brand-400 transition">3D Designer</a>
+          <a href="projects.html" class="hover:text-brand-400 transition">Projects</a>
+          <a href="framing.html" class="hover:text-brand-400 transition">Framing</a>
+          <a href="erection.html" class="hover:text-brand-400 transition">Erection</a>
+          <a href="mini-storage.html" class="hover:text-brand-400 transition">Mini Storage</a>
+          <a href="churches.html" class="hover:text-brand-400 transition">Churches</a>
+          <a href="panels.html" class="hover:text-brand-400 transition">Panels</a>
+          <a href="insulation.html" class="hover:text-brand-400 transition">Insulation</a>
+          <a href="imp.html" class="hover:text-brand-400 transition">IMP</a>
+          <a href="accessories.html" class="hover:text-brand-400 transition">Accessories</a>
+          <a href="index.html#contact" class="hover:text-brand-400 transition">Request a Quote</a>
+        </div>
+        <div class="flex justify-center gap-6 mb-4">
+          <a href="https://www.facebook.com/profile.php?id=61592282766064" target="_blank" rel="noopener noreferrer" class="hover:text-brand-400 transition font-medium">Facebook</a>
+          <a href="https://www.instagram.com/stampssteel/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-400 transition font-medium">Instagram</a>
+        </div>
+        <p class="text-xs text-slate-500 mb-3">© 2026 One World Steel. All rights reserved.</p>
+        <p class="text-xs text-slate-500"><a href="cache-help.html" class="hover:text-brand-400 transition">Seeing an old page?</a><span class="text-slate-600 mx-2" aria-hidden="true">·</span>Built by <a href="https://webbspinnervisions.net" target="_blank" rel="noopener noreferrer" class="text-brand-400 hover:text-brand-300 font-medium transition">Webb Spinner Visions</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    if (btn && menu) {
+      btn.addEventListener('click', () => {
+        const open = menu.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+        menu.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+      }));
+    }
+  </script>
+  <script src="js/web-vitals.js?v=20260917" defer></script>
+  <script src="js/quote-form.js" defer></script>
+  <script src="js/lightbox.js" defer></script>
+  <script src="js/estimator.js" defer></script>
+  <script src="js/site-common.js?v=20260917" defer></script>
+
 </body>
 </html>
