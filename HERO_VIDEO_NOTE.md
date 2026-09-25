@@ -13,3 +13,4 @@
 
 ## Marquee
 Brand-red ribbon under hero: 3D designer / building types / quote / phone.
+- Mobile hero no longer includes the gambrel barn with open-web trusses (not our framing). Do not put images/buildings/project-field back into the rotation.
