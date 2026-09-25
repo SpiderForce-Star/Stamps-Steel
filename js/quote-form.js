@@ -144,7 +144,7 @@
           '</div>' +
         '</div>' +
         '<p class="sq-footer-links">' +
-          '<a href="mailto:info@oneworldsteel.com">info@oneworldsteel.com</a> · ' +
+          '<a href="mailto:sales@oneworldsteel.com">sales@oneworldsteel.com</a> · ' +
           '<a href="tel:+16156298217">(615) 629-8217</a>' +
         '</p>' +
       '</div>'
@@ -240,7 +240,7 @@
             '\nTimeline: ' + (form.elements.timeline.value || '') +
             '\nMessage: ' + (form.elements.message.value || '');
           window.location.href =
-            'mailto:info@oneworldsteel.com?subject=' +
+            'mailto:sales@oneworldsteel.com?subject=' +
             encodeURIComponent('One World Steel quote request') +
             '&body=' + encodeURIComponent(body);
         } catch (err) { /* ignore */ }
@@ -274,7 +274,7 @@
         })
         .catch(function () {
           alertBox.textContent =
-            'We couldn’t send the form right now. Please call (615) 629-8217 or email info@oneworldsteel.com.';
+            'We couldn’t send the form right now. Please call (615) 629-8217 or email sales@oneworldsteel.com.';
           alertBox.classList.add('is-visible');
           submitBtn.disabled = false;
           submitBtn.textContent = 'Send free quote request';

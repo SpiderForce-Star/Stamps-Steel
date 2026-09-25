@@ -2,7 +2,7 @@
 
 Modern, visual, locally focused website for **One World Steel** — a private-label / broker of pre-engineered metal buildings (PEBs) based in **Bethpage, Middle Tennessee**, serving customers **nationwide**.
 
-**Live site:** [https://SpiderForce-Star.github.io/Stamps-Steel/](https://SpiderForce-Star.github.io/Stamps-Steel/)
+**Live site:** [https://oneworldsteel.com/](https://oneworldsteel.com/)
 
 ---
 
@@ -11,7 +11,7 @@ Modern, visual, locally focused website for **One World Steel** — a private-la
 | | |
 |---|---|
 | **Phone** | [(615) 629-8217](tel:+16156298217) |
-| **Email** | [info@oneworldsteel.com](mailto:info@oneworldsteel.com) |
+| **Email** | [sales@oneworldsteel.com](mailto:sales@oneworldsteel.com) |
 | **Facebook** | [One World Steel](https://www.facebook.com/profile.php?id=61592282766064) |
 | **Instagram** | [@stampssteel](https://www.instagram.com/stampssteel/) |
 | **Location** | Bethpage, TN 37022 · Middle Tennessee |
@@ -46,7 +46,7 @@ Modern, visual, locally focused website for **One World Steel** — a private-la
 - **Logo:** `images/logo.png` — official circular globe (red continents, black grid, white WORLD, red ONE and STEEL). Transparent 1080px PNG. Do not use copper I-beam marks or a globe without the wordmark.
 - **Tone:** Professional, straightforward, no high-pressure language
 
-Custom domain: keep `CNAME` as `stampssteel.com` until `oneworldsteel.com` is registered and pointed. Do not flip GitHub Pages custom domain yet.
+Custom domain: `oneworldsteel.com` (GitHub Pages `CNAME`). `www` should CNAME to `SpiderForce-Star.github.io`.
 
 
 ## Accessories product assets (`images/`)
@@ -96,7 +96,7 @@ GitHub Pages is enabled from `main`. After push, hard-refresh the live site if n
 ## Future ideas
 
 - Formspree / Netlify Forms for reliable form delivery  
-- Custom domain oneworldsteel.com — wait to point DNS / flip CNAME until the domain is registered  
+- Mailbox `sales@oneworldsteel.com` must exist at the domain host before quote emails land  
 - Product photos + optional multi-image lightbox  
 - Simple size estimator or 3D configurator  
 
