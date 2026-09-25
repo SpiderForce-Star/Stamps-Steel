@@ -41,27 +41,37 @@
     }
   </script>
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html, body { height: 100%; }
-    body {
-      min-height: 100dvh;
+    html { scroll-behavior: smooth; }
+    /* Critical layout stability (CLS) */
+    body { margin: 0; }
+    nav.bg-steel-950 { min-height: 4rem; }
+    .hero-section { min-height: min(78vh, 700px); }
+    @media (min-width: 640px) {
+      .hero-section { min-height: min(88vh, 900px); }
+    }
+
+.hero-section {
+      position: relative;
+      min-height: min(88vh, 900px);
       display: flex;
       align-items: center;
-      justify-content: center;
-      padding: 32px 20px;
+      overflow: hidden;
       background: #020617;
-      color: #f8fafc;
-      font-family: Inter, system-ui, sans-serif;
-      text-align: center;
     }
-    main { max-width: 36rem; }
-    img {
-      height: 56px;
-      width: auto;
-      max-width: min(280px, 80vw);
-      object-fit: contain;
-      margin: 0 auto 28px;
+    .hero-media {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      overflow: hidden;
+      background: #020617;
+    }
+    .hero-media picture,
+    .hero-media .hero-poster {
+      position: absolute;
+      inset: 0;
       display: block;
+      width: 100%;
+      height: 100%;
     }
     /* Full building photos fill the hero — no letterbox bars */
     .hero-media video,
@@ -706,11 +716,12 @@
       content: ""; width: 1.75rem; height: 2px;
       background: linear-gradient(90deg, #EE131B, #EE131B);
     }
-    p {
-      color: #94a3b8;
-      font-size: 1.05rem;
-      line-height: 1.55;
-      margin-bottom: 28px;
+    .pillar-card {
+      position: relative; overflow: hidden;
+      border: 1px solid #1e293b; border-radius: 1.25rem;
+      background: linear-gradient(160deg, #0f172a 0%, #020617 100%);
+      padding: 1.75rem 1.5rem; color: #e2e8f0;
+      transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
     }
     .pillar-card:hover {
       border-color: rgba(238,19,27,0.55);
@@ -817,9 +828,106 @@
       color: #fff !important;
       font-weight: 800;
       text-decoration: none;
-      letter-spacing: 0.02em;
+      letter-spacing: 0.04em;
     }
-    a:hover { color: #f3c78a; }
+    .attn-link:hover { text-decoration: underline; text-underline-offset: 3px; }
+    .attn-item.attn-hot .attn-link {
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    /* ===== HERO VIDEO: DESKTOP / TABLET ===== */
+    .hero-section {
+      min-height: min(88vh, 920px);
+      height: min(88vh, 920px);
+    }
+    @media (min-width: 1280px) {
+      .hero-section {
+        min-height: min(90vh, 980px);
+        height: min(90vh, 980px);
+      }
+      .hero-media video,
+      .hero-media img { object-fit: cover; object-position: center center; }
+    }
+
+    /* ===== MOBILE PORTRAIT (phone upright) — tall frame, keep action upper-center ===== */
+    @media (max-width: 767px) and (orientation: portrait) {
+      .hero-section {
+        min-height: min(78dvh, 720px) !important;
+        height: min(78dvh, 720px) !important;
+        max-height: none !important;
+        align-items: flex-end !important;
+      }
+      .hero-media video,
+      .hero-media img {
+        width: 100% !important;
+        height: 100% !important;
+        min-width: 100% !important;
+        min-height: 100% !important;
+        object-fit: cover !important;
+        object-position: center center !important;
+        transform: none !important;
+      }
+      .hero-overlay {
+        background:
+          linear-gradient(to top, rgba(2,6,23,0.92) 0%, rgba(2,6,23,0.45) 38%, rgba(2,6,23,0.12) 58%, rgba(2,6,23,0.35) 100%) !important;
+      }
+      .hero-controls {
+        right: 0.65rem; bottom: auto; top: 0.75rem;
+      }
+      .hero-film-bar { height: 2px; }
+    }
+
+    /* ===== MOBILE / TABLET LANDSCAPE — short wide frame, fill full width ===== */
+    @media (orientation: landscape) and (max-height: 560px) {
+      .hero-section {
+        min-height: 0 !important;
+        height: calc(100dvh - 3.75rem - 2.5rem) !important; /* nav + marquee */
+        max-height: calc(100dvh - 3.75rem - 2.5rem) !important;
+        align-items: flex-end !important;
+      }
+      .hero-media video,
+      .hero-media img {
+        width: 100% !important;
+        height: 100% !important;
+        min-width: 100% !important;
+        min-height: 100% !important;
+        object-fit: cover !important;
+        object-position: center center !important;
+        transform: none !important;
+      }
+      .hero-overlay {
+        background:
+          linear-gradient(to right, rgba(2,6,23,0.62) 0%, rgba(2,6,23,0.22) 45%, rgba(2,6,23,0.08) 100%),
+          linear-gradient(to top, rgba(2,6,23,0.7) 0%, rgba(2,6,23,0.15) 55%, rgba(2,6,23,0.2) 100%) !important;
+      }
+      .hero-controls {
+        top: 0.5rem; bottom: auto; right: 0.5rem;
+      }
+      .hero-ctrl-btn { font-size: 0.62rem; padding: 0.35rem 0.55rem; }
+    }
+
+    /* Very short landscape phones */
+    @media (orientation: landscape) and (max-height: 400px) {
+      .hero-section {
+        height: calc(100dvh - 3.4rem - 2.1rem) !important;
+        max-height: calc(100dvh - 3.4rem - 2.1rem) !important;
+      }
+      .hero-media video,
+      .hero-media img { object-fit: cover !important; object-position: center center !important; }
+    }
+
+    /* Prefer dynamic viewport on modern browsers */
+    @supports (height: 100dvh) {
+      @media (min-width: 768px) {
+        .hero-section {
+          min-height: min(88dvh, 920px);
+          height: min(88dvh, 920px);
+        }
+      }
+    }
+
+
   </style>
   <script type="application/ld+json">
   {
@@ -1781,10 +1889,17 @@
   </footer>
 
   <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.getRegistrations().then(function (regs) {
-        regs.forEach(function (reg) { reg.unregister(); });
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    if (btn && menu) {
+      btn.addEventListener('click', () => {
+        const open = menu.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
       });
+      menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+        menu.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+      }));
     }
   </script>
 
